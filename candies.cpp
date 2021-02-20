@@ -1,6 +1,5 @@
 #include <fstream>
+
 using namespace std;
-int main(int argc, char const *argv[])
-{
-    return 0;
-}
+
+int main(int argc, char const *argv[]) { return 0; }
