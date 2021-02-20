@@ -33,4 +33,4 @@
 
 # cpp exe
 xen
-
+*.txt
