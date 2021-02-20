@@ -11,11 +11,12 @@ int main(int argc, char const *argv[])
 
     ofstream outfile(argv[1]);
 
-    outfile << "#include <fstream>" << endl;
+    outfile << "#include <iostream>" << endl;
     outfile << "using namespace std;" << endl;
 
     outfile << "int main(int argc, char const *argv[])" << endl;
     outfile << "{" << endl;
+    outfile << "    Solution *obj = new Solution();" << endl;
 
     outfile << "    return 0;" << endl;
     outfile << "}" << endl;
