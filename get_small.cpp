@@ -49,18 +49,30 @@ public:
   {
 
     vector<int> count(nums.size(), 0);
+    vector<int> unsorted = nums;
 
     quick_sort(nums, nums.begin(), nums.end());
 
     for (int i = 0; i < nums.size(); ++i)
     {
-      set<int> unique;
-      for (int j = 0; j < i; j++)
+      cout << nums.at(i) << " ";
+    }
+
+    cout << endl;
+
+    for (int i = 0; i < nums.size(); ++i)
+    {
+      int cnt = 0;
+      for (int j = 0; j < nums.size(); j++)
       {
-        unique.insert(nums.at(j));
+
+        if (nums.at(j) < unsorted.at(i))
+        {
+          cnt++;
+        }
       }
 
-      count.at(i) = unique.size();
+      count.at(i) = cnt;
     }
 
     return count;
