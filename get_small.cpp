@@ -1,4 +1,5 @@
 #include <iostream>
+#include <set>
 #include <vector>
 using namespace std;
 
@@ -53,7 +54,11 @@ public:
 
     for (int i = 0; i < nums.size(); ++i)
     {
-      cout << nums.at(i) << " ";
+
+      set<int> unique;
+      for (int j = 0; j < i; j++)
+      {
+      }
     }
 
     return nums;
