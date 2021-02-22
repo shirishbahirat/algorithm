@@ -47,7 +47,14 @@ public:
   vector<int> smallerNumbersThanCurrent(vector<int> &nums)
   {
 
+    vector<int> count(nums.size(), 0);
+
     quick_sort(nums, nums.begin(), nums.end());
+
+    for (int i = 0; i < nums.size(); ++i)
+    {
+      cout << nums.at(i) << " ";
+    }
 
     return nums;
   }
@@ -58,14 +65,14 @@ int main(int argc, char const *argv[])
   Solution *obj = new Solution();
   vector<int> nums = {8, 1, 2, 0, 3, 5};
 
+  nums = obj->smallerNumbersThanCurrent(nums);
+
   for (int i = 0; i < nums.size(); ++i)
   {
     cout << nums.at(i) << " ";
   }
 
   cout << endl;
-
-  nums = obj->smallerNumbersThanCurrent(nums);
 
   return 0;
 }
