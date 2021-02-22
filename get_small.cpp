@@ -54,21 +54,23 @@ public:
 
     for (int i = 0; i < nums.size(); ++i)
     {
-
       set<int> unique;
       for (int j = 0; j < i; j++)
       {
+        unique.insert(nums.at(j));
       }
+
+      count.at(i) = unique.size();
     }
 
-    return nums;
+    return count;
   }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  vector<int> nums = {8, 1, 2, 0, 3, 5};
+  vector<int> nums = {8, 1, 2, 2, 3};
 
   nums = obj->smallerNumbersThanCurrent(nums);
 
