@@ -8,16 +8,23 @@ public:
   {
 
     bitset<64> bs(num);
+    int msb = 0;
 
-    cout << bs << endl;
+    asm("bsrl %1, %0" : "=r"(msb) : "r"(num));
 
-    return 0;
+    for (int i = 0; i <= msb; ++i)
+    {
+      if (bs[i])
+        msb++;
+    }
+    return msb;
   }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  obj->numberOfSteps(123);
+  int msb = obj->numberOfSteps(0);
+  cout << msb << endl;
   return 0;
 }
