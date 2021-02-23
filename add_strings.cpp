@@ -27,15 +27,14 @@ public:
       str1 = s1.str();
       str2 = s2.str();
 
-      cout << str1 << " " << str2 << endl;
-
       n1 = stoi(str1);
-      n2 = stoi(str1);
+      n2 = stoi(str2);
 
       sum = n1 + n2 + carry;
       if (sum > 9)
       {
-        carry = (sum % 10);
+        carry = 1;
+        sum %= 10;
       }
       else
       {
@@ -50,6 +49,8 @@ public:
       results += to_string(carry);
     }
 
+    reverse(results.begin(), results.end());
+
     return results;
   }
 };
@@ -58,8 +59,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  string results =
-      obj->addStrings("3876620623801494171", "6529364523802684779");
+  string results = obj->addStrings("9", "99");
 
   cout << results << endl;
   return 0;
