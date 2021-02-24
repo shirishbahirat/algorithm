@@ -12,10 +12,13 @@ public:
     int carry = 0;
     string results = "";
 
-    while (as && bs)
+    --as;
+    --bs;
+
+    cout << as << " " << bs << endl;
+
+    while ((as >= 0) && (bs >= 0))
     {
-      --as;
-      --bs;
 
       if (((a[as] == '1') && (b[bs] == '1')) && (carry == 0))
       {
@@ -57,9 +60,14 @@ public:
         results = "1" + results;
         carry = 1;
       }
+
+      --as;
+      --bs;
     }
 
-    while (as > 0)
+    cout << results << endl;
+
+    while (as >= 0)
     {
       if ((a[as] == '1') && (carry == 1))
       {
@@ -84,7 +92,7 @@ public:
       as--;
     }
 
-    while (bs > 0)
+    while (bs >= 0)
     {
       if ((b[bs] == '1') && (carry == 1))
       {
