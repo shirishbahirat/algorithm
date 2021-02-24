@@ -41,15 +41,59 @@ public:
         carry = 0;
       }
 
-      results += to_string(sum);
+      results = to_string(sum) + results;
+    }
+
+    while (j >= 0)
+    {
+      stringstream s2;
+      s2 << num2[j];
+      str2 = s2.str();
+      n2 = stoi(str2);
+
+      sum = n2 + carry;
+
+      if (sum > 9)
+      {
+        carry = 1;
+        sum %= 10;
+      }
+      else
+      {
+        carry = 0;
+      }
+
+      results = to_string(sum) + results;
+      --j;
+    }
+
+    while (i >= 0)
+    {
+      stringstream s1;
+      s1 << num1[i];
+      str1 = s1.str();
+      n1 = stoi(str1);
+
+      sum = n1 + carry;
+
+      if (sum > 9)
+      {
+        carry = 1;
+        sum %= 10;
+      }
+      else
+      {
+        carry = 0;
+      }
+
+      results = to_string(sum) + results;
+      --i;
     }
 
     if (carry)
     {
-      results += to_string(carry);
+      results = to_string(carry) + results;
     }
-
-    reverse(results.begin(), results.end());
 
     return results;
   }
@@ -59,7 +103,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  string results = obj->addStrings("9", "99");
+  string results = obj->addStrings("408", "5");
 
   cout << results << endl;
   return 0;
