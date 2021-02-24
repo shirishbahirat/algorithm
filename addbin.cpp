@@ -122,7 +122,7 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  string results = obj->addBinary("1111", "11");
+  string results = obj->addBinary("100", "110010");
   cout << results << endl;
   return 0;
 }
