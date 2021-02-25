@@ -8,23 +8,17 @@ public:
   int maxProfit(vector<int> &prices)
   {
 
-    int profit = 0;
-    for (int i = 0; i < prices.size(); ++i)
+    int minprice = 0x7FFFFFFF;
+    int maxprofit = 0;
+    for (int i = 0; i < prices.size(); i++)
     {
-      for (int j = i; j < prices.size(); ++j)
-      {
-        if (prices.at(i) < prices.at(j))
-        {
-          int temp = (prices.at(j) - prices.at(i));
-          if (temp > profit)
-          {
-            profit = temp;
-          }
-        }
-      }
+      if (prices[i] < minprice)
+        minprice = prices[i];
+      else if (prices[i] - minprice > maxprofit)
+        maxprofit = prices[i] - minprice;
     }
 
-    return profit;
+    return maxprofit;
   }
 };
 
