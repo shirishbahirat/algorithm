@@ -16,13 +16,27 @@ public:
 
     while (idr > idl)
     {
-      if (lsum < (rsum + nums[idr]))
+      if ((nums[idr] > 0) || (nums[idl] > 0))
       {
-        lsum += nums[idl++];
+        if (lsum < (rsum + nums[idr]))
+        {
+          lsum += nums[idl++];
+        }
+        else if (rsum < (lsum + nums[idl]))
+        {
+          rsum += nums[idr--];
+        }
       }
-      else if (rsum < (lsum + nums[idl]))
+      else
       {
-        rsum += nums[idr--];
+        if (lsum > (rsum + nums[idr]))
+        {
+          lsum += nums[idl++];
+        }
+        else if (rsum > (lsum + nums[idl]))
+        {
+          rsum += nums[idr--];
+        }
       }
     }
 
