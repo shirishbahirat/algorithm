@@ -16,27 +16,31 @@ public:
 
     while (idr > idl)
     {
-      if (lsum > (rsum + nums[idr]))
-      {
-        rsum += nums[idr--];
-      }
-      else // if (lsum < (rsum + nums[idr]))
+      if (lsum < (rsum + nums[idr]))
       {
         lsum += nums[idl++];
       }
+      else if (rsum < (lsum + nums[idl]))
+      {
+        rsum += nums[idr--];
+      }
     }
 
-    cout << lsum << " " << rsum << endl;
-    return 0;
+    if (rsum == lsum)
+      return idr;
+    else
+      return -1;
   }
 };
 
 int main(int argc, char const *argv[])
 {
 
-  vector<int> nums = {1, 7, 3, 6, 5, 6};
+  vector<int> nums = {-1, -1, -1, -1, -1, -1};
   Solution *obj = new Solution();
 
   int out = obj->pivotIndex(nums);
+
+  cout << out << endl;
   return 0;
 }
