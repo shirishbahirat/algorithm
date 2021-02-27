@@ -53,7 +53,7 @@ public:
     }
     else
     {
-      if ((idx < 0) && (lru.size() >= size))
+      if (lru.size() >= size)
       {
         lru.erase(lru.begin());
       }
@@ -61,12 +61,6 @@ public:
       lru.push_back(key);
       cache[key] = value;
     }
-
-    for (int i = 0; i < lru.size(); ++i)
-    {
-      cout << lru[i] << " ";
-    }
-    cout << endl;
   }
 
 private:
