@@ -48,18 +48,18 @@ public:
     if (idx >= 0)
     {
       cache[key] = value;
+      lru.erase(lru.begin() + idx);
+      lru.push_back(key);
     }
     else
     {
-      if (lru.size() > size)
+      if ((idx < 0) && (lru.size() >= size))
       {
-        return;
+        lru.erase(lru.begin());
       }
-      else
-      {
-        lru.push_back(key);
-        cache[key] = value;
-      }
+
+      lru.push_back(key);
+      cache[key] = value;
     }
 
     for (int i = 0; i < lru.size(); ++i)
@@ -78,16 +78,12 @@ private:
 int main(int argc, char const *argv[])
 {
   LRUCache *obj = new LRUCache(2);
-  obj->get(2);
-  obj->put(1, 1);
-  obj->put(2, 2);
+  obj->put(2, 1);
+  obj->put(1, 2);
+  obj->put(2, 3);
+  obj->put(4, 1);
   cout << obj->get(1) << endl;
-  obj->put(3, 3);
   cout << obj->get(2) << endl;
-  obj->put(4, 4);
-  cout << obj->get(1) << endl;
-  cout << obj->get(3) << endl;
-  cout << obj->get(4) << endl;
 
   return 0;
 }
