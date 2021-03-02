@@ -16,6 +16,7 @@ public:
       {
         nums[hole] = nums[hole - 1];
         hole--;
+        cout << " hole while loop " << hole << " value " << value << endl;
       }
       nums[hole] = value;
 
