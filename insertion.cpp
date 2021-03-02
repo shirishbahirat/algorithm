@@ -6,13 +6,33 @@ using namespace std;
 class Solution
 {
 public:
-  void sort(vector<int> &nums) { return; }
+  void sort(vector<int> &nums)
+  {
+    for (int i = 1; i < nums.size(); i++)
+    {
+      int value = nums[i];
+      int hole = i;
+      while (hole > 0 && nums[hole - 1] > value)
+      {
+        nums[hole] = nums[hole - 1];
+        hole--;
+      }
+      nums[hole] = value;
+
+      for (auto x : nums)
+      {
+        cout << x << " ";
+      }
+      cout << " hole " << value << endl;
+    }
+    return;
+  }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  vector<int> nums = {4, 5, 3, 2, 7, 1, 9, 0};
+  vector<int> nums = {4, 5, 2, 3, 7, 0, 9, 1};
 
   obj->sort(nums);
 
