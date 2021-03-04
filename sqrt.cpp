@@ -18,6 +18,7 @@ public:
     while ((s - x / s) > error)
     {
       s = (s + x / s) / 2;
+      cout << s << endl;
     }
     return s;
   }
