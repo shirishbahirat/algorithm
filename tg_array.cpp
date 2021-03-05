@@ -8,7 +8,17 @@ class Solution
 public:
   vector<int> createTargetArray(vector<int> &nums, vector<int> &index)
   {
+    vector<int> temp(nums.size(), 0);
 
+    int idx = 0;
+    for (int x : temp)
+    {
+
+      temp.at(index.at(idx)) = nums.at(idx);
+      cout << temp.at(idx) << " ";
+      ++idx;
+    }
+    cout << endl;
     return nums;
   }
 };
