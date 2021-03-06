@@ -15,19 +15,18 @@ public:
     {
       int sw = temp.at(index.at(idx));
       temp.at(index.at(idx)) = nums.at(idx);
-      cout << temp.at(idx) << " ";
 
       ++idx;
 
       for (int k = idx; k < nums.size(); ++k)
       {
-        int tx = nums[k];
-        nums[k] = sw;
+        int tx = temp[k];
+        temp[k] = sw;
         sw = tx;
       }
     }
-    cout << endl;
-    return nums;
+
+    return temp;
   }
 };
 
