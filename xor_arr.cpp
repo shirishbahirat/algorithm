@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  int xorOperation(int n, int start) { return 0; }
+  int xorOperation(int n, int start) { return 10; }
 };
 
 int main(int argc, char const *argv[])
