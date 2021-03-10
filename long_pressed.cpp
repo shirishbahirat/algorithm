@@ -12,6 +12,8 @@ public:
 
 int main(int argc, char const *argv[])
 {
+
   Solution *obj = new Solution();
+
   return 0;
 }
