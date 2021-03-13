@@ -8,7 +8,6 @@ class Solution
 public:
   int average(vector<int> &nums)
   {
-
     int avg = 0;
 
     for (int x : nums)
@@ -21,6 +20,7 @@ public:
     return avg;
   }
 };
+
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
