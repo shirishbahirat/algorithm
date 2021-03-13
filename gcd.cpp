@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  cout << obj->gcd(100, 20) << endl;
+  cout << obj->gcd(2, 33) << endl;
 
   return 0;
 }
