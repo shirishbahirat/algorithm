@@ -19,9 +19,9 @@ complex &operator+(complex &x, complex &y)
   int r = x.get_real() + y.get_real();
   int i = x.get_imag() + y.get_imag();
 
-  complex temp = complex(r, i);
+  complex *temp = new complex(r, i);
 
-  return temp;
+  return *temp;
 }
 
 int main(int argc, char const *argv[])
