@@ -56,9 +56,9 @@ public:
     {
       return;
     }
-    cout << *&(*n)->data << endl;
 
     transverse(&(*n)->left);
+    cout << *&(*n)->data << endl;
     transverse(&(*n)->right);
   }
 };
