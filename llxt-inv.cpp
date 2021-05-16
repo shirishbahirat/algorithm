@@ -55,6 +55,28 @@ public:
 
     cout << endl;
   }
+
+  void inverse(void)
+  {
+
+    if (nd == nullptr)
+      return;
+    if (nd->next == nullptr)
+      return;
+
+    node *pre = nullptr;
+    node *mid = nd;
+    node *pst = nd->next;
+
+    while (nd->next != nullptr)
+    {
+      nd->next = pre;
+      pre = mid;
+      mid = pst;
+      pst = pst->next;
+      nd = mid;
+    }
+  }
 };
 int main(int argc, char const *argv[])
 {
