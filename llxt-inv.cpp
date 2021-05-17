@@ -90,11 +90,19 @@ int main(int argc, char const *argv[])
   obj->insert(40);
   obj->insert(50);
 
+  cout << "created linked list" << endl;
+
   obj->print();
+
+  cout << "print done" << endl;
 
   obj->inverse();
 
+  cout << "Inversed linked list" << endl;
+
   obj->print();
+
+  cout << "print done" << endl;
 
   return 0;
 }
