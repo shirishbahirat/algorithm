@@ -90,5 +90,7 @@ int main(int argc, char const *argv[])
 
   obj->print();
 
+  obj->inverse();
+
   return 0;
 }
