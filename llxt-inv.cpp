@@ -76,6 +76,8 @@ public:
       pst = pst->next;
       nd = mid;
     }
+
+    nd->next = pre;
   }
 };
 int main(int argc, char const *argv[])
@@ -91,6 +93,8 @@ int main(int argc, char const *argv[])
   obj->print();
 
   obj->inverse();
+
+  obj->print();
 
   return 0;
 }
