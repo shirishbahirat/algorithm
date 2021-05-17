@@ -102,7 +102,7 @@ int main(int argc, char const *argv[])
 
   obj->print();
 
-  cout << "after inversed print" << endl;
+  cout << "inversed print" << endl;
 
   return 0;
 }
