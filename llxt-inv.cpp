@@ -98,11 +98,11 @@ int main(int argc, char const *argv[])
 
   obj->inverse();
 
-  cout << "Inversed linked list" << endl;
+  cout << "inversed linked list" << endl;
 
   obj->print();
 
-  cout << "print done" << endl;
+  cout << "after inversed print" << endl;
 
   return 0;
 }
