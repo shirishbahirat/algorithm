@@ -6,6 +6,18 @@ using namespace std;
 class Solution
 {
 public:
+  vector<int> v;
+
+  Solution() : v(20, -1)
+  {
+    /*for (int i = 0; i < 20; ++i)
+    {
+      v.push_back(-1);
+    }*/
+  }
+
+  ~Solution() {}
+
   int fib(int number)
   {
     if (number == 0)
@@ -14,7 +26,10 @@ public:
     if (number <= 2)
       return 1;
 
-    return fib(number - 1) + fib(number - 2);
+    if (v[number] < 0)
+      v[number] = fib(number - 1) + fib(number - 2);
+
+    return v[number];
   }
 };
 int main(int argc, char const *argv[])
