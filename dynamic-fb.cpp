@@ -41,5 +41,8 @@ int main(int argc, char const *argv[])
   cout << obj->fib(8) << endl;
   cout << obj->fib(9) << endl;
 
+  cout << obj->fib(25) << endl;
+  cout << obj->fib(50) << endl;
+
   return 0;
 }
