@@ -8,7 +8,7 @@ class Solution
 public:
   vector<int> v;
 
-  Solution() : v(20, -1) {}
+  Solution() : v(60, -1) {}
 
   ~Solution() {}
 
@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
   cout << obj->fib(9) << endl;
 
   cout << obj->fib(25) << endl;
-  cout << obj->fib(50) << endl;
+  cout << obj->fib(35) << endl;
 
   return 0;
 }
