@@ -52,7 +52,25 @@ public:
     return;
   }
 
-  int pop() { return 0; }
+  int pop()
+  {
+    if (stack)
+    {
+      int data = stack->data;
+
+      node *new_head = stack->next;
+
+      delete stack;
+
+      stack = new_head;
+
+      return data;
+    }
+    else
+    {
+      return -1;
+    }
+  }
 };
 int main(int argc, char const *argv[])
 {
@@ -64,6 +82,18 @@ int main(int argc, char const *argv[])
   obj->push(4);
   obj->push(5);
   obj->push(6);
+
+  obj->print();
+
+  cout << "pop " << obj->pop() << endl;
+
+  obj->print();
+
+  cout << "pop " << obj->pop() << endl;
+
+  obj->print();
+
+  cout << "pop " << obj->pop() << endl;
 
   obj->print();
 
