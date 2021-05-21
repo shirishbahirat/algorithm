@@ -66,6 +66,7 @@ int main(int argc, char const *argv[])
   obj->push(30);
   obj->push(40);
   obj->push(50);
+  obj->push(60);
 
   obj->print();
 
