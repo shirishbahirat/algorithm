@@ -6,13 +6,21 @@ using namespace std;
 class Solution
 {
 public:
-    int pivotIndex(vector<int> &nums)
-    {
-         return 0;
-    }
+  Solution() {}
+  ~Solution() {}
+
+  struct node
+  {
+    int data;
+    node *next;
+
+    node(int d) : data(d), next(nullptr) {}
+  };
+
+  int pivotIndex(vector<int> &nums) { return 0; }
 };
 int main(int argc, char const *argv[])
 {
-    Solution *obj = new Solution();
-    return 0;
-  }
+  Solution *obj = new Solution();
+  return 0;
+}
