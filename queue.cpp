@@ -42,6 +42,22 @@ public:
     return;
   }
 
+  int pop(void)
+  {
+    if (queue)
+    {
+      int data = queue->data;
+      node *temp = queue->next;
+      delete queue;
+      queue = temp;
+      return data;
+    }
+    else
+    {
+      return -1;
+    }
+  }
+
   void print(void)
   {
     node *temp = queue;
