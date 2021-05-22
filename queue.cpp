@@ -86,5 +86,14 @@ int main(int argc, char const *argv[])
 
   obj->print();
 
+  cout << "pop " << obj->pop() << endl;
+  obj->print();
+
+  cout << "pop " << obj->pop() << endl;
+  obj->print();
+
+  cout << "pop " << obj->pop() << endl;
+  obj->print();
+
   return 0;
 }
