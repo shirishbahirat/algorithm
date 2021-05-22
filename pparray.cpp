@@ -13,23 +13,7 @@ public:
 
   int **ppmx;
 
-  Solution()
-  {
-    ppmx = (int **)malloc(3 * sizeof(int));
-
-    for (int i = 0; i < 3; ++i)
-    {
-      ppmx[i] = (int *)malloc(3 * sizeof(int));
-    }
-
-    for (int i = 0; i < 3; ++i)
-    {
-      for (int j = 0; j < 3; ++j)
-      {
-        ppmx = a[0][0];
-      }
-    }
-  }
+  Solution() { ppmx = &pmx; }
 
   ~Solution() {}
 
@@ -40,7 +24,8 @@ public:
     {
       for (int j = 0; j < 3; ++j)
       {
-        cout << a[0][0] << " ";
+        cout << **a << " ";
+        ++*a;
       }
 
       cout << endl;
@@ -68,12 +53,14 @@ public:
   void pprint(void)
   {
 
+    int *temp = pmx;
+
     for (int i = 0; i < 3; ++i)
     {
       for (int j = 0; j < 3; ++j)
       {
-        cout << *pmx << " ";
-        pmx++;
+        cout << *temp << " ";
+        temp++;
       }
 
       cout << endl;
@@ -93,5 +80,6 @@ int main(int argc, char const *argv[])
   obj->pprint();
   cout << " " << endl;
   obj->ppprint();
+
   return 0;
 }
