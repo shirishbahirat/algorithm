@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 #include <vector>
 
@@ -10,7 +11,35 @@ public:
 
   int *pmx = &matrix[0][0];
 
-  int **ppmx = &pmx;
+  int **ppmx;
+
+  Solution()
+  {
+    ppmx = (int **)malloc(3 * sizeof(int));
+
+    for (int i = 0; i < 3; ++i)
+    {
+      ppmx[i] = (int *)malloc(3 * sizeof(int));
+    }
+  }
+
+  ~Solution() {}
+
+  void trace(int **a)
+  {
+
+    for (int i = 0; i < 3; ++i)
+    {
+      for (int j = 0; j < 3; ++j)
+      {
+        cout << a[0][0] << " ";
+      }
+
+      cout << endl;
+    }
+
+    return;
+  }
 
   void print(void)
   {
@@ -44,6 +73,8 @@ public:
 
     return;
   }
+
+  void ppprint(void) { trace(ppmx); }
 };
 
 int main(int argc, char const *argv[])
@@ -52,5 +83,7 @@ int main(int argc, char const *argv[])
   obj->print();
   cout << " " << endl;
   obj->pprint();
+  cout << " " << endl;
+  obj->ppprint();
   return 0;
 }
