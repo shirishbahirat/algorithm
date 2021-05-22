@@ -30,6 +30,7 @@ int main(int argc, char const *argv[])
   f = obj->test;
 
   f(100);
+  f(111);
 
   return 0;
 }
