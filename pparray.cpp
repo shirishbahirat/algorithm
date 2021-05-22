@@ -27,7 +27,6 @@ public:
         cout << **a << " ";
         ++*a;
       }
-
       cout << endl;
     }
 
