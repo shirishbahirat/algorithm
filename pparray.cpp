@@ -21,6 +21,14 @@ public:
     {
       ppmx[i] = (int *)malloc(3 * sizeof(int));
     }
+
+    for (int i = 0; i < 3; ++i)
+    {
+      for (int j = 0; j < 3; ++j)
+      {
+        ppmx = a[0][0];
+      }
+    }
   }
 
   ~Solution() {}
