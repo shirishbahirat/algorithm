@@ -26,13 +26,11 @@ int main(int argc, char const *argv[])
 
   f(100);
   f(111);
-  f(222);
 
   f = obj->test;
 
   f(100);
   f(111);
-  f(222);
 
   return 0;
 }
