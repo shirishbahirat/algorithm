@@ -8,12 +8,19 @@ class Solution
 public:
   Solution() : arr{10, 2, 4, 6, 3, 1}, len(5) {}
 
-  int split(int lo, int hi, int a[]) { return 0; }
-
-  void msort(int lo, int hi)
+  void msort(int a[], int lo, int hi)
   {
 
-    int mid = (hi - lo) / 2;
+    cout << lo << " " << hi << endl;
+
+    if (lo < hi)
+    {
+
+      int mid = lo + ((hi - lo) / 2);
+
+      msort(a, lo, mid);
+      msort(a, mid + 1, hi);
+    }
 
     return;
   }
@@ -26,6 +33,6 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  obj->msort(0, 5);
+  obj->msort(obj->arr, 0, 5);
   return 0;
 }
