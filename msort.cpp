@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  Solution() : arr{14, 20, 78, 98, 20, 45, 67}, len(7) {}
+  Solution() : arr{14, 25, 78, 98, 23, 45, 67} {}
 
   void merge(int a[], int lo, int mid, int hi)
   {
@@ -68,7 +68,6 @@ public:
     return;
   }
 
-  int len;
   int arr[];
 };
 
@@ -76,7 +75,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  obj->msort(obj->arr, 0, 7);
+  obj->msort(obj->arr, 0, 6);
 
   for (int i = 0; i < 7; ++i)
   {
