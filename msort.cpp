@@ -36,10 +36,12 @@ public:
         a[k++] = right[j++];
       }
     }
+
     while (i < s1)
     {
       a[k++] = left[i++];
     }
+
     while (j < s2)
     {
       a[k++] = right[j++];
@@ -58,6 +60,8 @@ public:
 
       msort(a, lo, mid);
       msort(a, mid + 1, hi);
+
+      cout << "merge " << lo << " " << mid << " " << hi << endl;
 
       merge(a, lo, mid, hi);
     }
