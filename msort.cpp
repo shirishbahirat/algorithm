@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  Solution() : arr{10, 2, 4, 6, 3, 1, 7}, len(7) {}
+  Solution() : arr{5, 2, 4, 6, 3, 1, 7}, len(7) {}
 
   void merge(int a[], int lo, int mid, int hi)
   {
@@ -14,8 +14,7 @@ public:
     int s1 = mid - lo + 1;
     int s2 = hi - mid;
 
-    int left[s1];
-    int right[hi - lo];
+    int left[s1], right[s2];
 
     for (int i = 0; i < s1; ++i)
       left[i] = a[lo + i];
