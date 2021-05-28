@@ -6,13 +6,13 @@ using namespace std;
 class Solution
 {
 public:
-  Solution() : arr{10, 2, 4, 6, 3, 1, 7}, len(6) {}
+  Solution() : arr{10, 2, 4, 6, 3, 1, 7}, len(7) {}
 
   void merge(int a[], int lo, int mid, int hi)
   {
 
     int s1 = mid - lo + 1;
-    int s2 = hi - lo;
+    int s2 = hi - mid;
 
     int left[s1];
     int right[hi - lo];
@@ -77,9 +77,9 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  obj->msort(obj->arr, 0, 6);
+  obj->msort(obj->arr, 0, 7);
 
-  for (int i = 0; i < 6; ++i)
+  for (int i = 0; i < 7; ++i)
   {
     cout << obj->arr[i] << " ";
   }
