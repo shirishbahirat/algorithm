@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  Solution() : arr{5, 2, 4, 6, 3, 1, 7}, len(7) {}
+  Solution() : arr{14, 20, 78, 98, 20, 45, 67}, len(7) {}
 
   void merge(int a[], int lo, int mid, int hi)
   {
