@@ -50,7 +50,7 @@ public:
   void msort(int a[], int lo, int hi)
   {
 
-    cout << lo << " " << hi << endl;
+    cout << "msort" << lo << " " << hi << endl;
 
     if (lo < hi)
     {
