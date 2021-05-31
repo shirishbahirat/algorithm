@@ -17,7 +17,11 @@ public:
     int blen = sizeof(b) / sizeof(b[0]);
     int clan = sizeof(c) / sizeof(c[0]);
 
-    return;
+    int i = 0, j = 0;
+
+    while
+
+      return;
   }
 
   int a[4], b[5], c[9];
