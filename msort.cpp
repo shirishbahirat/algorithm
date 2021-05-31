@@ -6,7 +6,18 @@ using namespace std;
 class Solution
 {
 public:
-  Solution() : arr{56, 25, 78, 99, 23, 45, 67, 54} {}
+  Solution() : arr{23, 16, 34, 22, 17, 32, 11, 25} {}
+
+  void prnt(int arr[])
+  {
+    for (int i = 0; i < 8; ++i)
+    {
+      cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return;
+  }
 
   void merge(int a[], int lo, int mid, int hi)
   {
@@ -63,6 +74,8 @@ public:
       cout << "merge " << lo << " " << mid << " " << hi << endl;
 
       merge(a, lo, mid, hi);
+
+      prnt(a);
     }
 
     return;
@@ -77,11 +90,7 @@ int main(int argc, char const *argv[])
 
   obj->msort(obj->arr, 0, 7);
 
-  for (int i = 0; i < 8; ++i)
-  {
-    cout << obj->arr[i] << " ";
-  }
-  cout << endl;
+  obj->prnt(obj->arr);
 
   return 0;
 }
