@@ -15,13 +15,38 @@ public:
 
     int alen = sizeof(a) / sizeof(a[0]);
     int blen = sizeof(b) / sizeof(b[0]);
-    int clan = sizeof(c) / sizeof(c[0]);
+    int clen = sizeof(c) / sizeof(c[0]);
 
-    int i = 0, j = 0;
+    int i = 0, j = 0, k = 0;
 
-    while
+    while ((i < alen) && (j < blen))
+    {
+      if (a[i] <= b[j])
+      {
+        c[k++] = a[i++];
+      }
+      else
+      {
+        c[k++] = b[j++];
+      }
+    }
 
-      return;
+    while (i < alen)
+    {
+      c[k++] = a[i++];
+    }
+
+    while (j < blen)
+    {
+      c[k++] = b[j++];
+    }
+
+    for (int x = 0; x < clen; ++x)
+    {
+      cout << c[x] << " ";
+    }
+    cout << endl;
+    return;
   }
 
   int a[4], b[5], c[9];
