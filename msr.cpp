@@ -8,6 +8,8 @@ class Solution
 public:
   Solution() : arr{6, 5, 4, 1, 2, 8, 3, 9} {}
 
+  void msort(int arr[], int lo, int mid, int hi) { return; }
+
   void merge(int arr[], int lo, int hi)
   {
 
@@ -16,6 +18,7 @@ public:
       int mid = lo + (hi - lo) / 2;
       merge(arr, lo, mid);
       merge(arr, mid + 1, hi);
+      msort(arr, lo, mid, hi);
     }
   }
 
