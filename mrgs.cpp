@@ -31,10 +31,10 @@ void merge(int arr[], int lo, int mid, int hi)
   }
 
   while (i < s1)
-    a[k++] = left[i++];
+    arr[k++] = left[i++];
 
   while (j < s2)
-    a[k++] = right[j++];
+    arr[k++] = right[j++];
 
   return;
 }
@@ -50,6 +50,10 @@ void msort(int arr[], int lo, int hi)
     msort(arr, mid + 1, hi);
   }
 
+  for (int i = 0; i < 7; ++i)
+    cout << arr[i] << " ";
+  cout << endl;
+
   return;
 }
 
@@ -60,6 +64,10 @@ int main(int argc, const char *argv[])
   int hi = (sizeof(arr) / sizeof(arr[0])) - 1;
 
   msort(arr, 0, hi);
+
+  for (int a : arr)
+    cout << a << " ";
+  cout << endl;
 
   return 0;
 }
