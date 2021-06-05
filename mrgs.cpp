@@ -10,6 +10,12 @@ void merge(int arr[], int lo, int mid, int hi)
 
   int left[s1], right[s2];
 
+  for (int i = 0; i < s1; ++i)
+    left[i] = arr[lo + i];
+
+  for (int i = 0; i < s2; ++i)
+    right[i] = arr[mid + 1 + i];
+
   return;
 }
 
