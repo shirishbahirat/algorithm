@@ -2,7 +2,16 @@
 
 using namespace std;
 
-void merge(int arr[], int lo, int mid, int hi) { return; }
+void merge(int arr[], int lo, int mid, int hi)
+{
+
+  int s1 = mid - lo + 1;
+  int s2 = hi - mid;
+
+  int left[s1], right[s2];
+
+  return;
+}
 
 void msort(int arr[], int lo, int hi)
 {
