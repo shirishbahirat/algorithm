@@ -48,11 +48,8 @@ void msort(int arr[], int lo, int hi)
 
     msort(arr, lo, mid);
     msort(arr, mid + 1, hi);
+    merge(arr, lo, mid, hi);
   }
-
-  for (int i = 0; i < 7; ++i)
-    cout << arr[i] << " ";
-  cout << endl;
 
   return;
 }
