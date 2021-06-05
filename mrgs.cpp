@@ -16,6 +16,26 @@ void merge(int arr[], int lo, int mid, int hi)
   for (int i = 0; i < s2; ++i)
     right[i] = arr[mid + 1 + i];
 
+  int i = 0, j = 0, k = lo;
+
+  while ((i < s1) && (j < s2))
+  {
+    if (left[i] < right[j])
+    {
+      arr[k++] = left[i++];
+    }
+    else
+    {
+      arr[k++] = right[j++];
+    }
+  }
+
+  while (i < s1)
+    a[k++] = left[i++];
+
+  while (j < s2)
+    a[k++] = right[j++];
+
   return;
 }
 
