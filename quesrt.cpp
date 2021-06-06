@@ -37,11 +37,12 @@ int partition(int arr[], int lo, int hi)
       }
     }
 
-    if (i > j)
+    if (j > i)
     {
       swap(arr, i, j);
     }
   }
+
   swap(arr, lo, j);
 
   return j;
@@ -62,7 +63,7 @@ void quick_sort(int arr[], int lo, int hi)
 int main(int argc, const char *argv[])
 {
 
-  int arr[] = {9, 12, 23, 4, 2, 18, 23};
+  int arr[] = {9, 12, 21, 4, 2, 18, 23};
   int hi = (sizeof(arr) / sizeof(arr[0])) - 1;
 
   quick_sort(arr, 0, hi);
