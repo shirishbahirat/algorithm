@@ -59,8 +59,8 @@ int main(int argc, const char *argv[])
 
   qsort(arr, 0, len);
 
-  for (int a : arr)
-    cout << a << " ";
+  for (int b : arr)
+    cout << b << " ";
   cout << endl;
 
   return 0;

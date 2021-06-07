@@ -68,8 +68,8 @@ int main(int argc, const char *argv[])
 
   quick_sort(arr, 0, hi);
 
-  for (int a : arr)
-    cout << a << " ";
+  for (int b : arr)
+    cout << b << " ";
   cout << endl;
 
   return 0;
