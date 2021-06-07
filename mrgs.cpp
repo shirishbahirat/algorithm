@@ -44,7 +44,7 @@ void msort(int arr[], int lo, int hi)
 
   if (hi > lo)
   {
-    int mid = lo + (hi - lo) / 2;
+    int mid = lo + ((hi - lo) / 2);
 
     msort(arr, lo, mid);
     msort(arr, mid + 1, hi);
