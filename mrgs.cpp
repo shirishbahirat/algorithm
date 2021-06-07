@@ -62,8 +62,8 @@ int main(int argc, const char *argv[])
 
   msort(arr, 0, hi);
 
-  for (int b : arr)
-    cout << b << " ";
+  for (int c : arr)
+    cout << c << " ";
   cout << endl;
 
   return 0;
