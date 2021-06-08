@@ -34,6 +34,22 @@ void trickle_down(int arr[], int position, int length)
   int right = 2 * position + 2;
 
   int largest = position;
+
+  if (left < length && arr[left] > arr[position])
+  {
+    largest = left;
+  }
+
+  if (right < length && arr[right] > arr[largest])
+  {
+    largest = right;
+  }
+
+  if (largest != position)
+  {
+    swap(arr, position, largest);
+    trickle_down(arr, largest, length);
+  }
 }
 
 int main(int argc, const char *argv[])
