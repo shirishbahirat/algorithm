@@ -27,6 +27,15 @@ void trickle_up(int arr[], int position)
   }
 }
 
+void trickle_down(int arr[], int position, int length)
+{
+
+  int left = 2 * position + 1;
+  int right = 2 * position + 2;
+
+  int largest = position;
+}
+
 int main(int argc, const char *argv[])
 {
 
