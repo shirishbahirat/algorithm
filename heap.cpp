@@ -25,6 +25,8 @@ void trickle_up(int arr[], int position)
     swap(arr, position, parent);
     trickle_up(arr, parent);
   }
+
+  return;
 }
 
 void trickle_down(int arr[], int position, int length)
