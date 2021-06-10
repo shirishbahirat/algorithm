@@ -54,12 +54,24 @@ void trickle_down(int arr[], int position, int length)
   }
 }
 
+void heapify(int arr[], int len)
+{
+  int parent = (len - 1) / 2;
+
+  for (int i = parent; i >= 0; --i)
+  {
+    trickle_down(arr, i, len);
+  }
+}
+
 int main(int argc, const char *argv[])
 {
 
   int arr[] = {4, 2, 3, 6};
 
   trickle_up(arr, 3);
+
+  heapify(arr, 3);
 
   for (int a : arr)
     cout << a << " ";
