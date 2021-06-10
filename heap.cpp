@@ -62,6 +62,12 @@ void heapify(int arr[], int len)
   {
     trickle_down(arr, i, len);
   }
+
+  for (int i = len; i >= 0; i--)
+  {
+    swap(arr, 0, i);
+    trickle_down(arr, i, 0);
+  }
 }
 
 int main(int argc, const char *argv[])
