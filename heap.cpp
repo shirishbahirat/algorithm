@@ -77,7 +77,7 @@ int main(int argc, const char *argv[])
 
   int arr[] = {4, 2, 3, 6};
 
-  trickle_up(arr, 3);
+  // trickle_up(arr, 3);
 
   heapify(arr, 3);
 
