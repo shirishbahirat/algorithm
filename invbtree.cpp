@@ -27,9 +27,10 @@ void print(node *head)
   if (head == nullptr)
     return;
 
+  print(head->left);
+
   cout << head->data << " ";
 
-  print(head->left);
   print(head->right);
 }
 
