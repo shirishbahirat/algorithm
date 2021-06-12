@@ -22,6 +22,17 @@ bool isbalanced(node *head)
   return isbalanced(head->left) && isbalanced(head->right);
 }
 
+void print(node *head)
+{
+  if (head == nullptr)
+    return;
+
+  cout << head->data << " ";
+
+  print(head->left);
+  print(head->right);
+}
+
 int main(int argc, const char *argv[])
 {
 
@@ -45,6 +56,10 @@ int main(int argc, const char *argv[])
   n->right->right = m;
 
   cout << isbalanced(n) << endl;
+
+  print(n);
+
+  cout << endl;
 
   return 0;
 }
