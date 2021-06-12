@@ -32,6 +32,12 @@ int main(int argc, const char *argv[])
   n->left = a;
   n->right = b;
 
+  node *x = new node(9);
+  node *y = new node(9);
+
+  n->left->left = x;
+  n->left->right = y;
+
   cout << isbalanced(n) << endl;
 
   return 0;
