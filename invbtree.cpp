@@ -11,6 +11,17 @@ struct node
   node(int d) : data(d), left(nullptr), right(nullptr) {}
 };
 
+bool isbalanced(node *head)
+{
+  if ((head->left == nullptr) && (head->right == nullptr))
+    return true;
+
+  if ((head->left == nullptr) || (head->right == nullptr))
+    return false;
+
+  return isbalanced(head->left) && isbalanced(head->right);
+}
+
 int main(int argc, const char *argv[])
 {
 
@@ -20,6 +31,8 @@ int main(int argc, const char *argv[])
 
   n->left = a;
   n->right = b;
+
+  cout << isbalanced(n) << endl;
 
   return 0;
 }
