@@ -33,6 +33,23 @@ void print(node *head)
   print(head->right);
 }
 
+void invert(struct node *head)
+{
+  if (head == nullptr)
+    return;
+  else
+  {
+    struct node *temp;
+
+    invert(head->left);
+    invert(head->right);
+
+    temp = head->left;
+    head->left = head->right;
+    head->right = temp;
+  }
+}
+
 int main(int argc, const char *argv[])
 {
 
