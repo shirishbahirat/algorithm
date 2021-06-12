@@ -78,5 +78,10 @@ int main(int argc, const char *argv[])
 
   cout << endl;
 
+  invert(n);
+  print(n);
+
+  cout << endl;
+
   return 0;
 }
