@@ -37,7 +37,7 @@ void trickle_down(int arr[], int position, int length)
 
   int largest = position;
 
-  if (left < length && arr[left] > arr[position])
+  if (left < length && arr[left] > arr[largest])
   {
     largest = left;
   }
