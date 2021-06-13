@@ -75,11 +75,12 @@ void heapify(int arr[], int len)
 int main(int argc, const char *argv[])
 {
 
-  int arr[] = {4, 2, 3, 6};
+  int arr[] = {1, 12, 9, 5, 6, 10};
+  int len = sizeof(arr) / sizeof(arr[0]);
 
-  // trickle_up(arr, 3);
+  trickle_up(arr, 3);
 
-  heapify(arr, 4);
+  heapify(arr, len);
 
   for (int a : arr)
     cout << a << " ";
