@@ -66,7 +66,7 @@ void heapify(int arr[], int len)
   for (int i = len - 1; i >= 0; i--)
   {
     swap(arr, 0, i);
-    trickle_down(arr, i, 0);
+    trickle_down(arr, 0, i);
   }
 
   return;
