@@ -11,32 +11,23 @@ public:
 
     sort(people.begin(), people.end());
     int start = 0;
-    int end = people.size();
+    int end = people.size() - 1;
     int boats = 0;
 
     while (start < end)
     {
-      if (people[start] == limit)
+      if (start == end)
       {
         boats++;
+        break;
+      }
+      if (people[start] + people[end] <= limit)
+      {
         start++;
       }
-      else if (people[end] == limit)
-      {
-        boats++;
-        end--;
-      }
-      else if (people[start] + people[end] <= limit)
-      {
-        boats++;
-        start++;
-        end--;
-      }
-      else if (start <= end)
-      {
-        boats++;
-        start++;
-      }
+
+      boats++;
+      end--;
     }
 
     return boats;
