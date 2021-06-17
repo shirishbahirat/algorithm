@@ -8,9 +8,13 @@ class Solution
 public:
   bool validMountainArray(vector<int> &arr)
   {
+
+    if (arr.size() < 3)
+      return false;
+
     int i = 1;
 
-    while ((arr[i] > arr[i - 1]) && (i < arr.size()))
+    while ((i < arr.size()) && (arr[i] > arr[i - 1]))
     {
       i++;
     }
@@ -18,7 +22,7 @@ public:
     if ((i == 1) || (i == arr.size()))
       return false;
 
-    while ((arr[i] < arr[i - 1]) && (i < arr.size()))
+    while ((i < arr.size()) && (arr[i] < arr[i - 1]))
     {
       i++;
     }
