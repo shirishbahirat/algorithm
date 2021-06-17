@@ -15,16 +15,22 @@ public:
     int end = people.size();
     int boats = 0;
 
-    while (start == end)
+    while (start <= end)
     {
-      if (start == limit)
+      if (people[start] == limit)
       {
         boats++;
         start++;
       }
-      if (end == limit)
+      else if (people[end] == limit)
       {
         boats++;
+        end--;
+      }
+      else if (people[start] + people[end] <= limit)
+      {
+        boats++;
+        start++;
         end--;
       }
     }
