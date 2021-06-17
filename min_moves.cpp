@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -15,7 +14,7 @@ public:
     int end = people.size();
     int boats = 0;
 
-    while (start <= end)
+    while (start < end)
     {
       if (people[start] == limit)
       {
@@ -33,6 +32,11 @@ public:
         start++;
         end--;
       }
+      else if (start <= end)
+      {
+        boats++;
+        start++;
+      }
     }
 
     return boats;
@@ -42,5 +46,11 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  vector<int> people = {1, 2};
+  int limit = 3;
+
+  cout << obj->numRescueBoats(people, limit) << endl;
+
   return 0;
 }
