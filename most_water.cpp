@@ -27,7 +27,7 @@ public:
         length = height[idy];
       }
 
-      int area = length * width;
+      int area = (int)(length * width);
 
       if (area > max_area)
       {
