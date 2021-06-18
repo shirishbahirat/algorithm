@@ -10,11 +10,10 @@ public:
   {
 
     int idx = 0;
-    int idy = height.size();
+    int idy = height.size() - 1;
     int max_area = 0;
-    bool flag = false;
 
-    while (idx < idy)
+    while (idx <= idy)
     {
       int width = (idy - idx);
       int length = 0;
@@ -27,21 +26,20 @@ public:
         length = height[idy];
       }
 
-      int area = (int)(length * width);
+      int area = length * width;
 
       if (area > max_area)
       {
         max_area = area;
       }
-      if (flag == false)
+
+      if (height[idx] < height[idy])
       {
         idx++;
-        flag = true;
       }
       else
       {
         idy--;
-        flag = false;
       }
     }
 
@@ -53,7 +51,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  vector<int> height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+  vector<int> height = {2, 3, 10, 5, 7, 8, 9};
 
   cout << "Max area " << obj->maxArea(height) << endl;
 
