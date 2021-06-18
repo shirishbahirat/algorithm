@@ -10,7 +10,9 @@ public:
   {
 
     if (arr.size() < 3)
+    {
       return false;
+    }
 
     int i = 1;
 
