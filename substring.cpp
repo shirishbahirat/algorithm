@@ -21,13 +21,16 @@ public:
     while (left < length && right < length)
     {
 
-      if (track.find(s[right]) != track.end())
+      char el = s[right];
+
+      if (track.find(el) != track.end())
       {
-        if (left < track[s[right]] + 1)
-          left = track[s[left]] + 1;
+        if (left < track[el] + 1)
+          left = track[el] + 1;
       }
 
-      track[s[right]] = right;
+      track[el] = right;
+
       right++;
 
       if ((right - left) > sub_length)
