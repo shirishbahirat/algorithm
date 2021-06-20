@@ -47,6 +47,6 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  cout << obj->countPrimes(10) << endl;
+  cout << obj->countPrimes(25) << endl;
   return 0;
 }
