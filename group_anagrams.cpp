@@ -17,7 +17,6 @@ public:
     for (int i = 0; i < strs.size(); i++)
     {
       sort(temp[i].begin(), temp[i].end());
-      cout << temp[i] << endl;
       groups[temp[i]].push_back(i);
     }
 
@@ -26,16 +25,12 @@ public:
     for (const auto &[key, value] : groups)
     {
       vector<int> grp = groups[key];
-
-      cout << key << endl;
-
       ans.push_back({});
 
       for (int i = 0; i < grp.size(); i++)
       {
         ans[idx].push_back(strs[grp[i]]);
       }
-
       idx++;
     }
 
