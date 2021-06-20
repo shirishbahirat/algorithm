@@ -13,14 +13,13 @@ public:
     vector<vector<string>> ans;
     vector<string> temp = strs;
     map<string, vector<int>> groups;
+    int idx = 0;
 
     for (int i = 0; i < strs.size(); i++)
     {
       sort(temp[i].begin(), temp[i].end());
       groups[temp[i]].push_back(i);
     }
-
-    int idx = 0;
 
     for (const auto &[key, value] : groups)
     {
