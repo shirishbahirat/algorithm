@@ -19,27 +19,28 @@ public:
   {
     int val = 1;
 
-    ListNode *temp = nullptr;
-    ListNode *list = head;
+    ListNode *main_pointer = head;
+    ListNode *following_pointer = head;
 
-    while (head)
+    while (main_pointer)
     {
       val++;
 
-      if (val == n)
-      {
-        temp = head;
-      }
-
-      head = head->next;
+      main_pointer = main_pointer->next;
 
       if (val > n)
       {
-        temp = temp->next;
+        following_pointer = following_pointer->next;
       }
     }
 
-    return list;
+    ListNode *temp = following_pointer->next;
+
+    following_pointer->next = following_pointer->next->next;
+
+    delete temp;
+
+    return head;
   }
 };
 
