@@ -21,5 +21,10 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  ListNode *head = new ListNode(2);
+
+  obj->oddEvenList(head);
+
   return 0;
 }
