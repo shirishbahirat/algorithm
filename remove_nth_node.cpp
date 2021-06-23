@@ -17,37 +17,15 @@ class Solution
 public:
   ListNode *removeNthFromEnd(ListNode *head, int n)
   {
-    int val = 0;
-    int nodes = 0;
 
-    ListNode *main_pointer = head;
-    ListNode *following_pointer = head;
-
-    while (main_pointer->next)
-    {
-      val++;
-      nodes++;
-
-      main_pointer = main_pointer->next;
-
-      if (val > n)
-      {
-        following_pointer = following_pointer->next;
-      }
-    }
-
-    if (nodes == 0 and n == 1)
-      return nullptr;
-
-    if (val)
-    {
-      ListNode *temp = following_pointer->next;
-
-      following_pointer->next = following_pointer->next->next;
-
-      delete temp;
-    }
-
+    ListNode *fast = head, *slow = head;
+    for (int i = 0; i < n; i++)
+      fast = fast->next;
+    if (!fast)
+      return head->next;
+    while (fast->next)
+      fast = fast->next, slow = slow->next;
+    slow->next = slow->next->next;
     return head;
   }
 };
