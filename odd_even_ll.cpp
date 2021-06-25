@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  ListNode *head = new ListNode(1000);
+  ListNode *head = new ListNode(101);
 
   obj->oddEvenList(head);
 
