@@ -31,6 +31,29 @@ void print(int arr[], int len)
   cout << endl;
 }
 
+int partition(int arr[], int lo, int hi)
+{
+
+  int pivot = arr[lo];
+  int idx = lo;
+  int idy = hi;
+
+  return mid;
+}
+
+void quick_sort(int arr[], int lo, int hi)
+{
+
+  if (hi > lo)
+  {
+    int mid = partition(arr, lo, hi);
+    quick_sort(arr, lo, mid);
+    quick_sort(arr, mid + 1, hi);
+  }
+
+  return;
+}
+
 void bubble_sort(int arr[], int len)
 {
 
