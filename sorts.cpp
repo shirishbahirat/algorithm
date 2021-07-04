@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int len = 10;
+int len = 9;
 int aarr[] = {10, 9, 8, 3, 6, 5, 4, 7, 2, 1};
 
 void swap(int arr[], int x, int y, int len)
