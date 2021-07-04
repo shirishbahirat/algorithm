@@ -31,9 +31,36 @@ void print(int arr[], int len)
   cout << endl;
 }
 
+void bubble_sort(int arr[], int len)
+{
+
+  if (len == 0)
+    return;
+
+  bool swapped = false;
+
+  for (int j = 0; j < len; j++)
+  {
+    swapped = false;
+    for (int i = 0; i <= len; i++)
+    {
+      if (arr[i] > arr[i + 1])
+      {
+        swap(arr, i, i + 1, len);
+        swapped = true;
+      }
+    }
+    if (swapped == false)
+      return;
+  }
+
+  return;
+}
+
 int main(int argc, char const *argv[])
 {
 
+  bubble_sort(aarr, len);
   print(aarr, len);
 
   return 0;
