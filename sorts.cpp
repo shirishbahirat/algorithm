@@ -31,4 +31,10 @@ void print(int arr[], int len)
   cout << endl;
 }
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  print(aarr, len);
+
+  return 0;
+}
