@@ -31,24 +31,36 @@ void print(int arr[], int len)
   cout << endl;
 }
 
-int partition(int arr[], int lo, int hi)
+int partition(int arr[], int lo, int hi, int len)
 {
 
-  int pivot = arr[lo];
-  int idx = lo;
-  int idy = hi;
+  int pivot = lo, idx = lo, idy = hi;
 
-  return mid;
+  while (idy > idx)
+  {
+    while (arr[idx] <= arr[pivot] && idx < hi)
+      idx++;
+
+    while (arr[idy] > arr[pivot] && idy > lo)
+      idy--;
+
+    if (idy > idx)
+      swap(arr, idx, idy, len);
+  }
+
+  swap(arr, pivot, idy, len);
+
+  return idy;
 }
 
-void quick_sort(int arr[], int lo, int hi)
+void quick_sort(int arr[], int lo, int hi, int len)
 {
 
   if (hi > lo)
   {
-    int mid = partition(arr, lo, hi);
-    quick_sort(arr, lo, mid);
-    quick_sort(arr, mid + 1, hi);
+    int mid = partition(arr, lo, hi, len);
+    quick_sort(arr, lo, mid, len);
+    quick_sort(arr, mid + 1, hi, len);
   }
 
   return;
@@ -83,7 +95,8 @@ void bubble_sort(int arr[], int len)
 int main(int argc, char const *argv[])
 {
 
-  bubble_sort(aarr, len);
+  // bubble_sort(aarr, len);
+  quick_sort(aarr, 0, len, len);
   print(aarr, len);
 
   return 0;
