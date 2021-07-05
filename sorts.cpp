@@ -95,7 +95,7 @@ void bubble_sort(int arr[], int len)
 int main(int argc, char const *argv[])
 {
 
-  // bubble_sort(aarr, len);
+  bubble_sort(aarr, len);
   quick_sort(aarr, 0, len, len);
   print(aarr, len);
 
