@@ -92,14 +92,26 @@ void bubble_sort(int arr[], int len)
   return;
 }
 
-void merge_sort(int arr[], int len) { return; }
+void merge(int arr[], int lo, int mid, int hi) { return; }
+
+void merge_sort(int arr[], int lo, int hi)
+{
+
+  int mid = lo + ((hi - lo) / 2);
+
+  merge_sort(arr, lo, mid);
+  merge_sort(arr, mid + 1, hi);
+  merge(arr, lo, mid, hi);
+
+  return;
+}
 
 int main(int argc, char const *argv[])
 {
 
   // bubble_sort(aarr, len);
   // quick_sort(aarr, 0, len, len);
-  merge_sort(aarr, len);
+  merge_sort(aarr, 0, len);
   print(aarr, len);
 
   return 0;
