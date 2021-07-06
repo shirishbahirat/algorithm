@@ -92,7 +92,17 @@ void bubble_sort(int arr[], int len)
   return;
 }
 
-void merge(int arr[], int lo, int mid, int hi) { return; }
+void merge(int arr[], int lo, int mid, int hi)
+{
+
+  int lena = mid - lo;
+  int lenb = hi - mid + 1;
+
+  int tempa[lena];
+  int tempb[lenb];
+
+  return;
+}
 
 void merge_sort(int arr[], int lo, int hi)
 {
