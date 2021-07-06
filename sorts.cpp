@@ -95,11 +95,15 @@ void bubble_sort(int arr[], int len)
 void merge(int arr[], int lo, int mid, int hi)
 {
 
-  int lena = mid - lo;
-  int lenb = hi - mid + 1;
+  int lena = mid - lo + 1, lenb = hi - mid;
 
-  int tempa[lena];
-  int tempb[lenb];
+  int left[lena], right[lenb];
+
+  for (int i = 0; i < lena; i++)
+    left[i] = arr[lo + i];
+
+  for (int i = 0; i < lenb; i++)
+    right[i] = arr[mid + i + 1];
 
   return;
 }
