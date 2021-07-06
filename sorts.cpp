@@ -111,22 +111,22 @@ void merge(int arr[], int lo, int mid, int hi)
   {
     if (left[i] <= right[j])
     {
-      a[k++] = left[i++];
+      arr[k++] = left[i++];
     }
     else
     {
-      a[k++] = right[j++];
+      arr[k++] = right[j++];
     }
   }
 
   while (i < lena)
   {
-    a[k++] = left[i++];
+    arr[k++] = left[i++];
   }
 
   while (j < lenb)
   {
-    a[k++] = right[j++];
+    arr[k++] = right[j++];
   }
 
   return;
