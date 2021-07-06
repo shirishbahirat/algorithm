@@ -105,6 +105,30 @@ void merge(int arr[], int lo, int mid, int hi)
   for (int i = 0; i < lenb; i++)
     right[i] = arr[mid + i + 1];
 
+  int i = 0, j = 0, k = lo;
+
+  while (i < lena && j < lenb)
+  {
+    if (left[i] <= right[j])
+    {
+      a[k++] = left[i++];
+    }
+    else
+    {
+      a[k++] = right[j++];
+    }
+  }
+
+  while (i < lena)
+  {
+    a[k++] = left[i++];
+  }
+
+  while (j < lenb)
+  {
+    a[k++] = right[j++];
+  }
+
   return;
 }
 
