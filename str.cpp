@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
       .data = 2000,
       .manager = {40, 50},
       .idx = 1111,
-      .count = 1,
+      .count = 10,
   };
 
   cout << nd.manager[0] << " " << nd.manager[1] << endl;
