@@ -10,6 +10,16 @@ struct node
   int count;
 };
 
+void configure(node n)
+{
+
+  cout << n.manager[0] << " " << n.manager[1] << endl;
+  cout << n.idx << " " << n.data << endl;
+  cout << n.count << endl;
+
+  return;
+};
+
 int main(int argc, char const *argv[])
 {
 
