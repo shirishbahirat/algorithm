@@ -13,9 +13,9 @@ int main(int argc, char const *argv[])
 {
 
   node nd = {
-      .data = 1000,
-      .manager = {4, 5},
-      .idx = 10,
+      .data = 2000,
+      .manager = {40, 50},
+      .idx = 1111,
   };
 
   cout << nd.manager[0] << " " << nd.manager[1] << endl;
