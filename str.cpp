@@ -30,12 +30,7 @@ int main(int argc, char const *argv[])
       .count = 10,
   };
 
-  node nx = {
-      .data = 2000,
-      .manager = {40, 50},
-      .idx = 1000,
-      .count = 10,
-  };
+  node *nx = &nd;
 
   cout << nd.manager[0] << " " << nd.manager[1] << endl;
   cout << nd.idx << " " << nd.data << endl;
