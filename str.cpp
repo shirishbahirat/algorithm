@@ -34,5 +34,12 @@ int main(int argc, char const *argv[])
   cout << nd.idx << " " << nd.data << endl;
   cout << nd.count << endl;
 
+  configure({
+      .data = 2000,
+      .manager = {40, 50},
+      .idx = 1111,
+      .count = 10,
+  });
+
   return 0;
 }
