@@ -26,7 +26,14 @@ int main(int argc, char const *argv[])
   node nd = {
       .data = 2000,
       .manager = {40, 50},
-      .idx = 1111,
+      .idx = 1000,
+      .count = 10,
+  };
+
+  node nx = {
+      .data = 2000,
+      .manager = {40, 50},
+      .idx = 1000,
       .count = 10,
   };
 
@@ -35,10 +42,10 @@ int main(int argc, char const *argv[])
   cout << nd.count << endl;
 
   configure({
-      .data = 2000,
-      .manager = {40, 50},
+      .data = 22222,
+      .manager = {3333, 5555},
       .idx = 1111,
-      .count = 10,
+      .count = 222,
   });
 
   return 0;
