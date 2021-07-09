@@ -10,4 +10,10 @@ void largest(int a)
   return;
 }
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  largest(10);
+
+  return 0;
+}
