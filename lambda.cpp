@@ -18,6 +18,7 @@ int main(int argc, char const *argv[])
   auto p = [w]() { return (w + 20); };
   largest(m(20));
   largest(p());
+  largest([w]() { return (w + 20); });
 
   cout << m(10) << endl;
 
