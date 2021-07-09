@@ -13,7 +13,13 @@ void largest(int a)
 int main(int argc, char const *argv[])
 {
 
-  largest(10);
+  int w = 11;
+  auto m = [](int x) { return x + 20; };
+  auto p = [w]() { return (w + 20); };
+  largest(m(20));
+  largest(p());
+
+  cout << m(10) << endl;
 
   return 0;
 }
