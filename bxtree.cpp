@@ -65,11 +65,11 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  obj->add_node(11);
-  obj->add_node(9);
-  obj->add_node(21);
-  obj->add_node(31);
-  obj->add_node(26);
+  obj->add_node(10);
+  obj->add_node(8);
+  obj->add_node(20);
+  obj->add_node(30);
+  obj->add_node(25);
   cout << obj->b->data << endl;
   cout << obj->b->left->data << endl;
   cout << obj->b->right->data << endl;
