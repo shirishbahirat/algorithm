@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
   largest(m(111));
   largest(p());
 
-  cout << m(111) << endl;
+  cout << m(11) << endl;
 
   return 0;
 }
