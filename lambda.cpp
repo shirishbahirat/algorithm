@@ -19,10 +19,10 @@ int main(int argc, char const *argv[])
 
   void (*f)(int) = [](int i) { std::cout << i; };
 
-  largest(m(1111));
+  largest(m(11111));
   largest(p());
 
-  cout << m(111) << endl;
+  cout << m(1111) << endl;
 
   return 0;
 }
