@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define NAME(nme) MY##name##IS
+#define NAME(nme) "MY##name##IS"
 
 int main(int argc, char const *argv[])
 {
