@@ -2,12 +2,12 @@
 
 using namespace std;
 
-#define COMMAND(NAME) NAME##
+#define glue(x, y) x##y
 
 int main(int argc, char const *argv[])
 {
 
-  cout << COMMAND("shirish") << endl;
+  cout << glue("shirish", "bahirat") << endl;
 
   return 0;
 }
