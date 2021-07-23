@@ -2,12 +2,12 @@
 
 using namespace std;
 
-#define NAME(nme) "MY##name##IS"
+#define GLUER(x, y, z) x##y##z
 
 int main(int argc, char const *argv[])
 {
 
-  cout << NAME("shirish") << endl;
+  cout << NAME("shirish", "d", "bahirat") << endl;
 
   return 0;
 }
