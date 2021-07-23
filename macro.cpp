@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  cout << glue("shirish", "bahirat") << endl;
+  cout << glue(10, 20) << endl;
 
   return 0;
 }
