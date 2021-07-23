@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  cout << NAME("shirish", "d", "bahirat") << endl;
+  cout << GLUER("shirish", "d", "bahirat") << endl;
 
   return 0;
 }
