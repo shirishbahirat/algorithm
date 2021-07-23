@@ -2,12 +2,12 @@
 
 using namespace std;
 
-#define GLUER(x, y, z) x##y##z
+#define COMMAND(NAME) NAME##
 
 int main(int argc, char const *argv[])
 {
 
-  cout << GLUER("shirish", "d", "bahirat") << endl;
+  cout << COMMAND("shirish") << endl;
 
   return 0;
 }
