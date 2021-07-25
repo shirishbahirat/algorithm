@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define glue(x, y) x##y
+#define glue(x, y) x##_y
 
 int main(int argc, char const *argv[])
 {
