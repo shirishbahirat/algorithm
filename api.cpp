@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
   api vm = {.send[0] = &sent};
   vf nc;
 
-  nc.pp.data = 123;
+  nc.pp.data = 11000;
   vm.send[0](100);
   cout << nc.pp.data << " " << nc.ndata << endl;
   nc.ndata = 321;
