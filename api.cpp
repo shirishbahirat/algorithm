@@ -7,9 +7,13 @@ struct vf
 {
   union
   {
-    struct pf
+    struct
     {
       int data;
+    } pp;
+    struct
+    {
+      int ndata;
     };
   };
 };
@@ -34,11 +38,15 @@ int main(int argc, char const *argv[])
 
   vf nc;
 
-  nc.data = 123;
+  nc.pp.data = 123;
 
   vm.send[0](100);
 
-  cout << nc.data << endl;
+  cout << nc.pp.data << " " << nc.ndata << endl;
+
+  nc.ndata = 321;
+
+  cout << nc.pp.data << " " << nc.ndata << endl;
 
   return 0;
 }
