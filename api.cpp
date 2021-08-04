@@ -7,7 +7,7 @@ struct vf
 {
   union
   {
-    struct
+    struct pf
     {
       int data;
     };
