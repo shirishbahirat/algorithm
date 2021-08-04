@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-typedef int (*function)(int);
+typedef int (*funct)(int);
 
 struct api
 {
-  function send;
+  funct send;
 };
 
-int send(int data)
+int sent(int data)
 {
 
   cout << "from api " << data << endl;
@@ -19,8 +19,7 @@ int send(int data)
 int main(int argc, char const *argv[])
 {
 
-  api vm = {.function = send;
-};
+  api vm = {.send = &sent};
 
-return 0;
+  return 0;
 }
