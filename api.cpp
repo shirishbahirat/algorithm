@@ -5,7 +5,7 @@ typedef int (*funct)(int);
 
 struct api
 {
-  funct send[];
+  funct send[10];
 };
 
 int sent(int data)
@@ -19,9 +19,9 @@ int sent(int data)
 int main(int argc, char const *argv[])
 {
 
-  // api vm = {.send[0] = &sent};
+  api vm = {.send[0] = &sent};
 
-  // vm.send(100);
+  vm.send[0](100);
 
   return 0;
 }
