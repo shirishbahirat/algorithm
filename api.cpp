@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
   nc.pp.data = 11000;
   vm.send[0](100);
   cout << nc.pp.data << " " << nc.ndata << endl;
-  nc.ndata = 3000;
+  nc.ndata = 3100;
   cout << nc.pp.data << " " << nc.ndata << endl;
   return 0;
 }
