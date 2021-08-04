@@ -25,9 +25,7 @@ struct api
 
 int sent(int data)
 {
-
   cout << "from api " << data << endl;
-
   return 0;
 }
 
@@ -35,18 +33,12 @@ int main(int argc, char const *argv[])
 {
 
   api vm = {.send[0] = &sent};
-
   vf nc;
 
   nc.pp.data = 123;
-
   vm.send[0](100);
-
   cout << nc.pp.data << " " << nc.ndata << endl;
-
   nc.ndata = 321;
-
   cout << nc.pp.data << " " << nc.ndata << endl;
-
   return 0;
 }
