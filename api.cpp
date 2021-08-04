@@ -21,5 +21,7 @@ int main(int argc, char const *argv[])
 
   api vm = {.send = &sent};
 
+  vm.send(100);
+
   return 0;
 }
