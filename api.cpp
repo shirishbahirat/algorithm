@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+#define TEST_DEFINE 0
+
 typedef int (*funct)(int);
 
 struct vf
