@@ -43,10 +43,8 @@ int main(int argc, char const *argv[])
   nc.ndata = 3100;
   cout << nc.pp.data << " " << nc.ndata << endl;
 
-  if (TEST_DEFINE)
-  {
-    cout << "test variable" << endl;
-  }
+  if
+    !(TEST_DEFINE) { cout << "test variable" << endl; }
 
   return 0;
 }
