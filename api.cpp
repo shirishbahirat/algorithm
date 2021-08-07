@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define TEST_DEFINE 0
+#define TEST_DEFINE 1
 
 typedef int (*funct)(int);
 
@@ -42,5 +42,11 @@ int main(int argc, char const *argv[])
   cout << nc.pp.data << " " << nc.ndata << endl;
   nc.ndata = 3100;
   cout << nc.pp.data << " " << nc.ndata << endl;
+
+  if (TEST_DEFINE)
+  {
+    cout << "test variable" << endl;
+  }
+
   return 0;
 }
