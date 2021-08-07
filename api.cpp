@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define TEST_DEFINE 2
+#define TEST_DEFINE 1
 
 typedef int (*funct)(int);
 
