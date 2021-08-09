@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
   }
 
 passed:
-  cout << "skipped test variable" << endl;
+  cout << "skipped test variable " << DATA_TYPE_NAME << endl;
 
   return 0;
 }
