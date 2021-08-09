@@ -43,10 +43,18 @@ int main(int argc, char const *argv[])
   nc.ndata = 3100;
   cout << nc.pp.data << " " << nc.ndata << endl;
 
+  if (1)
+  {
+    goto passed;
+  }
+
   if (!!TEST_DEFINE)
   {
     cout << "test variable" << endl;
   }
+
+passed:
+  cout << "skipped test variable" << endl;
 
   return 0;
 }
