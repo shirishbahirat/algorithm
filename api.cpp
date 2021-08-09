@@ -3,6 +3,11 @@ using namespace std;
 
 #define TEST_DEFINE 1
 
+enum
+{
+  DATA_TYPE_NAME = 0x101;
+};
+
 typedef int (*funct)(int);
 
 struct vf
