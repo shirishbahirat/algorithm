@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
   nc.ndata = 3100;
   cout << nc.pp.data << " " << nc.ndata << endl;
 
-  if (1)
+  if (0)
   {
     goto passed;
   }
