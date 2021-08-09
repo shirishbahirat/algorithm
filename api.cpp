@@ -5,7 +5,7 @@ using namespace std;
 
 enum
 {
-  DATA_TYPE_NAME = 0x101;
+  DATA_TYPE_NAME = 0x101
 };
 
 typedef int (*funct)(int);
