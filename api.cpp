@@ -79,6 +79,8 @@ passed:
 
   TEST_FUNCTION(1111111);
 
+  macro = macr;
+
   FUNCTION_MACRO(333);
 
   return 0;
