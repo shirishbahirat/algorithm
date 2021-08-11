@@ -87,5 +87,7 @@ passed:
 
   macro_t macfc = &macr;
 
+  macfc(444);
+
   return 0;
 }
