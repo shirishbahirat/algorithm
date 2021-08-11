@@ -85,7 +85,7 @@ passed:
 
   FUNCTION_MACRO(333);
 
-  macro_t *macfc = &macr;
+  macro_t macfc = &macr;
 
   return 0;
 }
