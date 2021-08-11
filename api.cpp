@@ -7,8 +7,6 @@ int (*macro)(int);
 
 typedef int (*macro_t)(int);
 
-macro_t macfc(int);
-
 #define FUNCTION_MACRO(d) macro(d)
 
 int macr(int data)
@@ -86,6 +84,8 @@ passed:
   macro = macr;
 
   FUNCTION_MACRO(333);
+
+  macro_t *macfc = macr;
 
   return 0;
 }
