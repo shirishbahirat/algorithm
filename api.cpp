@@ -79,5 +79,7 @@ passed:
 
   TEST_FUNCTION(1111111);
 
+  FUNCTION_MACRO(333);
+
   return 0;
 }
