@@ -5,6 +5,10 @@ using namespace std;
 
 int (*macro)(int);
 
+typedef int (*macro_t)(int);
+
+macro_t macfc(int);
+
 #define FUNCTION_MACRO(d) macro(d)
 
 int macr(int data)
