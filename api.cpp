@@ -5,6 +5,12 @@ using namespace std;
 
 typedef int (*macro)(int);
 
+int macr(int data)
+{
+  cout << "mac " << data << endl;
+  return 0;
+}
+
 #define TEST_FUNCTION(data)                                                    \
   do                                                                           \
   {                                                                            \
