@@ -3,6 +3,8 @@ using namespace std;
 
 #define TEST_DEFINE 1
 
+typedef int (*macro) (int)
+
 #define TEST_FUNCTION(data)                                                    \
   do                                                                           \
   {                                                                            \
