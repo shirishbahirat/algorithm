@@ -5,6 +5,8 @@ using namespace std;
 
 typedef int (*macro)(int);
 
+#define FUNCTION_MACRO(d) macro(d)
+
 int macr(int data)
 {
   cout << "mac " << data << endl;
