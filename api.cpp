@@ -79,7 +79,7 @@ passed:
 
   TEST_FUNCTION(1111111);
 
-  macro = &macr;
+  macro macr;
 
   FUNCTION_MACRO(333);
 
