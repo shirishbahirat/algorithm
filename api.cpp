@@ -9,6 +9,8 @@ typedef int (*macro_t)(int);
 
 #define FUNCTION_MACRO(d) macro(d)
 
+int recasted_number 1000;
+
 int macr(int data)
 {
   cout << "mac " << data << endl;
