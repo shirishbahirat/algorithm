@@ -91,7 +91,7 @@ passed:
 
   macfc(444);
 
-  cout << "recasted " << (int long)recasted_number << endl;
+  cout << "recasted " << (uint32_t)(int long)recasted_number << endl;
 
   return 0;
 }
