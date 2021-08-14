@@ -11,7 +11,7 @@ struct test_st
 
 #define ADDM(a, b, c) a##b##c
 
-#define INIT_STRUCTURE(testt)                                                  \
+#define INIT_STRUCTURE(testx)                                                  \
   {                                                                            \
     .dataa = a, .datab = b, .datac = c                                         \
   }
