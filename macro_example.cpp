@@ -29,5 +29,9 @@ int main(int argc, char const *argv[])
   cout << testt.datab << endl;
   cout << testt.datac << endl;
 
+  cout << testx.dataa << endl;
+  cout << testx.datab << endl;
+  cout << testx.datac << endl;
+
   return 0;
 }
