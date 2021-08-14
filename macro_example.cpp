@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  cout << ADDM(10, 11, 12) << endl;
+  cout << ADDM(, 11, 12) << endl;
 
   return 0;
 }
