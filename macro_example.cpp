@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  cout << ADD("a", "b", "c") << endl;
+  cout << ADD('a', 'b', 'c') << endl;
 
   return 0;
 }
