@@ -21,6 +21,8 @@ int main(int argc, char const *argv[])
   ADDK(100, 200, 300);
 
   cout << testt.dataa << endl;
+  cout << testt.datab << endl;
+  cout << testt.datac << endl;
 
   return 0;
 }
