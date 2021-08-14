@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define ADD(a, b, c) a##b##c;
+#define ADD(a, b, c) a##b##c
 
 int main(int argc, char const *argv[])
 {
