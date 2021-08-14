@@ -11,13 +11,11 @@ struct test_st
 
 #define ADDM(a, b, c) a##b##c
 
-#define INIT_STRUCTURE(testx)                                                  \
-  {                                                                            \
-    .dataa = a, .datab = b, .datac = c                                         \
-  }
+#define INIT_STRUCTURE(test_st, a, b, c)                                       \
+  test_st testx { .dataa = a, .datab = b, .datac = c }
 
 #define ADDK(a, b, c) test_st testt = {.dataa = a, .datab = b, .datac = c}
-#define ADDX(a, b, c) test_st INIT_STRUCTURE(testx, a, b, c)
+#define ADDX(a, b, c) INIT_STRUCTURE(test_st, a, b, c)
 
 int main(int argc, char const *argv[])
 {
