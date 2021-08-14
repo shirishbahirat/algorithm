@@ -25,7 +25,7 @@ int macr(int data)
 
 enum
 {
-  DATA_TYPE_NAME = 0x101
+  DATA_TYPE_NAME = 0x10101
 };
 
 typedef int (*funct)(int);
