@@ -17,7 +17,7 @@ struct test_st
   }
 
 #define ADDK(a, b, c) test_st testt = {.dataa = a, .datab = b, .datac = c}
-#define ADDX(a, b, c) test_st testt = INIT_STRUCTURE(testt, a, b, c)
+#define ADDX(a, b, c) test_st testx = INIT_STRUCTURE(testx, a, b, c)
 
 int main(int argc, char const *argv[])
 {
