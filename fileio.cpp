@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
   }
 
   fp = fopen("test_textfile.txt", "a");
-  char str[20] = "Hello Again.";
+  char str[20] = "Hello Again\n";
   if (fp)
   {
     putc('\n', fp);
