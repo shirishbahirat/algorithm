@@ -20,7 +20,7 @@ struct test_st
 int main(int argc, char const *argv[])
 {
 
-  cout << ADDM(, , 12) << endl;
+  cout << ADDM(, , 120) << endl;
 
   ADDK(1000, 2000, 3000);
   ADDX(1111, 2222, 3333);
