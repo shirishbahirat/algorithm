@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
   cout << ADDM(, , 12) << endl;
 
   ADDK(1000, 2000, 3000);
-  ADDX(111, 222, 333);
+  ADDX(1111, 2222, 3333);
 
   cout << testt.dataa << endl;
   cout << testt.datab << endl;
