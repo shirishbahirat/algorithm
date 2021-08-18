@@ -55,7 +55,7 @@ int virtualNIC_init_module(void)
   return 0;
 }
 
-virtualNIC = alloc_netdev(0, "virtnC%d", NET_NAME_UNKNOWN, virtual_setup);
+/// virtualNIC = alloc_netdev(0, "virtnC%d", NET_NAME_UNKNOWN, virtual_setup);
 
 void virtualNIC_cleanup(void)
 {
