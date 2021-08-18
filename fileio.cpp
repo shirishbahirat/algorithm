@@ -4,16 +4,14 @@
 int main(int argc, char const *argv[])
 {
 
-  FILE *fid = fopen("test_textfile.txt", "r");
-
-  double trainsample;
-  if (fid)
+  int c;
+  FILE *fp;
+  fp = fopen("test_textfile.txt", "r");
+  if (fp)
   {
-    while (!feof(fid))
-    {
-      fscanf(fid, "%lf", &trainsample);
-      printf("%lf\n", trainsample);
-    }
+    while ((c = getc(fp)) != EOF)
+      putchar(c);
+    fclose(fp);
   }
 
   return 0;
