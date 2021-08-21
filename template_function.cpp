@@ -6,6 +6,6 @@ int main()
 {
   cout << maxim(15, 14) << endl;
   cout << maxim(2.4, 1.4) << endl;
-  cout << maxim(2.3f, 5.6f) << endl;
+  cout << maxim(2.3f, 4.6f) << endl;
   return 0;
 }
