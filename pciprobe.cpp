@@ -21,8 +21,8 @@
 //	revised on: 15 APR 2009 -- to display each PCI Class Name
 //-------------------------------------------------------------------
 
-#include "io.h"     // for iopl(), in(), out()
 #include <stdio.h>  // for printf(), perror()
+#include <sys/io.h> // for iopl(), in(), out()
 #include <unistd.h> // for gethostname()
 
 #define CONFADD 0x0CF8
