@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
   f = test;
 
   f(101);
-  f(1111);
+  f(111);
   f(222);
 
   f = obj->test;
