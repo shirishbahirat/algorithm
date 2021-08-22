@@ -24,8 +24,8 @@ int main(int argc, char const *argv[])
   Solution *obj = new Solution();
   f = test;
 
-  f(100);
-  f(111);
+  f(101);
+  f(1111);
   f(222);
 
   f = obj->test;
