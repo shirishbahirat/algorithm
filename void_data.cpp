@@ -11,7 +11,7 @@ struct node
 int add_node(void *data)
 {
 
-  node *n = data;
+  node *n = (node *)data;
 
   return 0;
 }
