@@ -22,7 +22,7 @@ int add_node(void *data)
 int main(int argc, char const *argv[])
 {
 
-  node *n1 = new node(10);
+  node *n1 = new node(1000);
 
   add_node((void *)n1);
 
