@@ -10,4 +10,10 @@ struct node
 
 int add_node(void *data) { return 0; }
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  node *n1 = new node(10);
+
+  return 0;
+}
