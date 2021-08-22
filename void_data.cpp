@@ -15,5 +15,7 @@ int main(int argc, char const *argv[])
 
   node *n1 = new node(10);
 
+  add_node((void *)n1);
+
   return 0;
 }
