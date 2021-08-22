@@ -4,6 +4,8 @@ struct node
 {
   int data;
   node *next;
+
+  node(int d) : data(d), next(NULL) {}
 };
 
 int add_node(void *data) { return 0; }
