@@ -13,6 +13,8 @@ int add_node(void *data)
 
   node *n = (node *)data;
 
+  cout << n->data << endl;
+
   return 0;
 }
 
