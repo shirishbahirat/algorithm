@@ -5,7 +5,7 @@ static const int a15irqmap[] = {
     [VIRT_MMIO] = 16,          /* ...to 16 + NUM_VIRTIO_TRANSPORTS - 1 */
     [VIRT_GIC_V2M] = 48,       /* ...to 48 + NUM_GICV2M_SPIS - 1 */
     [VIRT_PLATFORM_BUS] = 112, /* ...to 112 + PLATFORM_BUS_NUM_IRQS -1 */
-    +[VIRT_FOO] = 176,
+    [VIRT_FOO] = 176,
 };
 
 struct node
