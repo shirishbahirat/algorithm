@@ -28,5 +28,12 @@ int main(int argc, char const *argv[])
 
   add_node((void *)n1);
 
+  for (int i = 0; i < 6; ++i)
+  {
+    cout << a[i] << " ";
+  }
+
+  cout << endl;
+
   return 0;
 }
