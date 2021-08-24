@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int arr[] = {[10] = 10, [3] = 3}
+int arr[] = {[10] = 10, [3] = 3};
 
 int main(int argc, const char *argv[])
 {
