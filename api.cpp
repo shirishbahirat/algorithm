@@ -52,7 +52,7 @@ struct api
 
 int sent(int data)
 {
-  cout << "from apis " << data << endl;
+  cout << "from api " << data << endl;
   return 0;
 }
 
