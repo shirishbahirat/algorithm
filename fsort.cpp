@@ -36,7 +36,7 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
-  vector<int> nums = {4, 4, 1, 5, 5, 10};
+  vector<int> nums = {4, 4, 1, 5, 15, 10};
 
   nums = obj->frequencySort(nums);
 
