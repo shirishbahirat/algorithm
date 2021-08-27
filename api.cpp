@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
 passed:
   cout << "skipped test variable " << DATA_TYPE_NAME << endl;
 
-  TEST_FUNCTION(1111111);
+  TEST_FUNCTION(111111);
 
   macro = macr;
 
