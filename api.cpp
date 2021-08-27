@@ -20,7 +20,7 @@ int macr(int data)
 #define TEST_FUNCTION(data)                                                    \
   do                                                                           \
   {                                                                            \
-    cout << "data from test func " << data << endl;                            \
+    cout << "data from test function " << data << endl;                        \
   } while (0)
 
 enum
