@@ -21,10 +21,11 @@ public:
       {
         space++;
       }
-      if (space == 0)
-      {
-        return s.size();
-      }
+    }
+
+    if (space == 0)
+    {
+      return s.size();
     }
 
     while (n--)
