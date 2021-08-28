@@ -13,8 +13,6 @@ public:
     int last = 0;
     int first = 0;
 
-    cout << n << " " << s[n - 1] << endl;
-
     while (n--)
     {
       if ((last == 0) && (s[n] = !' '))
@@ -37,7 +35,7 @@ int main(int argc, char const *argv[])
 
   string s = "Hello World";
 
-  obj->lengthOfLastWord(s);
+  cout << obj->lengthOfLastWord(s) << endl;
 
   return 0;
 }
