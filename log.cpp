@@ -11,7 +11,7 @@ public:
   vector<string> reorderLogFiles(vector<string> &logs)
   {
     vector<string> output;
-    vector<string> char_loh;
+    vector<string> char_log;
     vector<string> num_log;
 
     for (int i = 0; i < logs.size(); i++)
