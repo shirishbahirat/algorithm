@@ -15,12 +15,12 @@ public:
 
     while (n--)
     {
-      if ((last == 0) && (s[n] = !' '))
+      if ((last == 0) && (s[n] = !''))
       {
         last = n;
         cout << "Last word " << n << endl;
       }
-      else if ((first == 0) && (s[n] == ' '))
+      else if ((first == 0) && (s[n] == ''))
       {
         first = n;
         return (last - first);
