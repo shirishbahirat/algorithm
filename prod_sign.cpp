@@ -6,7 +6,25 @@ using namespace std;
 class Solution
 {
 public:
-  int pivotIndex(vector<int> &nums) { return 0; }
+  int pivotIndex(vector<int> &nums)
+  {
+
+    int result = 1;
+
+    for (int i = 0; i < nums.size(); ++i)
+    {
+      if (nums.at(i) > 0)
+        nums.at(i) = 1;
+      else if (nums.at(i) < 0)
+        nums.at(i) = -1;
+      else if (nums.at(i) == 0)
+        return 0;
+
+      result += nums.at(i);
+    }
+
+    return result;
+  }
 };
 int main(int argc, char const *argv[])
 {
