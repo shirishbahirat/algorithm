@@ -41,6 +41,11 @@ public:
         first = n;
         return (last - first);
       }
+
+      if ((n == 0) && (last != 0))
+      {
+        return last;
+      }
     }
 
     return 0;
