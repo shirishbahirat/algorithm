@@ -23,6 +23,11 @@ int main(int argc, char const *argv[])
   for (int i = 0; i < input.size(); i++)
   {
     cout << input[i] << endl;
+    for (int j = 0; j < input[i].size(); j++)
+    {
+      cout << input[i][j] << " ";
+    }
+    cout << endl;
   }
 
   return 0;
