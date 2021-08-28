@@ -20,7 +20,7 @@ public:
       else if (nums.at(i) == 0)
         return 0;
 
-      result += nums.at(i);
+      result *= nums.at(i);
     }
 
     return result;
