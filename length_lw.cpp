@@ -17,7 +17,7 @@ public:
     for (int i = 0; i < n; ++i)
     {
 
-      if (s[n] == 0x20)
+      if (s[i] == 0x20)
       {
         space++;
       }
