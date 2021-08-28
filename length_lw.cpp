@@ -44,7 +44,7 @@ public:
 
       if ((n == 0) && (last != 0))
       {
-        return last;
+        return last + 1;
       }
     }
 
