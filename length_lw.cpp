@@ -42,7 +42,7 @@ public:
         return (last - first);
       }
 
-      if ((n == 0) && (last != 0))
+      if ((n == 0) && (n != 0x20))
       {
         return last + 1;
       }
