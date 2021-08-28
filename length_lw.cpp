@@ -17,10 +17,10 @@ public:
 
     while (n--)
     {
-      if ((last == 0) && (s[n] = !" "))
+      if ((last == 0) && (s[n] = !' '))
         last = n;
 
-      if ((first == 0) && (s[n] < last) && (s[n] == " "))
+      if ((first == 0) && (s[n] < last) && (s[n] == ' '))
       {
         first = n;
         return (last - first);
