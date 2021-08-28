@@ -13,7 +13,7 @@ public:
     int last = 0;
     int first = 0;
 
-    if (isspace(ch) == 0)
+    if (isspace(s) == 0)
     {
       return s.size();
     }
