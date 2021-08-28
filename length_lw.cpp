@@ -9,7 +9,9 @@ public:
   int lengthOfLastWord(string s)
   {
 
-    cout << s.size() << endl;
+    int n = s.size();
+
+    cout << n << " " << s[n - 2] << endl;
 
     return 0;
   }
