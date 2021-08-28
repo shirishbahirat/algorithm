@@ -18,6 +18,7 @@ public:
       if ((last == 0) && (s[n] = !' '))
       {
         last = n;
+        cout << "Last word " << n << endl;
       }
       else if ((first == 0) && (s[n] == ' '))
       {
