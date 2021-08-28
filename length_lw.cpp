@@ -13,6 +13,11 @@ public:
     int last = 0;
     int first = 0;
 
+    if (isspace(ch) == 0)
+    {
+      return s.size();
+    }
+
     while (n--)
     {
       if ((last == 0) && (s[n] != 0x20))
