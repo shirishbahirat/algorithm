@@ -11,7 +11,7 @@ public:
 
     int n = s.size();
 
-    cout << n << " " << s[n - 2] << endl;
+    cout << n << " " << s[n - 1] << endl;
 
     return 0;
   }
