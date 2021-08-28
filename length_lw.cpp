@@ -12,10 +12,11 @@ public:
     int n = s.size();
     int last = 0;
     int first = 0;
+    int space = 0;
 
     for (int i = 0; i < n; ++i)
     {
-      int space = 0;
+
       if (s[n] == 0x20)
       {
         space++;
