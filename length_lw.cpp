@@ -19,7 +19,7 @@ public:
       {
         last = n;
       }
-      else if ((first == 0) && (s[n] < last) && (s[n] == ' '))
+      else if ((first == 0) && (s[n] == ' '))
       {
         first = n;
         return (last - first);
