@@ -38,6 +38,8 @@ public:
       }
     }
 
+    copy(begin(char_log), end(char_log), back_inserter(num_log));
+
     return output;
   }
 };
