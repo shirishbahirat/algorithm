@@ -13,9 +13,17 @@ public:
     int last = 0;
     int first = 0;
 
-    if (isspace(s) == 0)
+    for (int i = 0; i < n;)
     {
-      return s.size();
+      int space = 0;
+      if (isspace(s[n]) == 0)
+      {
+        space++;
+      }
+      if (space == 0)
+      {
+        return s.size();
+      }
     }
 
     while (n--)
