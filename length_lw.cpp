@@ -20,7 +20,8 @@ public:
         last = n;
         cout << "Last word " << n << endl;
       }
-      else if ((first == 0) && (s[n] == 0x20))
+
+      if ((first == 0) && (s[n] == 0x20) && (last != 0))
       {
         first = n;
         return (last - first);
