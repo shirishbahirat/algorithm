@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  int int arraySign(vector<int> &nums)
+  int arraySign(vector<int> &nums)
   {
 
     int result = 1;
