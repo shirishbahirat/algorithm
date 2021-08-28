@@ -11,6 +11,8 @@ public:
   vector<string> reorderLogFiles(vector<string> &logs)
   {
     vector<string> output;
+    vector<string> char_loh;
+    vector<string> num_log;
 
     for (int i = 0; i < logs.size(); i++)
     {
@@ -26,11 +28,13 @@ public:
       {
         cout << buf << " "
              << " num " << endl;
+        num_log.push_back(logs[i]);
       }
       else
       {
         cout << buf << " "
              << " char " << endl;
+        char_log.push_back(logs[i]);
       }
     }
 
