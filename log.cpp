@@ -22,7 +22,16 @@ public:
       ss >> buf;
       ss >> buf;
 
-      cout << buf << endl;
+      if ((buf[0] > 47) && (buf[0] < 58))
+      {
+        cout << buf << " "
+             << " num " << endl;
+      }
+      else
+      {
+        cout << buf << " "
+             << " char " << endl;
+      }
     }
 
     return output;
