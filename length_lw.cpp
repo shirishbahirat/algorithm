@@ -13,7 +13,7 @@ public:
     int last = 0;
     int first = 0;
 
-    for (int i = 0; i < n;)
+    for (int i = 0; i < n; ++i)
     {
       int space = 0;
       if (isspace(s[n]) == 0)
