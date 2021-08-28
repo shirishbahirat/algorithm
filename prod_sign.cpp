@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  int pivotIndex(vector<int> &nums)
+  int int arraySign(vector<int> &nums)
   {
 
     int result = 1;
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 
   vector<int> nums = {-1, -2, -3, -4, 3, 2, -1};
 
-  cout << obj->pivotIndex(nums) << endl;
+  cout << obj->arraySign(nums) << endl;
 
   return 0;
 }
