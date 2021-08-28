@@ -15,5 +15,7 @@ int main(int argc, char const *argv[])
 
   string s = "Hello World";
 
+  obj->lengthOfLastWord(s);
+
   return 0;
 }
