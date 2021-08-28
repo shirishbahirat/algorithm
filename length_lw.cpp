@@ -15,12 +15,12 @@ public:
 
     while (n--)
     {
-      if ((last == 0) && (s[n] = !'\040'))
+      if ((last == 0) && (s[n] != 0x20))
       {
         last = n;
         cout << "Last word " << n << endl;
       }
-      else if ((first == 0) && (s[n] == '\40'))
+      else if ((first == 0) && (s[n] == 0x20))
       {
         first = n;
         return (last - first);
