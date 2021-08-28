@@ -6,7 +6,13 @@ using namespace std;
 class Solution
 {
 public:
-  int lengthOfLastWord(string s) { return 0; }
+  int lengthOfLastWord(string s)
+  {
+
+    cout << s.size() << endl;
+
+    return 0;
+  }
 };
 
 int main(int argc, char const *argv[])
