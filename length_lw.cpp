@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  string s = "Hello World ";
+  string s = "Hello W ";
 
   cout << obj->lengthOfLastWord(s) << endl;
 
