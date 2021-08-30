@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-  int climbStairs(int n) { return 0; }
+  int climbStairs(int n) { return 10; }
 };
 int main(int argc, char const *argv[])
 {
