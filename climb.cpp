@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  cout << obj->climbStairs(3) << endl;
+  cout << obj->climbStairs(0) << endl;
 
   return 0;
 }
