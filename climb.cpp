@@ -16,7 +16,7 @@ public:
     int prev = 2;
     int prev_prev = 1;
 
-    for (int i = 3; i < n; i++)
+    for (int i = 3; i <= n; i++)
     {
       current = prev_prev + prev;
       prev_prev = prev;
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
-  cout << obj->climbStairs(2) << endl;
+  cout << obj->climbStairs(3) << endl;
 
   return 0;
 }
