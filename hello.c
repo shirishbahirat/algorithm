@@ -10,7 +10,7 @@ DEBUG_MSG DATA = "Hello world\n";
 int main(int argc, char **argv)
 {
 
-  printf(DEBUG_MSG "shirish bahirat\n");
+  printf(DEBUG_MSG "test message\n");
 
   return 0;
 }
