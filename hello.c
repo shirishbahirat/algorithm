@@ -5,12 +5,12 @@ typedef char *DEBUG_MSG;
 
 DEBUG_MSG DATA = "Hello world\n";
 
-#define DEBUG_MSG DATA;
+#define DEBUG_MSG "%s",
 
 int main(int argc, char **argv)
 {
 
-  printf("%s", DEBUG_MSG);
+  printf(DEBUG_MSG "shirish bahirat\n");
 
   return 0;
 }
