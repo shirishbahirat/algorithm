@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef char DEBUG_MSG;
+typedef char *DEBUG_MSG;
 
-DEBUG_MSG DATA[] = "Hello world\n";
+DEBUG_MSG DATA = "Hello world\n";
+
+#define DEBUG_MSG DATA;
 
 int main(int argc, char **argv)
 {
 
-  printf("TEST\n");
+  printf("%s", DEBUG_MSG);
 
   return 0;
 }
