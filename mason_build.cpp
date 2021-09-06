@@ -6,7 +6,7 @@ int arr[] = {[9] = 10, [3] = 3};
 
 int main(int argc, const char *argv[])
 {
-  cout << "Hello there" << endl;
+  cout << "Hello test" << endl;
 
   for (int i = 0; i < 10; i++)
   {
