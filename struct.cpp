@@ -3,7 +3,10 @@
 
 using namespace std;
 
-int cmd_handler : 16, header : 16;
+struct S
+{
+  unsigned char b1 : 3, : 2, b2 : 6, b3 : 2;
+};
 
 struct command
 {
