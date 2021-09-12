@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct S
+struct header
 {
   unsigned char b1 : 3, : 2, b2 : 6, b3 : 2;
 };
@@ -42,5 +42,10 @@ int main(int argc, char const *argv[])
   cout << &cmd.transition << endl;
   cout << &cmd.next << endl;
 
+  header scsi;
+
+  scsi.b1 = 2;
+  scsi.b2 = 5;
+  scsi.b3 = 3;
   return 0;
 }
