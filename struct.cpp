@@ -26,11 +26,12 @@ struct command
 int main(int argc, char const *argv[])
 {
 
-  command cmd = {.node = 100;
-  .index = 1;
-  .next = 5;
-  .count = 234;
-};
+  command cmd = {
+      .node = 100,
+      .index = 1,
+      .next = 5,
+      .count = 234,
+  };
 
-return 0;
+  return 0;
 }
