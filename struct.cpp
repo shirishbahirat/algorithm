@@ -47,5 +47,10 @@ int main(int argc, char const *argv[])
   scsi.b1 = 2;
   scsi.b2 = 5;
   scsi.b3 = 3;
+
+  cout << scsi.b1 << endl;
+  cout << scsi.b2 << endl;
+  cout << scsi.b3 << endl;
+
   return 0;
 }
