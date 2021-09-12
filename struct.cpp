@@ -56,5 +56,6 @@ int main(int argc, char const *argv[])
   cout << scsi.b2 << endl;
   cout << scsi.b3 << endl;
 
+  count << pm_fm("hi") << endl;
   return 0;
 }
