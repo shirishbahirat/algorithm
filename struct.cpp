@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
       .count = 234,
   };
 
-  cout << (int)cmd.transition << endl;
+  cout << (int)*&cmd.transition << endl;
 
   return 0;
 }
