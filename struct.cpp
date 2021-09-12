@@ -3,6 +3,10 @@
 
 using namespace std;
 
+#define MODNAME "DEVICE"
+
+#define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
+
 struct header
 {
   unsigned int b1 : 3, : 2, b2 : 6, b3 : 2;
