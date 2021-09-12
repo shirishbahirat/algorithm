@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int cmd_handler : 16, header : 16;
+
 struct command
 {
 
