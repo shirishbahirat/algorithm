@@ -3,16 +3,24 @@
 
 using namespace std;
 
-class Solution
+struct command
 {
-public:
-    int pivotIndex(vector<int> &nums)
-    {
-         return 0;
-    }
+
+  struct
+  {
+    int node;
+    int index;
+  };
+
+  struct
+  {
+  } transition;
+
+  struct
+  {
+    int next;
+    int count;
+  };
 };
-int main(int argc, char const *argv[])
-{
-    Solution *obj = new Solution();
-    return 0;
-  }
+
+int main(int argc, char const *argv[]) { return 0; }
