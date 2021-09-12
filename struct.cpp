@@ -5,7 +5,7 @@ using namespace std;
 
 struct header
 {
-  unsigned char b1 : 3, : 2, b2 : 6, b3 : 2;
+  unsigned int b1 : 3, : 2, b2 : 6, b3 : 2;
 };
 
 struct command
@@ -44,9 +44,9 @@ int main(int argc, char const *argv[])
 
   header scsi;
 
-  scsi.b1 = "2";
-  scsi.b2 = "5";
-  scsi.b3 = "3";
+  scsi.b1 = 2;
+  scsi.b2 = 5;
+  scsi.b3 = 3;
 
   cout << scsi.b1 << endl;
   cout << scsi.b2 << endl;
