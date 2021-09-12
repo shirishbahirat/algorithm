@@ -5,7 +5,7 @@ using namespace std;
 
 #define MODNAME "DEVICE"
 
-#define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
+#define pm_fm(fm) MODNAME ": " fm
 
 struct header
 {
