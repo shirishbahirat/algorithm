@@ -57,5 +57,8 @@ int main(int argc, char const *argv[])
   cout << scsi.b3 << endl;
 
   string mcrp = pm_fm("hi");
+
+  cout << mcrp << endl;
+
   return 0;
 }
