@@ -55,6 +55,8 @@ int main(int argc, char const *argv[])
   scsi.b2 = 5;
   scsi.b3 = 3;
 
+  cout << "size " << sizeof(scsi) << endl;
+
   cout << scsi.b1 << endl;
   cout << scsi.b2 << endl;
   cout << scsi.b3 << endl;
