@@ -9,7 +9,8 @@ using namespace std;
 
 struct header
 {
-  unsigned int b1 : 5, unsigned int : 2, b2 : 6, b3 : 2;
+  unsigned int b1 : 5;
+  unsigned int : 2, b2 : 6, b3 : 2;
 };
 
 struct command
