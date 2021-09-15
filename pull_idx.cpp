@@ -84,6 +84,7 @@ int main(int argc, char const *argv[])
   cout << n->tag << endl;
 
   pifo = remove_node(pifo);
+  cout << pifo->next->next->data << endl;
 
   return 0;
 }
