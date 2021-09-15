@@ -12,6 +12,15 @@ struct node
   node(int d, int t) : data(d), tag(t), next(nullptr) {}
 };
 
-void insert_node() {}
+void insert_node(node **new_node)
+{
+
+  node *n = *new_node;
+
+  if (n == nullptr)
+  {
+    n = new node(10, 11);
+  }
+}
 
 int main(int argc, char const *argv[]) { return 0; }
