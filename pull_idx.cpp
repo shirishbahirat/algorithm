@@ -12,22 +12,18 @@ struct node
   node(int d, int t) : data(d), tag(t), next(nullptr) {}
 };
 
-void insert_node(node **new_node, int data, int tag)
+void insert_node(node **head, int data, int tag)
 {
 
-  if (*new_node == nullptr)
+  if (*head == nullptr)
   {
-    *new_node = new node(data, tag);
+    *head = new node(data, tag);
+    return;
   }
-  else
-  {
-    node *n = *new_node;
-    while (n->next != nullptr)
-    {
-      n = n->next;
-    }
-    n = new node(data, tag);
-  }
+
+  node *temp = *head;
+  *head = new node(data, tag);
+  *head->next = temp;
 
   return;
 }
