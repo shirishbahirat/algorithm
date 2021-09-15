@@ -44,6 +44,8 @@ node *get_node(node *head, int tag)
     cout << temp->data << endl;
   }
 
+  cout << temp->data << endl;
+
   return temp;
 }
 
