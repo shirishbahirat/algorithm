@@ -79,7 +79,7 @@ int main(int argc, char const *argv[])
 
   cout << pifo->next->next->data << endl;
 
-  node *n = get_node(pifo, 14);
+  node *n = get_node(pifo, 11);
 
   cout << n->tag << endl;
 
