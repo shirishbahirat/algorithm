@@ -53,6 +53,11 @@ node *remove_node(node *head)
 {
   node *temp = head;
 
+  while (temp->valid != 0)
+  {
+    temp = temp->next;
+  }
+
   return temp;
 }
 
