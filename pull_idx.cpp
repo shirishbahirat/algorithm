@@ -38,6 +38,7 @@ int main(int argc, char const *argv[])
   node *pifo = nullptr;
 
   insert_node(&pifo, 10, 11);
+  insert_node(&pifo, 11, 12);
 
   cout << pifo->data << endl;
 
