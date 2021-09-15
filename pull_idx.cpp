@@ -12,17 +12,17 @@ struct node
   node(int d, int t) : data(d), tag(t), next(nullptr) {}
 };
 
-void insert_node(node **new_node)
+void insert_node(node **new_node, int data, int tag)
 {
 
   node *n = *new_node;
 
   if (n == nullptr)
   {
-    n = new node(10, 11);
+    *new_node = new node(10, 11);
   }
 
-  cout << n->data << endl;
+  cout << *new_node->data << endl;
 
   return;
 }
