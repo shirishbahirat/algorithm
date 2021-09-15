@@ -68,6 +68,16 @@ node *remove_node(node *head)
   }
   else
   {
+    node *n = temp;
+    if (temp->next)
+    {
+      prev->next = temp->next;
+    }
+    else
+    {
+      prev->next = nullptr;
+    }
+    delete n;
   }
 
   return head;
