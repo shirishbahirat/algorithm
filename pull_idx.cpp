@@ -58,6 +58,14 @@ node *remove_node(node *head)
     temp = temp->next;
   }
 
+  if (temp == head)
+  {
+    node *n = head;
+
+    head = head->next;
+    delete n;
+  }
+
   return temp;
 }
 
