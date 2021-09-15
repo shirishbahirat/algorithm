@@ -23,4 +23,12 @@ void insert_node(node **new_node)
   }
 }
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  node *pifo = nullptr;
+
+  insert_node(&pifo);
+
+  return 0;
+}
