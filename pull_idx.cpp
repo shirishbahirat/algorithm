@@ -38,13 +38,13 @@ node *get_node(node *head, int tag)
 
   node *temp = head;
 
-  while (temp->data != tag)
+  while (temp->tag != tag)
   {
     temp = temp->next;
-    cout << temp->data << endl;
+    cout << temp->tag << endl;
   }
 
-  cout << temp->data << endl;
+  cout << temp->tag << endl;
 
   return temp;
 }
