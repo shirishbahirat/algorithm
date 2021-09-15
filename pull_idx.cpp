@@ -21,6 +21,8 @@ void insert_node(node **new_node)
   {
     n = new node(10, 11);
   }
+
+  cout << n->data << endl;
 }
 
 int main(int argc, char const *argv[])
