@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 
   insert_node(&pifo);
 
-  // cout << pifo->data << endl;
+  cout << pifo->data << endl;
 
   return 0;
 }
