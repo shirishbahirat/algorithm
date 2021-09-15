@@ -26,7 +26,7 @@ node *insert_node(node *head, int data, int tag)
     {
       head = head->next;
     }
-    head = new node(data, tag);
+    head->next = new node(data, tag);
     head = temp;
   }
 
