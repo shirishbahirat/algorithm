@@ -21,10 +21,7 @@ void insert_node(node **new_node, int data, int tag)
   }
   else
   {
-    while ((*node) * new_node->next != nullptr)
-    {
-      (*node) *new_node = (*node) * new_node->next;
-    }
+    node *n = *new_node;
   }
 
   return;
