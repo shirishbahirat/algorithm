@@ -49,6 +49,13 @@ node *get_node(node *head, int tag)
   return temp;
 }
 
+node *remove_node(node *head)
+{
+  node *temp = head;
+
+  return temp;
+}
+
 int main(int argc, char const *argv[])
 {
 
