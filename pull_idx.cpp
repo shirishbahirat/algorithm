@@ -19,6 +19,14 @@ node *insert_node(node *head, int data, int tag)
   {
     head = new node(data, tag);
   }
+  else
+  {
+    node *temp = head;
+    while (head->next != nullptr)
+    {
+      head = head->next;
+    }
+  }
 
   return head;
 }
