@@ -41,7 +41,7 @@ node *get_node(node *head, int tag)
   while (temp->data != tag)
   {
     temp = temp->next;
-    cout << temp->data >> endl;
+    cout << temp->data << endl;
   }
 
   return temp;
