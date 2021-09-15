@@ -7,8 +7,8 @@ struct node
 {
   int data;
   int tag;
-  node *next;
   int valid;
+  node *next;
 
   node(int d, int t, int v) : data(d), tag(t), valid(v), next(nullptr) {}
 };
@@ -18,7 +18,7 @@ node *insert_node(node *head, int data, int tag)
 
   if (head == nullptr)
   {
-    head = new node(data, tag);
+    head = new node(data, tag, 1);
   }
   else
   {
@@ -27,7 +27,7 @@ node *insert_node(node *head, int data, int tag)
     {
       head = head->next;
     }
-    head->next = new node(data, tag);
+    head->next = new node(data, tag, 1);
     head = temp;
   }
 
