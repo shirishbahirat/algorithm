@@ -61,12 +61,11 @@ node *remove_node(node *head)
   if (temp == head)
   {
     node *n = head;
-
     head = head->next;
     delete n;
   }
 
-  return temp;
+  return head;
 }
 
 int main(int argc, char const *argv[])
