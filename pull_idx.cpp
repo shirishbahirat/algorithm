@@ -22,6 +22,10 @@ void insert_node(node **new_node, int data, int tag)
   else
   {
     node *n = *new_node;
+    while (n->next != nullptr)
+    {
+      n = n->next;
+    }
   }
 
   return;
