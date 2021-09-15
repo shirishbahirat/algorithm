@@ -52,9 +52,11 @@ node *get_node(node *head, int tag)
 node *remove_node(node *head)
 {
   node *temp = head;
+  node *prev = nullptr;
 
   while (temp->valid != 0)
   {
+    prev = temp;
     temp = temp->next;
   }
 
@@ -63,6 +65,9 @@ node *remove_node(node *head)
     node *n = head;
     head = head->next;
     delete n;
+  }
+  else
+  {
   }
 
   return head;
