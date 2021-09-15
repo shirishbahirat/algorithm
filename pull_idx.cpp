@@ -26,6 +26,7 @@ void insert_node(node **new_node, int data, int tag)
     {
       n = n->next;
     }
+    n = new node(data, tag);
   }
 
   return;
