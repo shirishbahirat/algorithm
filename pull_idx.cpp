@@ -12,7 +12,7 @@ struct node
   node(int d, int t) : data(d), tag(t), next(nullptr) {}
 };
 
-void insert_node(node *head, int data, int tag)
+node *insert_node(node *head, int data, int tag)
 {
 
   if (head == nullptr)
@@ -20,7 +20,7 @@ void insert_node(node *head, int data, int tag)
     head = new node(data, tag);
   }
 
-  return;
+  return head;
 }
 
 int main(int argc, char const *argv[])
@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 
   node *pifo = nullptr;
 
-  insert_node(pifo, 10, 11);
+  pifo = insert_node(pifo, 10, 11);
   // insert_node(pifo, 11, 12);
 
   cout << pifo->next->data << endl;
