@@ -15,9 +15,7 @@ struct node
 void insert_node(node **new_node, int data, int tag)
 {
 
-  node *n = *new_node;
-
-  if (n == nullptr)
+  if (*new_node == nullptr)
   {
     *new_node = new node(data, tag);
   }
