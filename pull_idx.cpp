@@ -44,6 +44,8 @@ node *get_node(node *head, int tag)
     temp = temp->next;
   }
 
+  temp->valid = 0;
+
   return temp;
 }
 
