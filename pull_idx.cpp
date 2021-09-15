@@ -19,7 +19,7 @@ void insert_node(node **new_node, int data, int tag)
 
   if (n == nullptr)
   {
-    *new_node = new node(10, 11);
+    *new_node = new node(data, tag);
   }
 
   cout << *new_node->data << endl;
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 
   node *pifo = nullptr;
 
-  insert_node(&pifo);
+  insert_node(&pifo, 10, 11);
 
   cout << pifo->data << endl;
 
