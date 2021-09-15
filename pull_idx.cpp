@@ -22,7 +22,7 @@ void insert_node(node **new_node, int data, int tag)
     *new_node = new node(data, tag);
   }
 
-  // cout << *new_node->data << endl;
+  cout << (*)new_node->data << endl;
 
   return;
 }
