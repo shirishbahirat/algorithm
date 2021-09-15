@@ -59,5 +59,7 @@ int main(int argc, char const *argv[])
 
   node *n = get_node(pifo, 14);
 
+  cout << n->tag << endl;
+
   return 0;
 }
