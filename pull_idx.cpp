@@ -9,7 +9,7 @@ struct node
   int tag;
   node *next;
 
-  node() : data(int d), tag(int t), next(nullptr) {}
+  node(int d, int t) : data(d), tag(t), next(nullptr) {}
 };
 
 void insert_node() {}
