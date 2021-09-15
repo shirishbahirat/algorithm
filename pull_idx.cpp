@@ -38,7 +38,7 @@ node *get_node(node *head, int tag)
 
   node *temp = head;
 
-  while (*temp->data != tag)
+  while (temp->data != tag)
   {
     temp = temp->next;
   }
