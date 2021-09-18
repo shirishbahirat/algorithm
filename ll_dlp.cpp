@@ -8,7 +8,6 @@ struct node
   node *next;
   node *prev;
   int tag;
-
   node(int d, int t) : data(d), tag(t), next(nullptr), prev(nullptr) {}
 };
 
