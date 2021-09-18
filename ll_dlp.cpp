@@ -12,7 +12,7 @@ struct node
   node(int d, int t) : data(d), tag(t), next(nullptr), prev(nullptr) {}
 };
 
-void insert_node(node **new_node, int data, int tag)
+void insert_node(node **new_node, int tag, int data)
 {
 
   node *n = new node(data, tag);
@@ -39,11 +39,11 @@ int main(int argc, char const *argv[])
 {
   node *head = nullptr;
 
-  insert_node(&head, 10, 1);
-  insert_node(&head, 11, 2);
-  insert_node(&head, 12, 3);
-  insert_node(&head, 13, 4);
-  insert_node(&head, 14, 5);
+  insert_node(&head, 1, 11);
+  insert_node(&head, 2, 22);
+  insert_node(&head, 3, 33);
+  insert_node(&head, 4, 44);
+  insert_node(&head, 5, 55);
 
   while (head != nullptr)
   {
