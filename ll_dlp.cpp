@@ -45,11 +45,11 @@ int main(int argc, char const *argv[])
   insert_node(&head, 13, 4);
   insert_node(&head, 14, 5);
 
-  cout << head->tag << endl;
-  cout << head->next->tag << endl;
-  cout << head->next->next->tag << endl;
-  cout << head->next->next->next->tag << endl;
-  cout << head->next->next->next->next->tag << endl;
+  while (head != nullptr)
+  {
+    cout << head->tag << " " << head->data << endl;
+    head = head->next;
+  }
 
   return 0;
 }
