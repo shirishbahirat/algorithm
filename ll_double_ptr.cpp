@@ -36,9 +36,9 @@ int main(int argc, char const *argv[])
 
   node *head = nullptr;
 
-  insert(&head, 0, 2);
-  insert(&head, 1, 3);
-  insert(&head, 2, 4);
+  insert(&head, 0, 10);
+  insert(&head, 1, 20);
+  insert(&head, 2, 30);
 
   cout << head->next->next->data << endl;
 
