@@ -12,11 +12,22 @@ struct node
 
 void insert(node **head, int tag, int data)
 {
-  node *n = new node(1, 10);
+  node *n = new node(tag, data);
+  node *tmp = *head;
 
   if (*head == nullptr)
   {
     *head = n;
+    return;
+  }
+  else
+  {
+    while ((*head)->next != nullptr)
+    {
+      (*head) = (*head)->next;
+    }
+    (*head)->next = n;
+    *head = tmp;
   }
 }
 
@@ -26,8 +37,10 @@ int main(int argc, char const *argv[])
   node *head = nullptr;
 
   insert(&head, 1, 2);
+  insert(&head, 2, 20);
+  insert(&head, 3, 30);
 
-  cout << head->data << endl;
+  cout << head->next->next->data << endl;
 
   return 0;
 }
