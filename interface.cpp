@@ -19,4 +19,8 @@ struct consumer_interface
   virtual void connect(producer_interface *prod) = 0;
 };
 
+class producer : public producer_interface
+{
+};
+
 int main(int argc, char const *argv[]) { return 0; }
