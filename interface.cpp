@@ -21,6 +21,15 @@ struct consumer_interface
 
 class producer : public producer_interface
 {
+public:
+  producer() {}
+  ~producer() {}
+
+  virtual void transmit(int cmd){};
+  virtual bool ready(void) { return false; }
+  virtual void connect(consumer_interface *cons) {}
+
+private:
 };
 
 int main(int argc, char const *argv[]) { return 0; }
