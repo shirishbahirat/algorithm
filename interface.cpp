@@ -54,7 +54,7 @@ public:
   }
   ~consumer() {}
 
-  virtual void receive(int cmd){};
+  virtual void receive(int cmd) { producer->ready(); };
   virtual bool ready(void)
   {
     cout << "from consumer" << endl;
@@ -83,6 +83,7 @@ int main(int argc, char const *argv[])
   c->connect(p);
 
   p->transmit(10);
+  c->receive(10);
 
   return 0;
 }
