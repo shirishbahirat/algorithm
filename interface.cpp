@@ -27,7 +27,7 @@ public:
   }
   ~producer() {}
 
-  virtual void transmit(int cmd){};
+  virtual void transmit(int cmd) { consumer->ready(); };
   virtual bool ready(void)
   {
     cout << "from producer" << endl;
@@ -82,8 +82,7 @@ int main(int argc, char const *argv[])
   p->connect(c);
   c->connect(p);
 
-  p->ready();
-  c->ready();
+  p->transmit(10);
 
   return 0;
 }
