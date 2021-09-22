@@ -77,6 +77,7 @@ int main(int argc, char const *argv[])
 {
 
   int arr[]{1, 2};
+  int *aa = new int[]{1, 3, 4, 5};
 
   producer_interface *p = new producer("producer");
   consumer_interface *c = new consumer("consumer");
