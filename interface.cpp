@@ -7,7 +7,7 @@ struct consumer_interface;
 
 struct producer_interface
 {
-  virtual void transmit(int cmd);
+  virtual void transmit(int cmd) = 0;
   virtual bool ready(void);
   virtual void connect(consumer_interface *cons);
 };
