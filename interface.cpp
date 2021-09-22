@@ -76,6 +76,8 @@ private:
 int main(int argc, char const *argv[])
 {
 
+  int arr[] = {1, 2};
+
   producer_interface *p = new producer("producer");
   consumer_interface *c = new consumer("consumer");
 
