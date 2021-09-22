@@ -22,7 +22,7 @@ struct consumer_interface
 class producer : public producer_interface
 {
 public:
-  producer() {}
+  producer() : counter(0) {}
   ~producer() {}
 
   virtual void transmit(int cmd){};
@@ -30,6 +30,7 @@ public:
   virtual void connect(consumer_interface *cons) {}
 
 private:
+  int counter;
 };
 
 int main(int argc, char const *argv[]) { return 0; }
