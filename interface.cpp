@@ -83,10 +83,11 @@ int main(int argc, char const *argv[])
 
   for (int i = 0; i < 5; i++)
     cout << *(aa + i) << " ";
+  cout << endl;
 
   for (auto i : v)
-    std::cout << i << ' ';
-  std::cout << '\n';
+    cout << i << ' ';
+  cout << endl;
 
   producer_interface *p = new producer("producer");
   consumer_interface *c = new consumer("consumer");
