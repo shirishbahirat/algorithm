@@ -28,7 +28,11 @@ public:
   ~producer() {}
 
   virtual void transmit(int cmd){};
-  virtual bool ready(void) { return false; }
+  virtual bool ready(void)
+  {
+    cout << "from producer" << endl;
+    return false;
+  }
   virtual void connect(consumer_interface *cons)
   {
     assert(cons);
@@ -51,7 +55,11 @@ public:
   ~consumer() {}
 
   virtual void receive(int cmd){};
-  virtual bool ready(void) { return false; }
+  virtual bool ready(void)
+  {
+    cout << "from consumer" << endl;
+    return false;
+  }
   virtual void connect(producer_interface *prod)
   {
     assert(prod);
