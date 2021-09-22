@@ -22,7 +22,7 @@ struct consumer_interface
 class producer : public producer_interface
 {
 public:
-  producer() : counter(0), tx_ready(false) {}
+  producer() : counter(0), tx_ready(false), consumer(nullptr) {}
   ~producer() {}
 
   virtual void transmit(int cmd){};
@@ -32,12 +32,13 @@ public:
 private:
   int counter;
   bool tx_ready;
+  consumer_interface *consumer;
 };
 
 class consumer : public consumer_interface
 {
 public:
-  consumer() : counter(0), rx_ready(false) {}
+  consumer() : counter(0), rx_ready(false), producer(nullptr) {}
   ~consumer() {}
 
   virtual void receive(int cmd){};
