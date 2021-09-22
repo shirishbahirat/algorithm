@@ -29,7 +29,11 @@ public:
 
   virtual void transmit(int cmd){};
   virtual bool ready(void) { return false; }
-  virtual void connect(consumer_interface *cons) { assert(cons); }
+  virtual void connect(consumer_interface *cons)
+  {
+    assert(cons);
+    consumer = cons;
+  }
 
 private:
   int counter;
@@ -48,7 +52,11 @@ public:
 
   virtual void receive(int cmd){};
   virtual bool ready(void) { return false; }
-  virtual void connect(producer_interface *prod) {}
+  virtual void connect(producer_interface *prod)
+  {
+    assert(prod);
+    producer = prod;
+  }
 
 private:
   int counter;
