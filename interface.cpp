@@ -42,11 +42,12 @@ public:
 
   virtual void receive(int cmd){};
   virtual bool ready(void) { return false; }
-  virtual void connect(producer_interface *cons) {}
+  virtual void connect(producer_interface *prod) {}
 
 private:
   int counter;
   bool rx_ready;
+  producer_interface *producer;
 };
 
 int main(int argc, char const *argv[]) { return 0; }
