@@ -9,14 +9,14 @@ struct producer_interface
 {
   virtual void transmit(int cmd);
   virtual bool ready(void);
-  // virtual void connect(struct *consumer_interface) {}
+  virtual void connect(consumer_interface *cons);
 };
 
 struct consumer_interface
 {
   virtual void receive(int cmd);
   virtual bool ready(void);
-  // virtual void connect(struct *producer_interface) {}
+  virtual void connect(producer_interface *prod);
 };
 
 int main(int argc, char const *argv[]) { return 0; }
