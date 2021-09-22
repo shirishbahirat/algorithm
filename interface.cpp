@@ -59,5 +59,6 @@ int main(int argc, char const *argv[])
 
   p->connect(c);
   c->connect(p);
+
   return 0;
 }
