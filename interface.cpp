@@ -79,6 +79,9 @@ int main(int argc, char const *argv[])
   int arr[]{1, 2};
   int *aa = new int[]{1, 3, 4, 5};
 
+  for (int i = 0; i < 5; i++)
+    cout << *(aa + i) << " ";
+
   producer_interface *p = new producer("producer");
   consumer_interface *c = new consumer("consumer");
 
