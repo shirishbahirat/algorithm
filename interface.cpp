@@ -29,7 +29,7 @@ public:
 
   virtual void transmit(int cmd){};
   virtual bool ready(void) { return false; }
-  virtual void connect(consumer_interface *cons) {}
+  virtual void connect(consumer_interface *cons) { assert(cons); }
 
 private:
   int counter;
