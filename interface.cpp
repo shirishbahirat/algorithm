@@ -34,4 +34,19 @@ private:
   bool tx_ready;
 };
 
+class consumer : public consumer_interface
+{
+public:
+  consumer() : counter(0), rx_ready(false) {}
+  ~consumer() {}
+
+  virtual void receive(int cmd){};
+  virtual bool ready(void) { return false; }
+  virtual void connect(producer_interface *cons) {}
+
+private:
+  int counter;
+  bool rx_ready;
+};
+
 int main(int argc, char const *argv[]) { return 0; }
