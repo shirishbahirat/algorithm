@@ -8,15 +8,15 @@ struct consumer_interface;
 struct producer_interface
 {
   virtual void transmit(int cmd) = 0;
-  virtual bool ready(void);
-  virtual void connect(consumer_interface *cons);
+  virtual bool ready(void) = 0;
+  virtual void connect(consumer_interface *cons) = 0;
 };
 
 struct consumer_interface
 {
-  virtual void receive(int cmd);
-  virtual bool ready(void);
-  virtual void connect(producer_interface *prod);
+  virtual void receive(int cmd) = 0;
+  virtual bool ready(void) = 0;
+  virtual void connect(producer_interface *prod) = 0;
 };
 
 int main(int argc, char const *argv[]) { return 0; }
