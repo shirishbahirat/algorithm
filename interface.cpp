@@ -82,5 +82,8 @@ int main(int argc, char const *argv[])
   p->connect(c);
   c->connect(p);
 
+  p->ready();
+  c->ready();
+
   return 0;
 }
