@@ -57,5 +57,7 @@ int main(int argc, char const *argv[])
   producer_interface *p = new producer();
   consumer_interface *c = new consumer();
 
+  p->connect(c);
+  c->connect(p);
   return 0;
 }
