@@ -51,4 +51,11 @@ private:
   producer_interface *producer;
 };
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  producer_interface *p = new producer();
+  consumer_interface *c = new consumer();
+
+  return 0;
+}
