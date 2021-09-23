@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#define MAX_DIES 10
+
 struct producer_interface;
 struct consumer_interface;
 
