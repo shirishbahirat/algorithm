@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
   p->transmit(10);
   c->receive(10);
 
-  for (int i = 0; i < 5; ++i)
+  for (int i = 0; i < 10; ++i)
   {
     c->task(i);
   }
