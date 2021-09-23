@@ -105,5 +105,10 @@ int main(int argc, char const *argv[])
     m[i] = new media(i);
   }
 
+  for (int i = 0; i < 5; ++i)
+  {
+    m[i]->op();
+  }
+
   return 0;
 }
