@@ -64,6 +64,10 @@ class consumer : public consumer_interface
 public:
   consumer(string n) : counter(0), rx_ready(false), producer(nullptr), name(n)
   {
+    for (int i = 0; i < 5; ++i)
+    {
+      m[i] = new media(i);
+    }
   }
   ~consumer() {}
 
@@ -100,10 +104,6 @@ int main(int argc, char const *argv[])
   c->receive(10);
 
   /*
-    for (int i = 0; i < 5; ++i)
-    {
-      m[i] = new media(i);
-    }
 
     for (int i = 0; i < 5; ++i)
     {
