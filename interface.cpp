@@ -84,6 +84,7 @@ private:
   bool rx_ready;
   producer_interface *producer;
   string name;
+  media *m[5];
 };
 
 int main(int argc, char const *argv[])
@@ -98,17 +99,16 @@ int main(int argc, char const *argv[])
   p->transmit(10);
   c->receive(10);
 
-  media *m[5];
+  /*
+    for (int i = 0; i < 5; ++i)
+    {
+      m[i] = new media(i);
+    }
 
-  for (int i = 0; i < 5; ++i)
-  {
-    m[i] = new media(i);
-  }
-
-  for (int i = 0; i < 5; ++i)
-  {
-    m[i]->op();
-  }
-
+    for (int i = 0; i < 5; ++i)
+    {
+      m[i]->op();
+    }
+  */
   return 0;
 }
