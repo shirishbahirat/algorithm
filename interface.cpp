@@ -63,9 +63,10 @@ private:
 class consumer : public consumer_interface
 {
 public:
-  consumer(string n) : counter(0), rx_ready(false), producer(nullptr), name(n)
+  consumer(string n, int d)
+      : counter(0), rx_ready(false), producer(nullptr), name(n), dies(d)
   {
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < dies; ++i)
     {
       m[i] = new media(i);
     }
@@ -91,6 +92,7 @@ private:
   bool rx_ready;
   producer_interface *producer;
   string name;
+  int dies;
   media *m[5];
 };
 
@@ -98,7 +100,7 @@ int main(int argc, char const *argv[])
 {
 
   producer_interface *p = new producer("producer");
-  consumer_interface *c = new consumer("consumer");
+  consumer_interface *c = new consumer("consumer", 5);
 
   p->connect(c);
   c->connect(p);
