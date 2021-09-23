@@ -100,7 +100,7 @@ int main(int argc, char const *argv[])
 {
 
   producer_interface *p = new producer("producer");
-  consumer_interface *c = new consumer("consumer", 5);
+  consumer_interface *c = new consumer("consumer", 10);
 
   p->connect(c);
   c->connect(p);
