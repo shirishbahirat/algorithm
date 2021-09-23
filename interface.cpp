@@ -93,7 +93,7 @@ private:
   producer_interface *producer;
   string name;
   int dies;
-  media *m[5];
+  media *m[10];
 };
 
 int main(int argc, char const *argv[])
