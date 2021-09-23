@@ -98,7 +98,7 @@ int main(int argc, char const *argv[])
   p->transmit(10);
   c->receive(10);
 
-  media *m[] = {nullptr, nullptr};
+  media *m[5];
 
   return 0;
 }
