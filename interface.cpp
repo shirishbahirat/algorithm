@@ -18,6 +18,7 @@ struct consumer_interface
   virtual void receive(int cmd) = 0;
   virtual bool ready(void) = 0;
   virtual void connect(producer_interface *prod) = 0;
+  virtual void task(int d) = 0;
 };
 
 class media
@@ -83,7 +84,7 @@ public:
     producer = prod;
   }
 
-  void task(int id) { m[id]->op(); }
+  virtual void task(int id) { m[id]->op(); }
 
 private:
   int counter;
@@ -105,12 +106,10 @@ int main(int argc, char const *argv[])
   p->transmit(10);
   c->receive(10);
 
-  /*
+  for (int i = 0; i < 5; ++i)
+  {
+    c->task(i);
+  }
 
-    for (int i = 0; i < 5; ++i)
-    {
-      m[i]->op();
-    }
-  */
   return 0;
 }
