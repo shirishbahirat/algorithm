@@ -83,6 +83,8 @@ public:
     producer = prod;
   }
 
+  void task(int id) { m[id]->op(); }
+
 private:
   int counter;
   bool rx_ready;
