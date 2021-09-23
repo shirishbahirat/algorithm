@@ -20,6 +20,18 @@ struct consumer_interface
   virtual void connect(producer_interface *prod) = 0;
 };
 
+class media
+{
+public:
+  media(int d) : id(d) {}
+  ~media() {}
+
+  void op() { cout << "From " << id << endl; }
+
+private:
+  int id;
+};
+
 class producer : public producer_interface
 {
 public:
@@ -77,18 +89,6 @@ private:
 int main(int argc, char const *argv[])
 {
 
-  int arr[]{1, 2};
-  int *aa = new int[]{1, 3, 4, 5, 6};
-  vector<int> v = {0, 1, 2, 3, 4, 5};
-
-  for (int i = 0; i < 5; i++)
-    cout << *(aa + i) << " ";
-  cout << endl;
-
-  for (auto i : v)
-    cout << i << ' ';
-  cout << endl;
-
   producer_interface *p = new producer("producer");
   consumer_interface *c = new consumer("consumer");
 
@@ -97,6 +97,8 @@ int main(int argc, char const *argv[])
 
   p->transmit(10);
   c->receive(10);
+
+  media *m[] = {nullptr, nullptr};
 
   return 0;
 }
