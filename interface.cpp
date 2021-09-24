@@ -44,10 +44,12 @@ private:
   int id;
 };
 
-class producer : public producer_interface
+class producer : public producer_interface, public logger
 {
 public:
-  producer(string n) : counter(0), tx_ready(false), consumer(nullptr), name(n)
+  producer(string n)
+      : logger("producer"), counter(0), tx_ready(false), consumer(nullptr),
+        name(n)
   {
   }
   ~producer() {}
@@ -71,11 +73,12 @@ private:
   string name;
 };
 
-class consumer : public consumer_interface
+class consumer : public consumer_interface, public logger
 {
 public:
   consumer(string n, int d)
-      : counter(0), rx_ready(false), producer(nullptr), name(n), dies(d)
+      : logger("consumer"), counter(0), rx_ready(false), producer(nullptr),
+        name(n), dies(d)
   {
     for (int i = 0; i < dies; ++i)
     {
