@@ -83,6 +83,7 @@ public:
     for (int i = 0; i < dies; ++i)
     {
       m[i] = new media(i);
+      mx.push_back(new media(i));
     }
   }
   ~consumer() {}
