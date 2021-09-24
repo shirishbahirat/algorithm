@@ -99,7 +99,7 @@ public:
 
   virtual bool ready(void)
   {
-    cout << "from consumer" << endl;
+    cout << "from consumer " << get_name() << endl;
     return false;
   }
   virtual void connect(producer_interface *prod)
