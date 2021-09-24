@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#define MAX_DIES 10
-
 struct producer_interface;
 struct consumer_interface;
 
@@ -82,7 +80,6 @@ public:
   {
     for (int i = 0; i < dies; ++i)
     {
-      m[i] = new media(i);
       mx.push_back(new media(i));
     }
   }
@@ -100,7 +97,7 @@ public:
     producer = prod;
   }
 
-  virtual void task(int id) { m[id]->op(); }
+  virtual void task(int id) { mx[id]->op(); }
 
 private:
   int counter;
@@ -108,7 +105,6 @@ private:
   producer_interface *producer;
   string name;
   int dies;
-  media *m[MAX_DIES];
   vector<media *> mx;
 };
 
