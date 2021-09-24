@@ -22,6 +22,16 @@ struct consumer_interface
   virtual void connect(producer_interface *prod) = 0;
 };
 
+class logger
+{
+public:
+  logger(string n) : name(n) {}
+  ~logger() {}
+
+private:
+  string name;
+};
+
 class media
 {
 public:
