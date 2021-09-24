@@ -26,6 +26,8 @@ public:
   logger(string n) : name(n) {}
   ~logger() {}
 
+  virtual string get_name(void) { return name; }
+
 private:
   string name;
 };
@@ -55,7 +57,7 @@ public:
   virtual void transmit(int cmd) { consumer->ready(); };
   virtual bool ready(void)
   {
-    cout << "from producer" << endl;
+    cout << "from producer " << get_name() << endl;
     return false;
   }
   virtual void connect(consumer_interface *cons)
