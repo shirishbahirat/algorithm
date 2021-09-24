@@ -85,7 +85,16 @@ public:
   }
   ~consumer() {}
 
-  virtual void receive(int cmd) { producer->ready(); };
+  virtual void receive(int cmd)
+  {
+    producer->ready();
+
+    for (int i = 0; i < dies; ++i)
+    {
+      mx[i]->op();
+    }
+  }
+
   virtual bool ready(void)
   {
     cout << "from consumer" << endl;
