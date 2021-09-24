@@ -108,6 +108,7 @@ private:
   string name;
   int dies;
   media *m[MAX_DIES];
+  vector<media *> mx;
 };
 
 int main(int argc, char const *argv[])
