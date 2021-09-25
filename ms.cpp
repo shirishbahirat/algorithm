@@ -63,5 +63,11 @@ int main(int argc, char const *argv[])
 
   merge_sort(arr, 0, 7);
 
+  for (auto x : arr)
+  {
+    cout << x << " ";
+  }
+  cout << endl;
+
   return 0;
 }
