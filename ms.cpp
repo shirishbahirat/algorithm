@@ -47,6 +47,11 @@ void merge(int arr[], int lo, int mid, int hi)
   {
     tc[idz++] = tb[idy++];
   }
+
+  for (int i = lo, j = 0; i <= hi; i++, j++)
+  {
+    arr[i] = tc[j];
+  }
 }
 
 void merge_sort(int arr[], int lo, int hi)
