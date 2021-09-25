@@ -23,7 +23,7 @@ struct consumer_interface
 class logger
 {
 public:
-  logger(string n) : name(n) {}
+  logger(string n) : name(n), count(0) {}
   ~logger() {}
 
   virtual string get_name(void) { return name; }
