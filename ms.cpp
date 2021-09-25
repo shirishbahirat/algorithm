@@ -25,6 +25,28 @@ void merge(int arr[], int lo, int mid, int hi)
     cout << tb[i] << " ";
   }
   cout << endl;
+
+  while ((idx < la) && (idy < lb))
+  {
+    if (ta[idx] < tb[idy])
+    {
+      tc[idz++] = ta[idx++];
+    }
+    else
+    {
+      tc[idz++] = tb[idy++];
+    }
+  }
+
+  while (idx < la)
+  {
+    tc[idz++] = ta[idx++];
+  }
+
+  while (idx < lb)
+  {
+    tc[idz++] = tb[idy++];
+  }
 }
 
 void merge_sort(int arr[], int lo, int hi)
