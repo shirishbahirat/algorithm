@@ -42,6 +42,14 @@ void pop(node **head)
     delete *head;
     return;
   }
+  else
+  {
+    node *temp = *head;
+    (*head) = (*head)->next;
+    delete *head;
+  }
+
+  return;
 }
 
 int main(int argc, char const *argv[])
