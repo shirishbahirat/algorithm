@@ -17,6 +17,11 @@ public:
       {
         intervals[idx + 1][0] = intervals[idx][1];
       }
+
+      if ((intervals[idx + 1][0]) > (intervals[idx + 1][1]))
+      {
+        intervals[idx + 1][1] = intervals[idx + 1][0];
+      }
     }
 
     for (int idx = 0; idx < (intervals.size() - 1); ++idx)
