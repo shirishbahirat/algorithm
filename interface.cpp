@@ -30,6 +30,7 @@ public:
 
 private:
   string name;
+  int count;
 };
 
 class media
