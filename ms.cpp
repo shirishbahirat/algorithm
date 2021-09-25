@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void merge(int arr[], int lo, int mid, int hi)
+{
+  int la = mid - lo + 1;
+  int lb = hi - mid;
+  int lc = la + lb;
+
+  int idx = 0, idy = 0, idz = 0;
+}
+
 void merge_sort(int arr[], int lo, int hi)
 {
   if (hi > lo)
