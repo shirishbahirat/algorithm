@@ -15,11 +15,16 @@ void merge(int arr[], int lo, int mid, int hi)
   for (int i = lo; i <= mid; i++)
   {
     ta[i] = arr[i];
+    cout << ta[i] << " ";
   }
+  cout << endl;
+
   for (int i = mid + 1; i <= hi; i++)
   {
     tb[i] = arr[i];
+    cout << tb[i] << " ";
   }
+  cout << endl;
 }
 
 void merge_sort(int arr[], int lo, int hi)
