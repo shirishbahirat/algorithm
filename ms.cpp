@@ -8,9 +8,9 @@ void merge(int arr[], int lo, int mid, int hi)
   int lb = hi - mid;
   int lc = la + lb;
 
-  int idx = 0, idy = 0, idz = 0;
+  int idx = 0, idy = 0, idz = lo;
 
-  int ta[la], tb[lb], tc[lc];
+  int ta[la], tb[lb];
 
   for (int i = lo; i <= mid; i++)
   {
@@ -28,29 +28,24 @@ void merge(int arr[], int lo, int mid, int hi)
 
   while ((idx < la) && (idy < lb))
   {
-    if (ta[idx] < tb[idy])
+    if (arr[idx] < tb[idy])
     {
-      tc[idz++] = ta[idx++];
+      arr[idz++] = ta[idx++];
     }
     else
     {
-      tc[idz++] = tb[idy++];
+      arr[idz++] = tb[idy++];
     }
   }
 
   while (idx < la)
   {
-    tc[idz++] = ta[idx++];
+    arr[idz++] = ta[idx++];
   }
 
   while (idx < lb)
   {
-    tc[idz++] = tb[idy++];
-  }
-
-  for (int i = lo, j = 0; i <= hi; i++, j++)
-  {
-    // arr[i] = tc[j];
+    arr[idz++] = tb[idy++];
   }
 }
 
