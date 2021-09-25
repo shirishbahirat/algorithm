@@ -11,6 +11,10 @@ void merge(int arr[], int lo, int mid, int hi)
   int idx = 0, idy = 0, idz = 0;
 
   int ta[la], tb[lb], tc[lc];
+
+  for (int i = lo; i <= mid; i++)
+  {
+  }
 }
 
 void merge_sort(int arr[], int lo, int hi)
