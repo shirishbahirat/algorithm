@@ -11,12 +11,12 @@ void merge(int arr[], int lo, int mid, int hi)
 
   int ta[la], tb[lb];
 
-  for (int i = lo, j = 0; i <= mid; i++, j++)
+  for (int i = lo, j = 0; j < la; i++, j++)
   {
     ta[j] = arr[i];
   }
 
-  for (int i = mid + 1, j = 0; i <= hi; i++, j++)
+  for (int i = mid + 1, j = 0; j < lb; i++, j++)
   {
     tb[j] = arr[i];
   }
