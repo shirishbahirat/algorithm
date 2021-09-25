@@ -63,5 +63,9 @@ int main(int argc, char const *argv[])
 
   cout << head->next->next->data << endl;
 
+  pop(&head);
+
+  cout << head->data << endl;
+
   return 0;
 }
