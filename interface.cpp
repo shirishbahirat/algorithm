@@ -87,7 +87,7 @@ private:
 class consumer : public consumer_interface, public logger
 {
 public:
-  consumer(string n, int d)
+  consumer(string n, int d, int c)
       : logger("consumer"), counter(0), rx_ready(false), producer(nullptr),
         name(n), dies(d)
   {
@@ -127,6 +127,7 @@ private:
   producer_interface *producer;
   string name;
   int dies;
+  int chs;
   vector<media *> mx;
   vector<channel *> ch;
 };
@@ -135,7 +136,7 @@ int main(int argc, char const *argv[])
 {
 
   producer_interface *p = new producer("producer");
-  consumer_interface *c = new consumer("consumer", 10);
+  consumer_interface *c = new consumer("consumer", 8, 4);
 
   p->connect(c);
   c->connect(p);
