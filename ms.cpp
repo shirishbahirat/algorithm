@@ -14,6 +14,11 @@ void merge(int arr[], int lo, int mid, int hi)
 
   for (int i = lo; i <= mid; i++)
   {
+    ta[i] = arr[i];
+  }
+  for (int i = mid + 1; i <= hi; i++)
+  {
+    tb[i] = arr[i];
   }
 }
 
