@@ -50,7 +50,7 @@ void merge(int arr[], int lo, int mid, int hi)
 
   for (int i = lo, j = 0; i <= hi; i++, j++)
   {
-    arr[i] = tc[j];
+    // arr[i] = tc[j];
   }
 }
 
