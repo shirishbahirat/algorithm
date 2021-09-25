@@ -89,7 +89,7 @@ class consumer : public consumer_interface, public logger
 public:
   consumer(string n, int d, int c)
       : logger("consumer"), counter(0), rx_ready(false), producer(nullptr),
-        name(n), dies(d)
+        name(n), dies(d), chns(c)
   {
     for (int i = 0; i < dies; ++i)
     {
@@ -127,7 +127,7 @@ private:
   producer_interface *producer;
   string name;
   int dies;
-  int chs;
+  int chns;
   vector<media *> mx;
   vector<channel *> ch;
 };
