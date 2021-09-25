@@ -30,6 +30,7 @@ void merge_sort(int arr[], int lo, int hi)
     int mid = lo + ((hi - lo) / 2);
     merge_sort(arr, lo, mid);
     merge_sort(arr, mid + 1, hi);
+    merge(arr, lo, mid, hi);
   }
 }
 
