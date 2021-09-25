@@ -31,6 +31,19 @@ void insert(node **head, int tag, int data)
   }
 }
 
+void pop(node **head)
+{
+
+  if (*head == nullptr)
+    return;
+
+  if ((*head)->next == nullptr)
+  {
+    delete *head;
+    return;
+  }
+}
+
 int main(int argc, char const *argv[])
 {
 
