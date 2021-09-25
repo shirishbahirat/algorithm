@@ -33,6 +33,16 @@ private:
   int count;
 };
 
+class channel
+{
+public:
+  channel(int d) : id(d) {}
+  ~channel() {}
+
+private:
+  int id;
+};
+
 class media
 {
 public:
