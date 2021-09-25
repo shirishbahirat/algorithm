@@ -95,6 +95,10 @@ public:
     {
       mx.push_back(new media(i));
     }
+    for (int i = 0; i < chns; ++i)
+    {
+      ch.push_back(new channel(i));
+    }
   }
   ~consumer() {}
 
