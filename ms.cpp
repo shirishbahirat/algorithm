@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 void merge_sort(int arr[], int lo, int hi)
 {
   if (hi > lo)
