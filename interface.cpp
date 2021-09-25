@@ -128,6 +128,7 @@ private:
   string name;
   int dies;
   vector<media *> mx;
+  vector<channel *> ch;
 };
 
 int main(int argc, char const *argv[])
