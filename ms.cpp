@@ -23,7 +23,7 @@ void merge(int arr[], int lo, int mid, int hi)
 
   while ((idx < la) && (idy < lb))
   {
-    if (arr[idx] <= tb[idy])
+    if (ta[idx] <= tb[idy])
     {
       arr[idz++] = ta[idx++];
     }
