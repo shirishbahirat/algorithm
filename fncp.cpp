@@ -7,7 +7,7 @@ typedef struct
 
 typedef struct
 {
-  Date manuDate, purDate;
+  date manuDate, purDate;
   double purPrice;
 } car;
 
