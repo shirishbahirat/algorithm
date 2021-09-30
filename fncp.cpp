@@ -22,8 +22,8 @@ int main(int argc, char const *argv[])
       .purc_date.month = 12,
       .purc_date.year = 2021,
   };
-};
-car tesla;
 
-return 0;
+  car tesla;
+
+  return 0;
 }
