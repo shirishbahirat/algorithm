@@ -21,6 +21,7 @@ int main(int argc, char const *argv[])
       .purc_date.day = 22,
       .purc_date.month = 12,
       .purc_date.year = 2021,
+      .purc_price = 22000,
   };
 
   car tesla;
