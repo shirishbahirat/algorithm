@@ -24,7 +24,15 @@ int main(int argc, char const *argv[])
       .purc_price = 22000,
   };
 
-  car tesla;
+  car tesla = {
+      .manu_date.day = 10,
+      .manu_date.month = 2,
+      .manu_date.year = 2020,
+      .purc_date.day = 22,
+      .purc_date.month = 12,
+      .purc_date.year = 2021,
+      .purc_price = 22000,
+  };
 
   return 0;
 }
