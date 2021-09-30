@@ -14,7 +14,7 @@ typedef struct
 int main(int argc, char const *argv[])
 {
 
-  car honda = { manu_date.day = 10;
+  car honda = {.manu_date.day = 10;
   manu_date.month = 2;
   manu_date.year = 2021;
 };
