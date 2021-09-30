@@ -6,11 +6,11 @@ typedef struct _node
   _node *next;
 } node;
 
-typedef node work
+typedef node
 {
   int count;
   int limit;
 }
-quue;
+work;
 
 int main(int argc, char const *argv[]) { return 0; }
