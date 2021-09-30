@@ -3,12 +3,19 @@
 typedef struct
 {
   int day, month, year;
-} Date;
+} date;
 
 typedef struct
 {
   Date manuDate, purDate;
   double purPrice;
-} Car;
+} car;
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  car honda;
+  car tesla;
+
+  eturn 0;
+}
