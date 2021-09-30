@@ -1,10 +1,10 @@
 #include <iostream>
 
-typedef struct node
+typedef struct _node
 {
   int data;
   node *next;
-};
+} node;
 
 node work
 {
