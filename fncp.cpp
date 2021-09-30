@@ -6,7 +6,7 @@ typedef struct node
   node *next;
 };
 
-typedef node
+node work
 {
   struct mgmt
   {
