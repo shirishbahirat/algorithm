@@ -1,16 +1,14 @@
 #include <iostream>
 
-typedef struct _node
+typedef struct
 {
-  int data;
-  _node *next;
-} node;
+  int day, month, year;
+} Date;
 
-typedef node
+typedef struct
 {
-  int count;
-  int limit;
-}
-work;
+  Date manuDate, purDate;
+  double purPrice;
+} Car;
 
 int main(int argc, char const *argv[]) { return 0; }
