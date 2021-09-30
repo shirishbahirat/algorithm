@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
     manu_date.day = 10;
     manu_date.month = 2;
     manu_date.year = 2021;
-  }
+  };
   car tesla;
 
   return 0;
