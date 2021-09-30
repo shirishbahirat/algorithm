@@ -7,8 +7,8 @@ typedef struct
 
 typedef struct
 {
-  date manuDate, purDate;
-  double purPrice;
+  date manu_date, pur_date;
+  double pur_price;
 } car;
 
 int main(int argc, char const *argv[])
@@ -17,5 +17,5 @@ int main(int argc, char const *argv[])
   car honda;
   car tesla;
 
-  eturn 0;
+  return 0;
 }
