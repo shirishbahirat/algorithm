@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
   };
 
   road_tax ca = {
-      .state = "CA",
+      .state = 'CA',
   };
 
   car toyata = {
