@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
       .purc_date.day = 12,
       .purc_date.month = 3,
       .purc_date.year = 2020,
-      .purc_price = 25000,
+      .purc_price = 20000,
   };
   return 0;
 }
