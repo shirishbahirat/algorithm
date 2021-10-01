@@ -11,6 +11,12 @@ typedef struct
   double purc_price;
 } car;
 
+typedef struct
+{
+  car tax_rate;
+  char *state;
+} road_tax;
+
 int main(int argc, char const *argv[])
 {
 
