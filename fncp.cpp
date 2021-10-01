@@ -40,17 +40,18 @@ int main(int argc, char const *argv[])
       .purc_price = 65000,
   };
 
-  road_tax ca = {.state = "CA";
-};
+  road_tax ca = {
+      .state = "CA",
+  };
 
-car toyata = {
-    .manu_date.day = 6,
-    .manu_date.month = 9,
-    .manu_date.year = 2018,
-    .purc_date.day = 12,
-    .purc_date.month = 3,
-    .purc_date.year = 2020,
-    .purc_price = 25000,
-};
-return 0;
+  car toyata = {
+      .manu_date.day = 6,
+      .manu_date.month = 9,
+      .manu_date.year = 2018,
+      .purc_date.day = 12,
+      .purc_date.month = 3,
+      .purc_date.year = 2020,
+      .purc_price = 25000,
+  };
+  return 0;
 }
