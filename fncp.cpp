@@ -43,10 +43,14 @@ int main(int argc, char const *argv[])
   };
 
   road_tax ca = {
-      tax_rate.state = "CA",          tax_rate.manu_date.day = 10,
-      tax_rate.manu_date.month = 2,   tax_rate.manu_date.year = 2020,
-      tax_rate.purc_date.day = 22,    tax_rate.purc_date.month = 12,
-      tax_rate.purc_date.year = 2021, tax_rate.purc_price = 22000,
+      .tax_rate.state = "CA",
+      .tax_rate.manu_date.day = 10,
+      .tax_rate.manu_date.month = 2,
+      .tax_rate.manu_date.year = 2020,
+      .tax_rate.purc_date.day = 22,
+      .tax_rate.purc_date.month = 12,
+      .tax_rate.purc_date.year = 2021,
+      .tax_rate.purc_price = 22000,
   };
 
   car toyata = {
