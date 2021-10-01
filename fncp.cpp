@@ -14,7 +14,7 @@ typedef struct
 typedef struct
 {
   car tax_rate;
-  char *state;
+  char *state[];
 } road_tax;
 
 int main(int argc, char const *argv[])
@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
   };
 
   road_tax ca = {
-      .*state = 'CA',
+      .state = 'CA',
   };
 
   car toyata = {
