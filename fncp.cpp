@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
   };
 
   road_tax ca = {
-      .tax_rate.state = "CA",
+      .state = "CA",
       .tax_rate.manu_date.day = 10,
       .tax_rate.manu_date.month = 2,
       .tax_rate.manu_date.year = 2020,
