@@ -19,7 +19,7 @@ typedef struct
   string state;
 } road_tax;
 
-typedef void(func *)(int);
+typedef void (*func)(int);
 
 int main(int argc, char const *argv[])
 {
