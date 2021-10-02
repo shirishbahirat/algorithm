@@ -21,7 +21,7 @@ typedef struct
 
 typedef void (*func)(int);
 
-typedef void (*apo)(func);
+typedef func another_func;
 
 void name_print(int data)
 {
