@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
   another_func afpf = name_print;
 
   pfpf(1000);
-  afpf(1000);
+  afpf(2000);
 
   car honda = {
       .manu_date.day = 10,
