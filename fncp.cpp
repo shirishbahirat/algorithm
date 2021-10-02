@@ -21,6 +21,8 @@ typedef struct
 
 typedef void (*func)(int);
 
+typedef void (*apo)(func);
+
 int main(int argc, char const *argv[])
 {
 
