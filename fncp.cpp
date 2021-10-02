@@ -32,6 +32,8 @@ void name_print(int data)
 int main(int argc, char const *argv[])
 {
 
+  func pfpf = name_print;
+
   car honda = {
       .manu_date.day = 10,
       .manu_date.month = 2,
