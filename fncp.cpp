@@ -34,6 +34,8 @@ int main(int argc, char const *argv[])
 
   func pfpf = name_print;
 
+  pfpf(1000);
+
   car honda = {
       .manu_date.day = 10,
       .manu_date.month = 2,
