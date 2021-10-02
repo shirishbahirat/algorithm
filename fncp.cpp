@@ -33,6 +33,7 @@ int main(int argc, char const *argv[])
 {
 
   func pfpf = name_print;
+  another_func afpf = name_print;
 
   pfpf(1000);
 
