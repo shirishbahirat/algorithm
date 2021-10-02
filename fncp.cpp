@@ -23,6 +23,12 @@ typedef void (*func)(int);
 
 typedef void (*apo)(func);
 
+void name_print(int data)
+{
+  cout << "fptr " << data << endl;
+  return;
+}
+
 int main(int argc, char const *argv[])
 {
 
