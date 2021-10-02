@@ -19,6 +19,8 @@ typedef struct
   string state;
 } road_tax;
 
+typedef void(func *)(int);
+
 int main(int argc, char const *argv[])
 {
 
@@ -62,5 +64,6 @@ int main(int argc, char const *argv[])
       .purc_date.year = 2020,
       .purc_price = 20000,
   };
+
   return 0;
 }
