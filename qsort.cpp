@@ -40,9 +40,9 @@ int partition(int arr[], int lo, int hi)
     }
   }
 
-  swap(arr, idx, hi);
+  swap(arr, idy, hi);
 
-  return idx;
+  return idy;
 }
 
 void quick_sort(int arr[], int lo, int hi)
