@@ -34,15 +34,13 @@ int partition(int arr[], int lo, int hi)
         idy--;
     }
 
-    cout << idx << " " << idy << endl;
-
     if (idx < idy)
     {
       swap(arr, idx, idy);
     }
   }
 
-  swap(arr, idy, hi);
+  swap(arr, idx, hi);
 
   return idx;
 }
