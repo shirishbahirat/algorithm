@@ -59,5 +59,11 @@ int main(int argc, char const *argv[])
 
   quick_sort(arr, 0, size);
 
+  for (auto x : arr)
+  {
+    cout << x << " ";
+  }
+  cout << endl;
+
   return 0;
 }
