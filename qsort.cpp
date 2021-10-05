@@ -63,11 +63,11 @@ void quick_sort(int arr[], int lo, int hi)
 int main(int argc, char const *argv[])
 {
   int arr[] = {3, 4, 7, 2, 10, 1, 5, 8, 9, 11, 6};
-  int size = sizeof(arr) / sizeof(arr[0]);
+  int size = (sizeof(arr) / sizeof(arr[0])) - 1;
 
   quick_sort(arr, 0, size);
 
-  for (auto x : arr)
+  for (int x : arr)
   {
     cout << x << " ";
   }
