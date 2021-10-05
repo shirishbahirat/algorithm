@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
   int arr[] = {3, 4, 7, 2, 10, 1, 5, 8, 9, 11, 6};
   int size = -1 + sizeof(arr) / sizeof(arr[0]);
 
-  quick_sort(arr, 0, size);
+  // quick_sort(arr, 0, size);
 
   for (auto x : arr)
   {
