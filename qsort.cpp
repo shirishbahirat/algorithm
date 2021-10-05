@@ -21,14 +21,14 @@ int partition(int arr[], int lo, int hi)
   int pivot = arr[hi];
   int idx = lo, idy = hi;
 
-  while (idx <= idy)
+  while (idx < idy)
   {
     while (arr[idx] < pivot)
       idx++;
     while (arr[idy] >= pivot)
       idy--;
 
-    if ((idx > idy) && (idx >= 0) && (idy <= hi))
+    if ((idx < idy) && (idx >= 0) && (idy <= hi))
     {
       swap(arr, idx, idy);
     }
