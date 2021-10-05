@@ -42,7 +42,7 @@ int partition(int arr[], int lo, int hi)
     }
   }
 
-  swap(arr, idx, hi);
+  swap(arr, idy, hi);
 
   return idx;
 }
