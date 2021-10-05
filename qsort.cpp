@@ -27,12 +27,15 @@ int partition(int arr[], int lo, int hi)
       idx++;
     while (arr[idy] >= pivot)
       idy--;
+
+    cout << idx << " " << idy << endl;
+
+    if ((idx < idy) && (idx <= hi) && (idy >= 0))
+    {
+      swap(arr, idx, idy);
+    }
   }
 
-  if ((idx < idy) && (idx <= hi) && (idy >= 0))
-  {
-    swap(arr, idx, idy);
-  }
   swap(arr, idx, hi);
 
   return idx;
