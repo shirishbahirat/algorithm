@@ -36,15 +36,15 @@ int partition(int arr[], int lo, int hi)
 
     cout << idx << " " << idy << endl;
 
-    if ((idx < idy) && (idx <= hi) && (idy >= 0))
+    if (idx < idy)
     {
       swap(arr, idx, idy);
     }
   }
 
-  swap(arr, idx, hi);
+  swap(arr, idy, hi);
 
-  return idx;
+  return idy;
 }
 
 void quick_sort(int arr[], int lo, int hi)
