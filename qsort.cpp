@@ -28,7 +28,7 @@ int partition(int arr[], int lo, int hi)
     while (arr[idy] >= pivot)
       idy--;
 
-    if (idx > idy)
+    if ((idx > idy) && (idx >= 0) && (idy <= hi))
     {
       swap(arr, idx, idy);
     }
