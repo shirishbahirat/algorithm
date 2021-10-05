@@ -24,9 +24,15 @@ int partition(int arr[], int lo, int hi)
   while (idx < idy)
   {
     while (arr[idx] < pivot)
-      idx++;
+    {
+      if (idx < hi)
+        idx++;
+    }
     while (arr[idy] >= pivot)
-      idy--;
+    {
+      if (idy > lo)
+        idy--;
+    }
 
     cout << idx << " " << idy << endl;
 
@@ -36,9 +42,9 @@ int partition(int arr[], int lo, int hi)
     }
   }
 
-  swap(arr, idy, hi);
+  swap(arr, idx, hi);
 
-  return idy;
+  return idx;
 }
 
 void quick_sort(int arr[], int lo, int hi)
