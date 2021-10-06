@@ -69,7 +69,7 @@ void quick_sort(int arr[], int lo, int hi, int idx, int len)
   idx--;
   aprint(arr, len);
 
-  if ((hi > lo) && (idx > 0))
+  if (hi > lo)
   {
     int mid = partition(arr, lo, hi);
     quick_sort(arr, lo, mid, idx, len);
