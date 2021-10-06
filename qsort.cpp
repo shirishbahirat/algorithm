@@ -57,7 +57,7 @@ int partition(int arr[], int lo, int hi)
 
 void aprint(int arr[])
 {
-  for (int x : arr)
+  for (auto x : arr)
   {
     cout << x << " ";
   }
