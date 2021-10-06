@@ -44,7 +44,10 @@ int partition(int arr[], int lo, int hi)
   if ((idx >= 0) && (idx <= hi))
     swap(arr, idx, hi);
 
-  return idx;
+  if (idx >= 0)
+    return idx;
+  else
+    return lo;
 }
 
 void quick_sort(int arr[], int lo, int hi)
