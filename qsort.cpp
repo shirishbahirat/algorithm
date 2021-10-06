@@ -18,7 +18,6 @@ void swap(int arr[], int x, int y)
 int partition(int arr[], int lo, int hi)
 {
 
-  cout << "in" << endl;
   int pivot = arr[hi];
   int idx = lo, idy = hi;
 
@@ -40,6 +39,7 @@ int partition(int arr[], int lo, int hi)
     {
       swap(arr, idx, idy);
     }
+    cout << "in" << endl;
   }
 
   cout << idx << " " << hi << endl;
