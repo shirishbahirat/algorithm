@@ -55,16 +55,16 @@ int partition(int arr[], int lo, int hi)
     return lo;
 }
 
-void aprint(int arr[])
+void aprint(int arr[], int len)
 {
-  for (auto x : arr)
+  for (int i = 0; i < len; i++)
   {
-    cout << x << " ";
+    cout << arr[i] << " ";
   }
   cout << endl;
 }
 
-void quick_sort(int arr[], int lo, int hi, int idx)
+void quick_sort(int arr[], int lo, int hi, int idx, int len)
 {
   idx--;
   aprint(arr);
@@ -72,8 +72,8 @@ void quick_sort(int arr[], int lo, int hi, int idx)
   if ((hi > lo) && (idx > 0))
   {
     int mid = partition(arr, lo, hi);
-    quick_sort(arr, lo, mid, idx);
-    quick_sort(arr, mid + 1, hi, idx);
+    quick_sort(arr, lo, mid, idx, len);
+    quick_sort(arr, mid + 1, hi, idx, len);
   }
 
   return;
@@ -85,9 +85,9 @@ int main(int argc, char const *argv[])
   int size = (sizeof(arr) / sizeof(arr[0])) - 1;
   int index = 10;
 
-  quick_sort(arr, 0, size, index);
+  quick_sort(arr, 0, size, index, size);
 
-  aprint(arr);
+  aprint(arr, size);
 
   return 0;
 }
