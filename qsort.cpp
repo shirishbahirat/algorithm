@@ -38,21 +38,15 @@ int partition(int arr[], int lo, int hi)
 
     if (idx < idy)
     {
-      if ((idx >= lo) && (idx <= hi))
-        if ((idy >= lo) && (idy <= hi))
-          swap(arr, idx, idy);
+      swap(arr, idx, idy);
     }
   }
 
   cout << idx << " " << hi << endl;
 
-  if ((idx >= lo) && (idx <= hi))
-    swap(arr, idx, hi);
+  swap(arr, idx, hi);
 
-  if (idx >= lo)
-    return idx;
-  else
-    return lo;
+  return idx;
 }
 
 void aprint(int arr[], int len)
