@@ -41,7 +41,8 @@ int partition(int arr[], int lo, int hi)
     }
   }
 
-  swap(arr, idx, hi);
+  if ((idx >= 0) && (idx <= hi))
+    swap(arr, idx, hi);
 
   return idx;
 }
