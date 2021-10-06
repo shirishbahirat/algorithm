@@ -67,7 +67,7 @@ void aprint(int arr[], int len)
 void quick_sort(int arr[], int lo, int hi, int idx, int len)
 {
   idx--;
-  aprint(arr);
+  aprint(arr, len);
 
   if ((hi > lo) && (idx > 0))
   {
