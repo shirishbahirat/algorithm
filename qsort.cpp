@@ -55,14 +55,15 @@ int partition(int arr[], int lo, int hi)
     return lo;
 }
 
-void quick_sort(int arr[], int lo, int hi)
+void quick_sort(int arr[], int lo, int hi, int idx)
 {
+  idx--;
 
-  if (hi > lo)
+  if ((hi > lo) && (idx > 0))
   {
     int mid = partition(arr, lo, hi);
-    quick_sort(arr, lo, mid);
-    quick_sort(arr, mid + 1, hi);
+    quick_sort(arr, lo, mid, idx);
+    quick_sort(arr, mid + 1, hi, idx);
   }
 
   return;
@@ -72,8 +73,9 @@ int main(int argc, char const *argv[])
 {
   int arr[] = {3, 4, 7, 2, 10, 0, 1, 5, 8, 9, 11, 6};
   int size = (sizeof(arr) / sizeof(arr[0])) - 1;
+  int index = 10;
 
-  quick_sort(arr, 0, size);
+  quick_sort(arr, 0, size, index);
 
   for (int x : arr)
   {
