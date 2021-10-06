@@ -55,9 +55,19 @@ int partition(int arr[], int lo, int hi)
     return lo;
 }
 
+void aprint(int arr[])
+{
+  for (int x : arr)
+  {
+    cout << x << " ";
+  }
+  cout << endl;
+}
+
 void quick_sort(int arr[], int lo, int hi, int idx)
 {
   idx--;
+  aprint(arr);
 
   if ((hi > lo) && (idx > 0))
   {
@@ -77,11 +87,7 @@ int main(int argc, char const *argv[])
 
   quick_sort(arr, 0, size, index);
 
-  for (int x : arr)
-  {
-    cout << x << " ";
-  }
-  cout << endl;
+  aprint(arr);
 
   return 0;
 }
