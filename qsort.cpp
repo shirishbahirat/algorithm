@@ -21,8 +21,6 @@ int partition(int arr[], int lo, int hi)
   int pivot = arr[hi];
   int idx = lo, idy = hi;
 
-  cout << "in " << lo << " " << hi << endl;
-
   while (idx < idy)
   {
     while (arr[idx] < pivot)
