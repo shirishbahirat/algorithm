@@ -66,7 +66,7 @@ void quick_sort(int arr[], int lo, int hi, int idx, int len)
   {
     int mid = partition(arr, lo, hi);
     if (mid > lo)
-      quick_sort(arr, lo, mid, idx, len);
+      quick_sort(arr, lo, mid - 1, idx, len);
     if (mid < hi)
       quick_sort(arr, mid + 1, hi, idx, len);
   }
