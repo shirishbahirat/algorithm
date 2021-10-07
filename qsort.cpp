@@ -39,7 +39,6 @@ int partition(int arr[], int lo, int hi)
     {
       swap(arr, idx, idy);
     }
-    cout << "in" << endl;
   }
 
   cout << idx << " " << hi << endl;
