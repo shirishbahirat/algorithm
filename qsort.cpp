@@ -41,8 +41,6 @@ int partition(int arr[], int lo, int hi)
     }
   }
 
-  cout << idx << " " << hi << endl;
-
   swap(arr, idx, hi);
 
   return idx;
@@ -65,10 +63,10 @@ void quick_sort(int arr[], int lo, int hi, int idx, int len)
   if (hi > lo)
   {
     int mid = partition(arr, lo, hi);
-    if ((mid - 1) > lo)
-      quick_sort(arr, lo, mid - 1, idx, len);
-    if ((mid + 1) < hi)
-      quick_sort(arr, mid + 1, hi, idx, len);
+
+    quick_sort(arr, lo, mid, idx, len);
+
+    quick_sort(arr, mid + 1, hi, idx, len);
   }
 
   return;
