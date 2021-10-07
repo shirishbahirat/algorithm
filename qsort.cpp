@@ -29,7 +29,7 @@ int partition(int arr[], int lo, int hi)
         idx++;
     }
 
-    while (arr[idy] > pivot)
+    while (arr[idy] >= pivot)
     {
       if (idy > lo)
         idy--;
