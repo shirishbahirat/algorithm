@@ -25,6 +25,8 @@ void trickle_down(int arr[], int idx)
   if (arr[largest] > arr[right])
     largest = right;
 
+  count << largest << endl;
+
   if (largest != idx)
   {
     swap(arr, idx, largest);
