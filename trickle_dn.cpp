@@ -14,6 +14,7 @@ void swap(int arr[], int idx, int idy)
 
 void trickle_down(int arr[], int idx)
 {
+
   int largest = idx;
   int left = 2 * idx + 1;
   int right = 2 * idx + 2;
