@@ -19,10 +19,10 @@ void trickle_down(int arr[], int idx)
   int left = 2 * idx + 1;
   int right = 2 * idx + 2;
 
-  if (arr[largest] < arr[left])
+  if (arr[largest] > arr[left])
     largest = left;
 
-  if (arr[largest] < arr[right])
+  if (arr[largest] > arr[right])
     largest = right;
 
   if (largest != idx)
