@@ -37,6 +37,8 @@ int main(int argc, char const *argv[])
   int arr[] = {10, 4, 6, 8, 7, 8, 8};
   int len = sizeof(arr) / sizeof(arr[0]);
 
+  trickle_down(arg, 0);
+
   for (int a : arr)
     cout << a << " ";
 
