@@ -12,7 +12,7 @@ void swap(int arr[], int idx, int idy)
   }
 }
 
-void trickle_down(int arr[], int idx, in len)
+void trickle_down(int arr[], int idx, int len)
 {
 
   int largest = idx;
