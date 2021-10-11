@@ -40,6 +40,8 @@ int main(int argc, char const *argv[])
   int arr[] = {10, 8, 6, 5, 7, 4, 12};
   int len = sizeof(arr) / sizeof(arr[0]);
 
+  trickle_up(arr, len - 1);
+
   print(arr, len);
 
   return 0;
