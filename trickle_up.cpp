@@ -19,6 +19,21 @@ void print(int arr[], int len)
   cout << endl;
 }
 
+void trickle_up(int arr[], int idx)
+{
+  if (idx > 0)
+  {
+    int p = (idx - 1) / 2;
+    if (arr[idx] < arr[p])
+    {
+      swap(arr, idx, p);
+      trickle_up(arr, p);
+    }
+  }
+
+  return;
+}
+
 int main(int argc, char const *argv[])
 {
 
