@@ -56,10 +56,14 @@ int dev_release(struct file *fl, struct dir_context *cntx)
   return 0;
 }
 
-#define DRIVER                                                                 \
-  {                                                                            \
-    (file_operations *)(fp);                                                   \
-  }
+#define LOAD_DRIVER(open, read, seek, write, release)                          \
+  {.open = open, .read = read, .write = write, .release = release};
+
+typedef struct DEFAULT_XXX_STRUCT
+{
+  int data_time;
+  int data;
+} SomeSetting;
 
 int main(int argc, char const *argv[])
 {
