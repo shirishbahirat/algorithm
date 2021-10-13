@@ -57,11 +57,7 @@ int dev_release(struct file *fl, struct dir_context *cntx)
 }
 
 #define LOAD_DRIVER(open, read, seek, write, release)                          \
-  {.open = open,                                                               \
-   .read = read,                                                               \
-   .seek = seek,                                                               \
-   .write = write,                                                             \
-   .release = release};
+  {open, read, seek, write, release};
 
 int main(int argc, char const *argv[])
 {
