@@ -77,7 +77,7 @@ int main(int argc, char const *argv[])
     */
 
   file_operations fops =
-      LOAD_DRIVER(&dev_open, &dev_read, &dev_seek, &dev_write, &dev_release);
+      LOAD_DRIVER(dev_open, dev_read, dev_seek, dev_write, dev_release);
 
   inode nd;
   file fl;
