@@ -59,12 +59,6 @@ int dev_release(struct file *fl, struct dir_context *cntx)
 #define LOAD_DRIVER(open, read, seek, write, release)                          \
   {.open = open, .read = read, .write = write, .release = release};
 
-typedef struct DEFAULT_XXX_STRUCT
-{
-  int data_time;
-  int data;
-} SomeSetting;
-
 int main(int argc, char const *argv[])
 {
 
@@ -75,6 +69,9 @@ int main(int argc, char const *argv[])
       .write = dev_write,
       .release = dev_release,
   };
+
+  file_operations fops =
+      LOAD_DRIVER(dev_open, dev_read, dev_seek, dev_write, dev_release);
 
   inode nd;
   file fl;
