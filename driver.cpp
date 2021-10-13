@@ -22,13 +22,17 @@ struct file_operations
 {
   struct module *owner;
   int (*open)(struct inode *, struct file *);
-  int (*seek)(struct file *, int, int);
+  int (*seek)(struct file *, char *, int, int *);
   int (*read)(struct file *, char *, int, int *);
-  int (*write)(struct file *, const char *, int, int *);
+  int (*write)(struct file *, char *, int, int *);
   int (*release)(struct file *, struct dir_context *);
 };
 
-int dev_open(struct inode *nnode, struct file *fl) { return 0; }
+int dev_open(struct inode *nnode, struct file *fl)
+{
+  cout << "dev open" << endl;
+  return 0;
+}
 int dev_seek(struct file *fl, char *name, int id, int *ptr) { return 0; }
 int dev_read(struct file *fl, char *name, int id, int *ptr) { return 0; }
 int dev_write(struct file *fl, char *name, int id, int *ptr) { return 0; }
@@ -44,6 +48,10 @@ int main(int argc, char const *argv[])
       .write = dev_write,
       .release = dev_release,
   };
+
+  inode nd;
+  file fl;
+  fops.open(&nd, &fl);
 
   return 0;
 }
