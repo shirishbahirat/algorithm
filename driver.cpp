@@ -76,8 +76,6 @@ int main(int argc, char const *argv[])
       .release = dev_release,
   };
 
-  DRIVER(&fops);
-
   inode nd;
   file fl;
   fops.open(&nd, &fl);
