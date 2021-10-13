@@ -35,10 +35,26 @@ int dev_open(struct inode *nnode, struct file *fl)
   cout << "dev open" << endl;
   return 0;
 }
-int dev_seek(struct file *fl, char *name, int id, int *ptr) { return 0; }
-int dev_read(struct file *fl, char *name, int id, int *ptr) { return 0; }
-int dev_write(struct file *fl, char *name, int id, int *ptr) { return 0; }
-int dev_release(struct file *fl, struct dir_context *cntx) { return 0; }
+int dev_seek(struct file *fl, char *name, int id, int *ptr)
+{
+  cout << "dev seek" << endl;
+  return 0;
+}
+int dev_read(struct file *fl, char *name, int id, int *ptr)
+{
+  cout << "dev read" << endl;
+  return 0;
+}
+int dev_write(struct file *fl, char *name, int id, int *ptr)
+{
+  cout << "dev write" << endl;
+  return 0;
+}
+int dev_release(struct file *fl, struct dir_context *cntx)
+{
+  cout << "dev release" << endl;
+  return 0;
+}
 
 int main(int argc, char const *argv[])
 {
