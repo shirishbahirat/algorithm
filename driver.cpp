@@ -56,6 +56,8 @@ int dev_release(struct file *fl, struct dir_context *cntx)
   return 0;
 }
 
+#define DRIVER(fops) (fp)
+
 int main(int argc, char const *argv[])
 {
 
