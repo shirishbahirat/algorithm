@@ -62,13 +62,15 @@ int dev_release(struct file *fl, struct dir_context *cntx)
 int main(int argc, char const *argv[])
 {
 
-  static struct file_operations fops = {
-      .open = dev_open,
-      .read = dev_read,
-      .seek = dev_seek,
-      .write = dev_write,
-      .release = dev_release,
-  };
+  /*
+    static struct file_operations fops = {
+        .open = dev_open,
+        .read = dev_read,
+        .seek = dev_seek,
+        .write = dev_write,
+        .release = dev_release,
+    };
+    */
 
   file_operations fops =
       LOAD_DRIVER(dev_open, dev_read, dev_seek, dev_write, dev_release);
