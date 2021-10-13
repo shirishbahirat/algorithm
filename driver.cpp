@@ -56,7 +56,7 @@ int dev_release(struct file *fl, struct dir_context *cntx)
   return 0;
 }
 
-#define DRIVER(*fops) (file_operations *)(fp)
+#define DRIVER(file_operations *fops) (file_operations *)(fp)
 
 int main(int argc, char const *argv[])
 {
