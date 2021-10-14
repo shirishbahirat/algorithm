@@ -184,7 +184,7 @@ void RedfishConfigHandlerInitilization(void)
   UINTN NumberOfHandles;
   EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *ConfigHandler;
   UINTN Index;
-  execution_staging_node *n;
+  execution_staging_node *n = nullptr;
 
   Status = gBs->LocateHandleBuffer(&NumberOfHandles);
 
@@ -204,9 +204,9 @@ void RedfishConfigHandlerInitilization(void)
     switch (priority)
     {
     case HIGH:
-      insert_prioty_high(&n, priority, Index, &ConfigHandler);
+      insert_prioty_high(&n, priority, Index, ConfigHandler);
       break;
-    case DEFAULT:
+    case DEFALT:
       break;
     }
   }
