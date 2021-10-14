@@ -188,6 +188,8 @@ void RedfishConfigHandlerInitilization(void)
 
   Status = gBs->LocateHandleBuffer(&NumberOfHandles);
 
+  cout << "Numbe of Handles " << NumberOfHandles << endl;
+
   if (EFI_ERROR(Status))
   {
     return;
