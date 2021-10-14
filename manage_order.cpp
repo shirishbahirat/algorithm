@@ -209,7 +209,7 @@ void RedfishConfigHandlerInitilization(void)
     case MEDIUM:
       insert_prioty_mid(&n, priority, Index, ConfigHandler);
       break;
-    case MEDIUM:
+    case LOW:
       insert_prioty_low(&n, priority, Index, ConfigHandler);
       break;
     default:
