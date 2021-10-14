@@ -224,7 +224,7 @@ void RedfishConfigHandlerInitilization(void)
   cout << "link list  " << n->next->next->next->priority << endl;
   // cout << "link list  " << n->next->next->next->next->priority << endl;
 
-  for (Index = 0; Index < NumberOfHandles; Index++)
+  for (Index = 0; Index < NumberOfHandles - 1; Index++)
   {
     driver_priority priority = n->priority;
     UINTN Index = n->Index;
