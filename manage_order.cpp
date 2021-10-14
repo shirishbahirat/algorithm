@@ -31,7 +31,6 @@ typedef struct _ConfigHandler
 {
   EFI_STATUS Init()
   {
-    cout << "Init Function" << endl;
     EFI_STATUS stat = pass;
     return pass;
   };
@@ -58,11 +57,7 @@ EFI_STATUS HndlProtocol(UINTN Index,
                         EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **ConfigHandler)
 {
   cfg = &Configs[Index];
-  cout << "check before address " << cfg->priority << endl;
   ConfigHandler = &cfg;
-
-  cout << "check after address " << (*ConfigHandler)->priority << endl;
-
   EFI_STATUS stat = pass;
   return stat;
 }
@@ -195,8 +190,6 @@ void RedfishConfigHandlerInitilization(void)
 
   Status = gBs->LocateHandleBuffer(&NumberOfHandles);
 
-  cout << "Numbe of Handles " << NumberOfHandles << endl;
-
   if (EFI_ERROR(Status))
   {
     return;
@@ -207,8 +200,6 @@ void RedfishConfigHandlerInitilization(void)
     Status = gBs->HandleProtocol(Index, &ConfigHandler);
 
     driver_priority priority = cfg->GetPriority();
-
-    cout << Index << " " << priority << endl;
 
     switch (priority)
     {
@@ -225,21 +216,16 @@ void RedfishConfigHandlerInitilization(void)
       break;
     }
   }
-  cout << "link list  " << n->priority << endl;
-  cout << "link list  " << n->next->priority << endl;
-  cout << "link list  " << n->next->next->priority << endl;
-  cout << "link list  " << n->next->next->next->priority << endl;
-  cout << "link list  " << n->next->next->next->next->priority << endl;
 
-  for (Index = 0; Index < NumberOfHandles - 1; Index++)
+  for (Index = 0; Index < NumberOfHandles; Index++)
   {
     driver_priority priority = n->priority;
-    UINTN Index = n->Index;
+    UINTN Tdx = n->Index;
     EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
     cfhandler->Init();
     n = n->next;
-
-    Status = gBs->InstallProtocolInterface(Index, &cfhandler);
+    cout << Index << endl;
+    Status = gBs->InstallProtocolInterface(Tdx, &cfhandler);
   }
 }
 
