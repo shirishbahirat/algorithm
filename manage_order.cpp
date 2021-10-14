@@ -161,6 +161,8 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
     return;
   }
 
+  cout << (*n)->id << endl;
+
   while (((*n)->priority == HIGH) && ((*n)->next != nullptr))
   {
     (*n) = (*n)->next;
