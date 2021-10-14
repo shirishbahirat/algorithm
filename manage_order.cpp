@@ -206,10 +206,15 @@ void RedfishConfigHandlerInitilization(void)
     case HIGH:
       insert_prioty_high(&n, priority, Index, ConfigHandler);
       break;
-    case default:
+    case MEDIUM:
+      insert_prioty_mid(&n, priority, Index, ConfigHandler);
+      break;
+    default:
       break;
     }
   }
+
+  cout << "link list  " << n->next->priority << endl;
 }
 
 int main(int argc, char const *argv[])
