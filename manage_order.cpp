@@ -47,7 +47,8 @@ struct _gBs
 {
   EFI_STATUS (*LocateHandleBuffer)(UINTN *);
   EFI_STATUS (*HandleProtocol)(UINTN, EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **);
-  EFI_STATUS (*InstallProtocolInterface)(UINTN);
+  EFI_STATUS(*InstallProtocolInterface)
+  (UINTN, EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **);
 };
 
 _gBs *gBs;
@@ -66,7 +67,8 @@ EFI_STATUS HndlProtocol(UINTN Index,
   return stat;
 }
 
-EFI_STATUS InstallProtocolInf(UINTN Indx)
+EFI_STATUS InstallProtocolInf(UINTN Indx,
+                              EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **cfhandler)
 {
   EFI_STATUS stat = pass;
   return stat;
@@ -236,6 +238,8 @@ void RedfishConfigHandlerInitilization(void)
     EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
     cfhandler->Init();
     n = n->next;
+
+    Status = gBs->InstallProtocolInterface(Index, &cfhandler);
   }
 }
 
