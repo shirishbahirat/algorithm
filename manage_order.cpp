@@ -105,6 +105,8 @@ void insert_prioty_low(execution_staging_node **n, driver_priority priority,
     return;
   }
 
+  cout << "Low " << (*n)->id << endl;
+
   while ((*n)->next != nullptr)
   {
     (*n) = (*n)->next;
@@ -135,7 +137,7 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
     return;
   }
 
-  cout << (*n)->id << endl;
+  cout << "High " << (*n)->id << endl;
 
   temp->next = *n;
 
@@ -161,7 +163,7 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
     return;
   }
 
-  cout << (*n)->id << endl;
+  cout << "Mid " << (*n)->id << endl;
 
   while (((*n)->priority == HIGH) && ((*n)->next != nullptr))
   {
