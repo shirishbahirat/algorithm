@@ -231,16 +231,14 @@ void RedfishConfigHandlerInitilization(void)
   // cout << "link list  " << n->next->next->next->priority << endl;
   // cout << "link list  " << n->next->next->next->next->priority << endl;
 
-  /*
-    for (Index = 0; Index < NumberOfHandles - 3; Index++)
-    {
-      driver_priority priority = n->priority;
-      UINTN Index = n->Index;
-      EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
-      cfhandler->Init();
-      n = n->next;
-    }
-    */
+  for (Index = 0; Index < NumberOfHandles - 1; Index++)
+  {
+    driver_priority priority = n->priority;
+    UINTN Index = n->Index;
+    EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
+    cfhandler->Init();
+    n = n->next;
+  }
 }
 
 int main(int argc, char const *argv[])
