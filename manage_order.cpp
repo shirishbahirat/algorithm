@@ -135,6 +135,8 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
     return;
   }
 
+  cout << (*n)->id << endl;
+
   temp->next = *n;
 
   *n = temp;
