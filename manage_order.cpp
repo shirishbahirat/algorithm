@@ -206,9 +206,9 @@ void RedfishConfigHandlerInitilization(void)
   {
     Status = gBs->HandleProtocol(Index, &ConfigHandler);
 
-    cout << Index << " " << cfg->GetPriority() << endl;
-
     driver_priority priority = cfg->GetPriority();
+
+    cout << Index << " " << priority << endl;
 
     switch (priority)
     {
