@@ -128,6 +128,7 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
   temp->priority = priority;
   temp->cfhandler = cfhandler;
   temp->id = id++;
+  execution_staging_node *head = *n;
 
   if (*n == nullptr)
   {
@@ -140,6 +141,8 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
   temp->next = *n;
 
   *n = temp;
+
+  *n = head;
 }
 
 void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
