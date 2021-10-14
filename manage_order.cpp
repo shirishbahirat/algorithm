@@ -29,7 +29,12 @@ typedef enum _driver_priority
 
 typedef struct _ConfigHandler
 {
-  EFI_STATUS Init();
+  EFI_STATUS Init()
+  {
+    cout << "Init Function" << endl;
+    EFI_STATUS stat = pass;
+    return pass;
+  };
   driver_priority GetPriority() { return priority; }
   driver_priority priority;
 } EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL;
