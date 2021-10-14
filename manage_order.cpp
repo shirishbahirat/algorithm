@@ -226,6 +226,10 @@ void RedfishConfigHandlerInitilization(void)
 
   for (Index = 0; Index < NumberOfHandles; Index++)
   {
+    driver_priority priority = n->priority;
+    UINTN Index = n->Index;
+    EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
+    n = n->next;
   }
 }
 
