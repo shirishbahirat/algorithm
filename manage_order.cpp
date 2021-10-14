@@ -229,7 +229,7 @@ void RedfishConfigHandlerInitilization(void)
     driver_priority priority = n->priority;
     UINTN Index = n->Index;
     EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
-    Status = cfhandler->Init();
+    cfhandler->Init();
     n = n->next;
   }
 }
