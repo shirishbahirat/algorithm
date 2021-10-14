@@ -206,7 +206,7 @@ void RedfishConfigHandlerInitilization(void)
     case HIGH:
       insert_prioty_high(&n, priority, Index, ConfigHandler);
       break;
-    case DEFALT:
+    case default:
       break;
     }
   }
