@@ -235,10 +235,10 @@ void RedfishConfigHandlerInitilization(void)
     driver_priority priority = n->priority;
     UINTN Tdx = n->Index;
     EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
+    cout << Index << " " << priority << endl;
     cfhandler->Init();
     n = n->next;
     Status = gBs->InstallProtocolInterface(Tdx, &cfhandler);
-    cout << Index << endl;
   }
 }
 
