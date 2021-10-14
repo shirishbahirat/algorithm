@@ -219,7 +219,7 @@ void RedfishConfigHandlerInitilization(void)
     }
   }
   cout << "link list  " << n->priority << endl;
-  n->cfhandler->init();
+  n->cfhandler->Init();
 
   // cout << "link list  " << n->next->priority << endl;
   // cout << "link list  " << n->next->next->priority << endl;
