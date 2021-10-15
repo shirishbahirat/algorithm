@@ -12,7 +12,18 @@ struct schema
 schema *create_node(int level, char *name, char *parent)
 {
   schema *node = new schema();
+  node->level = level;
+  node->name = name;
+  node->parent = parent;
+  node->next = nullptr;
+  node->mapped = false;
+
+  return node;
 }
+
+int level[] = {};
+char *name[] = {};
+char *parent[] = {};
 
 void inser_schema(schema **sch) {}
 
