@@ -10,8 +10,21 @@ struct schema
   char name[30];
   char parent[30];
   schema *next;
-  schema *side;
-  bool mapped;
+};
+
+struct stacks
+{
+  schema *nodes;
+  stacks *next;
+};
+
+struct pqueue
+{
+  int level;
+  int name[30];
+  int parent[30];
+  pqueue *child;
+  pqueue *sibling;
 };
 
 schema *split_line(string str, schema *sch)
@@ -42,8 +55,6 @@ schema *split_line(string str, schema *sch)
 
   strcpy(sch->parent, word.c_str());
   sch->next = nullptr;
-  sch->mapped = false;
-  sch->side = nullptr;
 
   return sch;
 }
@@ -54,7 +65,6 @@ schema *insert_schema(schema *head, schema *node)
   if (head == nullptr)
   {
     head = node;
-    cout << endl;
     return head;
   }
 
@@ -91,16 +101,20 @@ schema *create_schema(schema *head)
   return head;
 }
 
+void push_stack(stacks *top, schema *node) { assert(node != NULL); }
+
 int main(int argc, char const *argv[])
 {
   schema *head = nullptr;
+  schema *prioritized = nullptr;
+  stacks *top = nullptr;
 
   head = create_schema(head);
 
   while (head != nullptr)
   {
     cout << "node loop " << head->name << " " << head->level << " "
-         << head->parent << " " << head->mapped << endl;
+         << head->parent << endl;
     head = head->next;
   }
 
