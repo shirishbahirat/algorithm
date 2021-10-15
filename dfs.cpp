@@ -23,7 +23,7 @@ schema *create_node(int level, char *name, char *parent)
 
 int level[] = {};
 char *name[] = {};
-char *parent[] = {};
+char *parent[] = {"Root", "Boot", "Systems"};
 
 void inser_schema(schema **sch) {}
 
