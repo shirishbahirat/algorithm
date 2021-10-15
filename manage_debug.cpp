@@ -106,8 +106,6 @@ void insert_prioty_low(execution_staging_node **n, driver_priority priority,
     return;
   }
 
-  cout << "Low " << (*n)->id << endl;
-
   while ((*n)->next != nullptr)
   {
     (*n) = (*n)->next;
@@ -139,8 +137,6 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
     return;
   }
 
-  cout << "High " << (*n)->id << endl;
-
   temp->next = *n;
 
   *n = temp;
@@ -169,14 +165,11 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
     return;
   }
 
-  cout << "Mid " << (*n)->id << endl;
-
   while ((((*n)->priority == HIGH) || ((*n)->priority == MEDIUM)) &&
          ((*n)->next != nullptr))
   {
     prev = (*n);
     (*n) = (*n)->next;
-    cout << "Mid next " << temp->id << " " << (*n)->id << endl;
     forward++;
   }
 
@@ -186,16 +179,6 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
     *n = temp;
     return;
   }
-
-  cout << "Here " << endl;
-  /*
-    if ((forward == 0) && (((*n)->priority == HIGH)) ||
-        ((*n)->priority == LOW)) // *head == *n
-    {
-      (*n)->next = temp;
-      return;
-    }
-    */
 
   if ((prev->next != nullptr) && forward)
   {
@@ -209,7 +192,6 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
   if ((*n)->next == nullptr)
   {
     (*n)->next = temp;
-    cout << "Inserted mod node here" << endl;
   }
 
   *n = head;
@@ -253,8 +235,6 @@ void RedfishConfigHandlerInitilization(void)
     default:
       break;
     }
-
-    cout << "Inserted " << n->id << " " << n->priority << endl;
   }
 
   for (Index = 0; Index < NumberOfHandles; Index++)
