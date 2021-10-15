@@ -248,7 +248,7 @@ int main(int argc, char const *argv[])
 {
 
   id = 0;
-  driver_priority arr[] = {LOW, MEDIUM, HIGH, HIGH, HIGH};
+  driver_priority arr[] = {LOW, MEDIUM, HIGH, HIGH, MEDIUM};
 
   gBs = new (_gBs);
   gBs->LocateHandleBuffer = locateHandleBuffer;
