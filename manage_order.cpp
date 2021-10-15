@@ -191,6 +191,8 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
     (*n)->next = temp;
   }
 
+  *n = head;
+
   return;
 }
 
@@ -248,7 +250,7 @@ int main(int argc, char const *argv[])
 {
 
   id = 0;
-  driver_priority arr[] = {HIGH, HIGH, HIGH, HIGH, MEDIUM};
+  driver_priority arr[] = {HIGH, HIGH, MEDIUM, LOW, MEDIUM};
 
   gBs = new (_gBs);
   gBs->LocateHandleBuffer = locateHandleBuffer;
