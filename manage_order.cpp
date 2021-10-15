@@ -94,6 +94,7 @@ void insert_prioty_low(execution_staging_node **n, driver_priority priority,
   execution_staging_node *temp = new (execution_staging_node);
 
   temp->Index = Index;
+  temp->next = nullptr;
   temp->priority = priority;
   temp->cfhandler = cfhandler;
   temp->id = id++;
@@ -127,6 +128,7 @@ void insert_prioty_high(execution_staging_node **n, driver_priority priority,
   execution_staging_node *temp = new (execution_staging_node);
 
   temp->Index = Index;
+  temp->next = nullptr;
   temp->priority = priority;
   temp->cfhandler = cfhandler;
   temp->id = id++;
@@ -151,11 +153,15 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
   execution_staging_node *temp = new (execution_staging_node);
   execution_staging_node *head = *n;
   execution_staging_node *mid;
+  execution_staging_node *prev;
 
   temp->Index = Index;
+  temp->next = nullptr;
   temp->priority = priority;
   temp->cfhandler = cfhandler;
   temp->id = id++;
+
+  int forward = 0;
 
   if (*n == nullptr)
   {
@@ -165,30 +171,45 @@ void insert_prioty_mid(execution_staging_node **n, driver_priority priority,
 
   cout << "Mid " << (*n)->id << endl;
 
-  while (((*n)->priority == HIGH) && ((*n)->next != nullptr))
+  while ((((*n)->priority == HIGH) || ((*n)->priority == MEDIUM)) &&
+         ((*n)->next != nullptr))
   {
+    prev = (*n);
     (*n) = (*n)->next;
+    cout << "Mid next " << temp->id << " " << (*n)->id << endl;
+    forward++;
   }
 
-  if (head == *n)
+  if ((forward == 0) && ((*n)->priority == LOW)) // *head == *n
   {
     temp->next = *n;
-
     *n = temp;
     return;
   }
 
-  if ((*n)->next != nullptr)
+  cout << "Here " << endl;
+  /*
+    if ((forward == 0) && (((*n)->priority == HIGH)) ||
+        ((*n)->priority == LOW)) // *head == *n
+    {
+      (*n)->next = temp;
+      return;
+    }
+    */
+
+  if ((prev->next != nullptr) && forward)
   {
-    mid = (*n)->next;
-    (*n)->next = temp;
+    mid = prev->next;
+    prev->next = temp;
     temp->next = mid;
+    *n = head;
     return;
   }
 
   if ((*n)->next == nullptr)
   {
     (*n)->next = temp;
+    cout << "Inserted mod node here" << endl;
   }
 
   *n = head;
@@ -232,6 +253,8 @@ void RedfishConfigHandlerInitilization(void)
     default:
       break;
     }
+
+    cout << "Inserted " << n->id << " " << n->priority << endl;
   }
 
   for (Index = 0; Index < NumberOfHandles; Index++)
@@ -250,7 +273,7 @@ int main(int argc, char const *argv[])
 {
 
   id = 0;
-  driver_priority arr[] = {HIGH, HIGH, MEDIUM, MEDIUM, MEDIUM};
+  driver_priority arr[] = {MEDIUM, LOW, LOW, HIGH, MEDIUM};
 
   gBs = new (_gBs);
   gBs->LocateHandleBuffer = locateHandleBuffer;
