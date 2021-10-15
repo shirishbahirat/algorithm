@@ -101,7 +101,7 @@ schema *create_schema(schema *head)
   return head;
 }
 
-void push_stack(stacks *top, schema *node) { assert(node != NULL); }
+void push_stack(stacks *top, schema *node) { assert(node != nullptr); }
 
 int main(int argc, char const *argv[])
 {
@@ -117,6 +117,8 @@ int main(int argc, char const *argv[])
          << head->parent << endl;
     head = head->next;
   }
+
+  push_stack(top, head);
 
   return 0;
 }
