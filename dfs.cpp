@@ -205,7 +205,7 @@ int main(int argc, char const *argv[])
   pqueue_head = push_level_tree(top, pqueue_head, 1);
   top = pop_stack(top);
 
-  cout << "after ins 1st child " << pqueue_head->name << endl;
+  cout << "after ins 1st child " << pqueue_head->child->name << endl;
 
   // insert 1st child
   // top = push_level_to_stack(head, 1, pqueue_head->name, top);
