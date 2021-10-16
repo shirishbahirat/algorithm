@@ -12,12 +12,6 @@ struct schema
   schema *next;
 };
 
-struct stacks
-{
-  schema *nodes;
-  stacks *next;
-};
-
 struct pqueue
 {
   int level;
@@ -101,55 +95,6 @@ schema *create_schema(schema *head)
   return head;
 }
 
-stacks *push_stack(stacks *top, schema *node)
-{
-  assert(node != nullptr);
-
-  stacks *sp = new (stacks);
-  sp->nodes = node;
-  sp->next = nullptr;
-
-  if (top == nullptr)
-  {
-    top = sp;
-    return top;
-  }
-
-  sp->next = top;
-  top = sp;
-
-  return top;
-}
-
-stacks *pop_stack(stacks *top)
-{
-  assert(top != nullptr);
-
-  stacks *temp = top;
-  top = top->next;
-
-  cout << "Poped from stack " << temp->nodes->name << endl;
-
-  free(temp);
-
-  return top;
-}
-
-stacks *push_level_to_stack(schema *head, int level, char *parent, stacks *top)
-{
-
-  while (head != nullptr)
-  {
-    if ((head->level == level) && (!strcmp(parent, head->parent)))
-    {
-      top = push_stack(top, head);
-    }
-    head = head->next;
-  }
-
-  return top;
-}
-
 pqueue *push_level_tree(stacks *top, pqueue *pqueue_head, bool child)
 {
   pqueue *pqn = new pqueue();
@@ -207,39 +152,6 @@ int main(int argc, char const *argv[])
   head = create_schema(head);
 
   char name[30] = "none";
-
-  // insert root node
-  top = push_level_to_stack(head, 0, name, top);
-  pqueue_head = push_level_tree(top, pqueue_head, 0);
-  top = pop_stack(top);
-
-  // insert 1st child
-  top = push_level_to_stack(head, 1, pqueue_head->name, top);
-  pqueue_head = push_level_tree(top, pqueue_head, 1);
-  top = pop_stack(top);
-
-  cout << "after ins 1st child " << pqueue_head->child->name << endl;
-
-  while (top)
-  {
-    top = push_level_to_stack(head, 1, pqueue_head->name, top);
-    pqueue_head = push_level_tree(top, pqueue_head, 1);
-    top = pop_stack(top);
-  }
-
-  while (head != nullptr)
-  {
-    cout << "node loop " << head->name << " " << head->level << " "
-         << head->parent << endl;
-    head = head->next;
-  }
-
-  while (top != nullptr)
-  {
-    cout << "stack loop " << top->nodes->name << " " << top->nodes->level << " "
-         << top->nodes->parent << endl;
-    top = top->next;
-  }
 
   return 0;
 }
