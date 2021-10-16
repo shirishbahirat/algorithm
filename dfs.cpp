@@ -121,7 +121,7 @@ stacks *push_stack(stacks *top, schema *node)
   return top;
 }
 
-stacks *pop_stack(stacks *top)
+stacks *pop_stack(stacks *top, int level, char *name)
 {
   assert(top != nullptr);
 
@@ -156,7 +156,7 @@ int main(int argc, char const *argv[])
   head = create_schema(head);
 
   top = push_level(head, 3, top);
-  top = pop_stack(top);
+  top = pop_stack(top, 0, "none");
 
   while (head != nullptr)
   {
