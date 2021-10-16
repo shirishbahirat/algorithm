@@ -155,7 +155,7 @@ int main(int argc, char const *argv[])
 
   head = create_schema(head);
 
-  top = push_level(head, 3, top);
+  top = push_level(head, 0, top);
   top = pop_stack(top, 0, "none");
 
   while (head != nullptr)
