@@ -21,8 +21,8 @@ struct stacks
 struct pqueue
 {
   int level;
-  int name[30];
-  int parent[30];
+  char name[30];
+  char parent[30];
   pqueue *child;
   pqueue *sibling;
 };
@@ -121,7 +121,7 @@ stacks *push_stack(stacks *top, schema *node)
   return top;
 }
 
-stacks *pop_stack(stacks *top, int level, string name)
+stacks *pop_stack(stacks *top)
 {
   assert(top != nullptr);
 
@@ -135,16 +135,53 @@ stacks *pop_stack(stacks *top, int level, string name)
   return top;
 }
 
-stacks *push_level(schema *head, int level, stacks *top)
+stacks *push_level_to_stack(schema *head, int level, char *parent, stacks *top)
 {
+
   while (head != nullptr)
   {
-    if (head->level == level)
+    if ((head->level == level) && (!strcmp(parent, head->parent)))
+    {
       top = push_stack(top, head);
+    }
     head = head->next;
   }
 
   return top;
+}
+
+pqueue *push_level_tree(stacks *top, pqueue *pqueue_head, bool child)
+{
+  pqueue *pqn = new pqueue();
+  pqn->level = top->nodes->level;
+  strcpy(pqn->name, top->nodes->name);
+  strcpy(pqn->parent, top->nodes->parent);
+  pqn->child = nullptr;
+  pqn->sibling = nullptr;
+
+  if (pqueue_head == nullptr)
+  {
+    pqueue_head = pqn;
+  }
+
+  if (child)
+  {
+    while (pqueue_head->child != nullptr)
+    {
+      pqueue_head = pqueue_head->child;
+    }
+    pqueue_head->child = pqn;
+  }
+  else
+  {
+    while (pqueue_head->sibling != nullptr)
+    {
+      pqueue_head = pqueue_head->sibling;
+    }
+    pqueue_head->sibling = pqn;
+  }
+
+  return pqueue_head;
 }
 
 int main(int argc, char const *argv[])
@@ -152,11 +189,28 @@ int main(int argc, char const *argv[])
   schema *head = nullptr;
   schema *prioritized = nullptr;
   stacks *top = nullptr;
+  pqueue *pqueue_head = nullptr;
 
   head = create_schema(head);
 
-  top = push_level(head, 0, top);
-  top = pop_stack(top, 0, "none");
+  char name[30] = "none";
+
+  // insert root node
+  top = push_level_to_stack(head, 0, name, top);
+  pqueue_head = push_level_tree(top, pqueue_head, 0);
+  top = pop_stack(top);
+
+  // insert 1st child
+  top = push_level_to_stack(head, 1, pqueue_head->name, top);
+  pqueue_head = push_level_tree(top, pqueue_head, 1);
+  top = pop_stack(top);
+
+  cout << "after ins 1st child " << pqueue_head->name << endl;
+
+  // insert 1st child
+  // top = push_level_to_stack(head, 1, pqueue_head->name, top);
+  // pqueue_head = push_level_tree(top, pqueue_head, 1);
+  // top = pop_stack(top);
 
   while (head != nullptr)
   {
