@@ -121,7 +121,7 @@ stacks *push_stack(stacks *top, schema *node)
   return top;
 }
 
-stacks *pop_stack(stacks *top, int level, char *name)
+stacks *pop_stack(stacks *top, int level, string name)
 {
   assert(top != nullptr);
 
