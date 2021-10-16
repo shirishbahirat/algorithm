@@ -101,7 +101,51 @@ schema *create_schema(schema *head)
   return head;
 }
 
-void push_stack(stacks *top, schema *node) { assert(node != nullptr); }
+stacks *push_stack(stacks *top, schema *node)
+{
+  assert(node != nullptr);
+
+  stacks *sp = new (stacks);
+  sp->nodes = node;
+  sp->next = nullptr;
+
+  if (top == nullptr)
+  {
+    top = sp;
+    return top;
+  }
+
+  sp->next = top;
+  top = sp;
+
+  return top;
+}
+
+stacks *pop_stack(stacks *top)
+{
+  assert(top != nullptr);
+
+  stacks *temp = top;
+  top = top->next;
+
+  cout << "Poped from stack " << temp->nodes->name << endl;
+
+  free(temp);
+
+  return top;
+}
+
+stacks *push_level(schema *head, int level, stacks *top)
+{
+  while (head != nullptr)
+  {
+    if (head->level == level)
+      top = push_stack(top, head);
+    head = head->next;
+  }
+
+  return top;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -111,6 +155,9 @@ int main(int argc, char const *argv[])
 
   head = create_schema(head);
 
+  top = push_level(head, 3, top);
+  top = pop_stack(top);
+
   while (head != nullptr)
   {
     cout << "node loop " << head->name << " " << head->level << " "
@@ -118,7 +165,12 @@ int main(int argc, char const *argv[])
     head = head->next;
   }
 
-  push_stack(top, head);
+  while (top != nullptr)
+  {
+    cout << "stack loop " << top->nodes->name << " " << top->nodes->level << " "
+         << top->nodes->parent << endl;
+    top = top->next;
+  }
 
   return 0;
 }
