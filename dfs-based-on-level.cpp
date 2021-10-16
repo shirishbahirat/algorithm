@@ -145,8 +145,6 @@ pqueue *push_level_tree(stacks *top, pqueue *pqueue_head, bool child)
 int main(int argc, char const *argv[])
 {
   schema *head = nullptr;
-  schema *prioritized = nullptr;
-  stacks *top = nullptr;
   pqueue *pqueue_head = nullptr;
 
   head = create_schema(head);
