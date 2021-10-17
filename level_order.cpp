@@ -11,30 +11,7 @@ typedef enum
 } EFI_STATUS;
 typedef uint64_t EFI_HANDLE;
 typedef uint16_t UINTN;
-
-EFI_STATUS locateHandleBuffer(UINTN *Num)
-{
-
-  EFI_STATUS stat = pass;
-  *Num = 5;
-  return stat;
-}
-
-typedef enum _driver_level
-{
-  ROOT,
-  ONE,
-  TWO,
-  THRE,
-  FOUR,
-  FIVE,
-  SIX,
-  SEVEN,
-  EIGHT,
-  NINE,
-  TEN,
-  LEVELS
-} _driver_level;
+typedef uint16_t DRIVER_LEVEL;
 
 struct schema
 {
@@ -52,6 +29,69 @@ struct pqueue
   pqueue *child;
   pqueue *sibling;
 };
+
+schema *create_schema_temp(schema *schema_head, int *number_of_drivers);
+
+schema *schema_head = nullptr;
+pqueue *pqueue_head = nullptr;
+
+EFI_STATUS locateHandleBuffer(UINTN *Num)
+{
+
+  EFI_STATUS stat = pass;
+  int number_of_drivers = 0;
+
+  schema_head = create_schema_temp(schema_head, &number_of_drivers);
+
+  *Num = number_of_drivers;
+  return stat;
+}
+
+typedef struct _ConfigHandler
+{
+  EFI_STATUS Init()
+  {
+    EFI_STATUS stat = pass;
+    return pass;
+  };
+  driver_level GetLevel() { return level; }
+  driver_level level;
+  pqueue priority_queue;
+} EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL;
+
+EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL Configs[30];
+
+int EFI_ERROR(EFI_STATUS stat) { return stat; }
+
+struct _gBs
+{
+  EFI_STATUS (*LocateHandleBuffer)(UINTN *);
+  EFI_STATUS (*HandleProtocol)(UINTN, EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **);
+  EFI_STATUS(*InstallProtocolInterface)
+  (UINTN, EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **);
+};
+
+_gBs *gBs;
+EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfg;
+
+EFI_STATUS HndlProtocol(UINTN Index,
+                        EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **ConfigHandler)
+{
+  cfg = &Configs[Index];
+
+  cfg->level = schema_head->level;
+
+  ConfigHandler = &cfg;
+  EFI_STATUS stat = pass;
+  return stat;
+}
+
+EFI_STATUS InstallProtocolInf(UINTN Indx,
+                              EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL **cfhandler)
+{
+  EFI_STATUS stat = pass;
+  return stat;
+}
 
 schema *split_line(string str, schema *sch)
 {
@@ -85,31 +125,41 @@ schema *split_line(string str, schema *sch)
   return sch;
 }
 
-schema *insert_schema(schema *head, schema *node)
+struct execution_staging_node
+{
+  execution_staging_node *next;
+  driver_level level;
+  UINTN Index;
+  EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfghandler;
+  int id;
+};
+
+schema *insert_schema_to_llist_temp(schema *schema_head, schema *node)
 {
 
-  if (head == nullptr)
+  if (schema_head == nullptr)
   {
-    head = node;
-    return head;
+    schema_head = node;
+    return schema_head;
   }
 
-  schema *temp = head;
+  schema *temp = schema_head;
 
-  while (head->next != nullptr)
+  while (schema_head->next != nullptr)
   {
-    head = head->next;
+    schema_head = schema_head->next;
   }
 
-  head->next = node;
-  head = temp;
-  return head;
+  schema_head->next = node;
+  schema_head = temp;
+  return schema_head;
 }
 
-schema *create_schema(schema *head)
+schema *create_schema_temp(schema *schema_head, int *number_of_drivers)
 {
 
   schema *sch;
+  int num = 0;
 
   ifstream file("schema.inf");
   if (file.is_open())
@@ -119,18 +169,21 @@ schema *create_schema(schema *head)
     {
       sch = new schema();
       sch = split_line(line.c_str(), sch);
-      head = insert_schema(head, sch);
+      schema_head = insert_schema_to_llist_temp(schema_head, sch);
+      num++;
     }
     file.close();
   }
 
-  return head;
+  *number_of_drivers = num;
+
+  return schema_head;
 }
 
-pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
+pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
 {
 
-  if (head == nullptr)
+  if (schema_head == nullptr)
     return pqueue_head;
 
   pqueue *phead = pqueue_head, *temp = pqueue_head, *pqn = nullptr;
@@ -142,7 +195,7 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
     pqn->child = nullptr;
     pqn->sibling = nullptr;
     pqn->level = 0;
-    strcpy(pqn->name, "head");
+    strcpy(pqn->name, "schema_head");
     strcpy(pqn->parent, "none");
     phead = pqn;
     pqueue_head = phead;
@@ -156,16 +209,16 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
       pqn->sibling = nullptr;
       pqn->level = i;
       cout << pqn->level << endl;
-      strcpy(pqn->name, "head");
+      strcpy(pqn->name, "schema_head");
       strcpy(pqn->parent, "none");
       prev = pqn;
     }
   }
 
-  while (head)
+  while (schema_head)
   {
-    cout << head->level << " ";
-    int level = head->level;
+    cout << schema_head->level << " ";
+    int level = schema_head->level;
     temp = pqueue_head;
 
     while (level)
@@ -181,12 +234,12 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
     }
 
     pqn = new pqueue();
-    strcpy(pqn->name, head->name);
-    strcpy(pqn->parent, head->parent);
-    pqn->level = head->level;
+    strcpy(pqn->name, schema_head->name);
+    strcpy(pqn->parent, schema_head->parent);
+    pqn->level = schema_head->level;
     temp->sibling = pqn;
 
-    head = head->next;
+    schema_head = schema_head->next;
   }
   cout << endl;
 
@@ -220,16 +273,66 @@ void execute_per_level(pqueue *pqueue_head)
   return;
 }
 
+void RedfishConfigHandlerInitilization(void)
+{
+  EFI_STATUS Status;
+  EFI_HANDLE *HandleBuffer;
+  UINTN NumberOfHandles;
+  EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *ConfigHandler;
+  UINTN Index;
+  execution_staging_node *n = nullptr;
+
+  Status = gBs->LocateHandleBuffer(&NumberOfHandles);
+
+  cout << NumberOfHandles << endl;
+
+  if (EFI_ERROR(Status))
+  {
+    return;
+  }
+
+  for (Index = 0; Index < NumberOfHandles; Index++)
+  {
+    Status = gBs->HandleProtocol(Index, &ConfigHandler);
+    driver_level level = cfg->GetLevel();
+  }
+
+  /*
+    for (Index = 0; Index < NumberOfHandles; Index++)
+    {
+      driver_priority priority = n->priority;
+      UINTN Tdx = n->Index;
+      EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfhandler = n->cfhandler;
+      cout << Index << " " << priority << endl;
+      cfhandler->Init();
+      n = n->next;
+      Status = gBs->InstallProtocolInterface(Tdx, &cfhandler);
+    }
+    */
+}
+
 int main(int argc, char const *argv[])
 {
-  schema *head = nullptr;
-  pqueue *pqueue_head = nullptr;
 
-  head = create_schema(head);
+  int number_of_drivers;
 
-  pqueue_head = generate_level_tree(pqueue_head, head);
+  gBs = new (_gBs);
+  gBs->LocateHandleBuffer = locateHandleBuffer;
+  gBs->HandleProtocol = HndlProtocol;
+  gBs->InstallProtocolInterface = InstallProtocolInf;
+
+  RedfishConfigHandlerInitilization();
+
+  /*
+
+  schema_head = create_schema_temp(schema_head, &number_of_drivers);
+
+  pqueue_head = generate_level_tree(pqueue_head, schema_head);
 
   execute_per_level(pqueue_head);
+
+  cout << number_of_drivers << endl;
+  */
 
   return 0;
 }
