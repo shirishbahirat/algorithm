@@ -133,6 +133,15 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
   while (head)
   {
     cout << head->level << " ";
+    int level = head->level;
+    *temp = pqueue_head;
+
+    while (level)
+    {
+      temp = temp->child;
+      level--;
+    }
+
     head = head->next;
   }
   cout << endl;
