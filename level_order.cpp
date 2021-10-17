@@ -29,6 +29,7 @@ struct pqueue
   UINTN Index;
   pqueue *child;
   pqueue *sibling;
+  EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *cfghandler;
 };
 
 schema *create_schema_temp(schema *schema_head, int *number_of_drivers);
@@ -209,6 +210,7 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
     strcpy(pqn->name, "schema_head");
     strcpy(pqn->parent, "none");
     phead = pqn;
+    pqn->cfghandler = nullptr;
     pqueue_head = phead;
 
     cout << pqn->level << endl;
@@ -222,6 +224,7 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
       cout << pqn->level << endl;
       strcpy(pqn->name, "schema_head");
       strcpy(pqn->parent, "none");
+      pqn->cfghandler = nullptr;
       prev = pqn;
     }
   }
@@ -248,6 +251,7 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
     strcpy(pqn->name, schema_head->name);
     strcpy(pqn->parent, schema_head->parent);
     pqn->level = schema_head->level;
+    pqn->cfghandler = nullptr;
     temp->sibling = pqn;
 
     schema_head = schema_head->next;
@@ -258,7 +262,8 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
 }
 
 pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
-                          DRIVER_LEVEL level, UINTN Index)
+                          DRIVER_LEVEL level, UINTN Index,
+                          EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *ConfigHandler)
 {
 
   pqueue *phead = pqueue_head, *temp = pqueue_head, *pqn = nullptr;
@@ -272,6 +277,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
     pqn->level = 0;
     strcpy(pqn->name, "schema_head");
     strcpy(pqn->parent, "none");
+    pqn->cfghandler = nullptr;
     phead = pqn;
     pqueue_head = phead;
 
@@ -286,6 +292,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
       cout << "new priorvity struct " << pqn->level << endl;
       strcpy(pqn->name, "schema_head");
       strcpy(pqn->parent, "none");
+      pqn->cfghandler = nullptr;
       prev = pqn;
     }
   }
@@ -308,6 +315,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
   strcpy(pqn->parent, parent);
   pqn->level = level;
   pqn->Index = Index;
+  pqn->cfghandler = ConfigHandler;
   temp->sibling = pqn;
 
   return phead;
@@ -361,8 +369,9 @@ void RedfishConfigHandlerInitilization(void)
   for (Index = 0; Index < NumberOfHandles; Index++)
   {
     Status = gBs->HandleProtocol(Index, &ConfigHandler);
-    pqueue_head = insert_level_tree(pqueue_head, cfg->GetName(),
-                                    cfg->GetPerent(), cfg->GetLevel(), Index);
+    pqueue_head =
+        insert_level_tree(pqueue_head, cfg->GetName(), cfg->GetPerent(),
+                          cfg->GetLevel(), Index, ConfigHandler);
   }
 
   execute_per_level(pqueue_head);
