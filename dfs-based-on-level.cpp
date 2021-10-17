@@ -194,5 +194,7 @@ int main(int argc, char const *argv[])
 
   pqueue_head = generate_level_tree(pqueue_head, head);
 
+  execute_based_on_level(pqueue_head);
+
   return 0;
 }
