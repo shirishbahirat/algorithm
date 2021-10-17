@@ -342,7 +342,7 @@ void execution_order_per_level(pqueue *pqueue_head)
       {
         temp->cfghandler->Init();
       }
-      cout << " " << temp->parent;
+      cout << " " << temp->parent << endl;
       temp = temp->sibling;
     }
     cout << endl;
