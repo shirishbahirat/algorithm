@@ -338,6 +338,10 @@ void execute_per_level(pqueue *pqueue_head)
     while (temp)
     {
       cout << temp->name << " ";
+      if (temp->cfghandler)
+      {
+        temp->cfghandler->Init();
+      }
       temp = temp->sibling;
     }
     cout << endl;
