@@ -21,6 +21,24 @@ struct schema
   schema *next;
 };
 
+typedef struct _ConfigHandler
+{
+  EFI_STATUS Init()
+  {
+    EFI_STATUS stat = pass;
+    return pass;
+  };
+
+  DRIVER_LEVEL GetLevel() { return level; }
+  char *GetName() { return name; }
+  char *GetPerent() { return parent; }
+
+  DRIVER_LEVEL level;
+  char name[30];
+  char parent[30];
+
+} EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL;
+
 struct pqueue
 {
   int level;
@@ -48,24 +66,6 @@ EFI_STATUS locateHandleBuffer(UINTN *Num)
   *Num = number_of_drivers;
   return stat;
 }
-
-typedef struct _ConfigHandler
-{
-  EFI_STATUS Init()
-  {
-    EFI_STATUS stat = pass;
-    return pass;
-  };
-
-  DRIVER_LEVEL GetLevel() { return level; }
-  char *GetName() { return name; }
-  char *GetPerent() { return parent; }
-
-  DRIVER_LEVEL level;
-  char name[30];
-  char parent[30];
-
-} EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL;
 
 EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL Configs[30];
 
