@@ -95,51 +95,49 @@ schema *create_schema(schema *head)
   return head;
 }
 
-pqueue *push_level_tree(stacks *top, pqueue *pqueue_head, bool child)
+pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
 {
-  pqueue *pqn = new pqueue();
-  pqn->level = top->nodes->level;
-  strcpy(pqn->name, top->nodes->name);
-  strcpy(pqn->parent, top->nodes->parent);
-  pqn->child = nullptr;
-  pqn->sibling = nullptr;
 
-  pqueue *head = nullptr;
+  if (head == nullptr)
+    return pqueue_head;
+
+  pqueue *phead = pqueue_head, *temp = pqueue_head, *pqn = nullptr;
 
   if (pqueue_head == nullptr)
   {
-    pqueue_head = pqn;
-    return pqueue_head;
-  }
-  else
-  {
-    head = pqueue_head;
-  }
+    pqn = new pqueue();
+    pqueue *prev = pqn;
+    pqn->child = nullptr;
+    pqn->sibling = nullptr;
+    pqn->level = 0;
+    strcpy(pqn->name, "head");
+    strcpy(pqn->parent, "none");
+    phead = pqn;
+    pqueue_head = phead;
 
-  if (child)
-  {
-    while (pqueue_head->child != nullptr)
+    cout << pqn->level << endl;
+
+    for (int i = 1; i < 10; ++i)
     {
-      pqueue_head = pqueue_head->child;
+      pqn = new pqueue();
+      prev->child = pqn;
+      pqn->sibling = nullptr;
+      pqn->level = i;
+      cout << pqn->level << endl;
+      strcpy(pqn->name, "head");
+      strcpy(pqn->parent, "none");
+      prev = pqn;
     }
-    pqueue_head->child = pqn;
   }
-  else
+
+  while (head)
   {
-
-    while (pqueue_head->child != nullptr)
-    {
-      pqueue_head = pqueue_head->child;
-    }
-
-    while (pqueue_head->sibling != nullptr)
-    {
-      pqueue_head = pqueue_head->sibling;
-    }
-    pqueue_head->sibling = pqn;
+    cout << head->level << " ";
+    head = head->next;
   }
+  cout << endl;
 
-  return head;
+  return phead;
 }
 
 int main(int argc, char const *argv[])
@@ -149,7 +147,14 @@ int main(int argc, char const *argv[])
 
   head = create_schema(head);
 
-  char name[30] = "none";
+  pqueue_head = generate_level_tree(pqueue_head, head);
+
+  while (pqueue_head)
+  {
+    cout << pqueue_head->level << " ";
+    pqueue_head = pqueue_head->child;
+  }
+  cout << endl;
 
   return 0;
 }
