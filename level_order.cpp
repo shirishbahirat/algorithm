@@ -322,7 +322,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
   return phead;
 }
 
-void execute_per_level(pqueue *pqueue_head)
+void execution_order_per_level(pqueue *pqueue_head)
 {
 
   if (pqueue_head == nullptr)
@@ -379,7 +379,7 @@ void RedfishConfigHandlerInitilization(void)
                           cfg->GetLevel(), Index, ConfigHandler);
   }
 
-  execute_per_level(pqueue_head);
+  execution_order_per_level(pqueue_head);
 
   /*
     for (Index = 0; Index < NumberOfHandles; Index++)
