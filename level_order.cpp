@@ -25,7 +25,7 @@ typedef struct _ConfigHandler
 {
   EFI_STATUS Init()
   {
-    cout << " Init " << endl;
+    cout << " Init ";
     EFI_STATUS stat = pass;
     return pass;
   };
