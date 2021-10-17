@@ -321,11 +321,13 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
   return phead;
 }
 
-void execution_order_per_level(pqueue *pqueue_head)
+EFI_STATUS execution_order_per_level(pqueue *pqueue_head)
 {
 
+  EFI_STATUS Status = fail;
+
   if (pqueue_head == nullptr)
-    return;
+    return Status;
 
   pqueue *temp;
 
@@ -350,7 +352,9 @@ void execution_order_per_level(pqueue *pqueue_head)
   }
   cout << endl;
 
-  return;
+  Status = pass;
+
+  return Status;
 }
 
 void RedfishConfigHandlerInitilization(void)
@@ -379,7 +383,7 @@ void RedfishConfigHandlerInitilization(void)
                           cfg->GetLevel(), Index, ConfigHandler);
   }
 
-  execution_order_per_level(pqueue_head);
+  Status = execution_order_per_level(pqueue_head);
 
   /*
     for (Index = 0; Index < NumberOfHandles; Index++)
