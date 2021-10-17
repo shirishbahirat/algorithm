@@ -134,19 +134,55 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
   {
     cout << head->level << " ";
     int level = head->level;
-    *temp = pqueue_head;
+    temp = pqueue_head;
 
     while (level)
     {
       temp = temp->child;
       level--;
     }
+    cout << " after while loop " << temp->level << endl;
+
+    while (temp->sibling)
+    {
+      temp = temp->sibling;
+    }
+
+    pqn = new pqueue();
+    strcpy(pqn->name, head->name);
+    strcpy(pqn->parent, head->parent);
+    pqn->level = head->level;
+    temp->sibling = pqn;
 
     head = head->next;
   }
   cout << endl;
 
   return phead;
+}
+
+void execute_based_on_level(pqueue *pqueue_head)
+{
+
+  pqueue *temp;
+
+  while (pqueue_head)
+  {
+    cout << pqueue_head->level << " ";
+
+    temp = pqueue_head;
+    while (temp)
+    {
+      cout << temp->name << " ";
+      temp = temp->sibling;
+    }
+    cout << endl;
+
+    pqueue_head = pqueue_head->child;
+  }
+  cout << endl;
+
+  return;
 }
 
 int main(int argc, char const *argv[])
@@ -157,13 +193,6 @@ int main(int argc, char const *argv[])
   head = create_schema(head);
 
   pqueue_head = generate_level_tree(pqueue_head, head);
-
-  while (pqueue_head)
-  {
-    cout << pqueue_head->level << " ";
-    pqueue_head = pqueue_head->child;
-  }
-  cout << endl;
 
   return 0;
 }
