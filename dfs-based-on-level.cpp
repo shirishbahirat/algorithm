@@ -161,8 +161,11 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *head)
   return phead;
 }
 
-void execute_based_on_level(pqueue *pqueue_head)
+void execute_per_level(pqueue *pqueue_head)
 {
+
+  if (pqueue_head == nullptr)
+    return;
 
   pqueue *temp;
 
@@ -194,7 +197,7 @@ int main(int argc, char const *argv[])
 
   pqueue_head = generate_level_tree(pqueue_head, head);
 
-  execute_based_on_level(pqueue_head);
+  execute_per_level(pqueue_head);
 
   return 0;
 }
