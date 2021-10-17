@@ -302,7 +302,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
     current_levels = DEFAULT_LEVELS;
   }
 
-  if (level > current_levels)
+  if (level > current_levels) // @todo needs verification of thsi code
   {
 
     pqn = pqueue_head;
