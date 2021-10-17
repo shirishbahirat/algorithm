@@ -4,6 +4,38 @@
 
 using namespace std;
 
+typedef enum
+{
+  pass,
+  fail
+} EFI_STATUS;
+typedef uint64_t EFI_HANDLE;
+typedef uint16_t UINTN;
+
+EFI_STATUS locateHandleBuffer(UINTN *Num)
+{
+
+  EFI_STATUS stat = pass;
+  *Num = 5;
+  return stat;
+}
+
+typedef enum _driver_level
+{
+  ROOT,
+  ONE,
+  TWO,
+  THRE,
+  FOUR,
+  FIVE,
+  SIX,
+  SEVEN,
+  EIGHT,
+  NINE,
+  TEN,
+  LEVELS
+} _driver_level;
+
 struct schema
 {
   int level;
