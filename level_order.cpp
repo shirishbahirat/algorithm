@@ -311,7 +311,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
       pqn = pqn->child;
     }
 
-    for (int i = current_levels; < level; ++i)
+    for (int i = current_levels; i < level; ++i)
     {
       pqn = new pqueue();
       prev->child = pqn;
