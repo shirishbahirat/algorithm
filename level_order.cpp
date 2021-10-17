@@ -290,7 +290,6 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
       prev->child = pqn;
       pqn->sibling = nullptr;
       pqn->level = i;
-      cout << "new priorvity struct " << pqn->level << endl;
       strcpy(pqn->name, "schema_head");
       strcpy(pqn->parent, "none");
       pqn->cfghandler = nullptr;
