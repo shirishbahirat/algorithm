@@ -21,6 +21,9 @@ struct schema
   schema *next;
 };
 
+#define DEFAULT_LEVELS 10
+uint16_t current_levels = 0;
+
 typedef struct _ConfigHandler
 {
   EFI_STATUS Init()
@@ -284,7 +287,7 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
 
     cout << pqn->level << endl;
 
-    for (int i = 1; i < 10; ++i)
+    for (int i = 1; i < DEFAULT_LEVELS; ++i)
     {
       pqn = new pqueue();
       prev->child = pqn;
@@ -295,6 +298,32 @@ pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
       pqn->cfghandler = nullptr;
       prev = pqn;
     }
+
+    current_levels = DEFAULT_LEVELS;
+  }
+
+  if (level > current_levels)
+  {
+
+    pqn = pqueue_head;
+    for (int i = 0; i < current_levels; ++i)
+    {
+      pqn = pqn->child;
+    }
+
+    for (int = current_levels; i < level; ++i)
+    {
+      pqn = new pqueue();
+      prev->child = pqn;
+      pqn->sibling = nullptr;
+      pqn->level = i;
+      strcpy(pqn->name, "schema_head");
+      strcpy(pqn->parent, "none");
+      pqn->cfghandler = nullptr;
+      prev = pqn;
+    }
+
+    current_levels = level;
   }
 
   temp = pqueue_head;
