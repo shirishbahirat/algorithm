@@ -265,9 +265,9 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
   return phead;
 }
 
-pqueue *insert_level_tree(pqueue *pqueue_head, char *name, char *parent,
-                          DRIVER_LEVEL level, UINTN Index,
-                          EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *ConfigHandler)
+pqueue *IsertLevelTree(pqueue *pqueue_head, char *name, char *parent,
+                       DRIVER_LEVEL level, UINTN Index,
+                       EDKII_REDFISH_CONFIG_HANDLER_PROTOCOL *ConfigHandler)
 {
 
   pqueue *phead = pqueue_head, *temp = pqueue_head, *pqn = nullptr;
@@ -410,9 +410,8 @@ void RedfishConfigHandlerInitilization(void)
   for (Index = 0; Index < NumberOfHandles; Index++)
   {
     Status = gBs->HandleProtocol(Index, &ConfigHandler);
-    pqueue_head =
-        insert_level_tree(pqueue_head, cfg->GetName(), cfg->GetPerent(),
-                          cfg->GetLevel(), Index, ConfigHandler);
+    pqueue_head = IsertLevelTree(pqueue_head, cfg->GetName(), cfg->GetPerent(),
+                                 cfg->GetLevel(), Index, ConfigHandler);
   }
 
   Status = execution_order_per_level(pqueue_head);
