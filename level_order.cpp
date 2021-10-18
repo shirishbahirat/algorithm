@@ -21,7 +21,7 @@ struct schema
   schema *next;
 };
 
-#define DEFAULT_LEVELS 10
+#define DEFAULT_LEVELS 2
 uint16_t current_levels = 0;
 
 typedef struct _ConfigHandler
