@@ -12,6 +12,8 @@ int main(int argc, char const *argv[])
 
   string aname = "Alice";
 
+  char xname = "Bob";
+
   for (int i = 0; i < 4; i++)
   {
     updated[i] = name[i];
