@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
   for (int i = 0; i < 4; i++)
   {
     updated[i] = name[i];
-    cout << updated << endl;
+    cout << updated << " " << pname << endl;
   }
 
   return 0;
