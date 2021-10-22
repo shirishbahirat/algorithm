@@ -21,7 +21,7 @@ struct schema
   schema *next;
 };
 
-#define DEFAULT_LEVELS 2
+#define DEFAULT_LEVELS 10
 uint16_t current_levels = 0;
 
 typedef struct _ConfigHandler
@@ -219,7 +219,7 @@ pqueue *generate_level_tree(pqueue *pqueue_head, schema *schema_head)
 
     cout << pqn->level << endl;
 
-    for (int i = 1; i < 10; ++i)
+    for (int i = 1; i < DEFAULT_LEVELS; ++i)
     {
       pqn = new pqueue();
       prev->child = pqn;
@@ -285,9 +285,9 @@ pqueue *IsertLevelTree(pqueue *pqueue_head, char *name, char *parent,
     phead = pqn;
     pqueue_head = phead;
 
-    cout << pqn->level << endl;
+    cout << "init level tree " << pqn->level << endl;
 
-    for (int i = 1; i < DEFAULT_LEVELS; ++i)
+    for (int i = 1; i <= DEFAULT_LEVELS; ++i)
     {
       pqn = new pqueue();
       prev->child = pqn;
@@ -297,14 +297,16 @@ pqueue *IsertLevelTree(pqueue *pqueue_head, char *name, char *parent,
       strcpy(pqn->parent, "none");
       pqn->cfghandler = nullptr;
       prev = pqn;
+      cout << i << endl;
     }
 
     current_levels = DEFAULT_LEVELS;
   }
 
-  if (level > current_levels) // @todo needs verification of thsi code
+  if (level > current_levels)
   {
 
+    cout << "incrementing level " << endl;
     pqn = pqueue_head;
     pqueue *prev = pqn;
 
@@ -312,6 +314,7 @@ pqueue *IsertLevelTree(pqueue *pqueue_head, char *name, char *parent,
     {
       pqn = pqn->child;
       prev = pqn;
+      cout << "going up to max current_levels " << i << endl;
     }
 
     for (int i = current_levels; i < level; ++i)
