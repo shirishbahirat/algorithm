@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 
   char *pname = &name[0];
 
-  string aname = "Alic";
+  string aname = "Ali";
 
   char xname[] = "Bob";
 
