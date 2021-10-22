@@ -10,6 +10,8 @@ int main(int argc, char const *argv[])
 
   char *pname = &name[0];
 
+  char *aname = "Alice";
+
   for (int i = 0; i < 4; i++)
   {
     updated[i] = name[i];
