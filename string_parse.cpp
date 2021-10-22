@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 
   char xname[] = "Bob";
 
-  for (int i = 0; i < 4; i++)
+  for (int i = 0; i < 5; i++)
   {
     updated[i] = name[i];
     cout << updated << " " << pname << " " << aname[i] << endl;
