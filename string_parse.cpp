@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
     updated[i] = name[i];
   }
 
-  count << updated << endl;
+  cout << updated << endl;
 
   return 0;
 }
