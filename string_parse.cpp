@@ -2,4 +2,18 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[]) { return 0; }
+int main(int argc, char const *argv[])
+{
+
+  char name[] = "John Smith";
+  char updated[5] = "";
+
+  for (int i = 0; i < 5; i++)
+  {
+    updated[i] = name[i];
+  }
+
+  count << updated << endl;
+
+  return 0;
+}
