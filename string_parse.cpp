@@ -11,9 +11,8 @@ int main(int argc, char const *argv[])
   for (int i = 0; i < 5; i++)
   {
     updated[i] = name[i];
+    cout << updated << endl;
   }
-
-  cout << updated << endl;
 
   return 0;
 }
