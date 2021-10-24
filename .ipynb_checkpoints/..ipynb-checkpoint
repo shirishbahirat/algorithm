@@ -3,7 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "c776d32c",
+   "id": "68991960",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -13,7 +13,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "a2ba4eed",
+   "id": "35b88886",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -23,7 +23,7 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "dc31b1b2",
+   "id": "567a6695",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -33,7 +33,7 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "29055306",
+   "id": "af7c68fd",
    "metadata": {},
    "outputs": [
     {
@@ -56,7 +56,7 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "0905cb1e",
+   "id": "10855669",
    "metadata": {},
    "outputs": [
     {
@@ -77,7 +77,7 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "e2324083",
+   "id": "ca118bdf",
    "metadata": {},
    "outputs": [
     {
@@ -98,7 +98,7 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "33b340d5",
+   "id": "1370c9ab",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -108,7 +108,7 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "bef9987c",
+   "id": "a573764c",
    "metadata": {},
    "outputs": [
     {
@@ -131,7 +131,7 @@
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "0ac451f1",
+   "id": "9413707b",
    "metadata": {},
    "outputs": [
     {
@@ -152,7 +152,7 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "5cd7cc9b",
+   "id": "6119abb9",
    "metadata": {},
    "outputs": [
     {
@@ -173,7 +173,7 @@
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "7c7be93a",
+   "id": "8312313d",
    "metadata": {},
    "outputs": [
     {
@@ -194,7 +194,7 @@
   {
    "cell_type": "code",
    "execution_count": 17,
-   "id": "a967606a",
+   "id": "77bd76f3",
    "metadata": {},
    "outputs": [
     {
@@ -216,7 +216,7 @@
   {
    "cell_type": "code",
    "execution_count": 18,
-   "id": "f640ee79",
+   "id": "e0829b7d",
    "metadata": {},
    "outputs": [
     {
@@ -238,7 +238,7 @@
   {
    "cell_type": "code",
    "execution_count": 20,
-   "id": "405b21cf",
+   "id": "7915f792",
    "metadata": {},
    "outputs": [
     {
@@ -259,7 +259,7 @@
   {
    "cell_type": "code",
    "execution_count": 21,
-   "id": "7fecb433",
+   "id": "839b8fdb",
    "metadata": {},
    "outputs": [
     {
@@ -283,7 +283,7 @@
   {
    "cell_type": "code",
    "execution_count": 22,
-   "id": "8c5b347c",
+   "id": "b25a0cc9",
    "metadata": {},
    "outputs": [
     {
@@ -304,7 +304,7 @@
   {
    "cell_type": "code",
    "execution_count": 23,
-   "id": "c19d8338",
+   "id": "181ee21d",
    "metadata": {},
    "outputs": [
     {
@@ -329,7 +329,7 @@
   {
    "cell_type": "code",
    "execution_count": 25,
-   "id": "38993cc9",
+   "id": "8896d660",
    "metadata": {},
    "outputs": [
     {
@@ -351,7 +351,7 @@
   {
    "cell_type": "code",
    "execution_count": 26,
-   "id": "11df66d2",
+   "id": "c49cc699",
    "metadata": {},
    "outputs": [
     {
@@ -373,7 +373,7 @@
   {
    "cell_type": "code",
    "execution_count": 27,
-   "id": "ba8f7346",
+   "id": "a4b98110",
    "metadata": {},
    "outputs": [
     {
@@ -394,7 +394,7 @@
   {
    "cell_type": "code",
    "execution_count": 29,
-   "id": "8d7503a1",
+   "id": "721cb5a8",
    "metadata": {},
    "outputs": [
     {
@@ -416,7 +416,7 @@
   {
    "cell_type": "code",
    "execution_count": 31,
-   "id": "47305276",
+   "id": "7e066579",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -426,7 +426,7 @@
   {
    "cell_type": "code",
    "execution_count": 32,
-   "id": "b08ce375",
+   "id": "ab93be79",
    "metadata": {},
    "outputs": [
     {
@@ -451,7 +451,7 @@
   {
    "cell_type": "code",
    "execution_count": 33,
-   "id": "0f3a0567",
+   "id": "25e5bea1",
    "metadata": {},
    "outputs": [
     {
@@ -472,7 +472,7 @@
   {
    "cell_type": "code",
    "execution_count": 34,
-   "id": "97749f8f",
+   "id": "e7e027f9",
    "metadata": {},
    "outputs": [
     {
@@ -493,7 +493,7 @@
   {
    "cell_type": "code",
    "execution_count": 35,
-   "id": "f2918727",
+   "id": "ff5b7b87",
    "metadata": {},
    "outputs": [
     {
@@ -514,7 +514,7 @@
   {
    "cell_type": "code",
    "execution_count": 36,
-   "id": "82e79bce",
+   "id": "b3a70617",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -524,7 +524,7 @@
   {
    "cell_type": "code",
    "execution_count": 37,
-   "id": "8aea76f8",
+   "id": "e1adfa08",
    "metadata": {},
    "outputs": [
     {
@@ -545,7 +545,7 @@
   {
    "cell_type": "code",
    "execution_count": 38,
-   "id": "f96d79ef",
+   "id": "96921038",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -555,7 +555,7 @@
   {
    "cell_type": "code",
    "execution_count": 39,
-   "id": "6e934326",
+   "id": "85e3a1cc",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -565,7 +565,7 @@
   {
    "cell_type": "code",
    "execution_count": 40,
-   "id": "024421b7",
+   "id": "0029229d",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -575,7 +575,7 @@
   {
    "cell_type": "code",
    "execution_count": 41,
-   "id": "2172aeec",
+   "id": "405712fc",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -585,7 +585,7 @@
   {
    "cell_type": "code",
    "execution_count": 42,
-   "id": "71d7be42",
+   "id": "3641bf74",
    "metadata": {},
    "outputs": [
     {
@@ -607,7 +607,7 @@
   {
    "cell_type": "code",
    "execution_count": 45,
-   "id": "85dc21db",
+   "id": "ad05222a",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -617,7 +617,7 @@
   {
    "cell_type": "code",
    "execution_count": 47,
-   "id": "be6e67b4",
+   "id": "bc35bccf",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -627,7 +627,7 @@
   {
    "cell_type": "code",
    "execution_count": 48,
-   "id": "6ffff36c",
+   "id": "54966e76",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -638,7 +638,7 @@
   {
    "cell_type": "code",
    "execution_count": 51,
-   "id": "de3ccf0d",
+   "id": "6ea7a2fd",
    "metadata": {},
    "outputs": [
     {
@@ -662,7 +662,7 @@
   {
    "cell_type": "code",
    "execution_count": 52,
-   "id": "bdf420f1",
+   "id": "3e2a5463",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -672,7 +672,7 @@
   {
    "cell_type": "code",
    "execution_count": 53,
-   "id": "00f0aed7",
+   "id": "8ad359ba",
    "metadata": {},
    "outputs": [
     {
@@ -693,7 +693,7 @@
   {
    "cell_type": "code",
    "execution_count": 54,
-   "id": "9966db1d",
+   "id": "94fbdf52",
    "metadata": {},
    "outputs": [
     {
@@ -721,7 +721,7 @@
   {
    "cell_type": "code",
    "execution_count": 59,
-   "id": "8b953725",
+   "id": "70c1de20",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -731,7 +731,7 @@
   {
    "cell_type": "code",
    "execution_count": 60,
-   "id": "7815e726",
+   "id": "f9bcdf43",
    "metadata": {},
    "outputs": [
     {
@@ -822,7 +822,7 @@
   {
    "cell_type": "code",
    "execution_count": 64,
-   "id": "6a12ee74",
+   "id": "94542c11",
    "metadata": {},
    "outputs": [
     {
@@ -901,7 +901,7 @@
   {
    "cell_type": "code",
    "execution_count": 65,
-   "id": "ba46e35b",
+   "id": "ffc80965",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -911,7 +911,7 @@
   {
    "cell_type": "code",
    "execution_count": 66,
-   "id": "e6192cd3",
+   "id": "79db8bd6",
    "metadata": {},
    "outputs": [
     {
@@ -1008,7 +1008,7 @@
   {
    "cell_type": "code",
    "execution_count": 67,
-   "id": "49c26971",
+   "id": "7bc1ce55",
    "metadata": {},
    "outputs": [
     {
@@ -1099,7 +1099,7 @@
   {
    "cell_type": "code",
    "execution_count": 68,
-   "id": "d6959f00",
+   "id": "f91ce0b2",
    "metadata": {},
    "outputs": [
     {
@@ -1187,7 +1187,7 @@
   {
    "cell_type": "code",
    "execution_count": 69,
-   "id": "93b178d1",
+   "id": "f173ed39",
    "metadata": {},
    "outputs": [
     {
@@ -1213,7 +1213,7 @@
   {
    "cell_type": "code",
    "execution_count": 70,
-   "id": "9465b628",
+   "id": "6b262559",
    "metadata": {},
    "outputs": [
     {
@@ -1239,7 +1239,7 @@
   {
    "cell_type": "code",
    "execution_count": 72,
-   "id": "dbb70ae4",
+   "id": "58939018",
    "metadata": {},
    "outputs": [
     {
@@ -1300,7 +1300,7 @@
   {
    "cell_type": "code",
    "execution_count": 73,
-   "id": "c5fb112d",
+   "id": "14848b36",
    "metadata": {},
    "outputs": [
     {
@@ -1397,7 +1397,7 @@
   {
    "cell_type": "code",
    "execution_count": 74,
-   "id": "2cb67a53",
+   "id": "3f42f057",
    "metadata": {},
    "outputs": [
     {
@@ -1494,7 +1494,7 @@
   {
    "cell_type": "code",
    "execution_count": 75,
-   "id": "9591d344",
+   "id": "5f522c85",
    "metadata": {},
    "outputs": [
     {
@@ -1520,7 +1520,7 @@
   {
    "cell_type": "code",
    "execution_count": 77,
-   "id": "863fb314",
+   "id": "b9323984",
    "metadata": {},
    "outputs": [
     {
@@ -1599,7 +1599,7 @@
   {
    "cell_type": "code",
    "execution_count": 79,
-   "id": "93e9310e",
+   "id": "8ac13e70",
    "metadata": {},
    "outputs": [
     {
@@ -1628,7 +1628,7 @@
   {
    "cell_type": "code",
    "execution_count": 80,
-   "id": "3503eda0",
+   "id": "2e1ca569",
    "metadata": {},
    "outputs": [
     {
@@ -1752,7 +1752,7 @@
   {
    "cell_type": "code",
    "execution_count": 84,
-   "id": "45b2db11",
+   "id": "42f5605c",
    "metadata": {},
    "outputs": [
     {
@@ -1778,7 +1778,7 @@
   {
    "cell_type": "code",
    "execution_count": 88,
-   "id": "088f9d80",
+   "id": "d41e7e95",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1788,7 +1788,7 @@
   {
    "cell_type": "code",
    "execution_count": 89,
-   "id": "ed35a06d",
+   "id": "7a058b9a",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1798,7 +1798,7 @@
   {
    "cell_type": "code",
    "execution_count": 90,
-   "id": "71571433",
+   "id": "e8ea8f6d",
    "metadata": {},
    "outputs": [
     {
@@ -1890,7 +1890,7 @@
   {
    "cell_type": "code",
    "execution_count": 92,
-   "id": "d8afa5b5",
+   "id": "8e129efe",
    "metadata": {},
    "outputs": [
     {
@@ -1958,7 +1958,7 @@
   {
    "cell_type": "code",
    "execution_count": 93,
-   "id": "52f4bd02",
+   "id": "823ee085",
    "metadata": {},
    "outputs": [
     {
@@ -2066,7 +2066,7 @@
   {
    "cell_type": "code",
    "execution_count": 98,
-   "id": "85203466",
+   "id": "513c3d22",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2076,7 +2076,7 @@
   {
    "cell_type": "code",
    "execution_count": 99,
-   "id": "8158ceb3",
+   "id": "addfd81a",
    "metadata": {},
    "outputs": [
     {
@@ -2154,7 +2154,7 @@
   {
    "cell_type": "code",
    "execution_count": 101,
-   "id": "1596921d",
+   "id": "abda1d1b",
    "metadata": {},
    "outputs": [
     {
@@ -2175,7 +2175,7 @@
   {
    "cell_type": "code",
    "execution_count": 102,
-   "id": "898ec8bf",
+   "id": "4fd9f8f5",
    "metadata": {},
    "outputs": [
     {
@@ -2196,7 +2196,7 @@
   {
    "cell_type": "code",
    "execution_count": 104,
-   "id": "47a6b533",
+   "id": "20802efa",
    "metadata": {},
    "outputs": [
     {
@@ -2220,7 +2220,7 @@
   {
    "cell_type": "code",
    "execution_count": 105,
-   "id": "983d680b",
+   "id": "62db495f",
    "metadata": {},
    "outputs": [
     {
@@ -2277,7 +2277,7 @@
   {
    "cell_type": "code",
    "execution_count": 106,
-   "id": "c3a78a66",
+   "id": "6afc4224",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2288,7 +2288,7 @@
   {
    "cell_type": "code",
    "execution_count": 107,
-   "id": "7f7836d3",
+   "id": "77945d1c",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2298,7 +2298,7 @@
   {
    "cell_type": "code",
    "execution_count": 108,
-   "id": "c60979f0",
+   "id": "bb5f90a7",
    "metadata": {},
    "outputs": [
     {
@@ -2381,7 +2381,7 @@
   {
    "cell_type": "code",
    "execution_count": 110,
-   "id": "dcd8f36f",
+   "id": "7e7bf9d2",
    "metadata": {},
    "outputs": [
     {
@@ -2464,7 +2464,7 @@
   {
    "cell_type": "code",
    "execution_count": 112,
-   "id": "f41c7cf9",
+   "id": "aaf6c791",
    "metadata": {},
    "outputs": [
     {
@@ -2547,7 +2547,7 @@
   {
    "cell_type": "code",
    "execution_count": 113,
-   "id": "18da509e",
+   "id": "a198ab65",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2558,7 +2558,7 @@
   {
    "cell_type": "code",
    "execution_count": 116,
-   "id": "5257be51",
+   "id": "149949b8",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2568,7 +2568,7 @@
   {
    "cell_type": "code",
    "execution_count": 118,
-   "id": "574a64eb",
+   "id": "5223d786",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2578,7 +2578,7 @@
   {
    "cell_type": "code",
    "execution_count": 119,
-   "id": "45fb446f",
+   "id": "b0780179",
    "metadata": {},
    "outputs": [
     {
@@ -2599,7 +2599,7 @@
   {
    "cell_type": "code",
    "execution_count": 120,
-   "id": "87de9e00",
+   "id": "7d1a5ba0",
    "metadata": {},
    "outputs": [
     {
@@ -2620,7 +2620,7 @@
   {
    "cell_type": "code",
    "execution_count": 124,
-   "id": "69fd916c",
+   "id": "5bb49bb1",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2630,7 +2630,7 @@
   {
    "cell_type": "code",
    "execution_count": 125,
-   "id": "372b6c99",
+   "id": "5a210f52",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2640,7 +2640,7 @@
   {
    "cell_type": "code",
    "execution_count": 126,
-   "id": "a4bbe997",
+   "id": "e990d7b8",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2650,7 +2650,7 @@
   {
    "cell_type": "code",
    "execution_count": 127,
-   "id": "f88074c2",
+   "id": "85470f52",
    "metadata": {},
    "outputs": [
     {
@@ -2674,7 +2674,7 @@
   {
    "cell_type": "code",
    "execution_count": 128,
-   "id": "8bb4a477",
+   "id": "7b3fd7ce",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2684,7 +2684,7 @@
   {
    "cell_type": "code",
    "execution_count": 129,
-   "id": "828f86d7",
+   "id": "971f2226",
    "metadata": {},
    "outputs": [
     {
@@ -2708,7 +2708,7 @@
   {
    "cell_type": "code",
    "execution_count": 130,
-   "id": "f4d86f1b",
+   "id": "b66a10ed",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2718,7 +2718,7 @@
   {
    "cell_type": "code",
    "execution_count": 131,
-   "id": "3be37503",
+   "id": "fed225ed",
    "metadata": {},
    "outputs": [
     {
@@ -2742,7 +2742,7 @@
   {
    "cell_type": "code",
    "execution_count": 132,
-   "id": "99460602",
+   "id": "c0571e8f",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2752,7 +2752,7 @@
   {
    "cell_type": "code",
    "execution_count": 133,
-   "id": "b4902400",
+   "id": "c22e509a",
    "metadata": {},
    "outputs": [
     {
@@ -2776,7 +2776,7 @@
   {
    "cell_type": "code",
    "execution_count": 135,
-   "id": "fc49e86b",
+   "id": "7ced0464",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2786,7 +2786,7 @@
   {
    "cell_type": "code",
    "execution_count": 136,
-   "id": "b9762339",
+   "id": "0f2c15a3",
    "metadata": {},
    "outputs": [
     {
@@ -2807,7 +2807,7 @@
   {
    "cell_type": "code",
    "execution_count": 137,
-   "id": "fe1904b2",
+   "id": "337e1a56",
    "metadata": {},
    "outputs": [
     {
@@ -2828,7 +2828,7 @@
   {
    "cell_type": "code",
    "execution_count": 138,
-   "id": "f944c326",
+   "id": "2fd30f10",
    "metadata": {},
    "outputs": [
     {
@@ -2849,7 +2849,7 @@
   {
    "cell_type": "code",
    "execution_count": 139,
-   "id": "3141e73e",
+   "id": "d78e52c8",
    "metadata": {},
    "outputs": [
     {
@@ -2871,7 +2871,7 @@
   {
    "cell_type": "code",
    "execution_count": 140,
-   "id": "ecb6466d",
+   "id": "a5712c7e",
    "metadata": {},
    "outputs": [
     {
@@ -2895,7 +2895,7 @@
   {
    "cell_type": "code",
    "execution_count": 141,
-   "id": "91a4f8c2",
+   "id": "94821170",
    "metadata": {},
    "outputs": [
     {
@@ -2919,7 +2919,7 @@
   {
    "cell_type": "code",
    "execution_count": 142,
-   "id": "6e6462f5",
+   "id": "e8923d96",
    "metadata": {},
    "outputs": [
     {
@@ -2943,7 +2943,7 @@
   {
    "cell_type": "code",
    "execution_count": 143,
-   "id": "fbb8b00f",
+   "id": "c34b032f",
    "metadata": {},
    "outputs": [
     {
@@ -2967,7 +2967,7 @@
   {
    "cell_type": "code",
    "execution_count": 152,
-   "id": "2ad11c4e",
+   "id": "ce1c11c2",
    "metadata": {},
    "outputs": [
     {
@@ -2988,7 +2988,7 @@
   {
    "cell_type": "code",
    "execution_count": 153,
-   "id": "787c1217",
+   "id": "839dee11",
    "metadata": {},
    "outputs": [
     {
@@ -3017,7 +3017,7 @@
   {
    "cell_type": "code",
    "execution_count": 154,
-   "id": "a9ceb17e",
+   "id": "d0565d53",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -3027,7 +3027,7 @@
   {
    "cell_type": "code",
    "execution_count": 155,
-   "id": "1fae4567",
+   "id": "a987c487",
    "metadata": {},
    "outputs": [
     {
@@ -3048,7 +3048,7 @@
   {
    "cell_type": "code",
    "execution_count": 156,
-   "id": "40608fed",
+   "id": "a1eb4272",
    "metadata": {},
    "outputs": [
     {
@@ -3069,7 +3069,7 @@
   {
    "cell_type": "code",
    "execution_count": 157,
-   "id": "eb817e0e",
+   "id": "98256ce0",
    "metadata": {},
    "outputs": [
     {
@@ -3093,7 +3093,7 @@
   {
    "cell_type": "code",
    "execution_count": 158,
-   "id": "f7aae281",
+   "id": "0fabfc70",
    "metadata": {},
    "outputs": [
     {
@@ -3117,7 +3117,7 @@
   {
    "cell_type": "code",
    "execution_count": 161,
-   "id": "d82d60c5",
+   "id": "43691702",
    "metadata": {},
    "outputs": [
     {
@@ -3141,8 +3141,978 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 162,
+   "id": "1fa54cfb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[1, 1],\n",
+       "        [1, 1],\n",
+       "        [1, 1],\n",
+       "        [1, 1]])"
+      ]
+     },
+     "execution_count": 162,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.ones(4,2,dtype=torch.int64)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 163,
+   "id": "3d41f511",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[ 0.0000,  1.6364,  3.2727,  4.9091],\n",
+       "        [ 6.5455,  8.1818,  9.8182, 11.4545],\n",
+       "        [13.0909, 14.7273, 16.3636, 18.0000]])"
+      ]
+     },
+     "execution_count": 163,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.linspace(0,18,12).reshape(3,4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 164,
+   "id": "cf0aefea",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([1, 2, 3])"
+      ]
+     },
+     "execution_count": 164,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.tensor([1,2,3])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 165,
+   "id": "547c0040",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = torch.tensor([1,2,3])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "id": "de45aed9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([1, 2, 3], dtype=torch.int32)"
+      ]
+     },
+     "execution_count": 166,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.type(torch.int32)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 167,
+   "id": "4fe6ae4c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x=torch.zeros(2,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 168,
+   "id": "4d6f7764",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0., 0., 0., 0., 0.],\n",
+       "        [0., 0., 0., 0., 0.]])"
+      ]
+     },
+     "execution_count": 168,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 169,
+   "id": "121f7074",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0.5176, 0.3557, 0.1090, 0.8994, 0.6625],\n",
+       "        [0.0651, 0.0676, 0.0835, 0.1220, 0.2571]])"
+      ]
+     },
+     "execution_count": 169,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.rand_like(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 170,
+   "id": "38ee3fd5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[-1.4044, -0.8654, -0.5556, -0.7117, -1.3026],\n",
+       "        [ 0.7322, -0.2498,  0.6941,  1.9469,  0.3395]])"
+      ]
+     },
+     "execution_count": 170,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.randn_like(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "id": "21b6a2c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[ 7.,  0.,  8.,  5., 10.],\n",
+       "        [10.,  6., 10.,  7.,  4.]])"
+      ]
+     },
+     "execution_count": 172,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.randint_like(x, low=0, high=11)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 175,
+   "id": "c7dd422d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0.8823, 0.9150, 0.3829],\n",
+       "        [0.9593, 0.3904, 0.6009]])"
+      ]
+     },
+     "execution_count": 175,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.manual_seed(42)\n",
+    "torch.rand(2,3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 177,
+   "id": "313f7adf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2],\n",
+       "        [3, 4, 5]])"
+      ]
+     },
+     "execution_count": 177,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.arange(6).reshape(2,3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 178,
+   "id": "0a771c26",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor(0.)"
+      ]
+     },
+     "execution_count": 178,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[1,0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 181,
+   "id": "864a248a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = torch.arange(6).reshape(3,2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 182,
+   "id": "29a68b30",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor(3)"
+      ]
+     },
+     "execution_count": 182,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[1,1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 183,
+   "id": "ea436ffb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([1, 3, 5])"
+      ]
+     },
+     "execution_count": 183,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[:,1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 184,
+   "id": "269dc318",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([2, 3])"
+      ]
+     },
+     "execution_count": 184,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[1,:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 185,
+   "id": "919ffbd7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1],\n",
+       "        [2, 3],\n",
+       "        [4, 5]])"
+      ]
+     },
+     "execution_count": 185,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 186,
+   "id": "8ec28994",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[1],\n",
+       "        [3],\n",
+       "        [5]])"
+      ]
+     },
+     "execution_count": 186,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[:,1:]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 187,
+   "id": "1d30e272",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x=torch.arange(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 188,
+   "id": "99dd2c83",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2, 3, 4],\n",
+       "        [5, 6, 7, 8, 9]])"
+      ]
+     },
+     "execution_count": 188,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.view(2,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 189,
+   "id": "f43cd2fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])"
+      ]
+     },
+     "execution_count": 189,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 190,
+   "id": "56739d87",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2, 3, 4],\n",
+       "        [5, 6, 7, 8, 9]])"
+      ]
+     },
+     "execution_count": 190,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.reshape(2,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 191,
+   "id": "f9c50c87",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])"
+      ]
+     },
+     "execution_count": 191,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 192,
+   "id": "987c3b38",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "z = x.view(2,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 193,
+   "id": "d9bb5758",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])"
+      ]
+     },
+     "execution_count": 193,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 194,
+   "id": "335afde8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2, 3, 4],\n",
+       "        [5, 6, 7, 8, 9]])"
+      ]
+     },
+     "execution_count": 194,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 195,
+   "id": "11f0daeb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x[0] = 111"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "id": "9276e31a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([111,   1,   2,   3,   4,   5,   6,   7,   8,   9])"
+      ]
+     },
+     "execution_count": 196,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 197,
+   "id": "55a961fd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[111,   1,   2,   3,   4],\n",
+       "        [  5,   6,   7,   8,   9]])"
+      ]
+     },
+     "execution_count": 197,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 198,
+   "id": "432ea4b3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x=torch.arange(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 199,
+   "id": "a72e5e2f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2, 3, 4],\n",
+       "        [5, 6, 7, 8, 9]])"
+      ]
+     },
+     "execution_count": 199,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.view(2,-1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 200,
+   "id": "e2d2eb76",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[0, 1, 2, 3, 4],\n",
+       "        [5, 6, 7, 8, 9]])"
+      ]
+     },
+     "execution_count": 200,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.view(-1,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 202,
+   "id": "56dbf219",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = torch.tensor([1,2,3])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 203,
+   "id": "4490238e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b = torch.tensor([4,5,6])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 204,
+   "id": "29e07e00",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([5, 7, 9])"
+      ]
+     },
+     "execution_count": 204,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a+b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 205,
+   "id": "4bc95d54",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([ 4, 10, 18])"
+      ]
+     },
+     "execution_count": 205,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a*b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "id": "11bc1bb8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([5, 7, 9])"
+      ]
+     },
+     "execution_count": 206,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.add(a,b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "id": "df733819",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([ 4, 10, 18])"
+      ]
+     },
+     "execution_count": 209,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.multiply(a,b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 210,
+   "id": "d350fa6b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([5, 7, 9])"
+      ]
+     },
+     "execution_count": 210,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.add(b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 211,
+   "id": "1b459431",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([ 4, 10, 18])"
+      ]
+     },
+     "execution_count": 211,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.mul(b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 212,
+   "id": "9f45395c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([ 4, 10, 18])"
+      ]
+     },
+     "execution_count": 212,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.mul_(b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 213,
+   "id": "1d6812e7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([ 4, 10, 18])"
+      ]
+     },
+     "execution_count": 213,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "id": "2b09b452",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = torch.tensor([1,2,3])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 217,
+   "id": "f4a440f7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c = a.dot(b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 218,
+   "id": "932b7ecf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor(32)"
+      ]
+     },
+     "execution_count": 218,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 221,
+   "id": "4a46c9ce",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v = torch.tensor([[0,2,4],[1,3,5]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 222,
+   "id": "23605a52",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "d = torch.tensor([[6,7],[8,9],[10,11]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 223,
+   "id": "9a7f8886",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[56, 62],\n",
+       "        [80, 89]])"
+      ]
+     },
+     "execution_count": 223,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "torch.mm(v,d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 224,
+   "id": "30e04496",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "tensor([[56, 62],\n",
+       "        [80, 89]])"
+      ]
+     },
+     "execution_count": 224,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "v@d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 225,
+   "id": "5a0b72a1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = torch.tensor([2,3,4,5])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 227,
+   "id": "ee1e4142",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 227,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.numel()"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
-   "id": "b00a9855",
+   "id": "3648621c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "40fa4e12",
    "metadata": {},
    "outputs": [],
    "source": []
