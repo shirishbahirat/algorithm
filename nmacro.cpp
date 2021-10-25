@@ -15,6 +15,8 @@ char ride[] = "\
 \"Boot\":\"Disabled\",\
 \"values\":[\"once\",\"Disabled\"]";
 
+void convert(char *strng) { cout << strng << endl; }
+
 int main(int argc, char const *argv[])
 {
 
@@ -28,6 +30,8 @@ int main(int argc, char const *argv[])
   cout << NODE_V2_CS.data << endl;
 
   cout << ride << endl;
+
+  convert(ride);
 
   return 0;
 }
