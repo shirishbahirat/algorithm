@@ -20,7 +20,7 @@ void convert(char *strng) { cout << strng << endl; }
 #define ERROR(info)                                                            \
   {                                                                            \
     if (info)                                                                  \
-      return false else return true;                                           \
+      false else true;                                                         \
   }
 
 int main(int argc, char const *argv[])
