@@ -16,5 +16,7 @@ int main(int argc, char const *argv[])
   NODE_V2_CS.data = 2;
   // cout << ID(2) << endl;
 
+  ID(2) = 4;
+
   return 0;
 }
