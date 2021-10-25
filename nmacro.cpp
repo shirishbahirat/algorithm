@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 
   NODE_V2_CS.data = 2;
 
-  node PNODE_V2_CS = &NODE_V2_CS;
+  node *PNODE_V2_CS = &NODE_V2_CS;
 
   ID(2) = 4;
 
