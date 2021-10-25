@@ -11,6 +11,10 @@ struct node
 #define ID(version) (NODE_V##version##_CS).data
 #define PID(version) (PNODE_V##version##_CS)->data
 
+char ride[] = "\
+	\"Boot\":\"Disabled\",\
+	\"values\" : [\"once\",\"Disabled\"]";
+
 int main(int argc, char const *argv[])
 {
 
