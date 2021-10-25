@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 
   convert(ride);
 
-  char status[] = (ERROR(10) ? "Yes" : "No");
+  char status[] = ERROR(10) ? "Yes" : "No";
 
   cout << status << endl;
 
