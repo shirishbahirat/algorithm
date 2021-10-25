@@ -13,7 +13,7 @@ struct node
 
 char ride[] = "\
 \"Boot\":\"Disabled\",\
-\"values\" : [\"once\",\"Disabled\"]";
+\"values\":[\"once\",\"Disabled\"]";
 
 int main(int argc, char const *argv[])
 {
