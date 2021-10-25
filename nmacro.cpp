@@ -9,11 +9,14 @@ struct node
 } NODE_V2_CS;
 
 #define ID(version) (NODE_V##version##_CS).data
+#define PID(version) (PNODE_V##version##_CS)->data
 
 int main(int argc, char const *argv[])
 {
 
   NODE_V2_CS.data = 2;
+
+  node PNODE_V2_CS = &NODE_V2_CS;
 
   ID(2) = 4;
 
