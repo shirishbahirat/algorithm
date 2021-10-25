@@ -8,7 +8,7 @@ struct node
   node *next;
 } NODE_V2_CS;
 
-#define ID(version) (NODE_##V_CS).data
+#define ID(version) (NODE_V##_CS).data
 
 int main(int argc, char const *argv[])
 {
