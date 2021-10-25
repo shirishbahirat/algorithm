@@ -27,5 +27,7 @@ int main(int argc, char const *argv[])
 
   cout << NODE_V2_CS.data << endl;
 
+  cout << ride << endl;
+
   return 0;
 }
