@@ -14,9 +14,10 @@ int main(int argc, char const *argv[])
 {
 
   NODE_V2_CS.data = 2;
-  // cout << ID(2) << endl;
 
   ID(2) = 4;
+
+  cout << NODE_V2_CS.data << endl;
 
   return 0;
 }
