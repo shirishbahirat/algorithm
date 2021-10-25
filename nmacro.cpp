@@ -19,6 +19,7 @@ int main(int argc, char const *argv[])
   node *PNODE_V2_CS = &NODE_V2_CS;
 
   ID(2) = 4;
+  PID(2) = 10;
 
   cout << NODE_V2_CS.data << endl;
 
