@@ -39,5 +39,7 @@ int main(int argc, char const *argv[])
 
   convert(ride);
 
+  cout << ERROR(10) ? "Yes" : "No" << endl;
+
   return 0;
 }
