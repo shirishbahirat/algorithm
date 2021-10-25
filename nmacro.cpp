@@ -17,6 +17,12 @@ char ride[] = "\
 
 void convert(char *strng) { cout << strng << endl; }
 
+#define ERROR(info)                                                            \
+  {                                                                            \
+    if (info)                                                                  \
+      return false else return true;                                           \
+  }
+
 int main(int argc, char const *argv[])
 {
 
