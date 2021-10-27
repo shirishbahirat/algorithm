@@ -77,6 +77,8 @@ int main(int argc, char const *argv[])
   }
 
   cout << intf.in(10) << endl;
+  cout << intf.on(10, 10) << endl;
+  cout << intf.cn(10, 10, 10) << endl;
 
   return 0;
 }
