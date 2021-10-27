@@ -2,6 +2,15 @@
 
 using namespace std;
 
+enum etasks
+{
+  ONE,
+  TWO,
+  THREE,
+  FOUR,
+  FIVE
+};
+
 struct node
 {
   int data;
@@ -21,6 +30,8 @@ void convert(char *strng) { cout << strng << endl; }
 
 int main(int argc, char const *argv[])
 {
+
+  etasks tasks;
 
   NODE_V2_CS.data = 2;
 
