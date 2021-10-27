@@ -11,6 +11,10 @@ enum etasks
   FIVE
 };
 
+typedef int (*tpi)(int, int, int);
+typedef int (*bpi)(int, int);
+typedef int (*api)(int);
+
 struct node
 {
   int data;
