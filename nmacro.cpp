@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
     cout << "from enum " << i << endl;
   }
 
-  cout << intf.ap(10) << endl;
+  cout << intf.in(10) << endl;
 
   return 0;
 }
