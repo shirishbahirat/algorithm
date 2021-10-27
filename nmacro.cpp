@@ -11,7 +11,7 @@ enum etasks
   FIVE
 };
 
-typedef int (*tpi)(int, int, int);
+typedef int (*cpi)(int, int, int);
 typedef int (*bpi)(int, int);
 typedef int (*api)(int);
 
@@ -19,8 +19,12 @@ struct interface
 {
   api in;
   bpi on;
-  tpi cn;
+  cpi cn;
 };
+
+int ap(int a) { return a; }
+int bp(int a, int b) { return a + b; }
+int cp(int a, int b, int c) { return a + b + c; }
 
 struct node
 {
