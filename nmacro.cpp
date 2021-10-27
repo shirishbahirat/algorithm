@@ -50,5 +50,10 @@ int main(int argc, char const *argv[])
 
   cout << status << endl;
 
+  for (int i = 0; i < FIVE, ++i)
+  {
+    cout << "from enum " << i << endl;
+  }
+
   return 0;
 }
