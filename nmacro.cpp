@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
 
   etasks tasks;
 
-  interface int = {.api = ap;
+  interface intf = {.api = ap;
   .bpi = bp;
   .cpi = cp;
 };
