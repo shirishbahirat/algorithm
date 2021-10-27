@@ -48,32 +48,33 @@ int main(int argc, char const *argv[])
 
   etasks tasks;
 
-  interface intf = {.api = ap;
-  .bpi = bp;
-  .cpi = cp;
-};
+  interface intf = {
+      .api = ap,
+      .bpi = bp,
+      .cpi = cp,
+  };
 
-NODE_V2_CS.data = 2;
+  NODE_V2_CS.data = 2;
 
-node *PNODE_V2_CS = &NODE_V2_CS;
+  node *PNODE_V2_CS = &NODE_V2_CS;
 
-ID(2) = 4;
-PID(2) = 10;
+  ID(2) = 4;
+  PID(2) = 10;
 
-cout << NODE_V2_CS.data << endl;
+  cout << NODE_V2_CS.data << endl;
 
-cout << ride << endl;
+  cout << ride << endl;
 
-convert(ride);
+  convert(ride);
 
-string status = ERROR(10) ? "Yes" : "No";
+  string status = ERROR(10) ? "Yes" : "No";
 
-cout << status << endl;
+  cout << status << endl;
 
-for (int i = 0; i <= FIVE; ++i)
-{
-  cout << "from enum " << i << endl;
-}
+  for (int i = 0; i <= FIVE; ++i)
+  {
+    cout << "from enum " << i << endl;
+  }
 
-return 0;
+  return 0;
 }
