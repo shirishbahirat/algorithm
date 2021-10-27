@@ -49,9 +49,9 @@ int main(int argc, char const *argv[])
   etasks tasks;
 
   interface intf = {
-      .api = ap,
-      .bpi = bp,
-      .cpi = cp,
+      .in = ap,
+      .on = bp,
+      .cn = cp,
   };
 
   NODE_V2_CS.data = 2;
