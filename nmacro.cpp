@@ -15,6 +15,13 @@ typedef int (*tpi)(int, int, int);
 typedef int (*bpi)(int, int);
 typedef int (*api)(int);
 
+struct interface
+{
+  api in;
+  bpi on;
+  tip cn;
+};
+
 struct node
 {
   int data;
