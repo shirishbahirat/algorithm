@@ -19,7 +19,7 @@ struct interface
 {
   api in;
   bpi on;
-  tip cn;
+  tpi cn;
 };
 
 struct node
