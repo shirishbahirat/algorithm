@@ -5,6 +5,13 @@ using namespace std;
 #define IN
 #define OUT
 
+#define STRUCT_INFO
+
+typedef struct
+{
+  int fid;
+} struct_with_info;
+
 void function_with_types(IN int data, OUT int *addre)
 {
 
