@@ -12,7 +12,7 @@ typedef struct
   int fid;
 } struct_with_info;
 
-STRUCT_INFO struct_with_info information[] = {{.fid = 123}, {.fid = 456}};
+struct_with_info information[] STRUCT_INFO = {{.fid = 123}, {.fid = 456}};
 
 void function_with_types(IN int data, OUT int *addre)
 {
