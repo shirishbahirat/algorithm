@@ -94,5 +94,8 @@ int main(int argc, char const *argv[])
   cout << intf.on(10, 10) << endl;
   cout << intf.cn(10, 10, 10) << endl;
 
+  int out;
+  function_with_types(10, &out);
+
   return 0;
 }
