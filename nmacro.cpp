@@ -108,5 +108,7 @@ int main(int argc, char const *argv[])
 
   cout << "efi like function: " << out << endl;
 
+  cout << "struct with info: " << information[0].fid << endl;
+
   return 0;
 }
