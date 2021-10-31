@@ -14,7 +14,7 @@ typedef struct
 
 struct_with_info information[] STRUCT_INFO = {{.fid = 123}, {.fid = 456}};
 
-void function_with_types(IN int data, OUT int *addre)
+void function_with_types(int IN data, int OUT *addre)
 {
 
   int sum = 10;
