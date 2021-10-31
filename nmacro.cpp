@@ -97,5 +97,7 @@ int main(int argc, char const *argv[])
   int out;
   function_with_types(10, &out);
 
+  cout << "efi like function: " << out << endl;
+
   return 0;
 }
