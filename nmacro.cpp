@@ -12,6 +12,8 @@ typedef struct
   int fid;
 } struct_with_info;
 
+STRUCT_INFO struct_with_info information;
+
 void function_with_types(IN int data, OUT int *addre)
 {
 
