@@ -5,7 +5,16 @@ using namespace std;
 #define IN
 #define OUT
 
-void function_with_types(IN int data, OUT int addre) { return; }
+void function_with_types(IN int data, OUT int *addre)
+{
+
+  int sum = 10;
+  sum += data;
+
+  *addre = sum;
+
+  return;
+}
 
 enum etasks
 {
