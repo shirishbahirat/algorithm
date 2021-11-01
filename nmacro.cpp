@@ -114,5 +114,7 @@ int main(int argc, char const *argv[])
   cout << "struct with info: " << information[0].fid << endl;
   cout << "struct with info: " << information[1].fid << endl;
 
+  cout << "Done" << endl;
+
   return 0;
 }
