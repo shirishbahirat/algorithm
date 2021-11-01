@@ -87,6 +87,7 @@ int main(int argc, char const *argv[])
   cout << "Macro " << NODE_V2_CS.data << endl;
 
   cout << "Value of Macro: " << ID(2) << endl;
+  cout << "Contains of Macro: " << PID(2) << endl;
 
   cout << ride << endl;
 
