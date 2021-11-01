@@ -86,6 +86,8 @@ int main(int argc, char const *argv[])
   PID(2) = 10;
   cout << "Macro " << NODE_V2_CS.data << endl;
 
+  cout << "Value of Macro: " << ID(2) << endl;
+
   cout << ride << endl;
 
   convert(ride);
