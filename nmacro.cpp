@@ -62,7 +62,10 @@ char ride[] = "\
 \"Boot\":\"Disabled\",\
 \"values\":[\"once\",\"Disabled\"]";
 
-void convert(char *strng) { cout << __FUNCTION__ << "strng " << strng << endl; }
+void convert(char *strng)
+{
+  cout << __FUNCTION__ << " strng " << strng << endl;
+}
 
 #define ERROR(info) info
 
