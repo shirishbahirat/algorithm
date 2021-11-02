@@ -77,7 +77,7 @@ int main(int argc, char const *argv[])
       .cn = cp,
   };
 
-  NODE_V2_CS.data = 2;
+  NODE_V2_CS.data = 20;
 
   node *PNODE_V2_CS = &NODE_V2_CS;
 
