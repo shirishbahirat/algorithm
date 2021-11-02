@@ -64,7 +64,8 @@ char ride[] = "\
 
 void convert(char *strng)
 {
-  cout << __FUNCTION__ << " strng " << strng << " " << __FILE__ << endl;
+  cout << __FUNCTION__ << " strng " << strng << " " << __FILE__ << " "
+       << __LINE__ << endl;
 }
 
 #define ERROR(info) info
