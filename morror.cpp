@@ -21,8 +21,11 @@ node *new_node(int data)
 
 void in_order(node *n)
 {
+
   if (n == nullptr)
     return;
+
+  cout << "in order " << n->data << endl;
 
   in_order(n->left);
   cout << n->data << " ";
