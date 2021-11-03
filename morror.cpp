@@ -39,9 +39,9 @@ void mirror_order(node *n)
   mirror_order(n->left);
   mirror_order(n->right);
 
-  temp = node->left;
-  node->left = node->right;
-  node->right = temp;
+  temp = n->left;
+  n->left = n->right;
+  n->right = temp;
 }
 
 int main(int argc, const char *argv[])
