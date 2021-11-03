@@ -25,7 +25,7 @@ void in_order(node *n)
   if (n == nullptr)
     return;
   in_order(n->left);
-  cout n->data << " ";
+  cout << n->data << " ";
   in_order(n->right);
 }
 
