@@ -27,8 +27,8 @@ void reverse(node *n)
 
   node *t;
 
-  in_order(n->left);
-  in_order(n->right);
+  reverse(n->left);
+  reverse(n->right);
 
   t = n->left;
   n->left = n->right;
