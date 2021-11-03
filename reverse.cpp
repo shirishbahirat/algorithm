@@ -77,6 +77,8 @@ int main(int argc, const char *argv[])
   root->left->left = new_node(4);
   root->left->right = new_node(5);
 
+  reverse(root);
+
   in_order(root);
   cout << endl;
 
