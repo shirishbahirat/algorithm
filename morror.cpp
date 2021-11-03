@@ -29,6 +29,21 @@ void in_order(node *n)
   in_order(n->right);
 }
 
+void mirror_order(node *n)
+{
+  if (n == nullptr)
+    return;
+
+  node *temp;
+
+  mirror_order(n->left);
+  mirror_order(n->right);
+
+  temp = node->left;
+  node->left = node->right;
+  node->right = temp;
+}
+
 int main(int argc, const char *argv[])
 {
 
