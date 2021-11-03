@@ -49,10 +49,12 @@ int ap(int a) { return a; }
 int bp(int a, int b) { return a + b; }
 int cp(int a, int b, int c) { return a + b + c; }
 
-int ppfnc(int **a)
+void ppfnc(int **a)
 {
 
   int *b = (*a);
+
+  cout << "db " << *b << endl;
 
   return;
 }
