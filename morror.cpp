@@ -28,7 +28,7 @@ void in_order(node *n)
   cout << "in order " << n->data << endl;
 
   in_order(n->left);
-  cout << " p " << n->data << " ";
+  cout << "p " << n->data << " ";
   in_order(n->right);
 }
 
