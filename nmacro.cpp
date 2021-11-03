@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
 
   etasks tasks;
 
-  int x = 10;
+  int x = 7868;
   int *y = &x;
 
   ppfnc(&y);
