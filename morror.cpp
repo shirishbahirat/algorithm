@@ -56,5 +56,10 @@ int main(int argc, const char *argv[])
   in_order(root);
   cout << endl;
 
+  mirror_order(root);
+
+  in_order(root);
+  cout << endl;
+
   return 0;
 }
