@@ -29,6 +29,27 @@ void in_order(node *n)
   in_order(n->right);
 }
 
+void pre_order(node *n)
+{
+
+  if (n == nullptr)
+    return;
+  cout << n->data << " ";
+
+  in_order(n->left);
+  in_order(n->right);
+}
+
+void post_order(node *n)
+{
+
+  if (n == nullptr)
+    return;
+  in_order(n->left);
+  in_order(n->right);
+  cout << n->data << " ";
+}
+
 int main(int argc, const char *argv[])
 {
 
@@ -39,6 +60,12 @@ int main(int argc, const char *argv[])
   root->left->right = new_node(5);
 
   in_order(root);
+  cout << endl;
+
+  pre_order(root);
+  cout << endl;
+
+  post_order(root);
   cout << endl;
 
   return 0;
