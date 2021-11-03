@@ -24,6 +24,7 @@ void in_order(node *n)
 
   if (n == nullptr)
     return;
+
   in_order(n->left);
   cout << n->data << " ";
   in_order(n->right);
@@ -34,8 +35,8 @@ void pre_order(node *n)
 
   if (n == nullptr)
     return;
-  cout << n->data << " ";
 
+  cout << n->data << " ";
   in_order(n->left);
   in_order(n->right);
 }
@@ -45,6 +46,7 @@ void post_order(node *n)
 
   if (n == nullptr)
     return;
+
   in_order(n->left);
   in_order(n->right);
   cout << n->data << " ";
