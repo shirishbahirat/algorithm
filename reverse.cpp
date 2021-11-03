@@ -76,6 +76,8 @@ int main(int argc, const char *argv[])
   root->right = new_node(3);
   root->left->left = new_node(4);
   root->left->right = new_node(5);
+  root->right->left = new_node(6);
+  root->right->right = new_node(7);
 
   reverse(root);
 
