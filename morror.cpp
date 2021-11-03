@@ -17,4 +17,14 @@ node *new_node(int data)
   return n;
 }
 
+void in_order(node *n)
+{
+  if (n == nullptr)
+    return;
+
+  in_order(n->left);
+  cout << n->data << " ";
+  in_order(n->right);
+}
+
 int main(int argc, const char *argv[]) { return 0; }
