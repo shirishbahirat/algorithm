@@ -29,4 +29,14 @@ void in_order(node *n)
   in_order(n->right);
 }
 
-int main(int argc, const char *argv[]) { return 0; }
+int main(int argc, const char *argv[])
+{
+
+  node *root = new_node(1);
+  root->left = new_node(2);
+  root->right = new_node(3);
+  root->left->left = new_node(4);
+  root->left->right = new_node(5);
+
+  return 0;
+}
