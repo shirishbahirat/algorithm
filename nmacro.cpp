@@ -85,6 +85,11 @@ int main(int argc, char const *argv[])
 
   etasks tasks;
 
+  int x = 10;
+  int *y = &x;
+
+  ppfnc(int &y);
+
   interface intf = {
       .in = ap,
       .on = bp,
