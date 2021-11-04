@@ -41,7 +41,20 @@ int main(int argc, char const *argv[])
   }
 
   if (ida == asize)
-    cout << "a" << endl;
+  {
+
+    while ((idb < bsize) && (idc < csize))
+    {
+      if (b[idb] < c[idc])
+      {
+        d[idd++] = b[idb++];
+      }
+      else
+      {
+        d[idd++] = c[idc++];
+      }
+    }
+  }
 
   if (idb == bsize)
     cout << "b" << endl;
