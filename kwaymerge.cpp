@@ -85,6 +85,15 @@ int main(int argc, char const *argv[])
     }
   }
 
+  while (ida < asize)
+    d[idd++] = a[ida++];
+
+  while (idb < bsize)
+    d[idd++] = b[idb++];
+
+  while (idc < csize)
+    d[idd++] = c[idc++];
+
   for (int i = 0; i < dsize; ++i)
   {
     cout << d[i] << " ";
