@@ -21,7 +21,6 @@ int main(int argc, char const *argv[])
 
   while ((ida < asize) && (idb < bsize) && (idc < csize))
   {
-
     if ((a[ida] < b[idb]) && (a[ida] < c[idc]))
     {
       d[idd++] = a[ida++];
