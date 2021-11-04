@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 
-  int a[] = {2, 6, 9, 10};
+  int a[] = {2, 6, 9, 10, 12};
   int b[] = {1, 3, 5, 7};
   int c[] = {0, 4, 8, 11, 15};
 
