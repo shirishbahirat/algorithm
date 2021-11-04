@@ -40,6 +40,15 @@ int main(int argc, char const *argv[])
     }
   }
 
+  if (ida == asize)
+    cout << "a" << endl;
+
+  if (idb == bsize)
+    cout << "b" << endl;
+
+  if (idc == csize)
+    cout << "c" << endl;
+
   for (int i = 0; i < dsize; ++i)
   {
     cout << d[i] << " ";
