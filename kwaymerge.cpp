@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 {
 
   int a[] = {2, 6, 9, 10, 12};
-  int b[] = {1, 3, 5, 7};
+  int b[] = {1, 3, 5, 7, 17, 18, 19, 20};
   int c[] = {0, 4, 8, 11, 15};
 
   int asize = sizeof(a) / sizeof(a[0]);
