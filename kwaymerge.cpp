@@ -76,11 +76,11 @@ int main(int argc, char const *argv[])
     {
       if (a[ida] < b[idb])
       {
-        d[idd++] = b[idb++];
+        d[idd++] = a[ida++];
       }
       else
       {
-        d[idd++] = a[ida++];
+        d[idd++] = b[idb++];
       }
     }
   }
