@@ -17,6 +17,11 @@ int main(int argc, char const *argv[])
 
   int d[dsize];
 
+  for (int i = 0; i < dsize; ++i)
+  {
+    d[i] = 111;
+  }
+
   int ida = 0, idb = 0, idc = 0, idd = 0;
 
   while ((ida < asize) && (idb < bsize) && (idc < csize))
