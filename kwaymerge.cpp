@@ -15,5 +15,7 @@ int main(int argc, char const *argv[])
 
   int d[size];
 
+  int idx = 0, idy = 0, idz = 0;
+
   return 0;
 }
