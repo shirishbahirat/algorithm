@@ -75,7 +75,7 @@ int main(int argc, const char *argv[])
   in_order(root);
   cout << endl;
 
-  int val = fib(8);
+  int val = fib(9);
 
   cout << "Fib " << val << endl;
 
