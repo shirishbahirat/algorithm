@@ -9,13 +9,22 @@ int main(int argc, char const *argv[])
   int b[] = {1, 3, 5, 7};
   int c[] = {0, 4, 8, 11};
 
-  int size = sizeof(a) / sizeof(a[0]);
-  size += sizeof(b) / sizeof(b[0]);
-  size += sizeof(c) / sizeof(c[0]);
+  int asize = sizeof(a) / sizeof(a[0]);
+  int bsize = sizeof(b) / sizeof(b[0]);
+  int csize = sizeof(c) / sizeof(c[0]);
 
-  int d[size];
+  int dsize = asize + bsize + csize;
 
-  int idx = 0, idy = 0, idz = 0;
+  int d[dsize];
+
+  int ida = 0, idb = 0, idc = 0, idd = 0;
+
+  while ((ida < asize) && (idb < bsize) && (idc < csize))
+  {
+    ida++;
+    idb++;
+    idc++;
+  }
 
   return 0;
 }
