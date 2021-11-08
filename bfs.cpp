@@ -9,6 +9,17 @@ struct node
   node *right;
 };
 
+node *new_node(int data)
+{
+
+  node *n = new node();
+  n->data = data;
+  n->left = nullptr;
+  n->left = nullptr;
+
+  return n;
+}
+
 int main(int argc, const char *argv[])
 {
 
