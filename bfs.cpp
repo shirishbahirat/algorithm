@@ -2,4 +2,18 @@
 
 using namespace std;
 
-int main(int argc, const char *argv[]) { return 0; }
+struct node
+{
+  int data;
+  node *left;
+  node *right;
+};
+
+int main(int argc, const char *argv[])
+{
+
+  node *btree = new node();
+  btree->data = 10;
+
+  return 0;
+}
