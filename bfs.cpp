@@ -26,8 +26,8 @@ void post_order(node *n)
   if (n == nullptr)
     return;
 
-  in_order(n->left);
-  in_order(n->right);
+  post_order(n->left);
+  post_order(n->right);
   cout << n->data << " ";
 }
 
