@@ -53,8 +53,8 @@ void pre_order(node *n)
     return;
 
   cout << n->data << " ";
-  in_order(n->left);
-  in_order(n->right);
+  pre_order(n->left);
+  pre_order(n->right);
 }
 
 void post_order(node *n)
