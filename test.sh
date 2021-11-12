@@ -39,7 +39,6 @@ new_function() {
     echo "after incrementing: $idx $idy $idz"
 }
 
-
 my_function
 another_function
 new_function
