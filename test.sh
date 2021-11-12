@@ -27,6 +27,10 @@ my_function() {
     else 
         echo "if statement is false";       
     fi
+
+    for i in "[1 2 3]";
+        echo $i;
+    end
 }
 
 another_function() {
