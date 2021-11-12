@@ -34,5 +34,12 @@ another_function() {
     echo "after incrementing: $idx $idy $idz"
 }
 
+new_function() {
+    echo "from new function: $VALUE"
+    echo "after incrementing: $idx $idy $idz"
+}
+
+
 my_function
 another_function
+new_function
