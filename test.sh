@@ -12,26 +12,26 @@ idy=20
 idz=($idx+$idy)
 
 my_function() {
-	echo "from test function: $COLOR"
-	echo "parameters: $PARA1 $PARA2 $PARA3"
-	echo sp{el,il,al}l
-	echo ~
-	echo ~/
-	echo ~+
-	echo `date`
-	echo $[idx + 100]
+    echo "from test function: $COLOR"
+    echo "parameters: $PARA1 $PARA2 $PARA3"
+    echo sp{el,il,al}l
+    echo ~
+    echo ~/
+    echo ~+
+    echo `date`
+    echo $[idx + 100]
 
-	if [[ "$idx" == "11" ]]; then
-		echo "if statement is true";
-	else 
-		echo "if statement is false";		
-	fi
+    if [[ "$idx" == "11" ]]; then
+        echo "if statement is true";
+    else 
+        echo "if statement is false";       
+    fi
 
 }
 
 another_function() {
-	echo "from another function: $VALUE"
-	echo "after incrementing: $idx $idy $idz"
+    echo "from another function: $VALUE"
+    echo "after incrementing: $idx $idy $idz"
 }
 
 my_function
