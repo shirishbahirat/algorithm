@@ -27,7 +27,6 @@ my_function() {
 		echo "if statement is false";		
 	fi
 
-
 }
 
 another_function() {
