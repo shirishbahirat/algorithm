@@ -6,6 +6,7 @@ VALUE=10
 PARA1="$1"
 PARA2="$2"
 PARA3="$3"
+PARA4="$4"
 
 idx=10
 idy=20
