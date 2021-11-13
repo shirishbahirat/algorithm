@@ -10,12 +10,15 @@ PARA4="$4"
 
 idx=10
 idy=20
-idz=($idx+$idy)
+NUM=1113
+idz=$[$idx+$idy]
+NUM=$[$NUM + 1]
 
 my_function() {
     echo "from test function: $COLOR"
     echo "parameters: $PARA1 $PARA2 $PARA3"
     echo sp{el,il,al}l
+    echo $NUM
     echo ~
     echo ~/
     echo ~+
@@ -28,9 +31,7 @@ my_function() {
         echo "if statement is false";       
     fi
 
-    for i in "[1 2 3]";
-        echo $i;
-    end
+
 }
 
 another_function() {
