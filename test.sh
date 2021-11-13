@@ -21,6 +21,7 @@ my_function() {
     echo ~
     echo ~/
     echo ~+
+    echo ~+/
     echo `date`
     echo $[idx + 100]
 
