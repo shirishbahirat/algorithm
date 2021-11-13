@@ -7,8 +7,8 @@ PARA1="$1"
 PARA2="$2"
 PARA3="$3"
 
-idx=10
-idy=20
+idx=100
+idy=200
 NUM=1113
 idz=$[$idx+$idy]
 NUM=$[$NUM + 1]
