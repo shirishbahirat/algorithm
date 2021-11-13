@@ -19,7 +19,7 @@ my_function() {
     echo sp{el,il,al}l
     echo $NUM
     echo ~
-    echo .
+    echo ../
     echo ~/
     echo ~+
     echo ~+/
