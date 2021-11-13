@@ -30,8 +30,6 @@ my_function() {
     else 
         echo "if statement is false";       
     fi
-
-
 }
 
 another_function() {
