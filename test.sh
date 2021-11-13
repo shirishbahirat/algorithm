@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COLOR="Red"
-VALUE=10
+VALUE=3333
 
 PARA1="$1"
 PARA2="$2"
