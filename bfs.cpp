@@ -58,10 +58,15 @@ int main(int argc, const char *argv[])
 
   if (argc > 1)
   {
-    cout << "Received " << argv[1] << endl;
+
     if (strcmp(argv[1], "-h") == 0)
     {
       cout << "Received " << argv[2] << endl;
+    }
+
+    if (strcmp(argv[3], "-k") == 0)
+    {
+      cout << "Received " << argv[4] << endl;
     }
   }
 
