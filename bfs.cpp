@@ -56,6 +56,11 @@ void pre_order(node *n)
 int main(int argc, const char *argv[])
 {
 
+  if (argc > 1)
+  {
+    cout << "Received " << argv[1] << endl;
+  }
+
   node *root = new_node(1);
   root->left = new_node(2);
   root->right = new_node(3);
