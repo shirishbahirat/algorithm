@@ -9,6 +9,8 @@ struct node
   node *right;
 };
 
+int test_function(int a, ...) { return 0; }
+
 node *new_node(int data)
 {
 
