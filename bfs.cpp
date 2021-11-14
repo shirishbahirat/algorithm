@@ -9,7 +9,13 @@ struct node
   node *right;
 };
 
-int test_function(int a, ...) { return 0; }
+int test_function(int a, ...)
+{
+
+  cout << "undefined input args " << a << endl;
+
+  return 0;
+}
 
 node *new_node(int data)
 {
