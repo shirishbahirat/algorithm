@@ -89,5 +89,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
+  test_function(10, 11);
+
   return 0;
 }
