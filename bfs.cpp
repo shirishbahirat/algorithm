@@ -49,7 +49,19 @@ stack *push_stack(stack *s, node *n)
   return s;
 }
 
-stack *pop_stack() { return nullptr; }
+stack *pop_stack(stack *s)
+{
+
+  stack *t = s;
+
+  cout << "Pop stack " << t->n->data << endl;
+
+  del t;
+
+  s = s->prev;
+
+  return s;
+}
 
 void post_order(node *n)
 {
@@ -107,19 +119,6 @@ int main(int argc, const char *argv[])
   cout << endl;
 
   s = push_stack(s, root);
-
-  cout << "From stack " << s->n->data << endl;
-
-  s = push_stack(s, root->left);
-
-  cout << "From stack " << s->n->data << endl;
-  cout << "From stack " << s->prev->n->data << endl;
-
-  s = push_stack(s, root->left->left);
-
-  cout << "From stack " << s->n->data << endl;
-  cout << "From stack " << s->prev->n->data << endl;
-  cout << "From stack " << s->prev->prev->n->data << endl;
 
   return 0;
 }
