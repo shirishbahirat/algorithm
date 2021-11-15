@@ -53,7 +53,9 @@ stack *pop_stack(stack *s)
 {
 
   if (s == nullptr)
+  {
     return s;
+  }
 
   stack *t = s;
 
