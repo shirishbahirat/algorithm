@@ -61,9 +61,9 @@ stack *pop_stack(stack *s)
 
   // cout << "Pop stack " << t->n->data << endl;
 
-  s = s->prev;
+  delete s;
 
-  // delete t;
+  s = s->prev;
 
   return t;
 }
@@ -106,26 +106,20 @@ void dfs(stack *s, node *root)
 
   s = push_stack(s, root);
 
-  for (int i = 0; i < 4; ++i)
+  while (s != nullptr)
   {
+    stack *x = pop_stack(s);
 
-    if (s != nullptr)
+    if (x->n->left != nullptr)
     {
-      stack *x = pop_stack(s);
-
-      if (x->n->left != nullptr)
-      {
-        s = push_stack(s, x->n->left);
-      }
-      if (x->n->right != nullptr)
-      {
-        s = push_stack(s, x->n->right);
-      }
-
-      cout << x->n->data << " ";
-
-      delete x;
+      s = push_stack(s, x->n->left);
     }
+    if (x->n->right != nullptr)
+    {
+      s = push_stack(s, x->n->right);
+    }
+
+    cout << x->n->data << " ";
   }
   cout << endl;
 }
