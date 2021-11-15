@@ -101,6 +101,29 @@ void pre_order(node *n)
   pre_order(n->right);
 }
 
+void dfs(stack *s, node *root)
+{
+
+  s = push_stack(s, root);
+
+  while (s != nullptr)
+  {
+    stack *x = pop_stack(s);
+
+    if (x->n->left != nullptr)
+    {
+      s = push_stack(s, x->n->left);
+    }
+    if (x->n->right != nullptr)
+    {
+      s = push_stack(s, x->n->right);
+    }
+
+    cout << x->n->data << " " << endl;
+  }
+  cout << endl;
+}
+
 int main(int argc, const char *argv[])
 {
 
@@ -123,14 +146,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
-  s = push_stack(s, root);
-  s = push_stack(s, root->left);
-  s = push_stack(s, root->left->left);
-
-  s = pop_stack(s);
-  s = pop_stack(s);
-  s = pop_stack(s);
-  s = pop_stack(s);
+  dfs(s, root);
 
   return 0;
 }
