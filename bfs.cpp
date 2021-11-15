@@ -10,6 +10,12 @@ struct node
   node *right;
 };
 
+struct stack
+{
+  node *n;
+  stack *prev;
+};
+
 node *new_node(int data)
 {
 
@@ -20,6 +26,21 @@ node *new_node(int data)
 
   return n;
 }
+
+stack *push_stack(stack *s, node *n)
+{
+
+  if (s == nullptr)
+  {
+    s = new stack();
+    s->n = n;
+    s->prev = nullptr;
+  }
+
+  return s;
+}
+
+node *pop_stack() {}
 
 void post_order(node *n)
 {
@@ -57,6 +78,8 @@ void pre_order(node *n)
 int main(int argc, const char *argv[])
 {
 
+  stack *s = nullptr;
+
   node *root = new_node(1);
   root->left = new_node(2);
   root->right = new_node(3);
@@ -73,6 +96,10 @@ int main(int argc, const char *argv[])
 
   post_order(root);
   cout << endl;
+
+  push_stack(s, root);
+
+  cout << "From stack " << s->n->data << endl;
 
   return 0;
 }
