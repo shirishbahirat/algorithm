@@ -52,6 +52,9 @@ stack *push_stack(stack *s, node *n)
 stack *pop_stack(stack *s)
 {
 
+  if (s == nullptr)
+    return s;
+
   stack *t = s;
 
   cout << "Pop stack " << t->n->data << endl;
