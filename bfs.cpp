@@ -61,7 +61,7 @@ stack *pop_stack(stack *s)
 
   // cout << "Pop stack " << t->n->data << endl;
 
-  delete s;
+  // delete s;
 
   s = s->prev;
 
