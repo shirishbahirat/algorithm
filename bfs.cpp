@@ -61,9 +61,9 @@ stack *pop_stack(stack *s)
 
   cout << "Pop stack " << t->n->data << endl;
 
-  delete t;
-
   s = s->prev;
+
+  delete t;
 
   return s;
 }
@@ -128,7 +128,7 @@ int main(int argc, const char *argv[])
   s = push_stack(s, root->left->left);
 
   s = pop_stack(s);
-  // s = pop_stack(s);
+  s = pop_stack(s);
 
   return 0;
 }
