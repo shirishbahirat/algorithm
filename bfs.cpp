@@ -97,7 +97,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
-  push_stack(s, root);
+  s = push_stack(s, root);
 
   cout << "From stack " << s->n->data << endl;
 
