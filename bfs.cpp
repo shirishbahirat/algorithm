@@ -106,7 +106,7 @@ void dfs(stack *s, node *root)
 
   s = push_stack(s, root);
 
-  for (int i = 0, i < 3; ++i)
+  for (int i = 0; i < 3; ++i)
   {
 
     if (s != nullptr)
