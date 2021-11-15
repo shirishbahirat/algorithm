@@ -119,7 +119,7 @@ void dfs(stack *s, node *root)
       s = push_stack(s, x->n->right);
     }
 
-    cout << x->n->data << " " << endl;
+    cout << x->n->data << " ";
 
     delete x;
   }
