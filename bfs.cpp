@@ -30,7 +30,7 @@ node *new_node(int data)
 stack *push_stack(stack *s, node *n)
 {
 
-  if (s != nullptr)
+  if (s == nullptr)
   {
     s = new stack();
     s->n = n;
