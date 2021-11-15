@@ -124,6 +124,8 @@ int main(int argc, const char *argv[])
   cout << endl;
 
   s = push_stack(s, root);
+  s = push_stack(s, root->left);
+  s = push_stack(s, root->left->left);
 
   s = pop_stack(s);
   s = pop_stack(s);
