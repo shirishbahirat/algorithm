@@ -120,5 +120,7 @@ int main(int argc, const char *argv[])
 
   s = push_stack(s, root);
 
+  s = pop_stack(s);
+
   return 0;
 }
