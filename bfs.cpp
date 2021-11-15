@@ -29,18 +29,16 @@ node *new_node(int data)
 
 stack *push_stack(stack *s, node *n)
 {
+  s = new stack();
+  s->n = n;
 
   if (s == nullptr)
   {
-    s = new stack();
-    s->n = n;
     s->prev = nullptr;
     return s;
   }
   else
   {
-    stack *t = new stack();
-    t->n = n;
     t->prev = s;
     s = t;
   }
