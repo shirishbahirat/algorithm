@@ -124,7 +124,7 @@ void dfs(stack *s, node *root)
 
       cout << x->n->data << " ";
 
-      // delete x;
+      delete x;
     }
   }
   cout << endl;
