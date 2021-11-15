@@ -109,5 +109,9 @@ int main(int argc, const char *argv[])
 
   cout << "From stack " << s->n->data << endl;
 
+  s = push_stack(s, root->left);
+
+  cout << "From stack " << s->n->data << endl;
+
   return 0;
 }
