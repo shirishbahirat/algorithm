@@ -129,6 +129,7 @@ int main(int argc, const char *argv[])
 
   s = pop_stack(s);
   s = pop_stack(s);
+  s = pop_stack(s);
 
   return 0;
 }
