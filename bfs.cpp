@@ -120,6 +120,8 @@ void dfs(stack *s, node *root)
     }
 
     cout << x->n->data << " ";
+
+    delete x;
   }
   cout << endl;
 }
