@@ -106,7 +106,7 @@ void dfs(stack *s, node *root)
 
   s = push_stack(s, root);
 
-  while (s != nullptr)
+  if (s != nullptr)
   {
     stack *x = pop_stack(s);
 
@@ -148,7 +148,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
-  // dfs(s, root);
+  dfs(s, root);
 
   return 0;
 }
