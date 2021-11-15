@@ -40,7 +40,7 @@ stack *push_stack(stack *s, node *n)
   return s;
 }
 
-node *pop_stack() {}
+stack *pop_stack() { return nullptr; }
 
 void post_order(node *n)
 {
