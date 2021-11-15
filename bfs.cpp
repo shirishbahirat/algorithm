@@ -148,7 +148,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
-  dfs(s, root);
+  // dfs(s, root);
 
   return 0;
 }
