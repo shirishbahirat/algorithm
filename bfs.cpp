@@ -59,7 +59,7 @@ stack *pop_stack(stack *s)
 
   stack *t = s;
 
-  cout << "Pop stack " << t->n->data << endl;
+  // cout << "Pop stack " << t->n->data << endl;
 
   s = s->prev;
 
