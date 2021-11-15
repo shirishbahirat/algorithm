@@ -1,3 +1,4 @@
+#include <cstdarg>
 #include <iostream>
 
 using namespace std;
@@ -9,12 +10,22 @@ struct node
   node *right;
 };
 
-int test_function(int a, ...)
+int test_function(int num, ...)
 {
 
-  cout << "undefined input args " << a << endl;
+  va_list valist;
+  int sum = 0;
 
-  return 0;
+  va_start(valist, num);
+  for (int i = 0; i < num; i++)
+  {
+    sum += va_arg(valist, int);
+  }
+  va_end(valist);
+
+  cout << "undefined input args " << num << " " << sum << endl;
+
+  return sum;
 }
 
 node *new_node(int data)
@@ -95,7 +106,7 @@ int main(int argc, const char *argv[])
   post_order(root);
   cout << endl;
 
-  test_function(10, 11);
+  test_function(4, 11, 12, 13, 14);
 
   return 0;
 }
