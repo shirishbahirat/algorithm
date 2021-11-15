@@ -1,3 +1,4 @@
+#include <cstdarg>
 #include <iostream>
 
 using namespace std;
@@ -61,6 +62,20 @@ void mirror_order(node *n)
 int main(int argc, const char *argv[])
 {
 
+  if (argc > 1)
+  {
+
+    if (strcmp(argv[1], "-h") == 0)
+    {
+      cout << "Received " << argv[2] << endl;
+    }
+
+    if (strcmp(argv[3], "-k") == 0)
+    {
+      cout << "Received " << argv[4] << endl;
+    }
+  }
+
   node *root = new_node(1);
   root->left = new_node(2);
   root->right = new_node(3);
@@ -78,6 +93,8 @@ int main(int argc, const char *argv[])
   int val = fib(9);
 
   cout << "Fib " << val << endl;
+
+  test_function(4, 11, 12, 13, 14);
 
   return 0;
 }

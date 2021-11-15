@@ -7,6 +7,24 @@ using namespace std;
 
 #define STRUCT_INFO
 
+int test_function(int num, ...)
+{
+
+  va_list valist;
+  int sum = 0;
+
+  va_start(valist, num);
+  for (int i = 0; i < num; i++)
+  {
+    sum += va_arg(valist, int);
+  }
+  va_end(valist);
+
+  cout << "undefined input args " << num << " " << sum << endl;
+
+  return sum;
+}
+
 typedef struct
 {
   int fid;
