@@ -112,6 +112,7 @@ int main(int argc, const char *argv[])
   s = push_stack(s, root->left);
 
   cout << "From stack " << s->n->data << endl;
+  cout << "From stack " << s->prev->n->data << endl;
 
   return 0;
 }
