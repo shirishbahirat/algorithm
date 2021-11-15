@@ -127,8 +127,8 @@ int main(int argc, const char *argv[])
   s = push_stack(s, root->left);
   s = push_stack(s, root->left->left);
 
-  s = pop_stack(s);
-  s = pop_stack(s);
+  // s = pop_stack(s);
+  // s = pop_stack(s);
 
   return 0;
 }
