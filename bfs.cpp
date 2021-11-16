@@ -106,10 +106,8 @@ void dfs(stack *s, node *root)
 
   while (s != nullptr)
   {
-
     stack *t = s;
     s = s->prev;
-
     if (t->n->left != nullptr)
     {
       s = push_stack(s, t->n->left);
@@ -118,9 +116,7 @@ void dfs(stack *s, node *root)
     {
       s = push_stack(s, t->n->right);
     }
-
     cout << t->n->data << " ";
-
     delete t;
   }
   cout << endl;
