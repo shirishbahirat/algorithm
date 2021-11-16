@@ -57,15 +57,13 @@ stack *pop_stack(stack *s)
     return s;
   }
 
-  stack *t = new stack();
-  t->n = s->n;
-  t->prev = s->prev;
+  stack *t = s;
 
-  // delete s;
+  s = s->prev;
 
-  s = t->prev;
+  delete t;
 
-  return t;
+  return s;
 }
 
 void post_order(node *n)
