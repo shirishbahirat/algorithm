@@ -114,7 +114,7 @@ void dfs(stack *s, node *root)
     {
       s = push_stack(s, t->n->left);
     }
-    if (w->n->right != nullptr)
+    if (t->n->right != nullptr)
     {
       s = push_stack(s, t->n->right);
     }
