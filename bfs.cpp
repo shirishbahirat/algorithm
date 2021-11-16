@@ -49,6 +49,8 @@ stack *push_stack(stack *s, node *n)
   return s;
 }
 
+stack *t;
+
 stack *pop_stack(stack *s)
 {
 
@@ -57,7 +59,7 @@ stack *pop_stack(stack *s)
     return s;
   }
 
-  stack *t = s;
+  t = s;
 
   s = s->prev;
 
