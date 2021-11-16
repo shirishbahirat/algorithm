@@ -61,9 +61,7 @@ stack *pop_stack(stack *s)
 
   s = s->prev;
 
-  delete t;
-
-  return s;
+  return t;
 }
 
 void post_order(node *n)
