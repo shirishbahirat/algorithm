@@ -106,25 +106,22 @@ void dfs(stack *s, node *root)
 
   while (s != nullptr)
   {
-    stack *x = pop_stack(s);
 
-    stack *w = new stack();
+    stack *t = s;
+    s = s->prev;
 
-    w->n = x->n;
-    delete x;
-
-    if (w->n->left != nullptr)
+    if (t->n->left != nullptr)
     {
-      s = push_stack(s, w->n->left);
+      s = push_stack(s, t->n->left);
     }
     if (w->n->right != nullptr)
     {
-      s = push_stack(s, w->n->right);
+      s = push_stack(s, t->n->right);
     }
 
-    cout << w->n->data << " ";
+    cout << t->n->data << " ";
 
-    delete w;
+    delete t;
   }
   cout << endl;
 }
