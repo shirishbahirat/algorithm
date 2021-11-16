@@ -57,13 +57,13 @@ stack *pop_stack(stack *s)
     return s;
   }
 
-  stack *t = s;
+  stack *t = new stack();
+  t->n = s->n;
+  t->prev = s->prev;
 
-  // cout << "Pop stack " << t->n->data << endl;
+  delete s;
 
-  // delete s;
-
-  s = s->prev;
+  s = t->prev;
 
   return t;
 }
