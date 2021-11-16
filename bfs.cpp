@@ -111,16 +111,16 @@ void dfs(stack *s, node *root)
     w->n = x->n;
     delete x;
 
-    if (x->n->left != nullptr)
+    if (w->n->left != nullptr)
     {
-      s = push_stack(s, x->n->left);
+      s = push_stack(s, w->n->left);
     }
-    if (x->n->right != nullptr)
+    if (w->n->right != nullptr)
     {
-      s = push_stack(s, x->n->right);
+      s = push_stack(s, w->n->right);
     }
 
-    cout << x->n->data << " ";
+    cout << w->n->data << " ";
   }
   cout << endl;
 }
