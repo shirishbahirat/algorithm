@@ -61,7 +61,7 @@ stack *pop_stack(stack *s)
   t->n = s->n;
   t->prev = s->prev;
 
-  delete s;
+  // delete s;
 
   s = t->prev;
 
