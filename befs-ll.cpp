@@ -1,245 +1,150 @@
-#include <cstring>
-#include <fstream>
+#include <cstdarg>
 #include <iostream>
 
 using namespace std;
 
-struct schema
+struct node
 {
-  int level;
-  char name[30];
-  char parent[30];
-  schema *next;
+  int data;
+  node *left;
+  node *right;
 };
 
-struct stacks
+struct stack
 {
-  schema *nodes;
-  stacks *next;
+  node *n;
+  stack *prev;
 };
 
-struct pqueue
+node *new_node(int data)
 {
-  int level;
-  char name[30];
-  char parent[30];
-  pqueue *child;
-  pqueue *sibling;
-};
 
-schema *split_line(string str, schema *sch)
-{
-  string word = "";
-  int idx = 0;
+  node *n = new node();
+  n->data = data;
+  n->left = nullptr;
+  n->left = nullptr;
 
-  for (auto x : str)
-  {
-    if (x == ' ')
-    {
-      if (!idx)
-      {
-        sch->level = atoi(word.c_str());
-      }
-      else if (idx > 0)
-      {
-        strcpy(sch->name, word.c_str());
-      }
-      word = "";
-      idx++;
-    }
-    else
-    {
-      word = word + x;
-    }
-  }
-
-  strcpy(sch->parent, word.c_str());
-  sch->next = nullptr;
-
-  return sch;
+  return n;
 }
 
-schema *insert_schema(schema *head, schema *node)
+stack *push_stack(stack *s, node *n)
 {
 
-  if (head == nullptr)
+  stack *t = new stack();
+
+  if (s == nullptr)
   {
-    head = node;
-    return head;
-  }
-
-  schema *temp = head;
-
-  while (head->next != nullptr)
-  {
-    head = head->next;
-  }
-
-  head->next = node;
-  head = temp;
-  return head;
-}
-
-schema *create_schema(schema *head)
-{
-
-  schema *sch;
-
-  ifstream file("schema.inf");
-  if (file.is_open())
-  {
-    string line;
-    while (getline(file, line))
-    {
-      sch = new schema();
-      sch = split_line(line.c_str(), sch);
-      head = insert_schema(head, sch);
-    }
-    file.close();
-  }
-
-  return head;
-}
-
-stacks *push_stack(stacks *top, schema *node)
-{
-  assert(node != nullptr);
-
-  stacks *sp = new (stacks);
-  sp->nodes = node;
-  sp->next = nullptr;
-
-  if (top == nullptr)
-  {
-    top = sp;
-    return top;
-  }
-
-  sp->next = top;
-  top = sp;
-
-  return top;
-}
-
-stacks *pop_stack(stacks *top)
-{
-  assert(top != nullptr);
-
-  stacks *temp = top;
-  top = top->next;
-
-  cout << "Poped from stack " << temp->nodes->name << endl;
-
-  free(temp);
-
-  return top;
-}
-
-stacks *push_level_to_stack(schema *head, int level, char *parent, stacks *top)
-{
-
-  while (head != nullptr)
-  {
-    if ((head->level == level) && (!strcmp(parent, head->parent)))
-    {
-      top = push_stack(top, head);
-    }
-    head = head->next;
-  }
-
-  return top;
-}
-
-pqueue *push_level_tree(stacks *top, pqueue *pqueue_head, bool child)
-{
-  pqueue *pqn = new pqueue();
-  pqn->level = top->nodes->level;
-  strcpy(pqn->name, top->nodes->name);
-  strcpy(pqn->parent, top->nodes->parent);
-  pqn->child = nullptr;
-  pqn->sibling = nullptr;
-
-  pqueue *head = nullptr;
-
-  if (pqueue_head == nullptr)
-  {
-    pqueue_head = pqn;
-    return pqueue_head;
+    s = t;
+    s->n = n;
+    s->prev = nullptr;
+    return s;
   }
   else
   {
-    head = pqueue_head;
+    t->n = n;
+    t->prev = s;
+    s = t;
   }
 
-  if (child)
-  {
-    while (pqueue_head->child != nullptr)
-    {
-      pqueue_head = pqueue_head->child;
-    }
-    pqueue_head->child = pqn;
-  }
-  else
-  {
-
-    while (pqueue_head->child != nullptr)
-    {
-      pqueue_head = pqueue_head->child;
-    }
-
-    while (pqueue_head->sibling != nullptr)
-    {
-      pqueue_head = pqueue_head->sibling;
-    }
-    pqueue_head->sibling = pqn;
-  }
-
-  return head;
+  return s;
 }
 
-int main(int argc, char const *argv[])
+stack *t;
+
+stack *pop_stack(stack *s)
 {
-  schema *head = nullptr;
-  schema *prioritized = nullptr;
-  stacks *top = nullptr;
-  pqueue *pqueue_head = nullptr;
 
-  head = create_schema(head);
-
-  char name[30] = "none";
-
-  // insert root node
-  top = push_level_to_stack(head, 0, name, top);
-  pqueue_head = push_level_tree(top, pqueue_head, 0);
-  top = pop_stack(top);
-
-  // insert 1st child
-  top = push_level_to_stack(head, 1, pqueue_head->name, top);
-  pqueue_head = push_level_tree(top, pqueue_head, 1);
-  top = pop_stack(top);
-
-  cout << "after ins 1st child " << pqueue_head->child->name << endl;
-
-  while (top)
+  if (s == nullptr)
   {
-    top = push_level_to_stack(head, 1, pqueue_head->name, top);
-    pqueue_head = push_level_tree(top, pqueue_head, 1);
-    top = pop_stack(top);
+    return s;
   }
 
-  while (head != nullptr)
-  {
-    cout << "node loop " << head->name << " " << head->level << " "
-         << head->parent << endl;
-    head = head->next;
-  }
+  t = s;
 
-  while (top != nullptr)
+  s = s->prev;
+
+  return t;
+}
+
+void post_order(node *n)
+{
+
+  if (n == nullptr)
+    return;
+
+  post_order(n->left);
+  post_order(n->right);
+  cout << n->data << " ";
+}
+
+void in_order(node *n)
+{
+
+  if (n == nullptr)
+    return;
+
+  in_order(n->left);
+  cout << n->data << " ";
+  in_order(n->right);
+}
+
+void pre_order(node *n)
+{
+
+  if (n == nullptr)
+    return;
+
+  cout << n->data << " ";
+  pre_order(n->left);
+  pre_order(n->right);
+}
+
+void dfs(stack *s, node *root)
+{
+
+  s = push_stack(s, root);
+
+  while (s != nullptr)
   {
-    cout << "stack loop " << top->nodes->name << " " << top->nodes->level << " "
-         << top->nodes->parent << endl;
-    top = top->next;
+    stack *t = s;
+    s = s->prev;
+    if (t->n->right != nullptr)
+    {
+      s = push_stack(s, t->n->right);
+    }
+    if (t->n->left != nullptr)
+    {
+      s = push_stack(s, t->n->left);
+    }
+    cout << t->n->data << " ";
+    delete t;
   }
+  cout << endl;
+}
+
+int main(int argc, const char *argv[])
+{
+
+  stack *s = nullptr;
+
+  node *root = new_node(1);
+  root->left = new_node(2);
+  root->right = new_node(3);
+  root->left->left = new_node(4);
+  root->left->right = new_node(5);
+  root->right->left = new_node(6);
+  root->right->right = new_node(7);
+
+  in_order(root);
+  cout << endl;
+
+  pre_order(root);
+  cout << endl;
+
+  post_order(root);
+  cout << endl;
+
+  dfs(s, root);
 
   return 0;
 }
