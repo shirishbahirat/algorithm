@@ -123,6 +123,8 @@ void dfs(stack *s, node *root)
     }
 
     cout << w->n->data << " ";
+
+    delete w;
   }
   cout << endl;
 }
