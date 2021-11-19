@@ -6,6 +6,8 @@ typedef struct inf
 {
   int *(*device_ready)(int);
   int *(*device_attached)(int);
+  (void *)(*unused)();
+  (void *)(*unused)();
 } interface;
 
 int *x;
@@ -16,12 +18,6 @@ int *device_ready_interface(int a)
   cout << *x << endl;
   return x;
 }
-
-interface intr_anpther
-{
-  (void *)(*unused)();
-  (void *)(*unused)();
-};
 
 int main(int argc, char const *argv[])
 {
