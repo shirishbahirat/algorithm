@@ -37,5 +37,7 @@ int main(int argc, char const *argv[])
 
   x = intr.device_ready(200);
 
+  cout << get_data()->data << endl;
+
   return 0;
 }
