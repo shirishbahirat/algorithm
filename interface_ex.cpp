@@ -16,6 +16,8 @@ typedef struct inf
 } interface;
 
 int *x;
+sample info = {.data = 1000};
+sample *smpl = &info;
 
 int *device_ready_interface(int a)
 {
@@ -34,10 +36,6 @@ int main(int argc, char const *argv[])
                     .device_attached = nullptr};
 
   x = intr.device_ready(200);
-
-  sample info = {.data = 1000};
-
-  sample *smpl = &info;
 
   return 0;
 }
