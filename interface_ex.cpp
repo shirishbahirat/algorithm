@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
   int m = 20;
   x = &m;
   interface intr = {.device_ready = device_ready_interface,
-                    .device_attached = (void *)};
+                    .device_attached = (*void)};
 
   x = intr.device_ready(200);
 
