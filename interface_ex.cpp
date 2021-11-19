@@ -2,6 +2,11 @@
 
 using namespace std;
 
+struct sample
+{
+  int data;
+};
+
 typedef struct inf
 {
   int *(*device_ready)(int);
@@ -19,6 +24,8 @@ int *device_ready_interface(int a)
   return x;
 }
 
+sample *get_data() { return smpl; }
+
 int main(int argc, char const *argv[])
 {
   int m = 20;
@@ -27,6 +34,10 @@ int main(int argc, char const *argv[])
                     .device_attached = nullptr};
 
   x = intr.device_ready(200);
+
+  sample info = {.data = 1000};
+
+  sample *smpl = &info;
 
   return 0;
 }
