@@ -2,7 +2,7 @@
 
 using namespace std;
 
-struct sample
+struct msample
 {
   int data;
 };
@@ -16,8 +16,8 @@ typedef struct inf
 } interface;
 
 int *x;
-sample info = {.data = 1000};
-sample *smpl = &info;
+msample info = {.data = 1000};
+msample *smpl = &info;
 
 int *device_ready_interface(int a)
 {
@@ -26,7 +26,7 @@ int *device_ready_interface(int a)
   return x;
 }
 
-sample *get_data() { return smpl; }
+msample *get_data() { return smpl; }
 
 int main(int argc, char const *argv[])
 {
