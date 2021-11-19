@@ -17,6 +17,12 @@ int *device_ready_interface(int a)
   return x;
 }
 
+interface intr_anpther
+{
+  (void *)(*unused)();
+  (void *)(*unused)();
+};
+
 int main(int argc, char const *argv[])
 {
   int m = 20;
