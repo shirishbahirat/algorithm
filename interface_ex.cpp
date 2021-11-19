@@ -22,5 +22,7 @@ int main(int argc, char const *argv[])
   x = &m;
   interface intr = {.device_ready = device_ready_interface};
 
+  x = intr.device_ready(200);
+
   return 0;
 }
