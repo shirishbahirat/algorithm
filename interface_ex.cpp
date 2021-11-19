@@ -6,8 +6,8 @@ typedef struct inf
 {
   int *(*device_ready)(int);
   int *(*device_attached)(int);
-  void *(*unused)();
-  void *(*unused)();
+  void *(*unused1)();
+  void *(*unused2)();
 } interface;
 
 int *x;
