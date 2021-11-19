@@ -5,6 +5,7 @@ using namespace std;
 typedef struct inf
 {
   int *(*device_ready)(int);
+  int *(*device_attached)(int);
 } interface;
 
 int *x;
@@ -20,7 +21,8 @@ int main(int argc, char const *argv[])
 {
   int m = 20;
   x = &m;
-  interface intr = {.device_ready = device_ready_interface};
+  interface intr = {.device_ready = device_ready_interface,
+                    .device_attached = (void *)};
 
   x = intr.device_ready(200);
 
