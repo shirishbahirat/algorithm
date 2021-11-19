@@ -26,7 +26,13 @@ int *device_ready_interface(int a)
   return x;
 }
 
-msample *get_data() { return smpl; }
+msample *get_data(int b)
+{
+
+  smpl->data += a;
+
+  return smpl;
+}
 
 int main(int argc, char const *argv[])
 {
