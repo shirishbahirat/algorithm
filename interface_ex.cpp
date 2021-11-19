@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
 
   x = intr.device_ready(200);
 
-  cout << get_data()->data << endl;
+  cout << get_data(11)->data << endl;
 
   return 0;
 }
