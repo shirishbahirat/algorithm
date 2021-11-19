@@ -29,7 +29,7 @@ int *device_ready_interface(int a)
 msample *get_data(int b)
 {
 
-  smpl->data += a;
+  smpl->data += b;
 
   return smpl;
 }
