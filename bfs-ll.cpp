@@ -10,10 +10,10 @@ struct node
   node *right;
 };
 
-struct stack
+struct queue
 {
   node *n;
-  stack *prev;
+  queue *next;
 };
 
 node *new_node(int data)
@@ -27,31 +27,38 @@ node *new_node(int data)
   return n;
 }
 
-stack *push_stack(stack *s, node *n)
+queue *push_queue(queue *s, node *n)
 {
 
-  stack *t = new stack();
+  queue *t = new queue();
+  queue *head = s;
 
   if (s == nullptr)
   {
     s = t;
     s->n = n;
-    s->prev = nullptr;
+    s->next = nullptr;
     return s;
   }
   else
   {
+
+    while (s->next)
+    {
+      s = s->next;
+    }
+
+    t->next = nullptr;
+    s->next = t;
     t->n = n;
-    t->prev = s;
-    s = t;
   }
 
-  return s;
+  return head;
 }
 
-stack *t;
+queue *t;
 
-stack *pop_stack(stack *s)
+queue *pop_queue(queue *s)
 {
 
   if (s == nullptr)
@@ -61,7 +68,7 @@ stack *pop_stack(stack *s)
 
   t = s;
 
-  s = s->prev;
+  s = s->next;
 
   return t;
 }
@@ -99,22 +106,22 @@ void pre_order(node *n)
   pre_order(n->right);
 }
 
-void dfs(stack *s, node *root)
+void dfs(queue *s, node *root)
 {
 
-  s = push_stack(s, root);
+  s = push_queue(s, root);
 
   while (s != nullptr)
   {
-    stack *t = s;
-    s = s->prev;
+    queue *t = s;
+    s = s->next;
     if (t->n->right != nullptr)
     {
-      s = push_stack(s, t->n->right);
+      s = push_queue(s, t->n->right);
     }
     if (t->n->left != nullptr)
     {
-      s = push_stack(s, t->n->left);
+      s = push_queue(s, t->n->left);
     }
     cout << t->n->data << " ";
     delete t;
@@ -125,7 +132,7 @@ void dfs(stack *s, node *root)
 int main(int argc, const char *argv[])
 {
 
-  stack *s = nullptr;
+  queue *s = nullptr;
 
   node *root = new_node(1);
   root->left = new_node(2);
