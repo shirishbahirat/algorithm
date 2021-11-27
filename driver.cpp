@@ -32,7 +32,7 @@ struct file_operations
 
 int dev_open(struct inode *nnode, struct file *fl)
 {
-  cout << "dev open" << endl;
+  cout << "Dev open" << endl;
   return 0;
 }
 int dev_seek(struct file *fl, char *name, int id, int *ptr)
