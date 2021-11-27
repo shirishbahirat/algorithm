@@ -37,7 +37,7 @@ int dev_open(struct inode *nnode, struct file *fl)
 }
 int dev_seek(struct file *fl, char *name, int id, int *ptr)
 {
-  cout << "dev seek" << endl;
+  cout << "Dev seek" << endl;
   return 0;
 }
 int dev_read(struct file *fl, char *name, int id, int *ptr)
