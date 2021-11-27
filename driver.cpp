@@ -40,7 +40,7 @@ int dev_seek(struct file *fl, char *name, int id, int *ptr)
   cout << "Dev seek" << endl;
   return 0;
 }
-int dev_read(struct file *fl, char *name, int id, int *ptr)
+int Dev_read(struct file *fl, char *name, int id, int *ptr)
 {
   cout << "Dev read" << endl;
   return 0;
