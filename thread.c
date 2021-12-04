@@ -1,10 +1,24 @@
 #include <pthread.h>
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 
 pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
+void execute_command(char *command)
+{
+
+  char cm[] = "shirish";
+
+  if (!strcmp(command, cm))
+  {
+    printf("Set data %s\n", command);
+  }
+
+  return;
+}
 
 char data[20];
 
@@ -33,11 +47,10 @@ void *cli_task()
   {
     printf(">>");
     scanf("%19s", data);
-
-    printf("Set data %s\n", data);
     pthread_mutex_lock(&lock);
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
+    execute_command(data);
   }
 
   return NULL;
