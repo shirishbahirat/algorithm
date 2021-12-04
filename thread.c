@@ -6,7 +6,7 @@ pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
-char data = 'a';
+char data[20];
 
 void *dispatcher_task()
 {
@@ -14,7 +14,7 @@ void *dispatcher_task()
   while (1)
   {
     pthread_mutex_lock(&lock);
-    while (data)
+    while (1)
     {
       pthread_cond_wait(&cond, &lock);
     }
@@ -32,9 +32,9 @@ void *cli_task()
   while (1)
   {
     printf(">>");
-    scanf("%c", &data);
+    scanf("%19s", data);
 
-    printf("Set data %c\n", data);
+    printf("Set data %s\n", data);
     pthread_mutex_lock(&lock);
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
