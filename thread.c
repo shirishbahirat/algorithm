@@ -6,22 +6,22 @@ pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
-int data = 1;
+char data = 'a';
 
 void *dispatcher_task()
 {
 
-  pthread_mutex_lock(&lock);
-  while (data)
+  while (1)
   {
-    printf("Waiting for cond\n");
-    pthread_cond_wait(&cond, &lock);
-  }
-  pthread_cond_signal(&cond);
-  printf("Trigged cond\n");
+    pthread_mutex_lock(&lock);
+    while (data)
+    {
+      pthread_cond_wait(&cond, &lock);
+    }
+    pthread_cond_signal(&cond);
 
-  pthread_mutex_unlock(&lock);
-  printf("Existing thread\n");
+    pthread_mutex_unlock(&lock);
+  }
 
   return NULL;
 }
@@ -29,14 +29,16 @@ void *dispatcher_task()
 void *cli_task()
 {
 
-  printf(">>");
-  scanf("%d", &data);
+  while (1)
+  {
+    printf(">>");
+    scanf("%c", &data);
 
-  printf("Set data\n");
-  pthread_mutex_lock(&lock);
-  pthread_cond_signal(&cond);
-  pthread_mutex_unlock(&lock);
-  printf("Triggered condition\n");
+    printf("Set data %c\n", data);
+    pthread_mutex_lock(&lock);
+    pthread_cond_signal(&cond);
+    pthread_mutex_unlock(&lock);
+  }
 
   return NULL;
 }
@@ -47,9 +49,6 @@ int main(int argc, char *argv[])
   pthread_create(&thread_idx, NULL, dispatcher_task, NULL);
   pthread_create(&thread_idy, NULL, cli_task, NULL);
   printf("created thread\n");
-
-  sleep(1);
-  printf("Timer done\n");
 
   pthread_join(thread_idx, NULL);
   pthread_join(thread_idy, NULL);
