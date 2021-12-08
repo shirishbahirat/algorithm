@@ -79,11 +79,11 @@ int main(int argc, char const *argv[])
                            .init = state_init,
                            .close = state_close};
 
-  machine.init(INIT);
-  machine.execute(READY);
-  machine.execute(BUSY);
-  machine.change(READY);
-  machine.close(DONE);
+  (&machine)->init(INIT);
+  (&machine)->execute(READY);
+  (&machine)->execute(BUSY);
+  (&machine)->change(READY);
+  (&machine)->close(DONE);
 
   return 0;
 }
