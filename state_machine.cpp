@@ -13,13 +13,13 @@ enum state_t
 
 struct state_machine
 {
-  int (*execute)(state_t);
-  int (*change)(state_t);
-  int (*init)(state_t);
-  int (*close)(state_t);
+  state_t (*execute)(state_t);
+  state_t (*change)(state_t);
+  state_t (*init)(state_t);
+  state_t (*close)(state_t);
 };
 
-int state_execute(state_t name)
+state_t state_execute(state_t name)
 {
 
   switch (name)
@@ -39,36 +39,36 @@ int state_execute(state_t name)
 
   cout << state << endl;
 
-  return 0;
+  return state;
 }
 
-int state_change(state_t name)
+state_t state_change(state_t name)
 {
   state = name;
   cout << state << endl;
-  return 0;
+  return state;
 }
 
-int state_init(state_t name)
+state_t state_init(state_t name)
 {
   if (name == INIT)
   {
     state = INIT;
     cout << state << endl;
-    return 0;
+    return state;
   }
-  return 1;
+  return state;
 }
 
-int state_close(state_t name)
+state_t state_close(state_t name)
 {
   if (name == DONE)
   {
     state = DONE;
     cout << state << endl;
-    return 0;
+    return state;
   }
-  return 1;
+  return state;
 }
 
 int main(int argc, char const *argv[])
