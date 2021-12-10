@@ -87,5 +87,7 @@ int main(int argc, char const *argv[])
   (&machine)->change(READY);
   (&machine)->close(DONE);
 
+  cout << "Current state " << state << endl;
+
   return 0;
 }
