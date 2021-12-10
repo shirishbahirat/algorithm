@@ -37,7 +37,7 @@ state_t state_execute(state_t name)
     state = INIT;
   }
 
-  cout << state << endl;
+  cout << "Current state " << state << endl;
 
   return state;
 }
@@ -45,7 +45,7 @@ state_t state_execute(state_t name)
 state_t state_change(state_t name)
 {
   state = name;
-  cout << state << endl;
+  cout << "Current state " << state << endl;
   return state;
 }
 
