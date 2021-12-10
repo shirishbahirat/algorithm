@@ -79,6 +79,8 @@ int main(int argc, char const *argv[])
                            .init = state_init,
                            .close = state_close};
 
+  cout << "Current state " << state << endl;
+
   (&machine)->init(INIT);
   (&machine)->execute(READY);
   (&machine)->execute(BUSY);
