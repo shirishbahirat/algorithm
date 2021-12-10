@@ -4,7 +4,7 @@ using namespace std;
 
 enum state_t
 {
-  INIT,
+  INIT = 0,
   READY,
   BUSY,
   DONE,
