@@ -54,7 +54,7 @@ state_t state_init(state_t name)
   if (name == INIT)
   {
     state = INIT;
-    cout << state << endl;
+    cout << "Current state " << state << endl;
     return state;
   }
   return state;
@@ -65,7 +65,7 @@ state_t state_close(state_t name)
   if (name == DONE)
   {
     state = DONE;
-    cout << state << endl;
+    cout << "Current state " << state << endl;
     return state;
   }
   return state;
