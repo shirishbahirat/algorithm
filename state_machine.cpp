@@ -5,9 +5,9 @@ using namespace std;
 enum state_t
 {
   INIT = 0,
-  READY,
-  BUSY,
-  DONE,
+  READY = 0xA,
+  BUSY = 0xB,
+  DONE = 0xC,
   STATES = 0xFF
 } state;
 
