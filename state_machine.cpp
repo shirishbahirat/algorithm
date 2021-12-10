@@ -8,7 +8,7 @@ enum state_t
   READY,
   BUSY,
   DONE,
-  STATES
+  STATES = 0xFF
 } state;
 
 struct state_machine
