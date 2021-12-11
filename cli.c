@@ -35,6 +35,8 @@ void *dispatcher_task()
     {
       pthread_cond_wait(&management.cond, &management.lock);
     }
+    execute_command(data);
+
     pthread_cond_signal(&management.cond);
 
     pthread_mutex_unlock(&management.lock);
@@ -55,7 +57,6 @@ void *cli_task()
       pthread_mutex_lock(&management.lock);
       pthread_cond_signal(&management.cond);
       pthread_mutex_unlock(&management.lock);
-      execute_command(data);
     }
   }
 
