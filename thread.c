@@ -55,6 +55,7 @@ void *cli_task()
 
   return NULL;
 }
+
 int main(int argc, char *argv[])
 {
   pthread_t thread_idx, thread_idy;
