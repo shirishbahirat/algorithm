@@ -17,6 +17,8 @@ void execute_command(char *command)
 
   char cm[] = "shirish";
 
+  printf("%s\n", command);
+
   if (!strcmp(command, cm))
   {
     printf("Set data %s\n", command);
