@@ -11,7 +11,8 @@ int main(int argc, char const *argv[])
 {
 
   DEBUG("C A M\n"
-        "B\n");
+        "B\n"
+        "CFGDC\n");
 
   return 0;
 }
