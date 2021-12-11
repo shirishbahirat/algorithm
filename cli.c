@@ -15,7 +15,7 @@ mgmet management = {.cond = PTHREAD_COND_INITIALIZER,
 void execute_command(char *command)
 {
 
-  char cm[] = "shirish";
+  char cm[] = "shirish\0";
 
   printf("%s\n", command);
 
