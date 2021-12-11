@@ -2,10 +2,12 @@
 #include <iostream>
 #include <stdio.h>
 
+using namespace std;
+
 #define DEBUG(...)                                                             \
   do                                                                           \
   {                                                                            \
-    printf(__VA_ARGS__);                                                       \
+    cout << __VA_ARGS__ << endl;                                               \
   } while (0)
 
 int main(int argc, char const *argv[])
