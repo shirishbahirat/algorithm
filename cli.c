@@ -19,7 +19,7 @@ void execute_command(char *command)
 
   if (strlen(command) > 1)
   {
-    printf("Set data %s\n", command);
+    printf("Set data %s", command);
 
     strcpy(data, "");
   }
