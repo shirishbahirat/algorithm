@@ -12,18 +12,20 @@ typedef struct _mgmet
 mgmet management = {.cond = PTHREAD_COND_INITIALIZER,
                     .lock = PTHREAD_MUTEX_INITIALIZER};
 
+char data[20];
+
 void execute_command(char *command)
 {
 
   if (strlen(command) > 1)
   {
-    printf("Set data %s\n>> ", command);
+    printf("Set data %s\n", command);
+
+    strcpy(data, "");
   }
 
   return;
 }
-
-char data[20];
 
 void *dispatcher_task()
 {
@@ -36,7 +38,6 @@ void *dispatcher_task()
       pthread_cond_wait(&management.cond, &management.lock);
     }
     execute_command(data);
-    strcpy(data, "");
 
     pthread_cond_signal(&management.cond);
 
