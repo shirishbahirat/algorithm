@@ -52,7 +52,7 @@ void *cli_task()
   {
     printf(">> ");
     fgets(data, sizeof data, stdin);
-    printf("%20s\n", data);
+    printf("%s\n", data);
     if (strlen(data) > 0)
     {
       pthread_mutex_lock(&management.lock);
