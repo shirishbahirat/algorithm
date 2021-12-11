@@ -15,14 +15,7 @@ mgmet management = {.cond = PTHREAD_COND_INITIALIZER,
 void execute_command(char *command)
 {
 
-  char cm[] = "shirish\0";
-
-  printf("%s\n", command);
-
-  if (!strcmp(command, cm))
-  {
-    printf("Set data %s\n", command);
-  }
+  printf("Set data %s\n", command);
 
   return;
 }
@@ -54,7 +47,6 @@ void *cli_task()
   {
     printf(">> ");
     fgets(data, sizeof data, stdin);
-    printf("%s\n", data);
     if (strlen(data) > 0)
     {
       pthread_mutex_lock(&management.lock);
