@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
   pthread_create(&thread_idx, NULL, dispatcher_task, NULL);
   pthread_create(&thread_idy, NULL, cli_task, NULL);
 
-  // pthread_join(thread_idx, NULL);
-  // pthread_join(thread_idy, NULL);
+  pthread_join(thread_idx, NULL);
+  pthread_join(thread_idy, NULL);
   return 0;
 }
