@@ -51,10 +51,10 @@ void *cli_task()
   while (1)
   {
     printf(">>");
-    scanf("%19s", data);
     pthread_mutex_lock(&management.lock);
     pthread_cond_signal(&management.cond);
     pthread_mutex_unlock(&management.lock);
+    scanf("%19s", data);
     execute_command(data);
   }
 
