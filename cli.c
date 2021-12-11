@@ -18,7 +18,7 @@ void execute_command(char *command)
   if (strlen(command) > 1)
   {
     printf("Set data %s\n", command);
-    printf(">> ");
+    printf("\n>> ");
   }
 
   return;
