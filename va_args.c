@@ -14,5 +14,7 @@ int main(int argc, char const *argv[])
         "B\n"
         "CFGDC\n");
 
+  DEBUG("12\n");
+
   return 0;
 }
