@@ -31,7 +31,7 @@ void *dispatcher_task()
   while (1)
   {
     pthread_mutex_lock(&management.lock);
-    while (strlen(data) > 0)
+    while (strlen(data) < 1)
     {
       pthread_cond_wait(&management.cond, &management.lock);
     }
