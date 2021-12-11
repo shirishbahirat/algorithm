@@ -36,6 +36,7 @@ void *dispatcher_task()
       pthread_cond_wait(&management.cond, &management.lock);
     }
     execute_command(data);
+    strcpy(data, "");
 
     pthread_cond_signal(&management.cond);
 
