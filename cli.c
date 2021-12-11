@@ -56,7 +56,7 @@ void *cli_task()
     pthread_mutex_lock(&management.lock);
     pthread_cond_signal(&management.cond);
     pthread_mutex_unlock(&management.lock);
-    scanf("%20[^\n]s", data);
+    scanf("%20s", data);
 
     execute_command(data);
   }
