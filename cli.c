@@ -15,7 +15,7 @@ mgmet management = {.cond = PTHREAD_COND_INITIALIZER,
 void execute_command(char *command)
 {
 
-  if (sizeof(command) > 0)
+  if (strlen(command) > 1)
   {
     printf("Set data %s", command);
   }
