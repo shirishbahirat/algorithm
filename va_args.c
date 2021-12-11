@@ -10,7 +10,7 @@
 int main(int argc, char const *argv[])
 {
 
-  DEBUG("C A M\n"
+  DEBUG("CAM\n"
         "B\n"
         "CFGDC\n");
 
