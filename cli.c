@@ -52,13 +52,13 @@ void *cli_task()
   {
     printf(">> ");
     scanf("%20[^\n]s", data);
-
-    pthread_mutex_lock(&management.lock);
-    pthread_cond_signal(&management.cond);
-    pthread_mutex_unlock(&management.lock);
-    scanf("%20s", data);
-
-    execute_command(data);
+    if (sizeof(data) > 0)
+    {
+      pthread_mutex_lock(&management.lock);
+      pthread_cond_signal(&management.cond);
+      pthread_mutex_unlock(&management.lock);
+      execute_command(data);
+    }
   }
 
   return NULL;
