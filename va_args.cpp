@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <iostream>
 
 #define DEBUG(...)                                                             \
@@ -9,7 +10,7 @@
 int main(int argc, char const *argv[])
 {
 
-  DEBUG(3, 2, 4, 5)
+  DEBUG(3, 2, 4, 5);
 
   return 0;
 }
