@@ -19,6 +19,8 @@ int main(int argc, const char *argv[])
     parr++;
   }
 
+  cout << endl;
+
   for (int i = 0; i < 6; ++i)
   {
     cout << **pparr << " ";
