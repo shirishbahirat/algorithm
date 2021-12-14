@@ -52,7 +52,7 @@ int partition(int low, int high)
 int main(int argc, const char *argv[])
 {
 
-  partition(0, 9);
+  partition(0, 8);
   print_vect(vect, 8);
 
   while (1)
