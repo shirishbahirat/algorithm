@@ -9,5 +9,7 @@ int main(int argc, const char *argv[])
 
   int **pparr;
 
+  cout << "running" << endl;
+
   return 0;
 }
