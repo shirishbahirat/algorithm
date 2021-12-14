@@ -55,5 +55,7 @@ int main(int argc, const char *argv[])
 
   cout << "running" << endl;
 
+  print_arr(pparr, 6);
+
   return 0;
 }
