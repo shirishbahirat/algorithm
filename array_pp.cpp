@@ -15,9 +15,10 @@ int main(int argc, const char *argv[])
 
   for (int i = 0; i < 6; ++i)
   {
-    cout << *parr << endl;
+    cout << *parr << " ";
     parr++;
   }
+  cout << endl;
 
   cout << "running" << endl;
 
