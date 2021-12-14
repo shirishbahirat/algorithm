@@ -30,6 +30,14 @@ int main(int argc, const char *argv[])
 
   cout << endl;
 
+  for (int i = 0; i < 6; ++i)
+  {
+    cout << *(*pparr) << " ";
+    (*pparr)++;
+  }
+
+  cout << endl;
+
   cout << "running" << endl;
 
   return 0;
