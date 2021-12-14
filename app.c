@@ -49,7 +49,7 @@ int partition(int low, int high)
     }
   }
 
-  swap(vect, low, idx);
+  swap(vect, low, idy);
 
   return 0;
 }
