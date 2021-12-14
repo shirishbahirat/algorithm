@@ -51,7 +51,7 @@ int partition(int low, int high)
 
   swap(vect, low, idy);
 
-  return idy;
+  return idx;
 }
 
 void quick_sort(int low, int high)
