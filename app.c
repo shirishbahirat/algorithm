@@ -31,13 +31,22 @@ int partition(int low, int high)
   int idx = low;
   int idy = high;
 
+  while ((vect[idx] <= pivot) && (idx < high))
+  {
+    idx++;
+  }
+
+  while ((vect[idy] > pivot) && (idy > low))
+  {
+    idy--;
+  }
+
   return 0;
 }
 
 int main(int argc, const char *argv[])
 {
 
-  swap(vect, 0, 1);
   print_vect(vect, 8);
 
   while (1)
