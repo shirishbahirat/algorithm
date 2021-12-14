@@ -18,6 +18,12 @@ int main(int argc, const char *argv[])
     cout << *parr << " ";
     parr++;
   }
+
+  for (int i = 0; i < 6; ++i)
+  {
+    cout << **pparr << " ";
+  }
+
   cout << endl;
 
   cout << "running" << endl;
