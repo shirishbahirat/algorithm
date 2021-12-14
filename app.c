@@ -51,13 +51,22 @@ int partition(int low, int high)
 
   swap(vect, low, idy);
 
-  return 0;
+  return idy;
+}
+
+void quick_sort(int low, int high)
+{
+  while (low < high)
+  {
+    int mid = partition(low, high);
+    quick_sort(low, mid);
+    quick_sort(mid + 1, high);
+  }
 }
 
 int main(int argc, const char *argv[])
 {
 
-  partition(0, 8);
   print_vect(vect, 8);
 
   while (1)
