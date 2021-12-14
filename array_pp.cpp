@@ -11,6 +11,7 @@ int main(int argc, const char *argv[])
   int *parr;
 
   parr = arr;
+  pparr = &parr;
 
   cout << "running" << endl;
 
