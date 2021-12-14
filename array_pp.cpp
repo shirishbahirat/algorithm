@@ -9,7 +9,7 @@ int main(int argc, const char *argv[])
 
   int **pparr;
 
-  pparr = &arr;
+  pparr = arr;
 
   cout << "running" << endl;
 
