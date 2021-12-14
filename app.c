@@ -71,13 +71,11 @@ int main(int argc, const char *argv[])
   quick_sort(0, 8);
   print_vect(vect, 8);
 
-  /*
-    while (1)
-    {
-      printf(">> ");
-      fgets(data, sizeof data, stdin);
-    }
-    */
+  while (1)
+  {
+    printf(">> ");
+    fgets(data, sizeof data, stdin);
+  }
 
   return 0;
 }
