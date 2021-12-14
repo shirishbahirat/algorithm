@@ -51,12 +51,12 @@ int partition(int low, int high)
 
   swap(vect, low, idy);
 
-  return idx;
+  return idy;
 }
 
 void quick_sort(int low, int high)
 {
-  while (low < high)
+  if (low < high)
   {
     int mid = partition(low, high);
     print_vect(vect, 8);
