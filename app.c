@@ -2,7 +2,7 @@
 
 char data[20];
 
-int vect[] = {10, 4, 5, 3, 9, 11, 6, 8, 0xFFFF};
+int vect[] = {4, 10, 5, 3, 9, 11, 6, 8, 0xFFFF};
 
 void swap(int *v, int a, int b)
 {
