@@ -41,6 +41,11 @@ int partition(int low, int high)
     idy--;
   }
 
+  if (idx < idy)
+  {
+    swap(vect, idx, idy);
+  }
+
   return 0;
 }
 
