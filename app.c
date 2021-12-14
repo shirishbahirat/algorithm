@@ -42,5 +42,7 @@ int main(int argc, const char *argv[])
     fgets(data, sizeof data, stdin);
   }
 
+  print_vect(vect, 8);
+
   return 0;
 }
