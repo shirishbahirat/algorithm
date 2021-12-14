@@ -33,7 +33,6 @@ int partition(int low, int high)
 
   while (idx < idy)
   {
-
     while ((vect[idx] <= pivot) && (idx < high))
     {
       idx++;
@@ -49,6 +48,8 @@ int partition(int low, int high)
       swap(vect, idx, idy);
     }
   }
+
+  swap(vect, low, idx);
 
   return 0;
 }
