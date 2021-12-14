@@ -37,6 +37,7 @@ int partition(int low, int high)
 int main(int argc, const char *argv[])
 {
 
+  swap(vect, 0, 1);
   print_vect(vect, 8);
 
   while (1)
