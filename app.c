@@ -59,6 +59,7 @@ void quick_sort(int low, int high)
   while (low < high)
   {
     int mid = partition(low, high);
+    print_vect(vect, 8);
     quick_sort(low, mid);
     quick_sort(mid + 1, high);
   }
