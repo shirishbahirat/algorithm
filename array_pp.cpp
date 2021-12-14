@@ -4,6 +4,19 @@ using namespace std;
 
 int arr[] = {19, 3, 2, 23, 12, 34};
 
+void print_arr(int **p, int len)
+{
+
+  for (int i = 0; i < len; ++i)
+  {
+    cout << *(*p) << " ";
+    (*p)++;
+  }
+
+  cout << endl;
+  return;
+}
+
 int main(int argc, const char *argv[])
 {
 
@@ -37,6 +50,7 @@ int main(int argc, const char *argv[])
     (*pparr)++;
   }
 
+  parr = arr;
   cout << endl;
 
   cout << "running" << endl;
