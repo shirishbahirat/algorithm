@@ -36,13 +36,13 @@ int partition(int low, int high)
 int main(int argc, const char *argv[])
 {
 
+  print_vect(vect, 8);
+
   while (1)
   {
     printf(">> ");
     fgets(data, sizeof data, stdin);
   }
-
-  print_vect(vect, 8);
 
   return 0;
 }
