@@ -13,6 +13,11 @@ int main(int argc, const char *argv[])
   parr = arr;
   pparr = &parr;
 
+  for (int i = 0; i < 6; ++i)
+  {
+    cout << *parr << endl;
+  }
+
   cout << "running" << endl;
 
   return 0;
