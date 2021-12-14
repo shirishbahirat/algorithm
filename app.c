@@ -21,6 +21,7 @@ void print_vect(int v[], int len)
   {
     printf("%d ", v[i]);
   }
+  printf("\n");
 }
 
 int partition(int low, int high)
