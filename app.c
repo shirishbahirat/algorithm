@@ -14,6 +14,15 @@ void swap(int *v, int a, int b)
   }
 }
 
+void print_vect(int v[], int len)
+{
+  int i = 0;
+  for (i = 0; i < len; ++i)
+  {
+    printf("%d ", v[i]);
+  }
+}
+
 int partition(int low, int high)
 {
   int pivot = vect[0];
