@@ -67,6 +67,7 @@ void quick_sort(int low, int high)
 int main(int argc, const char *argv[])
 {
 
+  quick_sort(0, 8);
   print_vect(vect, 8);
 
   while (1)
