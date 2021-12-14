@@ -26,7 +26,7 @@ void print_vect(int v[], int len)
 
 int partition(int low, int high)
 {
-  int pivot = vect[0];
+  int pivot = vect[low];
 
   int idx = low;
   int idy = high;
