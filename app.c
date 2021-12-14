@@ -9,7 +9,7 @@ int main(int argc, const char *argv[])
   {
     printf(">> ");
     fgets(data, sizeof data, stdin);
-    printf("%s\n", data);
+    printf("%s", data);
   }
 
   return 0;
