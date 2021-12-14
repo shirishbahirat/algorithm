@@ -2,7 +2,7 @@
 
 char data[20];
 
-int vect[] = {10, 3, 5, 3, 9, 11, 6, 8, 0xFFFF};
+int vect[] = {10, 4, 5, 3, 9, 11, 6, 8, 0xFFFF};
 
 void swap(int *v, int a, int b)
 {
@@ -31,19 +31,23 @@ int partition(int low, int high)
   int idx = low;
   int idy = high;
 
-  while ((vect[idx] <= pivot) && (idx < high))
+  while (idx < idy)
   {
-    idx++;
-  }
 
-  while ((vect[idy] > pivot) && (idy > low))
-  {
-    idy--;
-  }
+    while ((vect[idx] <= pivot) && (idx < high))
+    {
+      idx++;
+    }
 
-  if (idx < idy)
-  {
-    swap(vect, idx, idy);
+    while ((vect[idy] > pivot) && (idy > low))
+    {
+      idy--;
+    }
+
+    if (idx < idy)
+    {
+      swap(vect, idx, idy);
+    }
   }
 
   return 0;
