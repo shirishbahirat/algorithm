@@ -8,8 +8,9 @@ int main(int argc, const char *argv[])
 {
 
   int **pparr;
+  int *parr;
 
-  pparr = arr;
+  parr = arr;
 
   cout << "running" << endl;
 
