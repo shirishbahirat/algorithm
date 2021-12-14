@@ -30,6 +30,7 @@ int main(int argc, const char *argv[])
 
   cout << endl;
 
+  parr = arr;
   for (int i = 0; i < 6; ++i)
   {
     cout << *(*pparr) << " ";
