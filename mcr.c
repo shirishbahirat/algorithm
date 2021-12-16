@@ -30,7 +30,7 @@ void *producer()
   {
     while (data == 0)
     {
-      delay(5);
+      delay(50);
       printf("Out of 0\n");
       data = 1;
       pthread_mutex_lock(&lock);
@@ -49,7 +49,7 @@ void *consumer()
   {
     while (data == 1)
     {
-      delay(5);
+      delay(50);
       printf("Out of 1\n");
       data = 0;
       pthread_mutex_lock(&lock);
