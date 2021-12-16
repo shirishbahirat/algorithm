@@ -31,7 +31,7 @@ void *producer()
     while (data == 0)
     {
       data = 1;
-      delay(10);
+      delay(3);
       pthread_mutex_lock(&lock);
     }
     pthread_cond_signal(&cond);
@@ -50,7 +50,7 @@ void *consumer()
     while (data == 1)
     {
       data = 0;
-      delay(10);
+      delay(3);
       pthread_mutex_lock(&lock);
     }
     pthread_cond_signal(&cond);
