@@ -20,7 +20,7 @@ void *producer()
     }
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
-    printf("Out of 0");
+    printf("Out of 0\n");
   }
 
   return NULL;
@@ -38,7 +38,7 @@ void *consumer()
     }
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
-    printf("Out of 1");
+    printf("Out of 1\n");
   }
 
   return NULL;
