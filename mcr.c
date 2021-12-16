@@ -31,12 +31,12 @@ void *producer()
     while (data == 0)
     {
       delay(3);
+      printf("Out of 0\n");
       data = 1;
       pthread_mutex_lock(&lock);
     }
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
-    printf("Out of 0\n");
   }
 
   return NULL;
@@ -50,12 +50,12 @@ void *consumer()
     while (data == 1)
     {
       delay(3);
+      printf("Out of 1\n");
       data = 0;
       pthread_mutex_lock(&lock);
     }
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
-    printf("Out of 1\n");
   }
 
   return NULL;
