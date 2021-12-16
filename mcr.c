@@ -5,6 +5,19 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+#include <time.h>
+
+void delay(int sec)
+{
+  int ms = 1000 * sec;
+
+  clock_t st = clock();
+
+  while (clock() < st + ms)
+  {
+  }
+}
+
 pthread_cond_t cond;
 pthread_mutex_t lock;
 
@@ -23,7 +36,7 @@ void *producer()
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
     printf("Out of 0\n");
-    wait(3);
+    delay(3);
   }
 
   return NULL;
@@ -42,7 +55,7 @@ void *consumer()
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
     printf("Out of 1\n");
-    wait(3);
+    delay(3);
   }
 
   return NULL;
