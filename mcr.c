@@ -8,9 +8,41 @@ pthread_mutex_t lock;
 
 int data = 0;
 
-void *producer() { return NULL; }
+void *producer()
+{
 
-void *consumer() { return NULL; }
+  while (1)
+  {
+    while (data == 0)
+    {
+      data = 1;
+      pthread_mutex_lock(&lock);
+    }
+    pthread_cond_signal(&cond);
+    pthread_mutex_unlock(&lock);
+    printf("Out of 0");
+  }
+
+  return NULL;
+}
+
+void *consumer()
+{
+
+  while (1)
+  {
+    while (data == 1)
+    {
+      data = 0;
+      pthread_mutex_lock(&lock);
+    }
+    pthread_cond_signal(&cond);
+    pthread_mutex_unlock(&lock);
+    printf("Out of 1");
+  }
+
+  return NULL;
+}
 
 int main(int argc, char const *argv[])
 {
