@@ -8,9 +8,9 @@ pthread_mutex_t lock;
 
 int data = 0;
 
-void *producer(void) { return NULL; }
+void *producer() { return NULL; }
 
-void *consumer(void) { return NULL; }
+void *consumer() { return NULL; }
 
 int main(int argc, char const *argv[])
 {
