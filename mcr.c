@@ -1,6 +1,8 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 pthread_cond_t cond;
@@ -21,6 +23,7 @@ void *producer()
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
     printf("Out of 0\n");
+    wait(2);
   }
 
   return NULL;
@@ -39,6 +42,7 @@ void *consumer()
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&lock);
     printf("Out of 1\n");
+    wait(2);
   }
 
   return NULL;
