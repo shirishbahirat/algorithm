@@ -9,7 +9,7 @@
 
 void delay(int sec)
 {
-  int ms = 100000 * sec;
+  int ms = 1000000 * sec;
 
   clock_t st = clock();
 
