@@ -17,5 +17,11 @@ int main(int argc, char const *argv[])
 
   pthread_t idx, idy;
 
+  pthread_create(&idx, NULL, producer, NULL);
+  pthread_create(&idy, NULL, consumer, NULL);
+
+  pthread_join(idx, NULL);
+  pthread_join(idy, NULL);
+
   return 0;
 }
