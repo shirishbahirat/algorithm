@@ -5,6 +5,12 @@ int arr[] = {10, 11, 12};
 
 int *prr = &arr;
 
+void print_arr(int **arr)
+{
+  printf("%d\n", arr[0]);
+  return;
+}
+
 int main(int argc, const char **argv)
 {
 
@@ -13,8 +19,6 @@ int main(int argc, const char **argv)
     argc--;
     printf("%s\n", argv[argc]);
   }
-
-  printf("%s\n", prr[0]);
 
   return 0;
 }
