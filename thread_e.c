@@ -11,7 +11,7 @@ void print_arr(const char **arr)
   return;
 }
 
-void print_arn(const int **arr)
+void print_arn(int **arr)
 {
   printf("%d\n", *arr[0]);
   return;
