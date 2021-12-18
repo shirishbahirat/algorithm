@@ -15,7 +15,7 @@ void print_arn(int **arr)
 {
   printf("%d\n", **arr);
   printf("%d\n", **arr);
-  // printf("%d\n", *arr[2]);
+  printf("%d\n", **arr);
   return;
 }
 
