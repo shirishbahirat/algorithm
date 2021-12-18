@@ -25,7 +25,7 @@ int main(int argc, const char **argv)
 {
 
   print_arr(argv);
-  print_arn(*arr);
+  print_arn(&parr);
 
   while (argc > 1)
   {
