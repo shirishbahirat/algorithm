@@ -4,6 +4,7 @@
 int arr[] = {10, 11, 12};
 
 int *parr = arr;
+int *narr = &arr[0];
 
 void print_arr(const char **arr)
 {
