@@ -21,8 +21,8 @@ void print_arn(int **arr)
   return;
 }
 
-void foo(int **array) {}
-void fox(int *array[]) {}
+void foo(int **array) { printf("%d\n", **array); }
+void fox(int *array[]) { printf("%d\n", **array); }
 
 int main(int argc, const char **argv)
 {
