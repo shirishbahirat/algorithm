@@ -3,6 +3,8 @@
 
 int arr[] = {10, 11, 12};
 
+int *parr = arr;
+
 void print_arr(const char **arr)
 {
   printf("%s\n", arr[0]);
@@ -19,6 +21,7 @@ int main(int argc, const char **argv)
 {
 
   print_arr(argv);
+  print_arn(&parr);
 
   while (argc > 1)
   {
