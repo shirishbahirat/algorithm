@@ -4,14 +4,10 @@
 int main(int argc, const char **argv)
 {
 
-  if (argc > 1)
+  while (argc)
   {
-    printf("%s\n", argv[1]);
-  }
-
-  if (argc > 2)
-  {
-    printf("%s\n", argv[2]);
+    printf("%s\n", argv[argc]);
+    argc--;
   }
 
   return 0;
