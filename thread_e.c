@@ -36,7 +36,7 @@ int main(int argc, const char **argv)
     printf("%s\n", argv[argc]);
   }
   foo(&parr);
-  // fox(&arr);
+  fox(&parr);
 
   return 0;
 }
