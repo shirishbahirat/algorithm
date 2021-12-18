@@ -12,6 +12,8 @@ void print_arr(char **arr)
 int main(int argc, const char **argv)
 {
 
+  print_arr(argv);
+
   while (argc > 1)
   {
     argc--;
