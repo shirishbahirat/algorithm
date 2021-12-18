@@ -3,7 +3,7 @@
 
 int arr[] = {10, 11, 12};
 
-int *prr = arr;
+int *prr = &arr;
 int **pr = &prr;
 
 int main(int argc, const char **argv)
