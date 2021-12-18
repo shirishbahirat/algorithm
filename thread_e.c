@@ -35,6 +35,8 @@ int main(int argc, const char **argv)
     argc--;
     printf("%s\n", argv[argc]);
   }
+  foo(&parr);
+  fox(&arr[0]);
 
   return 0;
 }
