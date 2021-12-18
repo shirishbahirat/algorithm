@@ -9,5 +9,10 @@ int main(int argc, const char **argv)
     printf("%s\n", argv[1]);
   }
 
+  if (argc > 2)
+  {
+    printf("%s\n", argv[2]);
+  }
+
   return 0;
 }
