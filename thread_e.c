@@ -4,7 +4,7 @@
 int main(int argc, const char **argv)
 {
 
-  while (argc)
+  while (argc > 0)
   {
     argc--;
     printf("%s\n", argv[argc]);
