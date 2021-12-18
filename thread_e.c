@@ -13,8 +13,8 @@ void print_arr(const char **arr)
 
 void print_arn(int **arr)
 {
-  printf("%d\n", *arr[0]);
-  printf("%d\n", *arr[1]);
+  printf("%d\n", *arr);
+  printf("%d\n", *arr);
   // printf("%d\n", *arr[2]);
   return;
 }
