@@ -21,6 +21,9 @@ void print_arn(int **arr)
   return;
 }
 
+void foo(int **array) {}
+void fox(int *array[]) {}
+
 int main(int argc, const char **argv)
 {
 
