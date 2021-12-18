@@ -3,9 +3,9 @@
 
 int arr[] = {10, 11, 12};
 
-void print_arr(int **arr)
+void print_arr(char **arr)
 {
-  printf("%d\n", arr[0]);
+  printf("%s\n", arr[0]);
   return;
 }
 
