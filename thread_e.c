@@ -3,7 +3,7 @@
 
 int arr[] = {10, 11, 12};
 
-void print_arr(char **arr)
+void print_arr(const char **arr)
 {
   printf("%s\n", arr[0]);
   return;
