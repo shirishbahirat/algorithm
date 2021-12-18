@@ -3,8 +3,6 @@
 
 int arr[] = {10, 11, 12};
 
-int *prr = &arr;
-
 void print_arr(int **arr)
 {
   printf("%d\n", arr[0]);
