@@ -28,8 +28,8 @@ void fox(int *array[]) { printf("%d\n", **array); }
 int main(int argc, const char **argv)
 {
 
-  printf("%d\n", narr);
-  printf("%d\n", parr);
+  printf("%d\n", *narr);
+  printf("%d\n", *parr);
 
   print_arr(argv);
   print_arn(&parr);
