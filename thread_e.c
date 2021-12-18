@@ -15,5 +15,7 @@ int main(int argc, const char **argv)
     printf("%s\n", argv[argc]);
   }
 
+  printf("%s\n", pr[0]);
+
   return 0;
 }
