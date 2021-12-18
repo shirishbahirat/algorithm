@@ -4,7 +4,6 @@
 int arr[] = {10, 11, 12};
 
 int *prr = &arr;
-int **pr = &prr;
 
 int main(int argc, const char **argv)
 {
@@ -15,7 +14,7 @@ int main(int argc, const char **argv)
     printf("%s\n", argv[argc]);
   }
 
-  printf("%s\n", pr[0]);
+  printf("%s\n", prr[0]);
 
   return 0;
 }
