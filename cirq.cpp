@@ -59,13 +59,16 @@ int main(int argc, char const *argv[])
 
   node *cmd = nullptr;
 
-  cmd = new node(10);
+  cmd = new node(1);
   head = push(cmd);
   cout << tail->data << endl;
-  cmd = new node(11);
+  cmd = new node(2);
   head = push(cmd);
   cout << tail->data << endl;
-  cmd = new node(12);
+  cmd = new node(3);
+  head = push(cmd);
+  cout << tail->data << endl;
+  cmd = new node(4);
   head = push(cmd);
   cout << tail->data << endl;
 
