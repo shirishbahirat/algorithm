@@ -47,8 +47,6 @@ node *pop()
     return nullptr;
   }
 
-  node *temp = tail;
-
   tail = tail->next;
 
   return tail;
