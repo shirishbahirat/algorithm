@@ -64,6 +64,7 @@ int main(int argc, char const *argv[])
   cout << tail->data << endl;
   cmd = new node(2);
   head = push(cmd);
+  tail = pop(tail);
   cout << tail->data << endl;
   cmd = new node(3);
   head = push(cmd);
