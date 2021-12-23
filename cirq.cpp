@@ -28,6 +28,10 @@ node *push(node *cmd)
   {
     head->next = cmd;
     cmd->prev = head;
+    if (tail->next == nullptr)
+    {
+      tail->next = cmd;
+    }
   }
 
   head = cmd;
