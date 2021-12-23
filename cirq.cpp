@@ -47,22 +47,25 @@ node *pop()
     return nullptr;
   }
 
+  node *temp = tail;
+
   tail = tail->next;
 
-  return tail;
+  return temp;
 }
 
 int main(int argc, char const *argv[])
 {
 
   node *cmd = nullptr;
+  node *dnd = nullptr;
 
   cmd = new node(1);
   head = push(cmd);
   cout << tail->data << endl;
   cmd = new node(2);
   head = push(cmd);
-  tail = pop();
+  dnd = pop();
   cout << tail->data << endl;
   cmd = new node(3);
   head = push(cmd);
