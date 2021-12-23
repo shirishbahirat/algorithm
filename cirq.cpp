@@ -20,7 +20,7 @@ node *pop(node *cmd);
 int main(int argc, char const *argv[])
 {
 
-  node *cmd = new node();
+  node *cmd = new node(10);
 
   return 0;
 }
