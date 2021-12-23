@@ -22,6 +22,7 @@ node *push(node *cmd)
   if (head == nullptr)
   {
     head = cmd;
+    tail = cmd;
   }
   else
   {
@@ -33,6 +34,8 @@ node *push(node *cmd)
 
   return head;
 }
+
+node *push(node *cmd) {}
 
 int main(int argc, char const *argv[])
 {
