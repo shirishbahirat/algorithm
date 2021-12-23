@@ -17,6 +17,23 @@ node *tail = nullptr;
 node *push(node *cmd);
 node *pop(node *cmd);
 
+node *push(node *cmd)
+{
+  if (head == nullptr)
+  {
+    head = cmd;
+  }
+  else
+  {
+    head->next = cmd;
+    cmd->prev = head;
+  }
+
+  head = cmd;
+
+  return head;
+}
+
 int main(int argc, char const *argv[])
 {
 
