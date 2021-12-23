@@ -43,6 +43,8 @@ int main(int argc, char const *argv[])
   head = push(cmd);
   cmd = new node(11);
   head = push(cmd);
+  cmd = new node(12);
+  head = push(cmd);
 
   cout << head->data << " " << head->prev->data << endl;
 
