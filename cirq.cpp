@@ -35,7 +35,7 @@ node *push(node *cmd)
   return head;
 }
 
-node *push(node *cmd) {}
+// node *push(node *cmd) {}
 
 int main(int argc, char const *argv[])
 {
