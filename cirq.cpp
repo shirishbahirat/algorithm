@@ -39,7 +39,7 @@ node *push(node *cmd)
   return head;
 }
 
-// node *push(node *cmd) {}
+node *pop(node *cmd) { return nullptr; }
 
 int main(int argc, char const *argv[])
 {
