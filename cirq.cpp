@@ -39,7 +39,20 @@ node *push(node *cmd)
   return head;
 }
 
-node *pop(node *cmd) { return nullptr; }
+node *pop(node *cmd)
+{
+
+  if (tail == nullptr)
+  {
+    return nullptr;
+  }
+
+  node *temp = tail;
+
+  tail = tail->next;
+
+  return temp;
+}
 
 int main(int argc, char const *argv[])
 {
