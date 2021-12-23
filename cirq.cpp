@@ -51,7 +51,7 @@ node *pop()
 
   tail = tail->next;
 
-  return temp;
+  return tail;
 }
 
 int main(int argc, char const *argv[])
