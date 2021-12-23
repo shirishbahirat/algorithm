@@ -38,6 +38,7 @@ int main(int argc, char const *argv[])
 {
 
   node *cmd = new node(10);
+  head = push(cmd);
 
   return 0;
 }
