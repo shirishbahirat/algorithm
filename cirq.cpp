@@ -39,7 +39,7 @@ node *push(node *cmd)
   return head;
 }
 
-node *pop(node *cmd)
+node *pop()
 {
 
   if (tail == nullptr)
@@ -64,7 +64,7 @@ int main(int argc, char const *argv[])
   cout << tail->data << endl;
   cmd = new node(2);
   head = push(cmd);
-  tail = pop(tail);
+  tail = pop();
   cout << tail->data << endl;
   cmd = new node(3);
   head = push(cmd);
