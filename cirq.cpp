@@ -68,10 +68,8 @@ int main(int argc, char const *argv[])
   delete dnd;
   cmd = new node(3);
   head = push(cmd);
-  cout << tail->data << endl;
   cmd = new node(4);
   head = push(cmd);
-  cout << tail->data << endl;
 
   cout << head->data << " " << head->prev->data << " " << head->prev->prev->data
        << endl;
