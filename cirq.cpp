@@ -62,14 +62,18 @@ int main(int argc, char const *argv[])
 
   cmd = new node(1);
   head = push(cmd);
+  cout << tail->data << endl;
   cmd = new node(2);
   head = push(cmd);
   dnd = pop();
   delete dnd;
+  cout << tail->data << endl;
   cmd = new node(3);
   head = push(cmd);
+  cout << tail->data << endl;
   cmd = new node(4);
   head = push(cmd);
+  cout << tail->data << endl;
 
   cout << head->data << " " << head->prev->data << " " << head->prev->prev->data
        << endl;
