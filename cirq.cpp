@@ -71,8 +71,5 @@ int main(int argc, char const *argv[])
   cmd = new node(4);
   head = push(cmd);
 
-  cout << head->data << " " << head->prev->data << " " << head->prev->prev->data
-       << endl;
-
   return 0;
 }
