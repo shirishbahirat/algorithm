@@ -70,7 +70,6 @@ int main(int argc, char const *argv[])
   head = push(cmd);
   cmd = new node(4);
   head = push(cmd);
-  cout << tail->data << endl;
 
   cout << head->data << " " << head->prev->data << " " << head->prev->prev->data
        << endl;
