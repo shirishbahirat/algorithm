@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 
   int decode = 1;
   char *parr = arr;
+  char *pparr = &parr;
 
   while (--argc)
   {
