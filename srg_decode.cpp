@@ -11,7 +11,9 @@ int main(int argc, char **argv)
 
   int decode = 1;
   char *parr = arr;
-  char *pparr = &parr;
+  char **pparr = &parr;
+
+  cout << pparr[0] << endl;
 
   while (--argc)
   {
