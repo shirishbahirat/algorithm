@@ -7,9 +7,12 @@ int main(int argc, char **argv)
 
   cout << argc << endl;
 
+  int decode = 1;
+
   while (--argc)
   {
-    cout << argv[argc] << endl;
+    cout << argv[decode] << endl;
+    decode++;
   }
 
   return 0;
