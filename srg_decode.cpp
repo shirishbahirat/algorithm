@@ -10,7 +10,7 @@ int main(int argc, char **argv)
   cout << argc << endl;
 
   int decode = 1;
-  char **parr = &arr;
+  char *parr = arr;
 
   while (--argc)
   {
