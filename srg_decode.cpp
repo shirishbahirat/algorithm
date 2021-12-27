@@ -2,7 +2,7 @@
 
 using namespace std;
 
-char arr[] = {'a', 'b', 'c'};
+char arr[] = {'a', 'b', 'c', 'd'};
 
 int main(int argc, char **argv)
 {
