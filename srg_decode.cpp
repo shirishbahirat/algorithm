@@ -3,6 +3,7 @@
 using namespace std;
 
 char arr[] = {'a', 'b', 'c', 'd'};
+int irr[] = {10, 11, 12, 9};
 
 int main(int argc, char **argv)
 {
