@@ -15,6 +15,11 @@ int main(int argc, char **argv)
   int *pirr = irr;
   int **ppirr = &pirr;
 
+  cout << ppirr[0][0] << endl;
+  cout << ppirr[0][1] << endl;
+  cout << ppirr[0][2] << endl;
+  cout << ppirr[0][3] << endl;
+
   cout << pparr[0][0] << endl;
   cout << pparr[0][1] << endl;
   cout << pparr[0][2] << endl;
