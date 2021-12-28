@@ -8,7 +8,7 @@ int main(int argc, char **argv)
 {
 
   int decode = 1;
-  char *parr = arr;
+  char *parr = arr[0];
   char **pparr = &parr;
 
   cout << pparr[0] << endl;
