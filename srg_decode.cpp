@@ -12,6 +12,9 @@ int main(int argc, char **argv)
   char *parr = arr;
   char **pparr = &parr;
 
+  int *pirr = irr;
+  int **ppirr = &pirr;
+
   cout << pparr[0][0] << endl;
   cout << pparr[0][1] << endl;
   cout << pparr[0][2] << endl;
