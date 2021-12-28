@@ -11,7 +11,7 @@ int main(int argc, char **argv)
   char *parr = arr;
   char **pparr = &parr;
 
-  cout << pparr[0] << endl;
+  cout << pparr[0][0] << endl;
 
   cout << argc << endl;
 
