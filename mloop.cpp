@@ -23,6 +23,16 @@ void rsum(int arr[], int idx)
   return;
 }
 
+void lsum(int arr[], int idx)
+{
+
+  for (int i = 0; i < idx; ++idx)
+  {
+    sum += arr[i];
+    cout << sum << " " << idx << endl;
+  }
+}
+
 int main(int argc, const char *argv[])
 {
 
