@@ -18,7 +18,7 @@ void rsum(int arr[], int idx)
   else
     rsum(arr, --idx);
 
-  cout << idx << endl;
+  cout << idx + 1 << endl;
 
   return;
 }
