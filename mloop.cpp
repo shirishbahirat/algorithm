@@ -4,7 +4,7 @@ using namespace std;
 
 int arr[] = {9, 4, 7, 2, 3, 8, 4};
 
-struc node
+struct node
 {
   int data;
   node *left;
