@@ -11,7 +11,7 @@ void rsum(int arr[], int idx)
 
   sum = sum + arr[idx];
 
-  cout << sum << idx << endl;
+  cout << sum << " " << idx << endl;
 
   if (idx == 0)
     return;
