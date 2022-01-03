@@ -6,7 +6,7 @@ int arr[] = {9, 4, 7, 2, 3, 8, 4};
 
 int sum = 0;
 
-void rsum(int arr[], int idx, int sum)
+void rsum(int arr[], int idx)
 {
 
   sum = sum + arr[idx];
@@ -16,7 +16,7 @@ void rsum(int arr[], int idx, int sum)
   if (idx == 0)
     return;
   else
-    rsum(arr, --idx, sum);
+    rsum(arr, --idx);
 
   return;
 }
