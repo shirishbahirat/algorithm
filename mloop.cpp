@@ -40,5 +40,9 @@ int main(int argc, const char *argv[])
 
   cout << sum << endl;
 
+  sum = 0;
+  lsum(arr, 6);
+  cout << sum << endl;
+
   return 0;
 }
