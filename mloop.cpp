@@ -6,7 +6,7 @@ int arr[] = {9, 4, 7, 2, 3, 8, 4};
 
 int sum = 0;
 
-int rsum(int arr[], int idx, int sum)
+void rsum(int arr[], int idx, int sum)
 {
 
   sum = sum + arr[idx];
@@ -14,11 +14,11 @@ int rsum(int arr[], int idx, int sum)
   cout << sum << endl;
 
   if (idx == 0)
-    return sum;
+    return;
   else
-    sum = rsum(arr, --idx, sum);
+    sum(arr, --idx, sum);
 
-  return 0;
+  return;
 }
 
 int main(int argc, const char *argv[])
