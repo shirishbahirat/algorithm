@@ -29,7 +29,7 @@ void lsum(int arr[], int idx)
   for (int i = 0; i <= idx; ++i)
   {
     sum += arr[i];
-    cout << sum << " " << idx << endl;
+    cout << sum << " " << i << endl;
   }
 }
 
