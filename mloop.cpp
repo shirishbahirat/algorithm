@@ -24,7 +24,7 @@ void rsum(int arr[], int idx)
 int main(int argc, const char *argv[])
 {
 
-  rsum(arr, 6, sum);
+  rsum(arr, 6);
 
   cout << sum << endl;
 
