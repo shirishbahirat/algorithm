@@ -18,7 +18,7 @@ int rsum(int arr[], int idx, int sum)
   else
     rsum(arr, --idx, sum);
 
-  return 0;
+  return sum;
 }
 
 int main(int argc, const char *argv[])
