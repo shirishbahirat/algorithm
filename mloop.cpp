@@ -26,7 +26,7 @@ void rsum(int arr[], int idx)
 void lsum(int arr[], int idx)
 {
 
-  for (int i = 0; i < idx; ++i)
+  for (int i = 0; i <= idx; ++i)
   {
     sum += arr[i];
     cout << sum << " " << idx << endl;
