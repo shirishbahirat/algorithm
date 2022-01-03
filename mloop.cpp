@@ -18,6 +18,8 @@ void rsum(int arr[], int idx)
   else
     rsum(arr, --idx);
 
+  cout << "Error" << endl;
+
   return;
 }
 
