@@ -16,7 +16,7 @@ int rsum(int arr[], int idx, int sum)
   if (idx == 0)
     return sum;
   else
-    sum(arr, --idx, sum);
+    rsum(arr, --idx, sum);
 
   return 0;
 }
