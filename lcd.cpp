@@ -10,30 +10,21 @@ struct node
   node(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-void insert(node &hd, int val)
+void insert(node **hd, int val)
 {
-  if (hd == nullptr)
+  if ((*hd) == nullptr)
   {
-    hd = new node(val);
+    (*hd) = new node(val);
+    return;
   }
-  else if ((hd->left == nullptr) && (hd->val < val))
+
+  if (val <= (*hd)->val)
   {
-    hd->left = new node(val);
-  }
-  else if ((hd->right == nullptr) && (hd->val >= val))
-  {
-    hd->right = new node(val);
+    insert(&(*hd)->left, val)
   }
   else
   {
-    if (hd->left->val < val)
-    {
-      // hd = insert(hd->right, val);
-    }
-    else
-    {
-      // hd = insert(hd->left, val);
-    }
+    insert(&(*hd)->right, val)
   }
 }
 
@@ -42,10 +33,10 @@ int main(int argc, char *argv[])
 
   node *root = nullptr;
 
-  insert(*root, 5);
-  insert(*root, 10);
-  insert(*root, 4);
-  insert(*root, 6);
+  insert(&root, 5);
+  insert(&root, 10);
+  insert(&root, 4);
+  insert(&root, 6);
 
   cout << root->val << endl;
   cout << root->left->val << endl;
