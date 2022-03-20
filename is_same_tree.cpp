@@ -19,6 +19,28 @@ struct TreeNode
 class Solution
 {
 public:
+  bool status = True;
+
+  bool transverse(TreeNode *x, TreeNode *y)
+  {
+    if ((x == nullptr) && (y == nullptr))
+    {
+      return status == False ? False : True;
+    }
+    if ((x == nullptr) || (y == nullptr))
+    {
+      return False;
+    }
+
+    if (x->val == y->val)
+    {
+      return status == False ? False : True;
+    }
+
+    transverse(x->left, y->left);
+    transverse(x->right, y->right);
+  }
+
   bool isSameTree(TreeNode *p, TreeNode *q) { return true; }
 };
 
