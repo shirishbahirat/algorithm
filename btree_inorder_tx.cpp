@@ -23,7 +23,28 @@ public:
   {
     vector<int> tree;
 
+    inorder(root, tree);
+
+    for (int k : tree)
+    {
+      cout << k << " ";
+    }
+    cout << endl;
+
     return tree;
+  }
+
+  void inorder(TreeNode *root, vector<int> &tree)
+  {
+    if (root == nullptr)
+      return;
+
+    inorder(root->left, tree);
+
+    cout << root->val << endl;
+    tree.push_back(root->val);
+
+    inorder(root->right, tree);
   }
 };
 
@@ -41,6 +62,8 @@ int main(int argc, char const *argv[])
 
   head->right->left = new TreeNode(12);
   head->right->right = new TreeNode(18);
+
+  obj->inorderTraversal(head);
 
   return 0;
 }
