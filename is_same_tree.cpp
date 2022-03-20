@@ -41,7 +41,6 @@ public:
     }
     else
     {
-      cout << false << endl;
       return (status = false);
     }
 
