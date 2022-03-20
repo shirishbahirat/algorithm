@@ -35,6 +35,7 @@ public:
 
     if (x->val == y->val)
     {
+      cout << status << endl;
       status = (status ? true : false);
       status = transverse(x->left, y->left);
       status = transverse(x->right, y->right);
