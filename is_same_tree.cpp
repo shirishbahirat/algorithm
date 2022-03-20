@@ -19,29 +19,37 @@ struct TreeNode
 class Solution
 {
 public:
-  bool status = True;
+  bool status = true;
 
   bool transverse(TreeNode *x, TreeNode *y)
   {
     if ((x == nullptr) && (y == nullptr))
     {
-      return status == False ? False : True;
+      return status = (status ? true : false);
     }
+
     if ((x == nullptr) || (y == nullptr))
     {
-      return False;
+      return (status = false);
     }
 
     if (x->val == y->val)
     {
-      return status == False ? False : True;
+      cout << status << endl;
+      status = (status ? true : false);
+      status = transverse(x->left, y->left);
+      status = transverse(x->right, y->right);
+    }
+    else
+    {
+      cout << false << endl;
+      return (status = false);
     }
 
-    transverse(x->left, y->left);
-    transverse(x->right, y->right);
+    return status;
   }
 
-  bool isSameTree(TreeNode *p, TreeNode *q) { return true; }
+  bool isSameTree(TreeNode *p, TreeNode *q) { return transverse(p, q); }
 };
 
 int main(int argc, char const *argv[])
@@ -71,6 +79,8 @@ int main(int argc, char const *argv[])
   q->right->right = new TreeNode(18);
 
   bool stat = obj->isSameTree(p, q);
+
+  cout << stat << endl;
 
   return 0;
 }
