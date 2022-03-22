@@ -31,9 +31,8 @@ public:
     if (root == nullptr)
       return;
 
-    cout << root->val << endl;
-
     traversal(root->left);
+    cout << root->val << endl;
     traversal(root->right);
 
     return;
