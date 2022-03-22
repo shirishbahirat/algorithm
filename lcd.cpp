@@ -43,7 +43,6 @@ public:
   }
 };
 
-//
 void insert(node **hd, int val)
 {
   if ((*hd) == nullptr)
