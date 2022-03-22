@@ -25,6 +25,22 @@ public:
     return head;
   }
 
+private:
+  TreeNode insert(vector<int> &nums, int low, int high)
+  {
+    if (low > high)
+    {
+      return null;
+    }
+
+    int mid = low + (high - low) / 2;
+    TreeNode *head = new TreeNode(nums[mid]);
+
+    head->left = helper(nums, low, mid - 1);
+    head->right = helper(nums, mid + 1, high);
+    return head;
+  }
+
   void traversal(TreeNode *root)
   {
 
