@@ -23,52 +23,50 @@ public:
   {
     TreeNode *head = nullptr;
     return head;
-  }
 
-private:
-  TreeNode insert(vector<int> &nums, int low, int high)
-  {
-    if (low > high)
+    TreeNode insert(vector<int> & nums, int low, int high)
     {
-      return null;
+      if (low > high)
+      {
+        return nullptr;
+      }
+
+      int mid = low + (high - low) / 2;
+      TreeNode *head = new TreeNode(nums[mid]);
+
+      head->left = insert(nums, low, mid - 1);
+      head->right = insert(nums, mid + 1, high);
+      return head;
     }
 
-    int mid = low + (high - low) / 2;
-    TreeNode *head = new TreeNode(nums[mid]);
+    void traversal(TreeNode * root)
+    {
 
-    head->left = helper(nums, low, mid - 1);
-    head->right = helper(nums, mid + 1, high);
-    return head;
-  }
+      if (root == nullptr)
+        return;
 
-  void traversal(TreeNode *root)
-  {
+      traversal(root->left);
+      cout << root->val << endl;
+      traversal(root->right);
 
-    if (root == nullptr)
       return;
+    }
+  };
 
-    traversal(root->left);
-    cout << root->val << endl;
-    traversal(root->right);
+  int main(int argc, char const *argv[])
+  {
+    Solution *obj = new Solution();
 
-    return;
+    TreeNode *head = new TreeNode(0);
+
+    head->left = new TreeNode(-3);
+    head->right = new TreeNode(9);
+
+    head->left->left = new TreeNode(-10);
+
+    head->right->left = new TreeNode(5);
+
+    obj->traversal(head);
+
+    return 0;
   }
-};
-
-int main(int argc, char const *argv[])
-{
-  Solution *obj = new Solution();
-
-  TreeNode *head = new TreeNode(0);
-
-  head->left = new TreeNode(-3);
-  head->right = new TreeNode(9);
-
-  head->left->left = new TreeNode(-10);
-
-  head->right->left = new TreeNode(5);
-
-  obj->traversal(head);
-
-  return 0;
-}
