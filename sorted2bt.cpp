@@ -31,10 +31,10 @@ public:
     if (root == nullptr)
       return;
 
+    cout << root->val << endl;
+
     traversal(root->left);
     traversal(root->right);
-
-    cout << root->val << endl;
 
     return;
   }
