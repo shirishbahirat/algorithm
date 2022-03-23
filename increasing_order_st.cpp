@@ -19,7 +19,20 @@ struct TreeNode
 class Solution
 {
 public:
+  TreeNode *head = nullptr;
+
   TreeNode *increasingBST(TreeNode *root) { return root; }
+
+  void add_node(TreeNode *root)
+  {
+
+    if (head == nullptr)
+    {
+      head = root;
+    }
+
+    head->right = root;
+  }
 
   void traversal(TreeNode *root)
   {
@@ -53,6 +66,8 @@ int main(int argc, char const *argv[])
 
   head->right->right->left = new TreeNode(7);
   head->right->right->right = new TreeNode(9);
+
+  obj->traversal(head);
 
   return 0;
 }
