@@ -39,6 +39,7 @@ public:
     head->left = insert(nums, low, mid - 1);
 
     head->right = insert(nums, mid + 1, high);
+
     return head;
   }
 
