@@ -49,6 +49,7 @@ public:
     traversal(root->left);
 
     cout << root->val << endl;
+
     traversal(root->right);
 
     return;
