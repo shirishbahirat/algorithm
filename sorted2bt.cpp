@@ -61,6 +61,7 @@ int main(int argc, char const *argv[])
   TreeNode *head = new TreeNode(0);
 
   head->left = new TreeNode(-3);
+
   head->right = new TreeNode(9);
 
   head->left->left = new TreeNode(-10);

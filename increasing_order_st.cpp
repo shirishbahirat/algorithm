@@ -19,30 +19,42 @@ struct TreeNode
 class Solution
 {
 public:
-  TreeNode *head = nullptr;
+  TreeNode *tree = nullptr;
+  TreeNode *start = nullptr;
 
-  TreeNode *increasingBST(TreeNode *root) { return root; }
-
-  void add_node(TreeNode *root)
+  TreeNode *increasingBST(TreeNode *root)
   {
 
-    if (head == nullptr)
-    {
-      head = root;
-    }
+    traversal(&root);
 
-    head->right = root;
+    return start;
   }
 
-  void traversal(TreeNode *root)
+  void add_node(TreeNode **root)
   {
 
-    if (root == nullptr)
+    if (tree == nullptr)
+    {
+      tree = new TreeNode((*root)->val);
+      start = tree;
+      return;
+    }
+
+    tree->right = new TreeNode((*root)->val);
+    tree->left = nullptr;
+    tree = tree->right;
+  }
+
+  void traversal(TreeNode **root)
+  {
+
+    if ((*root) == nullptr)
       return;
 
-    traversal(root->left);
-    cout << root->val << endl;
-    traversal(root->right);
+    traversal(&(*root)->left);
+    cout << (*root)->val << endl;
+    add_node(root);
+    traversal(&(*root)->right);
 
     return;
   }
@@ -67,7 +79,7 @@ int main(int argc, char const *argv[])
   head->right->right->left = new TreeNode(7);
   head->right->right->right = new TreeNode(9);
 
-  obj->traversal(head);
+  obj->traversal(&head);
 
   return 0;
 }
