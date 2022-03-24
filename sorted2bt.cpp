@@ -33,6 +33,7 @@ public:
     }
 
     int mid = low + (high - low) / 2;
+
     TreeNode *head = new TreeNode(nums[mid]);
 
     head->left = insert(nums, low, mid - 1);
