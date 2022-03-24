@@ -22,6 +22,7 @@ public:
   TreeNode *sortedArrayToBST(vector<int> &nums)
   {
     TreeNode *head = nullptr;
+
     return insert(nums, 0, nums.size() - 1);
   }
 
