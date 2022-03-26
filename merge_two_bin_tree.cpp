@@ -19,7 +19,13 @@ struct TreeNode
 class Solution
 {
 public:
-  TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2) {}
+  TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2)
+  {
+
+    TreeNode *root;
+
+    return root;
+  }
 };
 
 int main(int argc, char const *argv[])
