@@ -19,7 +19,7 @@ struct TreeNode
 class Solution
 {
 public:
-  bool result = false;
+  bool result = true;
   int val;
 
   void init(TreeNode *root)
@@ -39,13 +39,22 @@ public:
     transverse(root->left);
     transverse(root->right);
     cout << root->val << endl;
+
+    if (val != root->val)
+    {
+      result = false;
+    }
+
+    return result;
   }
 
   bool isUnivalTree(TreeNode *root)
   {
     init(root);
 
-    return true;
+    result = transverse(root);
+
+    return result;
   }
 };
 
@@ -61,10 +70,12 @@ int main(int argc, char const *argv[])
   p->left->left = new TreeNode(1);
   p->left->right = new TreeNode(1);
 
-  p->right->left = new TreeNode(1);
+  p->right->left = new TreeNode(2);
   p->right->right = new TreeNode(1);
 
-  obj->isUnivalTree(p);
+  bool status = obj->isUnivalTree(p);
+
+  cout << "out " << status << endl;
 
   return 0;
 }
