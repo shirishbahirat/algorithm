@@ -31,7 +31,7 @@ public:
 
     if ((root->val >= low) && (root->val <= high))
     {
-      sum += root->val
+      sum += root->val;
     }
 
     transverse(root->right, low, high);
@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
   p->right->left = new TreeNode(13);
   p->right->right = new TreeNode(18);
 
-  bool status = obj->rangeSumBST(p, 5, 15);
+  int status = obj->rangeSumBST(p, 5, 15);
 
   cout << "out " << status << endl;
 
