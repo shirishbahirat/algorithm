@@ -19,13 +19,36 @@ struct TreeNode
 class Solution
 {
 public:
-  TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2)
+  TreeNode *root;
+
+  void transverse(TreeNode *root1, TreeNode *root2)
   {
 
-    TreeNode *root;
+    if ((root1 == nullptr) && (root2 == nullptr))
+      return;
 
-    return root;
+    int val = 0;
+
+    if (root1 != nullptr)
+    {
+      val += root1->val;
+    }
+
+    if (root2 != nullptr)
+    {
+      val += root2->val;
+    }
+
+    root = new TreeNode(val);
+
+    transverse(root1->left, root2->left);
+
+    transverse(root1->right, root2->right);
+
+    return;
   }
+
+  TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2) { return root; }
 };
 
 int main(int argc, char const *argv[])
