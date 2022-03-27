@@ -21,7 +21,7 @@ class Solution
 public:
   TreeNode *root;
 
-  void transverse(TreeNode *root1, TreeNode *root2, TreeNode *root)
+  void transverse(TreeNode *root1, TreeNode *root2, TreeNode **root)
   {
 
     if ((root1 == nullptr) && (root2 == nullptr))
@@ -39,22 +39,23 @@ public:
       val += root2->val;
     }
 
-    root = new TreeNode(val);
+    TreeNode *n = new TreeNode(val);
+    (*root) = n;
 
     if (root1 == nullptr)
     {
-      transverse(nullptr, root2->left, root->left);
-      transverse(nullptr, root2->right, root->right);
+      transverse(nullptr, root2->left, &(*root)->left);
+      transverse(nullptr, root2->right, &(*root)->right);
     }
     else if (root2 == nullptr)
     {
-      transverse(root1->left, nullptr, root->left);
-      transverse(root1->right, nullptr, root->right);
+      transverse(root1->left, nullptr, &(*root)->left);
+      transverse(root1->right, nullptr, &(*root)->right);
     }
     else
     {
-      transverse(root1->left, root2->left, root->left);
-      transverse(root1->right, root2->right, root->right);
+      transverse(root1->left, root2->left, &(*root)->left);
+      transverse(root1->right, root2->right, &(*root)->right);
     }
 
     return;
@@ -63,7 +64,7 @@ public:
   TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2)
   {
 
-    transverse(root1, root2, root);
+    transverse(root1, root2, &root);
 
     return root;
   }
@@ -75,6 +76,7 @@ int main(int argc, char const *argv[])
 
   TreeNode *p = new TreeNode(1);
   TreeNode *q = new TreeNode(1);
+  TreeNode *r;
 
   p->left = new TreeNode(1);
   p->right = new TreeNode(1);
@@ -94,8 +96,9 @@ int main(int argc, char const *argv[])
   q->right->left = new TreeNode(2);
   q->right->right = new TreeNode(1);
 
-  obj->mergeTrees(p, q);
-  ;
+  r = obj->mergeTrees(p, q);
+
+  cout << r->val << endl;
 
   return 0;
 }
