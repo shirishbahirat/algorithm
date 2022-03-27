@@ -33,15 +33,27 @@ public:
       node = true;
     }
 
+    if (node)
+    {
+      TreeNode *n = new TreeNode(root->val);
+      (*tree) = n;
+    }
+
     cout << root->val << endl;
 
-    transverse(root->left, val);
-    transverse(root->right, val);
+    transverse(root->left, val, &(*tree)->right);
+    transverse(root->right, val, &(*tree)->left);
 
     return;
   }
 
-  TreeNode *searchBST(TreeNode *root, int val) { return root; }
+  TreeNode *searchBST(TreeNode *root, int val)
+  {
+
+    transverse(root, val, &tree);
+
+    return tree;
+  }
 };
 
 int main(int argc, char const *argv[])
@@ -59,7 +71,7 @@ int main(int argc, char const *argv[])
   p->right->left = new TreeNode(13);
   p->right->right = new TreeNode(18);
 
-  obj->transverse(p);
+  obj->searchBST(p, 5);
 
   return 0;
 }
