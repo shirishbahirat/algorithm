@@ -19,16 +19,24 @@ struct TreeNode
 class Solution
 {
 public:
-  void transverse(TreeNode *root)
+  TreeNode *tree;
+  bool node = false;
+
+  void transverse(TreeNode *root, int val, TreeNode **tree)
   {
 
     if (root == nullptr)
       return;
 
+    if (root->val == val)
+    {
+      node = true;
+    }
+
     cout << root->val << endl;
 
-    transverse(root->left);
-    transverse(root->right);
+    transverse(root->left, val);
+    transverse(root->right, val);
 
     return;
   }
