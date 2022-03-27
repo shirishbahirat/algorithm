@@ -19,11 +19,23 @@ struct TreeNode
 class Solution
 {
 public:
-  TreeNode *searchBST(TreeNode *root, int val) {}
+  TreeNode *searchBST(TreeNode *root, int val) { return root; }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  TreeNode *p = new TreeNode(10);
+
+  p->left = new TreeNode(5);
+  p->right = new TreeNode(15);
+
+  p->left->left = new TreeNode(3);
+  p->left->right = new TreeNode(7);
+
+  p->right->left = new TreeNode(13);
+  p->right->right = new TreeNode(18);
+
   return 0;
 }
