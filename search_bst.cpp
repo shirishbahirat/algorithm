@@ -19,6 +19,20 @@ struct TreeNode
 class Solution
 {
 public:
+  void transverse(TreeNode *root)
+  {
+
+    if (root == nullptr)
+      return;
+
+    cout << root->val << endl;
+
+    transverse(root->left);
+    transverse(root->right);
+
+    return;
+  }
+
   TreeNode *searchBST(TreeNode *root, int val) { return root; }
 };
 
@@ -36,6 +50,8 @@ int main(int argc, char const *argv[])
 
   p->right->left = new TreeNode(13);
   p->right->right = new TreeNode(18);
+
+  obj->transverse(p);
 
   return 0;
 }
