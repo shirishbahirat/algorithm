@@ -41,7 +41,7 @@ public:
 
     cout << root->val << endl;
 
-    if (tree != nullptr)
+    if (*tree != nullptr)
     {
       transverse(root->left, val, &(*tree)->right);
       transverse(root->right, val, &(*tree)->left);
