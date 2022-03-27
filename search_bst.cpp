@@ -20,37 +20,24 @@ class Solution
 {
 public:
   TreeNode *tree = nullptr;
-  bool node = false;
+  bool node = true;
 
-  void transverse(TreeNode *root, int val, TreeNode **tree)
+  void transverse(TreeNode *root, int val)
   {
 
     if (root == nullptr)
       return;
 
-    if (root->val == val)
+    if ((root->val == val) && (node == true))
     {
-      node = true;
-    }
-
-    if (node)
-    {
-      TreeNode *n = new TreeNode(root->val);
-      (*tree) = n;
+      node = false;
+      tree = root;
     }
 
     cout << root->val << endl;
 
-    if (*tree != nullptr)
-    {
-      transverse(root->left, val, &(*tree)->right);
-      transverse(root->right, val, &(*tree)->left);
-    }
-    else
-    {
-      transverse(root->left, val, &(*tree));
-      transverse(root->right, val, &(*tree));
-    }
+    transverse(root->left, val);
+    transverse(root->right, val);
 
     return;
   }
@@ -58,7 +45,7 @@ public:
   TreeNode *searchBST(TreeNode *root, int val)
   {
 
-    transverse(root, val, &tree);
+    transverse(root, val);
 
     return tree;
   }
