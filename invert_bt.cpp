@@ -19,7 +19,32 @@ struct TreeNode
 class Solution
 {
 public:
-  TreeNode *invertTree(TreeNode *root) { return root; }
+  void transverse(TreeNode *root)
+  {
+
+    if (root == nullptr)
+      return;
+
+    transverse(root->left);
+    transverse(root->right);
+
+    TreeNode *temp;
+
+    temp = root->left;
+
+    root->left = root->right;
+    root->right = temp;
+
+    return;
+  }
+
+  TreeNode *invertTree(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return root;
+  }
 };
 
 int main(int argc, char const *argv[])
