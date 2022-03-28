@@ -42,6 +42,6 @@ int main(int argc, char const *argv[])
   p->right->left = new TreeNode(2);
   p->right->right = new TreeNode(1);
 
-  vector<int> nodes = obj->getLonelyNodes(root);
+  vector<int> nodes = obj->getLonelyNodes(p);
   return 0;
 }
