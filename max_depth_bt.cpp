@@ -25,10 +25,11 @@ public:
   void transverse(TreeNode *root, int x, int y)
   {
 
-    cout << root->val << x << " " << y << endl;
-
     if (root == nullptr)
       return;
+
+    cout << root->val << x << " " << y << endl;
+
     x += 1;
     transverse(root->left, x, y);
     y += 1;
