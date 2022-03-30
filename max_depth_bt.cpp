@@ -19,11 +19,29 @@ struct TreeNode
 class Solution
 {
 public:
+  void transverse(TreeNode *root)
+  {
+
+    if (root == nullptr)
+      return;
+
+    transverse(root->left);
+    transverse(root->right);
+
+    return;
+  }
+
   int maxDepth(TreeNode *root) { return 0; }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  TreeNode *p = new TreeNode(3);
+
+  p->left = new TreeNode(9);
+  p->right = new TreeNode(20);
+
   return 0;
 }
