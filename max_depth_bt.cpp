@@ -30,9 +30,9 @@ public:
 
     cout << root->val << " " << x << " " << y << endl;
 
-    if (l)
+    if (l == true)
       x += 1;
-    else if (r)
+    else if (r == true)
       y += 1;
 
     transverse(root->left, true, false);
