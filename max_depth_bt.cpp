@@ -49,7 +49,7 @@ public:
 
     cout << x << " " << y << endl;
 
-    return 0;
+    return x > y ? x : y;
   }
 };
 
