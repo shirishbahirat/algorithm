@@ -48,8 +48,10 @@ public:
     transverse(root, false, false);
 
     cout << x << " " << y << endl;
-
-    return x > y ? (x + 1) : (y + 1);
+    if (x > 1 || y > 1)
+      return x > y ? (x + 1) : (y + 1);
+    else
+      return 0;
   }
 };
 
