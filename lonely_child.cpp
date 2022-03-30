@@ -62,5 +62,11 @@ int main(int argc, char const *argv[])
   p->right->right = new TreeNode(1);
 
   vector<int> nodes = obj->getLonelyNodes(p);
+
+  for (int i : nodes)
+  {
+    cout << i << endl;
+  }
+
   return 0;
 }
