@@ -25,10 +25,10 @@ public:
     if (root == nullptr)
       return;
 
+    cout << root->val << endl;
+
     transverse(root->left);
     transverse(root->right);
-
-    cout << root->val << endl;
 
     return;
   }
