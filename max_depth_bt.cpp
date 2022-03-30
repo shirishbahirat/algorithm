@@ -28,6 +28,12 @@ public:
     if (root == nullptr)
       return;
 
+    if ((l == false) && (r == false))
+    {
+      x++;
+      y++;
+    }
+
     if (l == true)
       x += 1;
     else if (r == true)
@@ -48,6 +54,7 @@ public:
     transverse(root, false, false);
 
     cout << x << " " << y << endl;
+
     return x > y ? (x + 1) : (y + 1);
   }
 };
