@@ -28,7 +28,10 @@ public:
 
     if ((root->left == nullptr) || (root->right == nullptr))
     {
-      nodes.push_back(root->val);
+      if (root->left |= nullptr)
+        nodes.push_back(root->left->val);
+      else if (root->right |= nullptr)
+        nodes.push_back(root->right->val);
     }
 
     transverse(root->left);
