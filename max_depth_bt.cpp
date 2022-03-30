@@ -19,43 +19,19 @@ struct TreeNode
 class Solution
 {
 public:
-  int x = 0;
-  int y = 0;
-
-  void transverse(TreeNode *root, bool l, bool r)
-  {
-
-    if (root == nullptr)
-      return;
-
-    if ((l == false) && (r == false))
-    {
-      x++;
-      y++;
-    }
-
-    if (l == true)
-      x++;
-    else if (r == true)
-      y++;
-
-    cout << root->val << " " << x << " " << y << endl;
-
-    transverse(root->left, true, false);
-
-    transverse(root->right, false, true);
-
-    return;
-  }
-
   int maxDepth(TreeNode *root)
   {
 
-    transverse(root, false, false);
+    if (root == nullptr)
+      return 0;
 
-    cout << x << " " << y << endl;
+    int left = maxDepth(root->left);
+    int right = maxDepth(root->right);
 
-    return x > y ? x : y;
+    if (left > right)
+      return left + 1;
+    else
+      return right + 1;
   }
 };
 
