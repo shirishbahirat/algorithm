@@ -37,7 +37,13 @@ public:
     return;
   }
 
-  vector<int> getLonelyNodes(TreeNode *root) { return nodes; }
+  vector<int> getLonelyNodes(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return nodes;
+  }
 };
 
 int main(int argc, char const *argv[])
