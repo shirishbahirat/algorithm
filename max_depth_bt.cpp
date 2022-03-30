@@ -22,7 +22,7 @@ public:
   int x = 0;
   int y = 0;
 
-  void transverse(TreeNode *root, int &x, int &y)
+  void transverse(TreeNode *root, bool l, bool r)
   {
 
     if (root == nullptr)
@@ -30,10 +30,15 @@ public:
 
     cout << root->val << " " << x << " " << y << endl;
 
-    x += 1;
-    transverse(root->left, x, y);
-    y += 1;
-    transverse(root->right, x, y);
+    if (l)
+      x += 1;
+
+    if (r)
+      y += 1;
+
+    transverse(root->left, true, false);
+
+    transverse(root->right, false, true);
 
     return;
   }
@@ -41,7 +46,7 @@ public:
   int maxDepth(TreeNode *root)
   {
 
-    transverse(root, x, y);
+    transverse(root, false, false);
 
     cout << x << " " << y << endl;
 
