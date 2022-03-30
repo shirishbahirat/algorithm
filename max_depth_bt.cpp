@@ -28,10 +28,18 @@ public:
     transverse(root->left);
     transverse(root->right);
 
+    cout << root->val << endl;
+
     return;
   }
 
-  int maxDepth(TreeNode *root) { return 0; }
+  int maxDepth(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return 0;
+  }
 };
 
 int main(int argc, char const *argv[])
