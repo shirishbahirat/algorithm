@@ -35,9 +35,9 @@ public:
     }
 
     if (l == true)
-      x += 1;
+      x++;
     else if (r == true)
-      y += 1;
+      y++;
 
     cout << root->val << " " << x << " " << y << endl;
 
