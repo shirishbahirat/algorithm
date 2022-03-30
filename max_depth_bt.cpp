@@ -32,8 +32,7 @@ public:
 
     if (l)
       x += 1;
-
-    if (r)
+    else if (r)
       y += 1;
 
     transverse(root->left, true, false);
