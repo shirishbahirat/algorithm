@@ -32,12 +32,12 @@ public:
 
     transverse(root->left, true, false);
 
-    transverse(root->right, false, true);
-
     if (l == true)
       x += 1;
     else if (r == true)
       y += 1;
+
+    transverse(root->right, false, true);
 
     return;
   }
