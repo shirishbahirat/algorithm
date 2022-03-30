@@ -28,12 +28,12 @@ public:
     if (root == nullptr)
       return;
 
-    cout << root->val << " " << x << " " << y << endl;
-
     if (l == true)
       x += 1;
     else if (r == true)
       y += 1;
+
+    cout << root->val << " " << x << " " << y << endl;
 
     transverse(root->left, true, false);
 
