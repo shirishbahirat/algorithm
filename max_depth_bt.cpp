@@ -55,7 +55,7 @@ public:
 
     cout << x << " " << y << endl;
 
-    return x > y ? (x + 1) : (y + 1);
+    return x > y ? x : y;
   }
 };
 
