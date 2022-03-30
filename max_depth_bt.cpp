@@ -54,5 +54,7 @@ int main(int argc, char const *argv[])
   p->right->left = new TreeNode(15);
   p->right->right = new TreeNode(7);
 
+  obj->maxDepth(p);
+
   return 0;
 }
