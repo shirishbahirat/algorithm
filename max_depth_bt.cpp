@@ -22,13 +22,13 @@ public:
   int x = 0;
   int y = 0;
 
-  void transverse(TreeNode *root, int x, int y)
+  void transverse(TreeNode *root, int &x, int &y)
   {
 
     if (root == nullptr)
       return;
 
-    cout << root->val << x << " " << y << endl;
+    cout << root->val << " " << x << " " << y << endl;
 
     x += 1;
     transverse(root->left, x, y);
@@ -44,6 +44,7 @@ public:
     transverse(root, x, y);
 
     cout << x << " " << y << endl;
+
     return 0;
   }
 };
