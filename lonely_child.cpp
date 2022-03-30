@@ -19,12 +19,25 @@ struct TreeNode
 class Solution
 {
 public:
-  vector<int> getLonelyNodes(TreeNode *root)
-  {
-    vector<int> nodes;
+  vector<int> nodes;
 
-    return nodes;
+  void transverse(TreeNode *root)
+  {
+    if (root == nullptr)
+      return;
+
+    if ((root->left == nullptr) || (root->right == nullptr))
+    {
+      nodes.push_back(root->val);
+    }
+
+    transverse(root->left);
+    transverse(root->right);
+
+    return;
   }
+
+  vector<int> getLonelyNodes(TreeNode *root) { return nodes; }
 };
 
 int main(int argc, char const *argv[])
