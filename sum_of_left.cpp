@@ -37,7 +37,13 @@ public:
     return;
   }
 
-  int sumOfLeftLeaves(TreeNode *root) { return 0; }
+  int sumOfLeftLeaves(TreeNode *root)
+  {
+
+    transverse(root, false);
+
+    return sum;
+  }
 };
 
 int main(int argc, char const *argv[])
