@@ -19,7 +19,24 @@ struct TreeNode
 class Solution
 {
 public:
-  int sumRootToLeaf(TreeNode *root) { return 0; }
+  int sum = 0;
+  void getSum(TreeNode *root, int n)
+  {
+    if (!root)
+      return;
+    n = 2 * n + root->val;
+    getSum(root->left, n);
+    getSum(root->right, n);
+    if (!root->left && !root->right)
+    {
+      sum += n;
+    }
+  }
+  int sumRootToLeaf(TreeNode *root)
+  {
+    getSum(root, 0);
+    return sum;
+  }
 };
 
 int main(int argc, char const *argv[])
