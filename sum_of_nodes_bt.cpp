@@ -28,14 +28,14 @@ int main(int argc, char const *argv[])
 
   TreeNode *root = new TreeNode(1);
 
-  TreeNode *root->left = new TreeNode(0);
-  TreeNode *root->right = new TreeNode(1);
+  root->left = new TreeNode(0);
+  root->right = new TreeNode(1);
 
-  TreeNode *root->left->left = new TreeNode(0);
-  TreeNode *root->left->right = new TreeNode(1);
+  root->left->left = new TreeNode(0);
+  root->left->right = new TreeNode(1);
 
-  TreeNode *root->right->left = new TreeNode(0);
-  TreeNode *root->right->right = new TreeNode(1);
+  root->right->left = new TreeNode(0);
+  root->right->right = new TreeNode(1);
 
   return 0;
 }
