@@ -58,5 +58,7 @@ int main(int argc, char const *argv[])
   root->right->left = new TreeNode(0);
   root->right->right = new TreeNode(1);
 
+  obj->binaryTreePaths(root);
+
   return 0;
 }
