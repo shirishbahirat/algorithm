@@ -20,11 +20,43 @@ class Solution
 {
 public:
   vector<string> data;
-  vector<string> binaryTreePaths(TreeNode *root) { return data; }
+
+  void transverse(TreeNode *root)
+  {
+    if (root == nullptr)
+      return;
+
+    cout << root->val << "->" << endl;
+    transverse(root->left);
+    transverse(root->right);
+
+    if ((root->left == nullptr) && (root->right == nullptr))
+      cout << endl;
+  }
+
+  vector<string> binaryTreePaths(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return data;
+  }
 };
 
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  TreeNode *root = new TreeNode(1);
+
+  root->left = new TreeNode(0);
+  root->right = new TreeNode(1);
+
+  root->left->left = new TreeNode(0);
+  root->left->right = new TreeNode(1);
+
+  root->right->left = new TreeNode(0);
+  root->right->right = new TreeNode(1);
+
   return 0;
 }
