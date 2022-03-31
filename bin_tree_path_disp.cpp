@@ -19,7 +19,8 @@ struct TreeNode
 class Solution
 {
 public:
-  vector<string> binaryTreePaths(TreeNode *root) {}
+  vector<string> data;
+  vector<string> binaryTreePaths(TreeNode *root) { return data; }
 };
 
 int main(int argc, char const *argv[])
