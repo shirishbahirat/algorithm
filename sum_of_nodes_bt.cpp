@@ -25,5 +25,17 @@ public:
 int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
+
+  TreeNode *root = new TreeNode(1);
+
+  TreeNode *root->left = new TreeNode(0);
+  TreeNode *root->right = new TreeNode(1);
+
+  TreeNode *root->left->left = new TreeNode(0);
+  TreeNode *root->left->right = new TreeNode(1);
+
+  TreeNode *root->right->left = new TreeNode(0);
+  TreeNode *root->right->right = new TreeNode(1);
+
   return 0;
 }
