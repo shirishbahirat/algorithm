@@ -63,11 +63,12 @@ int main(int argc, char const *argv[])
   Solution *obj = new Solution();
 
   TreeNode *root = new TreeNode(1);
-
+  /*
   root->left = new TreeNode(2);
   root->right = new TreeNode(3);
 
   root->left->right = new TreeNode(5);
+  */
 
   vector<string> data = obj->binaryTreePaths(root);
 
