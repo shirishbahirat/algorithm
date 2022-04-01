@@ -49,6 +49,8 @@ public:
   vector<string> binaryTreePaths(TreeNode *root)
   {
     cout << root->val << "->";
+    val += to_string(root->val);
+    val += "->";
     transverse(root);
 
     return data;
