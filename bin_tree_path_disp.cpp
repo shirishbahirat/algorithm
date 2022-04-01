@@ -31,6 +31,7 @@ public:
 
     if (root->right)
       cout << "->";
+
     transverse(root->right);
 
     if ((root->left == nullptr) && (root->right == nullptr))
