@@ -20,6 +20,7 @@ class Solution
 {
 public:
   vector<string> data;
+  string val = "";
 
   void transverse(TreeNode *root)
   {
@@ -28,6 +29,7 @@ public:
 
     transverse(root->left);
     cout << root->val;
+    val += to_string(root->val);
 
     if (root->right)
       cout << "->";
