@@ -28,12 +28,10 @@ public:
       return;
 
     transverse(root->left);
-    cout << root->val;
     val += to_string(root->val);
 
     if (root->right)
     {
-      cout << "->";
       val += "->";
     }
 
@@ -41,7 +39,6 @@ public:
 
     if ((root->left == nullptr) && (root->right == nullptr))
     {
-      cout << endl;
       data.push_back(val);
       val = "";
     }
@@ -49,11 +46,14 @@ public:
 
   vector<string> binaryTreePaths(TreeNode *root)
   {
-    cout << root->val << "->";
     val += to_string(root->val);
-    val += "->";
-    transverse(root);
-
+    if ((root->left) || (root->right))
+    {
+      val += "->";
+      transverse(root);
+    }
+    else
+      data.push_back(val);
     return data;
   }
 };
