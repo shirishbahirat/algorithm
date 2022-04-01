@@ -28,6 +28,7 @@ public:
 
     cout << root->val << "->";
     transverse(root->left);
+    cout << root->val << "->";
     transverse(root->right);
 
     if ((root->left == nullptr) && (root->right == nullptr))
