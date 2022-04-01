@@ -43,6 +43,7 @@ public:
     {
       cout << endl;
       data.push_back(val);
+      val = "";
     }
   }
 
