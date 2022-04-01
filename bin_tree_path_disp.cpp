@@ -30,7 +30,7 @@ public:
     transverse(root->left);
     transverse(root->right);
 
-    if ((root->left == nullptr) || (root->right == nullptr))
+    if ((root->left == nullptr) && (root->right == nullptr))
       cout << endl;
   }
 
