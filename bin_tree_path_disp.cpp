@@ -19,42 +19,32 @@ struct TreeNode
 class Solution
 {
 public:
-  vector<string> data;
-  string val = "";
+  vector<string> allPaths;
 
-  void transverse(TreeNode *root)
+  void getAllPaths(TreeNode *root, string currentPath)
   {
-    if (root == nullptr)
+    if (root == NULL)
       return;
 
-    transverse(root->left);
-    val += to_string(root->val);
+    currentPath += to_string(root->val);
 
-    if (root->right)
+    if (root->left == NULL and root->right == NULL)
     {
-      val += "->";
+      allPaths.push_back(currentPath);
+      return;
     }
+    currentPath += "->";
 
-    transverse(root->right);
-
-    if ((root->left == nullptr) && (root->right == nullptr))
-    {
-      data.push_back(val);
-      val = "";
-    }
+    getAllPaths(root->left, currentPath);
+    getAllPaths(root->right, currentPath);
+    return;
   }
 
   vector<string> binaryTreePaths(TreeNode *root)
   {
-    val += to_string(root->val);
-    if ((root->left) || (root->right))
-    {
-      val += "->";
-      transverse(root);
-    }
-    else
-      data.push_back(val);
-    return data;
+    string currentPath = "";
+    getAllPaths(root, currentPath);
+    return allPaths;
   }
 };
 
