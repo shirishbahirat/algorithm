@@ -66,7 +66,12 @@ int main(int argc, char const *argv[])
 
   root->left->right = new TreeNode(5);
 
-  obj->binaryTreePaths(root);
+  vector<string> data = obj->binaryTreePaths(root);
+
+  for (string x : data)
+  {
+    cout << x << endl;
+  }
 
   return 0;
 }
