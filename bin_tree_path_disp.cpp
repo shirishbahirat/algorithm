@@ -32,12 +32,18 @@ public:
     val += to_string(root->val);
 
     if (root->right)
+    {
       cout << "->";
+      val += "->";
+    }
 
     transverse(root->right);
 
     if ((root->left == nullptr) && (root->right == nullptr))
+    {
       cout << endl;
+      data.push_back(val);
+    }
   }
 
   vector<string> binaryTreePaths(TreeNode *root)
