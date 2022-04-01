@@ -26,7 +26,7 @@ public:
     if (root == nullptr)
       return;
 
-    cout << root->val << "->";
+    // cout << root->val << "->";
     transverse(root->left);
     cout << root->val << "->";
     transverse(root->right);
