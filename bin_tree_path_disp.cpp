@@ -37,7 +37,7 @@ public:
 
   vector<string> binaryTreePaths(TreeNode *root)
   {
-
+    cout << root->val << "->";
     transverse(root);
 
     return data;
