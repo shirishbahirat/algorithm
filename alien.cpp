@@ -10,7 +10,7 @@ public:
 
 int main(int argc, char const *argv[])
 {
-  Solution *obj = new Solution(); //
+  Solution *obj = new Solution();
   string order = "bb";
   vector<string> words = {"aa", "bb"};
   obj->isAlienSorted(words, order);
