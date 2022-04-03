@@ -49,7 +49,10 @@ int main(int argc, char const *argv[])
   root2->right = new TreeNode(1);
 
   root2->left->left = new TreeNode(6);
-  root2->left->right = new TreeNode(2);
+  root2->left->right = new TreeNode(7);
+
+  root2->right->left = new TreeNode(4);
+  root2->right->right = new TreeNode(2);
 
   return 0;
 }
