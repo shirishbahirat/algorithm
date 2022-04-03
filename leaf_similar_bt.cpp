@@ -43,5 +43,13 @@ int main(int argc, char const *argv[])
   root1->left->right->left = new TreeNode(7);
   root1->left->right->right = new TreeNode(4);
 
+  TreeNode *root2 = new TreeNode(3);
+
+  root2->left = new TreeNode(5);
+  root2->right = new TreeNode(1);
+
+  root2->left->left = new TreeNode(6);
+  root2->left->right = new TreeNode(2);
+
   return 0;
 }
