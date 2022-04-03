@@ -22,11 +22,10 @@ public:
   bool leafSimilar(TreeNode *root1, TreeNode *root2) { return true; }
 };
 
-root1 = [ 3, 5, 1, 6, 2, 9, 8, null, null, 7, 4 ] root2 =
-    [3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8]
+// root1 = [ 3, 5, 1, 6, 2, 9, 8, null, null, 7, 4 ]
+// root2 = [3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8]
 
-    int
-    main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
   Solution *obj = new Solution();
 
