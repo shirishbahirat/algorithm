@@ -19,6 +19,15 @@ struct TreeNode
 class Solution
 {
 public:
+  void transverse(TreeNode *root1, TreeNode *root2)
+  {
+
+    if ((root1 == nullptr) and (root2 == nullptr))
+      return;
+
+    return;
+  }
+
   bool leafSimilar(TreeNode *root1, TreeNode *root2) { return true; }
 };
 
