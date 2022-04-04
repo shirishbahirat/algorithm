@@ -27,16 +27,21 @@ public:
 
     if ((root1 != nullptr) and (root2 == nullptr))
     {
+      cout << "root1 " << root1->val << endl;
       transverse(root1->left, nullptr);
       transverse(root1->right, nullptr);
     }
     else if ((root1 == nullptr) and (root2 != nullptr))
     {
+      cout << "root2 " << root2->val << endl;
       transverse(nullptr, root2->left);
       transverse(nullptr, root2->right);
     }
     else
     {
+      cout << "root1 " << root1->val << endl;
+      cout << "root2 " << root2->val << endl;
+
       transverse(root1->left, root2->left);
       transverse(root1->right, root2->right);
     }
