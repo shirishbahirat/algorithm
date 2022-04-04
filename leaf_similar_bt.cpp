@@ -77,13 +77,25 @@ public:
   {
 
     transverse(root1, root2);
+    bool status = false;
 
     for (int i = 0, j = 0; i < leaf1.size() && j < leaf2.size(); i++, j++)
     {
       cout << leaf1.at(i) << " " << leaf2.at(j) << endl;
+      if (leaf1.at(i) == leaf2.at(j))
+      {
+        if (status != false)
+        {
+          status = true;
+        }
+      }
+      else
+      {
+        status = false;
+      }
     }
 
-    return true;
+    return status;
   }
 };
 
