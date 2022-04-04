@@ -19,6 +19,9 @@ struct TreeNode
 class Solution
 {
 public:
+  vector<int> leaf1;
+  vector<int> leaf2;
+
   void transverse(TreeNode *root1, TreeNode *root2)
   {
 
