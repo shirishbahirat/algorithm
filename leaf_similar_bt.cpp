@@ -83,6 +83,10 @@ public:
       cout << x << endl;
     }
 
+    for (int x : leaf1)
+    {
+      cout << x << endl;
+    }
     return true;
   }
 };
