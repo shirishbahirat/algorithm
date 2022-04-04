@@ -78,6 +78,11 @@ public:
 
     transverse(root1, root2);
 
+    for (int x : leaf2)
+    {
+      cout << x << endl;
+    }
+
     return true;
   }
 };
