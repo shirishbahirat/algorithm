@@ -22,84 +22,29 @@ public:
   vector<int> leaf1;
   vector<int> leaf2;
 
-  void transverse(TreeNode *root1, TreeNode *root2)
+  void depth_first_search(TreeNode *head, vector<int> &leaf)
   {
 
-    if ((root1 == nullptr) and (root2 == nullptr))
+    if (head == nullptr)
       return;
 
-    if ((root1 != nullptr) and (root2 == nullptr))
+    if ((head->left == nullptr) && (head->right == nullptr))
     {
-      cout << "root1 " << root1->val << endl;
-      if ((root1->left == nullptr) && (root1->right == nullptr))
-      {
-        leaf1.push_back(root1->val);
-      }
-
-      transverse(root1->left, nullptr);
-      transverse(root1->right, nullptr);
+      leaf.push_back(head->val);
     }
-    else if ((root1 == nullptr) and (root2 != nullptr))
-    {
-      cout << "root2 " << root2->val << endl;
 
-      if ((root2->left == nullptr) && (root2->right == nullptr))
-      {
-        leaf2.push_back(root2->val);
-      }
-
-      transverse(nullptr, root2->left);
-      transverse(nullptr, root2->right);
-    }
-    else
-    {
-      cout << "root1 " << root1->val << endl;
-      cout << "root2 " << root2->val << endl;
-
-      if ((root1->left == nullptr) && (root1->right == nullptr))
-      {
-        leaf1.push_back(root1->val);
-      }
-
-      if ((root2->left == nullptr) && (root2->right == nullptr))
-      {
-        leaf2.push_back(root2->val);
-      }
-
-      transverse(root1->left, root2->left);
-      transverse(root1->right, root2->right);
-    }
+    depth_first_search(head->left, leaf);
+    depth_first_search(head->right, leaf);
 
     return;
   }
 
   bool leafSimilar(TreeNode *root1, TreeNode *root2)
   {
+    bool status = false;
 
-    transverse(root1, root2);
-    bool status = true;
-    int i = 0, j = 0;
-
-    for (i = 0, j = 0; i < leaf1.size() && j < leaf2.size(); i++, j++)
-    {
-      cout << leaf1.at(i) << " " << leaf2.at(j) << endl;
-      if (leaf1.at(i) == leaf2.at(j))
-      {
-        if (status != false)
-        {
-          status = true;
-        }
-      }
-      else
-      {
-        status = false;
-      }
-    }
-
-    if (i != j)
-    {
-      status = false;
-    }
+    depth_first_search(root1, leaf1);
+    depth_first_search(root2, leaf2);
 
     return status;
   }
