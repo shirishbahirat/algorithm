@@ -31,12 +31,33 @@ public:
     if ((root1 != nullptr) and (root2 == nullptr))
     {
       cout << "root1 " << root1->val << endl;
+      if ((root1->left->left == nullptr) && (root1->left->right == nullptr))
+      {
+        leaf1.push_back(root1->val);
+      }
+
+      if ((root1->right->left == nullptr) && (root1->right->right == nullptr))
+      {
+        leaf1.push_back(root1->val);
+      }
+
       transverse(root1->left, nullptr);
       transverse(root1->right, nullptr);
     }
     else if ((root1 == nullptr) and (root2 != nullptr))
     {
       cout << "root2 " << root2->val << endl;
+
+      if ((root2->left->left == nullptr) && (root2->left->right == nullptr))
+      {
+        leaf2.push_back(root2->val);
+      }
+
+      if ((root2->right->left == nullptr) && (root2->right->right == nullptr))
+      {
+        leaf2.push_back(root1->val);
+      }
+
       transverse(nullptr, root2->left);
       transverse(nullptr, root2->right);
     }
