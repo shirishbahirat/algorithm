@@ -25,6 +25,22 @@ public:
     if ((root1 == nullptr) and (root2 == nullptr))
       return;
 
+    if ((root1 != nullptr) and (root2 == nullptr))
+    {
+      transverse(root1->left, nullptr);
+      transverse(root1->right, nullptr);
+    }
+    else if ((root1 == nullptr) and (root2 != nullptr))
+    {
+      transverse(nullptr, root2->left);
+      transverse(nullptr, root2->right);
+    }
+    else
+    {
+      transverse(root1->left, root2->left);
+      transverse(root1->right, root2->right);
+    }
+
     return;
   }
 
