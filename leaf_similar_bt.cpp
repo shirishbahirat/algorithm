@@ -56,6 +56,16 @@ public:
       cout << "root1 " << root1->val << endl;
       cout << "root2 " << root2->val << endl;
 
+      if ((root1->left == nullptr) && (root1->right == nullptr))
+      {
+        leaf1.push_back(root1->val);
+      }
+
+      if ((root2->left == nullptr) && (root2->right == nullptr))
+      {
+        leaf2.push_back(root2->val);
+      }
+
       transverse(root1->left, root2->left);
       transverse(root1->right, root2->right);
     }
