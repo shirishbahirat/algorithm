@@ -78,14 +78,9 @@ public:
 
     transverse(root1, root2);
 
-    for (int x : leaf2)
+    for (int i = 0, j = 0; i < leaf1.size() && j < leaf2.size(); i++, j++)
     {
-      cout << x << endl;
-    }
-
-    for (int x : leaf1)
-    {
-      cout << x << endl;
+      cout << leaf1.at(i) << " " << leaf2.at(j) << endl;
     }
 
     return true;
