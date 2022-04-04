@@ -140,7 +140,9 @@ int main(int argc, char const *argv[])
   root2->right->right->left = new TreeNode(9);
   root2->right->right->right = new TreeNode(8);
 
-  obj->leafSimilar(root1, root2);
+  boot status = obj->leafSimilar(root1, root2);
+
+  cout << status << endl;
 
   return 0;
 }
