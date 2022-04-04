@@ -44,7 +44,13 @@ public:
     return;
   }
 
-  bool leafSimilar(TreeNode *root1, TreeNode *root2) { return true; }
+  bool leafSimilar(TreeNode *root1, TreeNode *root2)
+  {
+
+    transverse(root1, root2);
+
+    return true;
+  }
 };
 
 // root1 = [ 3, 5, 1, 6, 2, 9, 8, null, null, 7, 4 ]
@@ -81,6 +87,8 @@ int main(int argc, char const *argv[])
 
   root2->right->right->left = new TreeNode(9);
   root2->right->right->right = new TreeNode(8);
+
+  obj->leafSimilar(root1, root2);
 
   return 0;
 }
