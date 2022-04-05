@@ -41,10 +41,25 @@ public:
 
   bool leafSimilar(TreeNode *root1, TreeNode *root2)
   {
-    bool status = false;
+    bool status = true;
 
     depth_first_search(root1, leaf1);
     depth_first_search(root2, leaf2);
+
+    if (leaf1.size() == leaf2.size())
+    {
+      for (int i = 0; i < leaf1.size(), ++i)
+      {
+        if (leaf1.at(i) != leaf2.at(i))
+        {
+          status = false;
+        }
+      }
+    }
+    else
+    {
+      status = false;
+    }
 
     return status;
   }
