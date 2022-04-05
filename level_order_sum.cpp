@@ -57,7 +57,7 @@ public:
       }
     }
 
-    return data;
+    return output;
   }
 };
 
