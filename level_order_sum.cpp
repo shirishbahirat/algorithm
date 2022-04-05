@@ -30,9 +30,10 @@ public:
       return;
 
     transverse(root->left, level + 1);
-    cout << root->val << endl;
 
     transverse(root->right, level + 1);
+
+    cout << root->val << endl;
   }
 
   vector<double> averageOfLevels(TreeNode *root)
