@@ -21,10 +21,14 @@ class Solution
 public:
   vector<double> data;
 
+  vector<vector<double>> nodes;
+
   void transverse(TreeNode *root, int level)
   {
     if (root == nullptr)
       return;
+
+    nodes[level].push_back(root->val);
 
     transverse(root->left, level + 1);
     transverse(root->right, level + 1);
