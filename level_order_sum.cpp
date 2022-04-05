@@ -29,7 +29,7 @@ public:
     if (root == nullptr)
       return;
 
-    cout << root->val << endl;
+    cout << root->val << " " << level << endl;
 
     transverse(root->left, level + 1);
 
