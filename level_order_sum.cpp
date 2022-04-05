@@ -19,7 +19,7 @@ struct TreeNode
 class Solution
 {
 public:
-  vector<double> data;
+  vector<double> output;
 
   vector<double> sum;
   vector<double> index;
@@ -48,6 +48,15 @@ public:
   vector<double> averageOfLevels(TreeNode *root)
   {
     transverse(root, 0);
+
+    for (int i = 0; i < sum.size(); ++i)
+    {
+      if (index[i] > 0)
+      {
+        output.push_back(sum[i] / index[i]);
+      }
+    }
+
     return data;
   }
 };
