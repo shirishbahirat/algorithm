@@ -37,6 +37,9 @@ public:
       index.push_back(0);
     }
 
+    index[level] += 1;
+    sum[level] += root->val;
+
     transverse(root->left, level + 1);
 
     transverse(root->right, level + 1);
