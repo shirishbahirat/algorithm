@@ -29,9 +29,9 @@ public:
     if (root == nullptr)
       return;
 
+    transverse(root->left, level + 1);
     cout << root->val << endl;
 
-    transverse(root->left, level + 1);
     transverse(root->right, level + 1);
   }
 
