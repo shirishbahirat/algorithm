@@ -26,7 +26,7 @@ public:
     if (root == nullptr)
       return;
 
-    if (left)
+    if ((left) and (root->left == nullptr) and (root->right == nullptr))
     {
       sum += root->val;
     }
