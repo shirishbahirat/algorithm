@@ -33,7 +33,7 @@ public:
 
     if (sum.size() < level)
     {
-      sum.push(0);
+      sum.push_back(0);
     }
 
     transverse(root->left, level + 1);
