@@ -34,6 +34,7 @@ public:
     if (sum.size() < level)
     {
       sum.push_back(0);
+      index.push_back(0);
     }
 
     transverse(root->left, level + 1);
