@@ -31,6 +31,11 @@ public:
 
     cout << root->val << " " << level << endl;
 
+    if (sum.size() < level)
+    {
+      sum.push(0);
+    }
+
     transverse(root->left, level + 1);
 
     transverse(root->right, level + 1);
