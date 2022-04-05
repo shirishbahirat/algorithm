@@ -28,7 +28,7 @@ public:
     if (root == nullptr)
       return;
 
-    nodes[level].push_back(root->val);
+    // nodes[level].push_back(root->val);
 
     transverse(root->left, level + 1);
     transverse(root->right, level + 1);
