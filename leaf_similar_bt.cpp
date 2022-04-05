@@ -48,7 +48,7 @@ public:
 
     if (leaf1.size() == leaf2.size())
     {
-      for (int i = 0; i < leaf1.size(), ++i)
+      for (int i = 0; i < leaf1.size(); ++i)
       {
         if (leaf1.at(i) != leaf2.at(i))
         {
