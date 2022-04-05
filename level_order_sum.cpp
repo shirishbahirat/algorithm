@@ -30,7 +30,11 @@ public:
     transverse(root->right, level + 1);
   }
 
-  vector<double> averageOfLevels(TreeNode *root) { return data; }
+  vector<double> averageOfLevels(TreeNode *root)
+  {
+    transverse(root, 0);
+    return data;
+  }
 };
 
 int main(int argc, char const *argv[])
