@@ -21,14 +21,15 @@ class Solution
 public:
   vector<double> data;
 
-  vector<vector<double>> nodes;
+  vector<double> sum;
+  vector<double> index;
 
   void transverse(TreeNode *root, int level)
   {
     if (root == nullptr)
       return;
 
-    // nodes[level].push_back(root->val);
+    cout << root->val << endl;
 
     transverse(root->left, level + 1);
     transverse(root->right, level + 1);
