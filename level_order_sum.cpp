@@ -31,7 +31,7 @@ public:
 
     cout << root->val << " " << level << endl;
 
-    if (sum.size() < level)
+    if (sum.size() <= level)
     {
       sum.push_back(0);
       index.push_back(0);
