@@ -4,8 +4,6 @@ using namespace std;
 
 int arr[] = {19, 3, 2, 23, 12, 34};
 
-//
-
 void print_arr(int **p, int len)
 {
 
