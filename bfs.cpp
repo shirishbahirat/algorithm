@@ -15,7 +15,8 @@ struct stack
   node *n;
   stack *prev;
 };
-/ node *new_node(int data)
+
+node *new_node(int data)
 {
 
   node *n = new node();
