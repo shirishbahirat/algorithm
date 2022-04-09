@@ -19,7 +19,7 @@ struct TreeNode
 class Solution
 {
 public:
-  int minDepth(TreeNode *root) { return 0; }
+  int minDepth(TreeNode *root) { return 10; }
 };
 
 int main(int argc, char const *argv[])
