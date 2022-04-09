@@ -33,7 +33,13 @@ public:
     return 0;
   }
 
-  int minDepth(TreeNode *root) { return 10; }
+  int minDepth(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return 10;
+  }
 };
 
 int main(int argc, char const *argv[])
