@@ -21,7 +21,7 @@ class Solution
 public:
   int tilt = 0;
 
-  void transverse(TreeNode *root, int tilt)
+  int transverse(TreeNode *root, int *tilt)
   {
 
     if (!root)
@@ -30,7 +30,7 @@ public:
     int left = transverse(root->left, tilt);
     int right = transverse(root->right, tilt);
 
-    tilt += abs(left - right);
+    *tilt += abs(left - right);
 
     return left + right + root->val;
   }
@@ -38,7 +38,7 @@ public:
   int findTilt(TreeNode *root)
   {
 
-    transverse(root, tilt);
+    transverse(root, &tilt);
 
     return tilt;
   }
