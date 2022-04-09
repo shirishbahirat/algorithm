@@ -25,9 +25,8 @@ public:
     if (!root)
       return 0;
 
-    cout << root->val << endl;
-
     int left = transverse(root->left);
+    cout << root->val << endl;
     int right = transverse(root->right);
 
     return 0;
