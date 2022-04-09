@@ -19,6 +19,18 @@ struct TreeNode
 class Solution
 {
 public:
+  int transverse(TreeNode *root)
+  {
+
+    if (!root)
+      return 0;
+
+    int left = transverse(root->left);
+    int right = transverse(root->right);
+
+    return 0;
+  }
+
   int minDepth(TreeNode *root) { return 10; }
 };
 
