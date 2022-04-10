@@ -20,7 +20,8 @@ struct TreeNode
 class Solution
 {
 public:
-  int depth = 0;
+  int left = 0;
+  int right = 0;
   int empty = false;
 
   void transverse(TreeNode *root)
@@ -33,31 +34,22 @@ public:
 
     ordered.push(root);
 
-    depth++;
-
     while (!ordered.empty())
     {
       TreeNode *rt = ordered.front();
       cout << rt->val << endl;
       ordered.pop();
 
-      if ((rt->left != nullptr) && (rt->right != nullptr))
-      {
-        if (!empty)
-        {
-          depth++;
-        }
-      }
-      else
-      {
-        empty = true;
-      }
-
       if (rt->left != nullptr)
+      {
+        left++;
         ordered.push(rt->left);
+      }
 
       if (rt->right != nullptr)
-        ordered.push(rt->right);
+      {
+        right++ ordered.push(rt->right);
+      }
     }
 
     return;
@@ -68,7 +60,7 @@ public:
 
     transverse(root);
 
-    return depth;
+    return min(left, right) + 1;
   }
 };
 
