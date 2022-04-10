@@ -28,7 +28,7 @@ public:
 
     queue<TreeNode *> ordered;
 
-    ordered.push_back(root); //
+    ordered.push(root);
 
     while (!ordered.empty())
     {
@@ -37,10 +37,10 @@ public:
       ordered.pop();
 
       if (rt->left != nullptr)
-        ordered.push_back(rt->left);
+        ordered.push(rt->left);
 
       if (rt->right != nullptr)
-        ordered.push_back(rt->right);
+        ordered.push(rt->right);
     }
 
     return;
