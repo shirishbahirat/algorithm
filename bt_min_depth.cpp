@@ -61,7 +61,7 @@ public:
 
     transverse(root);
 
-    return min(left, right) + 1;
+    return min(left, right);
   }
 };
 
