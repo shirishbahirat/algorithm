@@ -26,7 +26,7 @@ public:
     if (!root)
       return;
 
-    queue<TreeNode> ordered;
+    queue<TreeNode *> ordered;
 
     ordered.push_back(root);
 
