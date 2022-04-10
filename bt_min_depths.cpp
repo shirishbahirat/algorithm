@@ -41,7 +41,7 @@ public:
     if (root->right)
       r = transverse(root->right);
 
-    return min(l, r) + 1;
+    return (min(l, r) + 1);
   }
 
   return;
