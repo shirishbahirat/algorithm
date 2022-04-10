@@ -48,7 +48,8 @@ public:
 
       if (rt->right != nullptr)
       {
-        right++ ordered.push(rt->right);
+        right++;
+        ordered.push(rt->right);
       }
     }
 
