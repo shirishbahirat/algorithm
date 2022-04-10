@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -19,18 +20,22 @@ struct TreeNode
 class Solution
 {
 public:
-  int transverse(TreeNode *root)
+  void transverse(TreeNode *root)
   {
 
     if (!root)
       return 0;
+
+    queue<TreeNode> ordered;
+
+    ordered.push_back(root);
 
     int left = transverse(root->left);
     int right = transverse(root->right);
 
     cout << root->val << endl;
 
-    return 0;
+    return;
   }
 
   int minDepth(TreeNode *root)
