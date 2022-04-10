@@ -44,18 +44,14 @@ public:
     return (min(l, r) + 1);
   }
 
-  return;
-}
-
   int minDepth(TreeNode *root)
-{
+  {
 
-  transverse(root);
+    transverse(root);
 
-  return min(left, right);
-}
-}
-;
+    return min(left, right);
+  }
+};
 
 int main(int argc, char const *argv[])
 {
