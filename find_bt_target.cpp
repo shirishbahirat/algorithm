@@ -21,6 +21,22 @@ class Solution
 public:
   int element;
 
+  bool found = false;
+
+  void find(TreeNode *root, int element)
+  {
+
+    if (!root)
+      return;
+
+    if (element > root->val)
+      find(root->right, element);
+    else if (element < root->val)
+      find(root->left, element);
+    else
+      found = true;
+  }
+
   bool findTarget(TreeNode *root, int k)
   {
 
@@ -28,6 +44,9 @@ public:
       return false;
 
     element = k - root->val;
+
+    if (!element)
+      return true;
 
     return true;
   }
