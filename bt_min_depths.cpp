@@ -24,46 +24,38 @@ public:
   int right = 0;
   int empty = false;
 
-  void transverse(TreeNode *root)
+  int transverse(TreeNode *root)
   {
 
     if (!root)
-      return;
+      return 0;
 
-    queue<TreeNode *> ordered;
+    if (root->left == nullptr && root->right == nullptr)
+      return 1;
 
-    ordered.push(root);
+    int l = INT_MAX, r = INT_MAX;
 
-    while (!ordered.empty())
-    {
-      TreeNode *rt = ordered.front();
-      cout << rt->val << endl;
-      ordered.pop();
+    if (root->left)
+      l = transverse(root->left);
 
-      if (rt->left != nullptr)
-      {
-        left++;
-        ordered.push(rt->left);
-      }
+    if (root->right)
+      r = transverse(root->right);
 
-      if (rt->right != nullptr)
-      {
-        right++;
-        ordered.push(rt->right);
-      }
-    }
-
-    return;
+    return min(l, r) + 1;
   }
+
+  return;
+}
 
   int minDepth(TreeNode *root)
-  {
+{
 
-    transverse(root);
+  transverse(root);
 
-    return min(left, right);
-  }
-};
+  return min(left, right);
+}
+}
+;
 
 int main(int argc, char const *argv[])
 {
