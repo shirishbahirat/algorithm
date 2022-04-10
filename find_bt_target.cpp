@@ -48,7 +48,9 @@ public:
     if (!element)
       return true;
 
-    return true;
+    find(root, element);
+
+    return found;
   }
 };
 
