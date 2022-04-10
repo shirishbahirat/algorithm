@@ -28,7 +28,7 @@ public:
 
     queue<TreeNode *> ordered;
 
-    ordered.push_back(root);
+    ordered.push_back(root); //
 
     while (!ordered.empty())
     {
