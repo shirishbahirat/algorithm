@@ -24,16 +24,24 @@ public:
   {
 
     if (!root)
-      return 0;
+      return;
 
     queue<TreeNode> ordered;
 
     ordered.push_back(root);
 
-    int left = transverse(root->left);
-    int right = transverse(root->right);
+    while (!ordered.empty())
+    {
+      TreeNode *rt = ordered.front();
+      cout << rt->val << endl;
+      ordered.pop();
 
-    cout << root->val << endl;
+      if (rt->left != nullptr)
+        ordered.push_back(rt->left);
+
+      if (rt->right != nullptr)
+        ordered.push_back(rt->right);
+    }
 
     return;
   }
