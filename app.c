@@ -14,7 +14,7 @@ void swap(int *v, int a, int b)
   }
 }
 
-////
+//
 void print_vect(int v[], int len)
 {
   int i = 0;
