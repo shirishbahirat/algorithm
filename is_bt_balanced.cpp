@@ -36,11 +36,11 @@ public:
 
       cout << node->val << endl;
 
-      if (node->right != nullptr)
-        stack.push(node->right);
-
       if (node->left != nullptr)
         stack.push(node->left);
+
+      if (node->right != nullptr)
+        stack.push(node->right);
     }
   }
 
