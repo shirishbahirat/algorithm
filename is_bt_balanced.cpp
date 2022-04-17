@@ -1,5 +1,4 @@
 #include <iostream>
-#include <queue>
 #include <vector>
 
 using namespace std;
@@ -19,35 +18,18 @@ struct TreeNode
 class Solution
 {
 public:
-  queue<TreeNode *> stack;
-
-  void transverse(TreeNode *root)
+  void transverse(TreeNode *root, int &left, int &right)
   {
 
     if (root == nullptr)
       return;
-
-    stack.push(root);
-
-    while (!stack.empty())
-    {
-      TreeNode *node = stack.front();
-      stack.pop();
-
-      cout << node->val << endl;
-
-      if (node->left != nullptr)
-        stack.push(node->left);
-
-      if (node->right != nullptr)
-        stack.push(node->right);
-    }
   }
 
   bool isBalanced(TreeNode *root)
   {
+    int l = 0, r = 0;
 
-    transverse(root);
+    transverse(root, l, r);
 
     return true;
   }
