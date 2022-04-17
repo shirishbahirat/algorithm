@@ -28,6 +28,18 @@ public:
       return;
 
     stack.push(root);
+
+    while (!stack.empty())
+    {
+      TreeNode *node = stack.top();
+      stack.pop();
+
+      if (node->left != nullptr)
+        stack.push(node->left);
+
+      if (node->left != nullptr)
+        stack.push(node->right);
+    }
   }
 
   bool isBalanced(TreeNode *root) { return true; }
