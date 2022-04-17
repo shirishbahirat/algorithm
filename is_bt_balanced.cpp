@@ -21,6 +21,15 @@ class Solution
 public:
   queue<TreeNode *> stack;
 
+  void transverse(TreeNode *root)
+  {
+
+    if (root == nullptr)
+      return;
+
+    stack.push(root);
+  }
+
   bool isBalanced(TreeNode *root) { return true; }
 };
 
