@@ -23,13 +23,19 @@ public:
 
     if (root == nullptr)
       return;
+
+    if (root->left)
+      transverse(root->left, ++left, right);
+
+    if (root->right)
+      transverse(root->right, left, ++right);
   }
 
   bool isBalanced(TreeNode *root)
   {
-    int l = 0, r = 0;
+    int left = 0, right = 0;
 
-    transverse(root, l, r);
+    transverse(root, left, right);
 
     return true;
   }
