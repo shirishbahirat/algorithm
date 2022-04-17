@@ -34,6 +34,8 @@ public:
       TreeNode *node = stack.top();
       stack.pop();
 
+      cout << node->val << endl;
+
       if (node->left != nullptr)
         stack.push(node->left);
 
@@ -42,7 +44,13 @@ public:
     }
   }
 
-  bool isBalanced(TreeNode *root) { return true; }
+  bool isBalanced(TreeNode *root)
+  {
+
+    transverse(root);
+
+    return true;
+  }
 };
 
 int main(int argc, char const *argv[])
