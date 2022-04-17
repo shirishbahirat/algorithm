@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stacks>
+#include <stack>
 #include <vector>
 
 using namespace std;
@@ -19,7 +19,7 @@ struct TreeNode
 class Solution
 {
 public:
-  stacks<TreeNode *> stack;
+  stack<TreeNode *> stack;
 
   void transverse(TreeNode *root)
   {
