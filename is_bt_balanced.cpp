@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -18,6 +19,8 @@ struct TreeNode
 class Solution
 {
 public:
+  queue<TreeNode *> stack;
+
   bool isBalanced(TreeNode *root) { return true; }
 };
 
