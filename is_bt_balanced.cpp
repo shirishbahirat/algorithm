@@ -37,10 +37,10 @@ public:
       cout << node->val << endl;
 
       if (node->left != nullptr)
-        stack.push(node->left);
+        stack.push(node->right);
 
       if (node->left != nullptr)
-        stack.push(node->right);
+        stack.push(node->left);
     }
   }
 
