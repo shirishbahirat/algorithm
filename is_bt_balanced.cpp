@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stack>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -19,7 +19,7 @@ struct TreeNode
 class Solution
 {
 public:
-  stack<TreeNode *> stack;
+  queue<TreeNode *> stack;
 
   void transverse(TreeNode *root)
   {
@@ -31,7 +31,7 @@ public:
 
     while (!stack.empty())
     {
-      TreeNode *node = stack.top();
+      TreeNode *node = stack.front();
       stack.pop();
 
       cout << node->val << endl;
