@@ -36,7 +36,7 @@ public:
 
       cout << node->val << endl;
 
-      if (node->left != nullptr)
+      if (node->right != nullptr)
         stack.push(node->right);
 
       if (node->left != nullptr)
