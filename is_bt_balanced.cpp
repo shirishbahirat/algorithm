@@ -37,6 +37,7 @@ public:
 
     transverse(root, left, right);
 
+    cout << left << " " << right << endl;
     return true;
   }
 };
