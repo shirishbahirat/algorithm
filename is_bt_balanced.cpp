@@ -38,7 +38,8 @@ public:
     transverse(root, left, right);
 
     cout << left << " " << right << endl;
-    return true;
+
+    return ((left - right) > 1 || (left - right) < 1) ? false : true;
   }
 };
 
