@@ -15,61 +15,26 @@ using namespace std;
 
 class Solution {
 public:
-
-    int min = INT_MAX;
-    int secondmin = INT_MAX;
-    int taken = 0;
-
-    void transverse_min(TreeNode* root)
-    {
-        if(root == nullptr)
-            return; 
-
-        if (root->val < min)
-        {
-            min = root->val;
-        }
-
-        transverse_min(root->left);
-        transverse_min(root->right);
-
-    }
-
-    void transverse_2min(TreeNode* root)
-    {
-        if(root == nullptr)
-            return; 
-
-        if (root->val < min)
-        {
-            min = root->val;
-        }
-
-        if ((root->val > min) && (root->val < secondmin))
-        {
-            secondmin = root->val;
-            taken = 1;
-        }
-
-        transverse_2min(root->left);
-        transverse_2min(root->right);
-
-    }
-
     int findSecondMinimumValue(TreeNode* root) {
-
-        TreeNode* temp = root;
-        
-        transverse_min(root);
-
-        root = temp;
-
-        transverse_2min(root);
-
-        if (taken)
-            return secondmin;
-        else
-            return -1;
+        vector<int> v;
+        conversion(root,v);
+        if(v.size()==1){return -1;} 
+        sort(v.begin(),v.end());
+        for(int i=1;i<v.size();i++)
+        {
+            if(v[i-1]!=v[i])
+            {
+                return v[i];
+            }
+        }
+        return -1;
+    }
+    void conversion(TreeNode* root,vector<int>& v)
+    {
+        if(root==NULL){return;}
+        conversion(root->left,v);
+        v.push_back(root->val);
+        conversion(root->right,v);
     }
 };
 
